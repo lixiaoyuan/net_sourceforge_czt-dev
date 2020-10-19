@@ -1,3 +1,12 @@
+# net_sourceforge_czt-dev
+git clone https://git.code.sf.net/p/czt/code czt-code   commit  d72340
+
+Compile complete
+
+It is provided for compiling impala 3.4.0
+
+
+
 # Community Z Tools
 
 The [Community Z Tools (CZT)][czt] project is an open-source Java framework for building formal methods tools for Z and Z dialects. It includes a set of tools for parsing, typechecking, transforming, animating and printing ISO Standard Z conforming specifications in LaTeX, Unicode and XML formats.
