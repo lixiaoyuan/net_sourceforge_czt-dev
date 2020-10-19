@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Spec Version="2.1" xsi:schemaLocation="http://czt.sourceforge.net/zml http://czt.sourceforge.net/zml/Z_2_1.xsd" xmlns="http://czt.sourceforge.net/zml" xmlns:ns2="http://czt.sourceforge.net/zpatt" xmlns:ns4="http://czt.sourceforge.net/circustime" xmlns:ns3="http://czt.sourceforge.net/circus" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <NarrSect>
+        <Anns>
+            <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="0" Col="0" Start="0" Length="2"/>
+        </Anns>
+        <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">d </Content>
+    </NarrSect>
+    <ZSect>
+        <Anns>
+            <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="0" Col="2" Start="2" Length="846"/>
+        </Anns>
+        <Name>time_action_wait</Name>
+        <Parent>
+            <Anns>
+                <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="1" Col="41" Start="59" Length="19"/>
+            </Anns>
+            <Word>circustime_toolkit</Word>
+        </Parent>
+        <ZParaList>
+            <LatexMarkupPara/>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="2" Col="14" Start="93" Length="2"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+            </NarrPara>
+            <ns3:ChannelPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="5" Col="3" Start="113"/>
+                </Anns>
+                <ZDeclList>
+                    <ns3:ChannelDecl>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex"/>
+                        </Anns>
+                        <ZNameList/>
+                        <ZNameList>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="5" Col="17" Start="127" Length="1"/>
+                                </Anns>
+                                <Word>c</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="5" Col="20" Start="130" Length="1"/>
+                                </Anns>
+                                <Word>d</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                        </ZNameList>
+                        <RefExpr Mixfix="false" Explicit="false">
+                            <ZName>
+                                <Word>$$SYNCH</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ZExprList/>
+                        </RefExpr>
+                    </ns3:ChannelDecl>
+                </ZDeclList>
+            </ns3:ChannelPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="6" Col="12" Start="147" Length="2"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+            </NarrPara>
+            <ns3:ProcessPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="34" Col="4" Start="168"/>
+                </Anns>
+                <ZName>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="9" Col="18" Start="182" Length="1"/>
+                    </Anns>
+                    <Word>P</Word>
+                    <ZStrokeList/>
+                </ZName>
+                <ZNameList/>
+                <ns3:BasicProcess>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="9" Col="29"/>
+                    </Anns>
+                    <ZParaList>
+                        <NarrPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="10" Col="12" Start="219" Length="50"/>
+                            </Anns>
+                            <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+tests production rule: CIRCWAIT:cw expression:e
+</Content>
+                        </NarrPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="14" Col="12" Start="302" Length="23"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="14" Col="12" Start="302" Length="1"/>
+                                </Anns>
+                                <Word>A</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns4:WaitAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="14" Col="23" Start="313" Length="12"/>
+                                </Anns>
+                                <NumExpr>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="14" Col="33" Start="323" Length="2"/>
+                                    </Anns>
+                                    <ZNumeral Value="20">
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="14" Col="33" Start="323" Length="2"/>
+                                        </Anns>
+                                    </ZNumeral>
+                                </NumExpr>
+                            </ns4:WaitAction>
+                        </ns3:ActionPara>
+                        <NarrPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="15" Col="18" Start="347" Length="77"/>
+                            </Anns>
+                            <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"> 
+
+same production rule with another expression for E (as requested by user)
+</Content>
+                        </NarrPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="19" Col="12" Start="457" Length="31"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="19" Col="12" Start="457" Length="1"/>
+                                </Anns>
+                                <Word>B</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns4:WaitAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="19" Col="23" Start="468" Length="20"/>
+                                </Anns>
+                                <ApplExpr Mixfix="true">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="19" Col="35" Start="478" Length="10"/>
+                                    </Anns>
+                                    <RefExpr Mixfix="false" Explicit="false">
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="19" Col="35" Start="480" Length="5"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="19" Col="35" Start="480" Length="5"/>
+                                            </Anns>
+                                            <Word> _ .. _ </Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </RefExpr>
+                                    <TupleExpr>
+                                        <ZExprList>
+                                            <NumExpr>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="19" Col="33" Start="478" Length="1"/>
+                                                </Anns>
+                                                <ZNumeral Value="1">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="19" Col="33" Start="478" Length="1"/>
+                                                    </Anns>
+                                                </ZNumeral>
+                                            </NumExpr>
+                                            <NumExpr>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="19" Col="41" Start="486" Length="2"/>
+                                                </Anns>
+                                                <ZNumeral Value="20">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="19" Col="41" Start="486" Length="2"/>
+                                                    </Anns>
+                                                </ZNumeral>
+                                            </NumExpr>
+                                        </ZExprList>
+                                    </TupleExpr>
+                                </ApplExpr>
+                            </ns4:WaitAction>
+                        </ns3:ActionPara>
+                        <NarrPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="20" Col="18" Start="511" Length="90"/>
+                            </Anns>
+                            <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"> 
+
+tests production rule: CIRCWAIT refName:na COLON expression:e CIRCSPOT circusAction:ac
+</Content>
+                        </NarrPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="24" Col="12" Start="634" Length="47"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="24" Col="12" Start="634" Length="1"/>
+                                </Anns>
+                                <Word>C</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns4:WaitExprAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="24" Col="33" Start="655" Length="26"/>
+                                </Anns>
+                                <ns3:CallAction>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="24" Col="58" Start="680" Length="1"/>
+                                    </Anns>
+                                    <ZName>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="24" Col="58" Start="680" Length="1"/>
+                                        </Anns>
+                                        <Word>B</Word>
+                                        <ZStrokeList/>
+                                    </ZName>
+                                    <ZExprList/>
+                                </ns3:CallAction>
+                                <ApplExpr Mixfix="true">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="24" Col="39" Start="659" Length="10"/>
+                                    </Anns>
+                                    <RefExpr Mixfix="false" Explicit="false">
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="24" Col="39" Start="661" Length="5"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="24" Col="39" Start="661" Length="5"/>
+                                            </Anns>
+                                            <Word> _ .. _ </Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </RefExpr>
+                                    <TupleExpr>
+                                        <ZExprList>
+                                            <NumExpr>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="24" Col="37" Start="659" Length="1"/>
+                                                </Anns>
+                                                <ZNumeral Value="1">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="24" Col="37" Start="659" Length="1"/>
+                                                    </Anns>
+                                                </ZNumeral>
+                                            </NumExpr>
+                                            <NumExpr>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="24" Col="45" Start="667" Length="2"/>
+                                                </Anns>
+                                                <ZNumeral Value="20">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="24" Col="45" Start="667" Length="2"/>
+                                                    </Anns>
+                                                </ZNumeral>
+                                            </NumExpr>
+                                        </ZExprList>
+                                    </TupleExpr>
+                                </ApplExpr>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="24" Col="33" Start="655" Length="1"/>
+                                    </Anns>
+                                    <Word>r</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                            </ns4:WaitExprAction>
+                        </ns3:ActionPara>
+                        <NarrPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="25" Col="18" Start="704" Length="9"/>
+                            </Anns>
+                            <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"> 
+      
+</Content>
+                        </NarrPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="28" Col="9" Start="743" Length="33"/>
+                            </Anns>
+                            <ZName>
+                                <Word>$$mainAction_L28C9</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:SeqAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="28" Col="9" Start="743" Length="33"/>
+                                    <ns3:OnTheFlyDefAnn/>
+                                </Anns>
+                                <ns3:SeqAction>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="28" Col="19" Start="753" Length="12"/>
+                                    </Anns>
+                                    <ns3:CallAction>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="28" Col="19" Start="753" Length="1"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="28" Col="19" Start="753" Length="1"/>
+                                            </Anns>
+                                            <Word>A</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </ns3:CallAction>
+                                    <ns3:CallAction>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="28" Col="30" Start="764" Length="1"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="28" Col="30" Start="764" Length="1"/>
+                                            </Anns>
+                                            <Word>B</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </ns3:CallAction>
+                                </ns3:SeqAction>
+                                <ns3:CallAction>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="28" Col="41" Start="775" Length="1"/>
+                                    </Anns>
+                                    <ZName>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="28" Col="41" Start="775" Length="1"/>
+                                        </Anns>
+                                        <Word>C</Word>
+                                        <ZStrokeList/>
+                                    </ZName>
+                                    <ZExprList/>
+                                </ns3:CallAction>
+                            </ns3:SeqAction>
+                        </ns3:ActionPara>
+                        <NarrPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="29" Col="18" Start="798" Length="4"/>
+                            </Anns>
+                            <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+
+</Content>
+                        </NarrPara>
+                        <AxPara Box="OmitBox">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="9" Col="29"/>
+                                <ns3:CircusStateAnn/>
+                                <ns3:CircusStateAnn/>
+                            </Anns>
+                            <ZNameList/>
+                            <ZSchText>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="9" Col="29"/>
+                                </Anns>
+                                <ZDeclList>
+                                    <ConstDecl>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="9" Col="29"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="9" Col="29"/>
+                                            </Anns>
+                                            <Word>$$defaultSt_L9C29</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <SchExpr>
+                                            <ZSchText>
+                                                <ZDeclList/>
+                                                <TruePred/>
+                                            </ZSchText>
+                                        </SchExpr>
+                                    </ConstDecl>
+                                </ZDeclList>
+                            </ZSchText>
+                        </AxPara>
+                    </ZParaList>
+                </ns3:BasicProcess>
+            </ns3:ProcessPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circustime/target/test-classes/tests/circustime/time_action_wait.tex" Line="35" Col="12" Start="842" Length="6"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+   </Content>
+            </NarrPara>
+        </ZParaList>
+    </ZSect>
+</Spec>

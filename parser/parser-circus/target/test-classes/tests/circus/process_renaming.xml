@@ -1,0 +1,990 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Spec Version="2.1" xsi:schemaLocation="http://czt.sourceforge.net/zml http://czt.sourceforge.net/zml/Z_2_1.xsd" xmlns="http://czt.sourceforge.net/zml" xmlns:ns2="http://czt.sourceforge.net/zpatt" xmlns:ns3="http://czt.sourceforge.net/circus" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ZSect>
+        <Anns>
+            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="0" Col="0" Start="0" Length="2045"/>
+        </Anns>
+        <Name>process_renaming</Name>
+        <Parent>
+            <Anns>
+                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="1" Col="41" Start="57" Length="15"/>
+            </Anns>
+            <Word>circus_toolkit</Word>
+        </Parent>
+        <ZParaList>
+            <LatexMarkupPara/>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="2" Col="14" Start="87" Length="2"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+            </NarrPara>
+            <ns3:ChannelPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="5" Col="3" Start="107"/>
+                </Anns>
+                <ZDeclList>
+                    <ns3:ChannelDecl>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex"/>
+                        </Anns>
+                        <ZNameList>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="5" Col="18" Start="122" Length="1"/>
+                                </Anns>
+                                <Word>X</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                        </ZNameList>
+                        <ZNameList>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="5" Col="21" Start="125" Length="1"/>
+                                </Anns>
+                                <Word>g</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                        </ZNameList>
+                        <ProdExpr>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="5" Col="33" Start="128" Length="13"/>
+                            </Anns>
+                            <ZExprList>
+                                <RefExpr Mixfix="false" Explicit="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="5" Col="24" Start="128" Length="1"/>
+                                    </Anns>
+                                    <ZName>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="5" Col="24" Start="128" Length="1"/>
+                                        </Anns>
+                                        <Word>X</Word>
+                                        <ZStrokeList/>
+                                    </ZName>
+                                    <ZExprList/>
+                                </RefExpr>
+                                <RefExpr Mixfix="false" Explicit="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="5" Col="33" Start="137" Length="4"/>
+                                    </Anns>
+                                    <ZName>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="5" Col="33" Start="137" Length="4"/>
+                                        </Anns>
+                                        <Word>ℕ</Word>
+                                        <ZStrokeList/>
+                                    </ZName>
+                                    <ZExprList/>
+                                </RefExpr>
+                            </ZExprList>
+                        </ProdExpr>
+                    </ns3:ChannelDecl>
+                </ZDeclList>
+            </ns3:ChannelPara>
+            <ns3:ChannelPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="6" Col="3" Start="148" Length="36"/>
+                </Anns>
+                <ZDeclList>
+                    <ns3:ChannelDecl>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="6" Col="17" Start="162" Length="22"/>
+                        </Anns>
+                        <ZNameList/>
+                        <ZNameList>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="6" Col="17" Start="162" Length="1"/>
+                                </Anns>
+                                <Word>c</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="6" Col="20" Start="165" Length="1"/>
+                                </Anns>
+                                <Word>d</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                        </ZNameList>
+                        <ProdExpr>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="6" Col="35" Start="168" Length="16"/>
+                            </Anns>
+                            <ZExprList>
+                                <RefExpr Mixfix="false" Explicit="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="6" Col="23" Start="168" Length="4"/>
+                                    </Anns>
+                                    <ZName>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="6" Col="23" Start="168" Length="4"/>
+                                        </Anns>
+                                        <Word>ℕ</Word>
+                                        <ZStrokeList/>
+                                    </ZName>
+                                    <ZExprList/>
+                                </RefExpr>
+                                <RefExpr Mixfix="false" Explicit="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="6" Col="35" Start="180" Length="4"/>
+                                    </Anns>
+                                    <ZName>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="6" Col="35" Start="180" Length="4"/>
+                                        </Anns>
+                                        <Word>ℕ</Word>
+                                        <ZStrokeList/>
+                                    </ZName>
+                                    <ZExprList/>
+                                </RefExpr>
+                            </ZExprList>
+                        </ProdExpr>
+                    </ns3:ChannelDecl>
+                </ZDeclList>
+            </ns3:ChannelPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="7" Col="12" Start="197" Length="68"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+If the process being renamed is a call, no parenthesis are needed
+</Content>
+            </NarrPara>
+            <ns3:ProcessPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="12" Col="3" Start="285" Length="74"/>
+                </Anns>
+                <ZName>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="12" Col="17" Start="299" Length="16"/>
+                    </Anns>
+                    <Word>RenamingProcess1</Word>
+                    <ZStrokeList/>
+                </ZName>
+                <ZNameList/>
+                <ns3:RenameProcess>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="12" Col="43" Start="325" Length="34"/>
+                    </Anns>
+                    <ns3:CallProcess CallUsage="Parameterised">
+                        <RefExpr Mixfix="false" Explicit="false">
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="12" Col="43" Start="325" Length="1"/>
+                                </Anns>
+                                <Word>A</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ZExprList/>
+                        </RefExpr>
+                        <ZExprList/>
+                    </ns3:CallProcess>
+                    <ns3:AssignmentPairs>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="12" Col="45" Start="327" Length="32"/>
+                        </Anns>
+                        <ZNameList>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="12" Col="58" Start="340" Length="1"/>
+                                </Anns>
+                                <Word>c</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                        </ZNameList>
+                        <ZExprList>
+                            <RefExpr Mixfix="false" Explicit="false">
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="12" Col="63" Start="345" Length="1"/>
+                                </Anns>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="12" Col="63" Start="345" Length="1"/>
+                                    </Anns>
+                                    <Word>d</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ZExprList/>
+                            </RefExpr>
+                        </ZExprList>
+                    </ns3:AssignmentPairs>
+                </ns3:RenameProcess>
+            </ns3:ProcessPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="13" Col="12" Start="372" Length="104"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+whereas, if the process being renamed is a compound processes,
+surrounding parenthesis are required.
+</Content>
+            </NarrPara>
+            <ns3:ProcessPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="19" Col="3" Start="496" Length="56"/>
+                </Anns>
+                <ZName>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="19" Col="17" Start="510" Length="16"/>
+                    </Anns>
+                    <Word>RenamingProcess2</Word>
+                    <ZStrokeList/>
+                </ZName>
+                <ZNameList/>
+                <ns3:RenameProcess>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="19" Col="43" Start="536" Length="16"/>
+                    </Anns>
+                    <ns3:ExtChoiceProcess>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="19" Col="46" Start="537" Length="14"/>
+                            <ParenAnn>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="19" Col="43" Start="536" Length="16"/>
+                                </Anns>
+                            </ParenAnn>
+                        </Anns>
+                        <ns3:CallProcess CallUsage="Parameterised">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="19" Col="44" Start="537" Length="1"/>
+                            </Anns>
+                            <RefExpr Mixfix="false" Explicit="false">
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="19" Col="44" Start="537" Length="1"/>
+                                    </Anns>
+                                    <Word>A</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ZExprList/>
+                            </RefExpr>
+                            <ZExprList/>
+                        </ns3:CallProcess>
+                        <ns3:CallProcess CallUsage="Parameterised">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="19" Col="57" Start="550" Length="1"/>
+                            </Anns>
+                            <RefExpr Mixfix="false" Explicit="false">
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="19" Col="57" Start="550" Length="1"/>
+                                    </Anns>
+                                    <Word>B</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ZExprList/>
+                            </RefExpr>
+                            <ZExprList/>
+                        </ns3:CallProcess>
+                    </ns3:ExtChoiceProcess>
+                    <ns3:AssignmentPairs>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="19" Col="60" Start="553" Length="38"/>
+                        </Anns>
+                        <ZNameList>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="19" Col="73" Start="566" Length="1"/>
+                                </Anns>
+                                <Word>c</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                        </ZNameList>
+                        <ZExprList>
+                            <RefExpr Mixfix="false" Explicit="true">
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="19" Col="78" Start="571" Length="7"/>
+                                </Anns>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="19" Col="78" Start="571" Length="1"/>
+                                    </Anns>
+                                    <Word>g</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ZExprList>
+                                    <RefExpr Mixfix="false" Explicit="false">
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="19" Col="80" Start="573" Length="4"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="19" Col="80" Start="573" Length="4"/>
+                                            </Anns>
+                                            <Word>ℕ</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </RefExpr>
+                                </ZExprList>
+                            </RefExpr>
+                        </ZExprList>
+                    </ns3:AssignmentPairs>
+                </ns3:RenameProcess>
+            </ns3:ProcessPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="20" Col="12" Start="604" Length="89"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+On the other hand, trying to mix them up can be confusing, as the next example shows.
+</Content>
+            </NarrPara>
+            <ns3:ProcessPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="25" Col="5" Start="715" Length="56"/>
+                </Anns>
+                <ZName>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="25" Col="19" Start="729" Length="16"/>
+                    </Anns>
+                    <Word>RenamingProcess3</Word>
+                    <ZStrokeList/>
+                </ZName>
+                <ZNameList/>
+                <ns3:ExtChoiceProcess>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="25" Col="47" Start="755" Length="16"/>
+                    </Anns>
+                    <ns3:CallProcess CallUsage="Parameterised">
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="25" Col="45" Start="755" Length="1"/>
+                        </Anns>
+                        <RefExpr Mixfix="false" Explicit="false">
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="25" Col="45" Start="755" Length="1"/>
+                                </Anns>
+                                <Word>A</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ZExprList/>
+                        </RefExpr>
+                        <ZExprList/>
+                    </ns3:CallProcess>
+                    <ns3:RenameProcess>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="25" Col="58" Start="768" Length="3"/>
+                        </Anns>
+                        <ns3:CallProcess CallUsage="Parameterised">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="25" Col="59" Start="769" Length="1"/>
+                                <ParenAnn>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="25" Col="58" Start="768" Length="3"/>
+                                    </Anns>
+                                </ParenAnn>
+                            </Anns>
+                            <RefExpr Mixfix="false" Explicit="false">
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="25" Col="59" Start="769" Length="1"/>
+                                    </Anns>
+                                    <Word>B</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ZExprList/>
+                            </RefExpr>
+                            <ZExprList/>
+                        </ns3:CallProcess>
+                        <ns3:AssignmentPairs>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="25" Col="62" Start="772" Length="32"/>
+                            </Anns>
+                            <ZNameList>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="25" Col="75" Start="785" Length="1"/>
+                                    </Anns>
+                                    <Word>c</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                            </ZNameList>
+                            <ZExprList>
+                                <RefExpr Mixfix="false" Explicit="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="25" Col="80" Start="790" Length="1"/>
+                                    </Anns>
+                                    <ZName>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="25" Col="80" Start="790" Length="1"/>
+                                        </Anns>
+                                        <Word>d</Word>
+                                        <ZStrokeList/>
+                                    </ZName>
+                                    <ZExprList/>
+                                </RefExpr>
+                            </ZExprList>
+                        </ns3:AssignmentPairs>
+                    </ns3:RenameProcess>
+                </ns3:ExtChoiceProcess>
+            </ns3:ProcessPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="26" Col="12" Start="817" Length="630"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+It represents the external choice between A, and process B with channel c renamed to d.
+
+Unfortunately, because of the nature of renaming, with respect to other Circus (and Z)
+constructs (i.e., schema substitution, action substitution, etc), the grammar becomes
+very tricky to normalise without conflicts. Thus, even with precedences being used
+(i.e., renaming being the strongest), the following example fails to parse
+\[
+     \circprocess\ RenamingProcess4 \circdef A \extchoice B \lcircrename c := d \rcircrename
+\]
+
+Renaming also works for processes with generic actuals themselves.
+</Content>
+            </NarrPara>
+            <ns3:ProcessPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="44" Col="5" Start="1469" Length="80"/>
+                </Anns>
+                <ZName>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="44" Col="19" Start="1483" Length="16"/>
+                    </Anns>
+                    <Word>RenamingProcess5</Word>
+                    <ZStrokeList/>
+                </ZName>
+                <ZNameList/>
+                <ns3:RenameProcess>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="44" Col="45" Start="1509" Length="40"/>
+                    </Anns>
+                    <ns3:CallProcess CallUsage="Parameterised">
+                        <RefExpr Mixfix="false" Explicit="true">
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="44" Col="45" Start="1509" Length="1"/>
+                                </Anns>
+                                <Word>A</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ZExprList>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="44" Col="46" Start="1510" Length="6"/>
+                                </Anns>
+                                <RefExpr Mixfix="false" Explicit="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="44" Col="47" Start="1511" Length="4"/>
+                                    </Anns>
+                                    <ZName>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="44" Col="47" Start="1511" Length="4"/>
+                                        </Anns>
+                                        <Word>ℕ</Word>
+                                        <ZStrokeList/>
+                                    </ZName>
+                                    <ZExprList/>
+                                </RefExpr>
+                            </ZExprList>
+                        </RefExpr>
+                        <ZExprList/>
+                    </ns3:CallProcess>
+                    <ns3:AssignmentPairs>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="44" Col="53" Start="1517" Length="32"/>
+                        </Anns>
+                        <ZNameList>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="44" Col="66" Start="1530" Length="1"/>
+                                </Anns>
+                                <Word>c</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                        </ZNameList>
+                        <ZExprList>
+                            <RefExpr Mixfix="false" Explicit="false">
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="44" Col="71" Start="1535" Length="1"/>
+                                </Anns>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="44" Col="71" Start="1535" Length="1"/>
+                                    </Anns>
+                                    <Word>d</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ZExprList/>
+                            </RefExpr>
+                        </ZExprList>
+                    </ns3:AssignmentPairs>
+                </ns3:RenameProcess>
+            </ns3:ProcessPara>
+            <ns3:ProcessPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="45" Col="5" Start="1558" Length="62"/>
+                </Anns>
+                <ZName>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="45" Col="19" Start="1572" Length="16"/>
+                    </Anns>
+                    <Word>RenamingProcess6</Word>
+                    <ZStrokeList/>
+                </ZName>
+                <ZNameList/>
+                <ns3:ExtChoiceProcess>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="45" Col="47" Start="1598" Length="22"/>
+                    </Anns>
+                    <ns3:CallProcess CallUsage="Parameterised">
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="45" Col="45" Start="1598" Length="1"/>
+                        </Anns>
+                        <RefExpr Mixfix="false" Explicit="false">
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="45" Col="45" Start="1598" Length="1"/>
+                                </Anns>
+                                <Word>B</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ZExprList/>
+                        </RefExpr>
+                        <ZExprList/>
+                    </ns3:CallProcess>
+                    <ns3:RenameProcess>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="45" Col="58" Start="1611" Length="9"/>
+                        </Anns>
+                        <ns3:CallProcess CallUsage="Parameterised">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="45" Col="59" Start="1612" Length="1"/>
+                                <ParenAnn>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="45" Col="58" Start="1611" Length="9"/>
+                                    </Anns>
+                                </ParenAnn>
+                            </Anns>
+                            <RefExpr Mixfix="false" Explicit="true">
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="45" Col="59" Start="1612" Length="1"/>
+                                    </Anns>
+                                    <Word>A</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ZExprList>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="45" Col="60" Start="1613" Length="6"/>
+                                    </Anns>
+                                    <RefExpr Mixfix="false" Explicit="false">
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="45" Col="61" Start="1614" Length="4"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="45" Col="61" Start="1614" Length="4"/>
+                                            </Anns>
+                                            <Word>ℕ</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </RefExpr>
+                                </ZExprList>
+                            </RefExpr>
+                            <ZExprList/>
+                        </ns3:CallProcess>
+                        <ns3:AssignmentPairs>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="45" Col="68" Start="1621" Length="32"/>
+                            </Anns>
+                            <ZNameList>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="45" Col="81" Start="1634" Length="1"/>
+                                    </Anns>
+                                    <Word>c</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                            </ZNameList>
+                            <ZExprList>
+                                <RefExpr Mixfix="false" Explicit="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="45" Col="86" Start="1639" Length="1"/>
+                                    </Anns>
+                                    <ZName>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="45" Col="86" Start="1639" Length="1"/>
+                                        </Anns>
+                                        <Word>d</Word>
+                                        <ZStrokeList/>
+                                    </ZName>
+                                    <ZExprList/>
+                                </RefExpr>
+                            </ZExprList>
+                        </ns3:AssignmentPairs>
+                    </ns3:RenameProcess>
+                </ns3:ExtChoiceProcess>
+            </ns3:ProcessPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="46" Col="12" Start="1666" Length="3"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+</Content>
+            </NarrPara>
+            <ns3:ProcessPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="50" Col="5" Start="1689" Length="336"/>
+                </Anns>
+                <ZName>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="50" Col="19" Start="1703" Length="16"/>
+                    </Anns>
+                    <Word>RenamingProcess7</Word>
+                    <ZStrokeList/>
+                </ZName>
+                <ZNameList/>
+                <ns3:BasicProcess>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="50" Col="45" Start="1729" Length="296"/>
+                    </Anns>
+                    <ZParaList>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="51" Col="8" Start="1751" Length="27"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="51" Col="8" Start="1751" Length="2"/>
+                                </Anns>
+                                <Word>A1</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:PrefixingAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="51" Col="20" Start="1763" Length="15"/>
+                                </Anns>
+                                <ns3:SkipAction>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="51" Col="30" Start="1773" Length="5"/>
+                                    </Anns>
+                                </ns3:SkipAction>
+                                <ns3:Communication CommUsage="Normal" CommPattern="Input" MultiSych="0" Indexed="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="51" Col="20" Start="1763" Length="2"/>
+                                    </Anns>
+                                    <RefExpr Mixfix="false" Explicit="false">
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="51" Col="20" Start="1763" Length="2"/>
+                                            </Anns>
+                                            <Word>c</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </RefExpr>
+                                    <ns3:CircusFieldList>
+                                        <ns3:InputField>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="51" Col="22" Start="1765" Length="1"/>
+                                                </Anns>
+                                                <Word>x</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <TruePred/>
+                                        </ns3:InputField>
+                                    </ns3:CircusFieldList>
+                                </ns3:Communication>
+                            </ns3:PrefixingAction>
+                        </ns3:ActionPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="52" Col="8" Start="1790" Length="27"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="52" Col="8" Start="1790" Length="2"/>
+                                </Anns>
+                                <Word>A2</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:PrefixingAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="52" Col="20" Start="1802" Length="15"/>
+                                </Anns>
+                                <ns3:SkipAction>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="52" Col="30" Start="1812" Length="5"/>
+                                    </Anns>
+                                </ns3:SkipAction>
+                                <ns3:Communication CommUsage="Normal" CommPattern="Input" MultiSych="0" Indexed="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="52" Col="20" Start="1802" Length="2"/>
+                                    </Anns>
+                                    <RefExpr Mixfix="false" Explicit="false">
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="52" Col="20" Start="1802" Length="2"/>
+                                            </Anns>
+                                            <Word>d</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </RefExpr>
+                                    <ns3:CircusFieldList>
+                                        <ns3:InputField>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="52" Col="22" Start="1804" Length="1"/>
+                                                </Anns>
+                                                <Word>x</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <TruePred/>
+                                        </ns3:InputField>
+                                    </ns3:CircusFieldList>
+                                </ns3:Communication>
+                            </ns3:PrefixingAction>
+                        </ns3:ActionPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="53" Col="8" Start="1829" Length="47"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="53" Col="8" Start="1829" Length="2"/>
+                                </Anns>
+                                <Word>B1</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:RenameAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="53" Col="20" Start="1841" Length="35"/>
+                                </Anns>
+                                <ns3:CallAction>
+                                    <ZName>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="53" Col="20" Start="1841" Length="2"/>
+                                        </Anns>
+                                        <Word>A1</Word>
+                                        <ZStrokeList/>
+                                    </ZName>
+                                    <ZExprList/>
+                                </ns3:CallAction>
+                                <ns3:AssignmentPairs>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="53" Col="23" Start="1844" Length="32"/>
+                                    </Anns>
+                                    <ZNameList>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="53" Col="36" Start="1857" Length="1"/>
+                                            </Anns>
+                                            <Word>c</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                    </ZNameList>
+                                    <ZExprList>
+                                        <RefExpr Mixfix="false" Explicit="false">
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="53" Col="41" Start="1862" Length="1"/>
+                                            </Anns>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="53" Col="41" Start="1862" Length="1"/>
+                                                </Anns>
+                                                <Word>d</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <ZExprList/>
+                                        </RefExpr>
+                                    </ZExprList>
+                                </ns3:AssignmentPairs>
+                            </ns3:RenameAction>
+                        </ns3:ActionPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="54" Col="8" Start="1888" Length="47"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="54" Col="8" Start="1888" Length="2"/>
+                                </Anns>
+                                <Word>B2</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:RenameAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="54" Col="20" Start="1900" Length="35"/>
+                                </Anns>
+                                <ns3:CallAction>
+                                    <ZName>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="54" Col="20" Start="1900" Length="2"/>
+                                        </Anns>
+                                        <Word>A2</Word>
+                                        <ZStrokeList/>
+                                    </ZName>
+                                    <ZExprList/>
+                                </ns3:CallAction>
+                                <ns3:AssignmentPairs>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="54" Col="23" Start="1903" Length="32"/>
+                                    </Anns>
+                                    <ZNameList>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="54" Col="36" Start="1916" Length="1"/>
+                                            </Anns>
+                                            <Word>d</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                    </ZNameList>
+                                    <ZExprList>
+                                        <RefExpr Mixfix="false" Explicit="false">
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="54" Col="41" Start="1921" Length="1"/>
+                                            </Anns>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="54" Col="41" Start="1921" Length="1"/>
+                                                </Anns>
+                                                <Word>c</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <ZExprList/>
+                                        </RefExpr>
+                                    </ZExprList>
+                                </ns3:AssignmentPairs>
+                            </ns3:RenameAction>
+                        </ns3:ActionPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="55" Col="8" Start="1947" Length="28"/>
+                            </Anns>
+                            <ZName>
+                                <Word>$$mainAction_L55C8</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:RenameAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="55" Col="8" Start="1947" Length="28"/>
+                                    <ns3:OnTheFlyDefAnn/>
+                                </Anns>
+                                <ns3:IntChoiceAction>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="55" Col="19" Start="1958" Length="16"/>
+                                        <ParenAnn>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="55" Col="18" Start="1957" Length="18"/>
+                                            </Anns>
+                                        </ParenAnn>
+                                    </Anns>
+                                    <ns3:CallAction>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="55" Col="19" Start="1958" Length="2"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="55" Col="19" Start="1958" Length="2"/>
+                                            </Anns>
+                                            <Word>B1</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </ns3:CallAction>
+                                    <ns3:CallAction>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="55" Col="33" Start="1972" Length="2"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="55" Col="33" Start="1972" Length="2"/>
+                                            </Anns>
+                                            <Word>B2</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </ns3:CallAction>
+                                </ns3:IntChoiceAction>
+                                <ns3:AssignmentPairs>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="55" Col="37" Start="1976" Length="32"/>
+                                    </Anns>
+                                    <ZNameList>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="55" Col="50" Start="1989" Length="1"/>
+                                            </Anns>
+                                            <Word>d</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                    </ZNameList>
+                                    <ZExprList>
+                                        <RefExpr Mixfix="false" Explicit="false">
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="55" Col="55" Start="1994" Length="1"/>
+                                            </Anns>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="55" Col="55" Start="1994" Length="1"/>
+                                                </Anns>
+                                                <Word>c</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <ZExprList/>
+                                        </RefExpr>
+                                    </ZExprList>
+                                </ns3:AssignmentPairs>
+                            </ns3:RenameAction>
+                        </ns3:ActionPara>
+                        <AxPara Box="OmitBox">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="50" Col="45" Start="1729" Length="296"/>
+                                <ns3:CircusStateAnn/>
+                                <ns3:CircusStateAnn/>
+                            </Anns>
+                            <ZNameList/>
+                            <ZSchText>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="50" Col="45" Start="1729" Length="296"/>
+                                </Anns>
+                                <ZDeclList>
+                                    <ConstDecl>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="50" Col="45" Start="1729" Length="296"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="50" Col="45" Start="1729" Length="296"/>
+                                            </Anns>
+                                            <Word>$$defaultSt_L50C45</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <SchExpr>
+                                            <ZSchText>
+                                                <ZDeclList/>
+                                                <TruePred/>
+                                            </ZSchText>
+                                        </SchExpr>
+                                    </ConstDecl>
+                                </ZDeclList>
+                            </ZSchText>
+                        </AxPara>
+                    </ZParaList>
+                </ns3:BasicProcess>
+            </ns3:ProcessPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/process_renaming.tex" Line="57" Col="12" Start="2038" Length="7"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">     
+
+</Content>
+            </NarrPara>
+        </ZParaList>
+    </ZSect>
+</Spec>

@@ -1,0 +1,12 @@
+\documentclass{article}
+\usepackage{czt}
+
+\begin{document}
+─ section spec2 parents standard_toolkit └ 
+
+This specification describes ...
+
+
+─ FT ::= OKAY | ⊑ └ 
+
+\end{document}

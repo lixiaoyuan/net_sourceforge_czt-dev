@@ -1,0 +1,213 @@
+\documentclass{article}
+\usepackage{czt}
+
+\begin{document}
+%----------------------------------
+
+\begin{zsection}	 \SECTION simpleMondexCh4\_ref \parents~ref\_toolkit , simpleMondexCh4
+\end{zsection}
+
+VC ZSection Created at Sun Oct 18 08:41:45 UTC 2020.
+
+
+Added schema for feasibility VC signature of paragraph named AbortPurseOkayFSBSig at unknown.
+\begin{schema}{AbortPurseOkayFSBSig}
+\\
+ ConPurse \\
+ m? : MESSAGE 
+\where
+ true
+\end{schema}
+
+
+Added schema for feasibility VC signature of paragraph named ClearExceptionLogPurseEafromOkayFSBSig at unknown.
+\begin{schema}{ClearExceptionLogPurseEafromOkayFSBSig}
+\\
+ ConPurse \\
+ m? : MESSAGE 
+\where
+ true
+\end{schema}
+
+
+Added schema for feasibility VC signature of paragraph named ClearExceptionLogPurseOkayFSBSig at unknown.
+\begin{schema}{ClearExceptionLogPurseOkayFSBSig}
+\\
+ ConPurse \\
+ m? : MESSAGE \\
+ m? : MESSAGE 
+\where
+ true
+\end{schema}
+
+
+Added schema for feasibility VC signature of paragraph named ConPurseAbortFSBSig at unknown.
+\begin{schema}{ConPurseAbortFSBSig}
+\\
+ ConPurseAbort 
+\where
+ ConPurseAbort
+\end{schema}
+
+
+Added schema for feasibility VC signature of paragraph named ConPurseClearFSBSig at unknown.
+\begin{schema}{ConPurseClearFSBSig}
+\\
+ ConPurseAbort \\
+ nextSeqNo : NAT \\
+ pdAuth : PayDetails \\
+ statuS : STATUS 
+\where
+ ConPurseClear
+\end{schema}
+
+
+Added schema for feasibility VC signature of paragraph named ConPurseFSBSig at unknown.
+\begin{schema}{ConPurseFSBSig}
+\\
+ ConPurse 
+\where
+ ConPurse
+\end{schema}
+
+
+Added schema for feasibility VC signature of paragraph named CounterPartyDetailsFSBSig at unknown.
+\begin{schema}{CounterPartyDetailsFSBSig}
+\\
+ CounterPartyDetails 
+\where
+ CounterPartyDetails
+\end{schema}
+
+
+Added schema for feasibility VC signature of paragraph named LogIfNecessaryFSBSig at unknown.
+\begin{schema}{LogIfNecessaryFSBSig}
+\\
+ ConPurse 
+\where
+ true
+\end{schema}
+
+
+Added schema for feasibility VC signature of paragraph named PayDetailsFSBSig at unknown.
+\begin{schema}{PayDetailsFSBSig}
+\\
+ PayDetails 
+\where
+ PayDetails
+\end{schema}
+
+
+Added schema for feasibility VC signature of paragraph named TransferDetailsFSBSig at unknown.
+\begin{schema}{TransferDetailsFSBSig}
+\\
+ TransferDetails 
+\where
+ TransferDetails
+\end{schema}
+
+VC3 [AXIOM] for line 6 column 1 start 118 length 30 in "simpleMondexCh4"
+\begin{theorem}{ NAME\_ vc\_ ref}\\
+ \lnot NAME = \{ \} \\
+
+\end{theorem}
+
+VC5 for line 11 column 1 start 213 length 159 in "simpleMondexCh4"
+\begin{theorem}{ axiom340\_ vc\_ ref}\\
+ \exists NAMES : {\finset}_{1}~NAME | true @ ( \exists n1 , n2 : NAMES @ \lnot n1 = n2 \\
+ \forall n1 : NAMES @ \exists n2 : NAMES @ \lnot n1 = n2 ) \\
+
+\end{theorem}
+
+VC7 for line 20 column 1 start 424 length 43 in "simpleMondexCh4"
+\begin{theorem}{ NAT\_ vc\_ ref}\\
+ \exists NAT : \power ( 0 \upto 10 ) | true @ true \\
+
+\end{theorem}
+
+VC9 for line 25 column 1 start 526 length 147 in "simpleMondexCh4"
+\begin{theorem}{ TransferDetails\_ vc\_ ref}\\
+ \exists TransferDetailsFSBSig | true @ true \\
+
+\end{theorem}
+
+VC13 for line 45 column 1 start 1086 length 101 in "simpleMondexCh4"
+\begin{theorem}{ CounterPartyDetails\_ vc\_ ref}\\
+ \exists CounterPartyDetailsFSBSig | true @ true \\
+
+\end{theorem}
+
+VC15 for line 61 column 1 start 1670 length 115 in "simpleMondexCh4"
+\begin{theorem}{ PayDetails\_ vc\_ ref}\\
+ \exists PayDetailsFSBSig | true @ true \\
+
+\end{theorem}
+
+VC17 [AXIOM] for line 69 column 1 start 1860 length 32 in "simpleMondexCh4"
+\begin{theorem}{ CLEAR\_ vc\_ ref}\\
+ \lnot CLEAR = \{ \} \\
+
+\end{theorem}
+
+VC19 for line 74 column 1 start 1963 length 83 in "simpleMondexCh4"
+\begin{theorem}{ axiom348\_ vc\_ ref}\\
+ \exists image : {\power}_{1}~PayDetails \inj CLEAR | true @ true \\
+
+\end{theorem}
+
+VC21 for line 81 column 1 start 2103 length 511 in "simpleMondexCh4"
+\begin{theorem}{ MESSAGE\_ vc\_ ref}\\
+ startFrom \in CounterPartyDetails \inj MESSAGE \land startTo \in CounterPartyDetails \inj MESSAGE \land req \in PayDetails \inj MESSAGE \land val \in PayDetails \inj MESSAGE \land ack \in PayDetails \inj MESSAGE \land exceptionLogResult \in NAMES \cross PayDetails \inj MESSAGE \land exceptionLogClear \in NAMES \cross CLEAR \inj MESSAGE \\
+
+\end{theorem}
+
+VC23 for line 94 column 1 start 2670 length 595 in "simpleMondexCh4"
+\begin{theorem}{ ConPurse\_ vc\_ ref}\\
+ \exists ConPurseFSBSig | true @ true \\
+
+\end{theorem}
+
+VC25 for line 115 column 1 start 3346 length 617 in "simpleMondexCh4"
+\begin{theorem}{ LogIfNecessary\_ vc\_ ref}\\
+ \forall LogIfNecessaryFSBSig | true @ \pre LogIfNecessary \\
+
+\end{theorem}
+
+VC27 for line 134 column 1 start 4040 length 95 in "simpleMondexCh4"
+\begin{theorem}{ ConPurseAbort\_ vc\_ ref}\\
+ \exists ConPurseAbortFSBSig | true @ true \\
+
+\end{theorem}
+
+VC29 for line 139 column 1 start 4206 length 192 in "simpleMondexCh4"
+\begin{theorem}{ AbortPurseOkay\_ vc\_ ref}\\
+ \forall AbortPurseOkayFSBSig | true @ \pre AbortPurseOkay \\
+
+\end{theorem}
+
+VC31 for line 151 column 1 start 4483 length 68 in "simpleMondexCh4"
+\begin{theorem}{ ConPurseClear\_ vc\_ ref}\\
+ \exists ConPurseClearFSBSig | true @ true \\
+
+\end{theorem}
+
+VC33 for line 156 column 1 start 4632 length 294 in "simpleMondexCh4"
+\begin{theorem}{ ClearExceptionLogPurseEafromOkay\_ vc\_ ref}\\
+ \forall ClearExceptionLogPurseEafromOkayFSBSig | true @ \pre ClearExceptionLogPurseEafromOkay \\
+
+\end{theorem}
+
+VC35 for line 172 column 1 start 5014 length 112 in "simpleMondexCh4"
+\begin{theorem}{ ClearExceptionLogPurseOkay\_ vc\_ ref}\\
+ \forall ClearExceptionLogPurseOkayFSBSig | true @ \pre ClearExceptionLogPurseOkay \\
+
+\end{theorem}
+
+
+
+ VC Z section "simpleMondexCh4ARGref" has $16$ interesting VCs (Total = 36; Simplified to $true$ = 20).
+
+
+
+%----------------------------------
+\end{document}

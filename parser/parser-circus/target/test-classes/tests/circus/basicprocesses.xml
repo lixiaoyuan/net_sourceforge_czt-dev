@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Spec Version="2.1" xsi:schemaLocation="http://czt.sourceforge.net/zml http://czt.sourceforge.net/zml/Z_2_1.xsd" xmlns="http://czt.sourceforge.net/zml" xmlns:ns2="http://czt.sourceforge.net/zpatt" xmlns:ns3="http://czt.sourceforge.net/circus" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <NarrSect>
+        <Anns>
+            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/basicprocesses.tex" Line="0" Col="0" Start="0" Length="773"/>
+        </Anns>
+        <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">\documentclass{article}
+
+\usepackage{vmargin}
+\usepackage{circus}
+
+\setpapersize{A4}
+\setmarginsrb{40mm}{20mm}{40mm}{20mm}{12pt}{11mm}{0pt}{10mm}
+
+\begin{document}
+
+\title{\Circus\ Grammar Explained --- Basic processes}
+\author{Leonardo Freitas}
+\date{April 2007}
+
+\maketitle
+
+\begin{abstract}
+    \noindent This article documents the various ways one can declare basic \Circus\ processes using \LaTeX\ markup.
+    It also documents the open issues of the language related to this syntactic category.
+\end{abstract}
+
+\section{Introduction}
+
+</Content>
+    </NarrSect>
+    <ZSect>
+        <Anns>
+            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/basicprocesses.tex" Line="26" Col="0" Start="773" Length="2275"/>
+        </Anns>
+        <Name>basic_circus_processes</Name>
+        <Parent>
+            <Anns>
+                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/basicprocesses.tex" Line="27" Col="47" Start="837" Length="15"/>
+            </Anns>
+            <Word>circus_toolkit</Word>
+        </Parent>
+        <ZParaList>
+            <LatexMarkupPara/>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/basicprocesses.tex" Line="28" Col="14" Start="867" Length="80"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+\section{Basic \Circus\ process paragraphs --- \grammar{circusBasicProcess}}
+
+</Content>
+            </NarrPara>
+            <ns3:ChannelPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/basicprocesses.tex" Line="33" Col="4" Start="966" Length="23"/>
+                </Anns>
+                <ZDeclList>
+                    <ns3:ChannelDecl>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/basicprocesses.tex" Line="33" Col="18" Start="980" Length="9"/>
+                        </Anns>
+                        <ZNameList/>
+                        <ZNameList>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/basicprocesses.tex" Line="33" Col="18" Start="980" Length="3"/>
+                                </Anns>
+                                <Word>out</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                        </ZNameList>
+                        <RefExpr Mixfix="false" Explicit="false">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/basicprocesses.tex" Line="33" Col="23" Start="985" Length="4"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/basicprocesses.tex" Line="33" Col="23" Start="985" Length="4"/>
+                                </Anns>
+                                <Word>ℕ</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ZExprList/>
+                        </RefExpr>
+                    </ns3:ChannelDecl>
+                </ZDeclList>
+            </ns3:ChannelPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/basicprocesses.tex" Line="34" Col="12" Start="1002" Length="75"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+\subsection{Just main action --- stateless}
+
+Within a single environment
+</Content>
+            </NarrPara>
+            <ns3:ProcessPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/basicprocesses.tex" Line="57" Col="4" Start="1304"/>
+                </Anns>
+                <ZName>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/basicprocesses.tex" Line="49" Col="18" Start="1318" Length="34"/>
+                    </Anns>
+                    <Word>JustMainActionBasicProcessMultiple</Word>
+                    <ZStrokeList/>
+                </ZName>
+                <ZNameList/>
+                <ns3:BasicProcess>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/basicprocesses.tex" Line="49" Col="66"/>
+                    </Anns>
+                    <ZParaList>
+                        <NarrPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/basicprocesses.tex" Line="50" Col="12" Start="1389" Length="2"/>
+                            </Anns>
+                            <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+                        </NarrPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/basicprocesses.tex" Line="53" Col="4" Start="1416" Length="27"/>
+                            </Anns>
+                            <ZName>
+                                <Word>$$mainAction_L53C4</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:PrefixingAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/basicprocesses.tex" Line="53" Col="4" Start="1416" Length="27"/>
+                                    <ns3:OnTheFlyDefAnn/>
+                                </Anns>
+                                <ns3:SkipAction>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/basicprocesses.tex" Line="53" Col="26" Start="1438" Length="5"/>
+                                    </Anns>
+                                </ns3:SkipAction>
+                                <ns3:Communication CommUsage="Normal" CommPattern="Output" MultiSych="0" Indexed="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/basicprocesses.tex" Line="53" Col="14" Start="1426" Length="3"/>
+                                    </Anns>
+                                    <RefExpr Mixfix="false" Explicit="false">
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/basicprocesses.tex" Line="53" Col="14" Start="1426" Length="3"/>
+                                            </Anns>
+                                            <Word>out</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </RefExpr>
+                                    <ns3:CircusFieldList>
+                                        <ns3:DotField>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/basicprocesses.tex" Line="53" Col="17" Start="1429" Length="2"/>
+                                            </Anns>
+                                            <NumExpr>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/basicprocesses.tex" Line="53" Col="18" Start="1430" Length="1"/>
+                                                </Anns>
+                                                <ZNumeral Value="0">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/basicprocesses.tex" Line="53" Col="18" Start="1430" Length="1"/>
+                                                    </Anns>
+                                                </ZNumeral>
+                                            </NumExpr>
+                                        </ns3:DotField>
+                                    </ns3:CircusFieldList>
+                                </ns3:Communication>
+                            </ns3:PrefixingAction>
+                        </ns3:ActionPara>
+                        <NarrPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/basicprocesses.tex" Line="54" Col="18" Start="1462" Length="2"/>
+                            </Anns>
+                            <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+                        </NarrPara>
+                        <AxPara Box="OmitBox">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/basicprocesses.tex" Line="49" Col="66"/>
+                                <ns3:CircusStateAnn/>
+                                <ns3:CircusStateAnn/>
+                            </Anns>
+                            <ZNameList/>
+                            <ZSchText>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/basicprocesses.tex" Line="49" Col="66"/>
+                                </Anns>
+                                <ZDeclList>
+                                    <ConstDecl>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/basicprocesses.tex" Line="49" Col="66"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/basicprocesses.tex" Line="49" Col="66"/>
+                                            </Anns>
+                                            <Word>$$defaultSt_L49C66</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <SchExpr>
+                                            <ZSchText>
+                                                <ZDeclList/>
+                                                <TruePred/>
+                                            </ZSchText>
+                                        </SchExpr>
+                                    </ConstDecl>
+                                </ZDeclList>
+                            </ZSchText>
+                        </AxPara>
+                    </ZParaList>
+                </ns3:BasicProcess>
+            </ns3:ProcessPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/basicprocesses.tex" Line="58" Col="12" Start="1504" Length="1544"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+\end{document} </Content>
+            </NarrPara>
+        </ZParaList>
+    </ZSect>
+</Spec>

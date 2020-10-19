@@ -1,0 +1,7 @@
+─ section missingHardSpace parents standard_toolkit └ 
+
+The "z" below gives it within jEdit. That's because of mistake in warning processing
+┌ AState 
+x : ℙ ℕ |
+ x ≠ ∅ └ 
+

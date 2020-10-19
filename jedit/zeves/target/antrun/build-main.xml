@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <property name="dir" location="/root/czt-code/jedit/zeves/../../lib"/>
+  <property name="file" location="/root/czt-code/jedit/zeves/target/ZEvesPlugin-1.6-cdh.jar"/>
+  <mkdir dir="${dir}"/>
+  <copy file="${file}" tofile="${dir}/ZEvesPlugin.jar" failonerror="false"/>
+</target>
+</project>

@@ -1,0 +1,8 @@
+/root/czt-code/parser/parser-circusconf/src/test/java/net/sourceforge/czt/parser/circusconf/SectionManagerCircusConfParserTest.java
+/root/czt-code/parser/parser-circusconf/src/test/java/net/sourceforge/czt/parser/circusconf/ParserTest.java
+/root/czt-code/parser/parser-circusconf/src/test/java/net/sourceforge/czt/parser/circusconf/ParserFailTest.java
+/root/czt-code/parser/parser-circusconf/src/test/java/net/sourceforge/czt/parser/circusconf/ParserUtilsTest.java
+/root/czt-code/parser/parser-circusconf/src/test/java/net/sourceforge/czt/parser/circusconf/CyclicParentParserTest.java
+/root/czt-code/parser/parser-circusconf/src/test/java/net/sourceforge/czt/parser/circusconf/DefaultCircusConfSectionParentsTest.java
+/root/czt-code/parser/parser-circusconf/src/test/java/net/sourceforge/czt/parser/circusconf/AbstractParserTest.java
+/root/czt-code/parser/parser-circusconf/src/test/java/net/sourceforge/czt/print/circusconf/PrintTest.java

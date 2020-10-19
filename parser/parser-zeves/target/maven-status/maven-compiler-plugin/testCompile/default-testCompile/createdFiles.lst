@@ -1,0 +1,8 @@
+net/sourceforge/czt/print/zeves/ZmlPrintTest.class
+net/sourceforge/czt/parser/zeves/ScanningTest$TestError.class
+net/sourceforge/czt/parser/zeves/DefaultZEveSectionParentsTest.class
+net/sourceforge/czt/parser/zeves/ProofScriptParsingTest.class
+net/sourceforge/czt/parser/zeves/OnTheFlyParsingTest.class
+net/sourceforge/czt/parser/zeves/ScanningTest$TestNormal.class
+net/sourceforge/czt/parser/zeves/CyclicParentParserTest.class
+net/sourceforge/czt/parser/zeves/ScanningTest.class

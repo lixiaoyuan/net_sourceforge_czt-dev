@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Spec Version="2.1" xsi:schemaLocation="http://czt.sourceforge.net/zml http://czt.sourceforge.net/zml/Z_2_1.xsd" xmlns="http://czt.sourceforge.net/zml" xmlns:ns2="http://czt.sourceforge.net/zpatt" xmlns:ns3="http://czt.sourceforge.net/circus" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <NarrSect>
+        <Anns>
+            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/processDesc.tex" Line="0" Col="0" Start="0" Length="501"/>
+        </Anns>
+        <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">\documentclass{article}
+
+\usepackage{vmargin}
+\usepackage{circus}
+
+\setpapersize{A4}
+\setmarginsrb{40mm}{20mm}{40mm}{20mm}{12pt}{11mm}{0pt}{10mm}
+
+\begin{document}
+
+\title{\Circus\ Process description errors}
+\author{Leonardo Freitas}
+\date{February 2007}
+
+\maketitle
+
+</Content>
+    </NarrSect>
+    <ZSect>
+        <Anns>
+            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/processDesc.tex" Line="19" Col="0" Start="501" Length="200"/>
+        </Anns>
+        <Name>circus_procdesc_errors</Name>
+        <Parent>
+            <Anns>
+                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/processDesc.tex" Line="20" Col="47" Start="565" Length="15"/>
+            </Anns>
+            <Word>circus_toolkit</Word>
+        </Parent>
+        <ZParaList>
+            <LatexMarkupPara/>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/processDesc.tex" Line="21" Col="14" Start="595" Length="2"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+            </NarrPara>
+            <ns3:ProcessPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/processDesc.tex" Line="24" Col="4" Start="616"/>
+                </Anns>
+                <ZName>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/processDesc.tex" Line="24" Col="18" Start="630" Length="12"/>
+                    </Anns>
+                    <Word>ParamProcess</Word>
+                    <ZStrokeList/>
+                </ZName>
+                <ZNameList/>
+                <ns3:ParamProcess>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/processDesc.tex" Line="24" Col="43"/>
+                    </Anns>
+                    <ns3:CallProcess CallUsage="Parameterised">
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/processDesc.tex" Line="24" Col="58" Start="670" Length="1"/>
+                        </Anns>
+                        <RefExpr Mixfix="false" Explicit="false">
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/processDesc.tex" Line="24" Col="58" Start="670" Length="1"/>
+                                </Anns>
+                                <Word>P</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ZExprList/>
+                        </RefExpr>
+                        <ZExprList/>
+                    </ns3:CallProcess>
+                    <ZDeclList>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/processDesc.tex" Line="24" Col="41" Start="652" Length="7"/>
+                        </Anns>
+                        <VarDecl>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/processDesc.tex" Line="24" Col="41" Start="652" Length="7"/>
+                            </Anns>
+                            <ZNameList>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/processDesc.tex" Line="24" Col="40" Start="652" Length="1"/>
+                                    </Anns>
+                                    <Word>x</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                            </ZNameList>
+                            <RefExpr Mixfix="false" Explicit="false">
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/processDesc.tex" Line="24" Col="43" Start="655" Length="4"/>
+                                </Anns>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/processDesc.tex" Line="24" Col="43" Start="655" Length="4"/>
+                                    </Anns>
+                                    <Word>ℕ</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ZExprList/>
+                            </RefExpr>
+                        </VarDecl>
+                    </ZDeclList>
+                </ns3:ParamProcess>
+            </ns3:ProcessPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/processDesc.tex" Line="25" Col="12" Start="684" Length="17"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+\end{document}
+</Content>
+            </NarrPara>
+        </ZParaList>
+    </ZSect>
+</Spec>

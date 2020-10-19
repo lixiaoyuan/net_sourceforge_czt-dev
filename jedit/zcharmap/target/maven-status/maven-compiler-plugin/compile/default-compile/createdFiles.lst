@@ -1,0 +1,9 @@
+net/sourceforge/czt/jedit/zcharmap/ZCharMap.class
+net/sourceforge/czt/jedit/zcharmap/ZChar.class
+net/sourceforge/czt/jedit/zcharmap/ZCharMap$ActionHandler.class
+net/sourceforge/czt/jedit/zcharmap/ZCharMap$StringRenderer.class
+net/sourceforge/czt/jedit/zcharmap/ZCharMap$StatusRenderer.class
+net/sourceforge/czt/jedit/zcharmap/ZCharMap$ZCharTable.class
+net/sourceforge/czt/jedit/zcharmap/CztXmlHandler.class
+net/sourceforge/czt/jedit/zcharmap/ZCharMap$MouseHandler.class
+net/sourceforge/czt/jedit/zcharmap/CommunityZToolsPlugin.class

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <property name="dir" location="/root/czt-code/jedit/zsidekick/../../lib"/>
+  <property name="file" location="/root/czt-code/jedit/zsidekick/target/ZSideKick-1.6-cdh.jar"/>
+  <mkdir dir="${dir}"/>
+  <copy file="${file}" tofile="${dir}/ZSideKick.jar" failonerror="false"/>
+</target>
+</project>

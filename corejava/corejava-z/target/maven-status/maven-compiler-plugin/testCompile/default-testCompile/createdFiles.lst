@@ -1,0 +1,11 @@
+net/sourceforge/czt/z/util/OperatorNameTest.class
+net/sourceforge/czt/z/impl/AstTest$OrExprTest.class
+net/sourceforge/czt/base/ast/TermTest$1.class
+net/sourceforge/czt/z/jaxb/JaxbXmlWriterReaderTest.class
+net/sourceforge/czt/z/impl/AstTest$AndExprTest.class
+net/sourceforge/czt/z/util/ZUtilsTest.class
+net/sourceforge/czt/base/ast/TermTest.class
+net/sourceforge/czt/z/impl/AstTest$OptempParaTest.class
+net/sourceforge/czt/base/ast/TermTest$ExampleTermVisitor.class
+net/sourceforge/czt/base/util/XmlWriterReaderTest.class
+net/sourceforge/czt/z/impl/AstTest.class

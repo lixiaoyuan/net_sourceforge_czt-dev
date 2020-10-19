@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Spec Version="2.1" xsi:schemaLocation="http://czt.sourceforge.net/zml http://czt.sourceforge.net/zml/Z_2_1.xsd" xmlns="http://czt.sourceforge.net/zml" xmlns:ns2="http://czt.sourceforge.net/zpatt" xmlns:ns3="http://czt.sourceforge.net/circus" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <NarrSect>
+        <Anns>
+            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="0" Col="0" Start="0" Length="126"/>
+        </Anns>
+        <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">\documentclass{article}
+
+\usepackage{circus}
+\newenvironment{zsection}{\begin{quotation}}{\end{quotation}}
+
+\begin{document}
+
+</Content>
+    </NarrSect>
+    <ZSect>
+        <Anns>
+            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="7" Col="0" Start="126" Length="690"/>
+        </Anns>
+        <Name>fibsec</Name>
+        <Parent>
+            <Anns>
+                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="8" Col="28" Start="171" Length="15"/>
+            </Anns>
+            <Word>circus_toolkit</Word>
+        </Parent>
+        <ZParaList>
+            <LatexMarkupPara/>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="9" Col="14" Start="201" Length="2"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+            </NarrPara>
+            <ns3:ChannelPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="12" Col="4" Start="222" Length="23"/>
+                </Anns>
+                <ZDeclList>
+                    <ns3:ChannelDecl>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="12" Col="18" Start="236" Length="9"/>
+                        </Anns>
+                        <ZNameList/>
+                        <ZNameList>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="12" Col="18" Start="236" Length="3"/>
+                                </Anns>
+                                <Word>out</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                        </ZNameList>
+                        <RefExpr Mixfix="false" Explicit="false">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="12" Col="23" Start="241" Length="4"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="12" Col="23" Start="241" Length="4"/>
+                                </Anns>
+                                <Word>ℕ</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ZExprList/>
+                        </RefExpr>
+                    </ns3:ChannelDecl>
+                </ZDeclList>
+            </ns3:ChannelPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="13" Col="12" Start="258" Length="2"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+            </NarrPara>
+            <ns3:ProcessPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="16" Col="4" Start="279" Length="507"/>
+                </Anns>
+                <ZName>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="16" Col="18" Start="293" Length="3"/>
+                    </Anns>
+                    <Word>Fib</Word>
+                    <ZStrokeList/>
+                </ZName>
+                <ZNameList/>
+                <ns3:BasicProcess>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="16" Col="35" Start="310" Length="476"/>
+                    </Anns>
+                    <ZParaList>
+                        <AxPara Box="OmitBox">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="17" Col="21" Start="345" Length="32"/>
+                                <ns3:CircusStateAnn/>
+                            </Anns>
+                            <ZNameList/>
+                            <ZSchText>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="17" Col="21" Start="345" Length="32"/>
+                                </Anns>
+                                <ZDeclList>
+                                    <ConstDecl>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="17" Col="21" Start="345" Length="32"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="17" Col="21" Start="345" Length="8"/>
+                                            </Anns>
+                                            <Word>FibState</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <SchExpr>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="17" Col="37" Start="361" Length="16"/>
+                                            </Anns>
+                                            <ZSchText>
+                                                <ZDeclList>
+                                                    <VarDecl>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="17" Col="44" Start="364" Length="10"/>
+                                                        </Anns>
+                                                        <ZNameList>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="17" Col="40" Start="364" Length="1"/>
+                                                                </Anns>
+                                                                <Word>x</Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="17" Col="43" Start="367" Length="1"/>
+                                                                </Anns>
+                                                                <Word>y</Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                        </ZNameList>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="17" Col="46" Start="370" Length="4"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="17" Col="46" Start="370" Length="4"/>
+                                                                </Anns>
+                                                                <Word>ℕ</Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                    </VarDecl>
+                                                </ZDeclList>
+                                            </ZSchText>
+                                        </SchExpr>
+                                    </ConstDecl>
+                                </ZDeclList>
+                            </ZSchText>
+                        </AxPara>
+                        <AxPara Box="OmitBox">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="18" Col="9" Start="390" Length="50"/>
+                            </Anns>
+                            <ZNameList/>
+                            <ZSchText>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="18" Col="9" Start="390" Length="50"/>
+                                </Anns>
+                                <ZDeclList>
+                                    <ConstDecl>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="18" Col="24" Start="390" Length="50"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="18" Col="9" Start="390" Length="12"/>
+                                            </Anns>
+                                            <Word>InitFibState</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <SchExpr>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="18" Col="29" Start="410" Length="30"/>
+                                            </Anns>
+                                            <ZSchText>
+                                                <ZDeclList>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex"/>
+                                                    </Anns>
+                                                    <InclDecl>
+                                                        <DecorExpr>
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="18" Col="32" Start="413" Length="10"/>
+                                                            </Anns>
+                                                            <RefExpr Mixfix="false" Explicit="false">
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="18" Col="32" Start="413" Length="8"/>
+                                                                </Anns>
+                                                                <ZName>
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="18" Col="32" Start="413" Length="8"/>
+                                                                    </Anns>
+                                                                    <Word>FibState</Word>
+                                                                    <ZStrokeList/>
+                                                                </ZName>
+                                                                <ZExprList/>
+                                                            </RefExpr>
+                                                            <NextStroke>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="18" Col="41" Start="422" Length="1"/>
+                                                                </Anns>
+                                                            </NextStroke>
+                                                        </DecorExpr>
+                                                    </InclDecl>
+                                                </ZDeclList>
+                                                <AndPred And="Chain">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="18" Col="50"/>
+                                                    </Anns>
+                                                    <MemPred Mixfix="true">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="18" Col="48" Start="426" Length="7"/>
+                                                        </Anns>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="18" Col="45" Start="426" Length="2"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="18" Col="45" Start="426" Length="2"/>
+                                                                </Anns>
+                                                                <Word>x</Word>
+                                                                <ZStrokeList>
+                                                                    <NextStroke/>
+                                                                </ZStrokeList>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                        <SetExpr>
+                                                            <ZExprList>
+                                                                <RefExpr Mixfix="false" Explicit="false">
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="18" Col="50" Start="431" Length="2"/>
+                                                                    </Anns>
+                                                                    <ZName>
+                                                                        <Anns>
+                                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="18" Col="50" Start="431" Length="2"/>
+                                                                        </Anns>
+                                                                        <Word>y</Word>
+                                                                        <ZStrokeList>
+                                                                            <NextStroke/>
+                                                                        </ZStrokeList>
+                                                                    </ZName>
+                                                                    <ZExprList/>
+                                                                </RefExpr>
+                                                            </ZExprList>
+                                                        </SetExpr>
+                                                    </MemPred>
+                                                    <MemPred Mixfix="true">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="18" Col="50"/>
+                                                        </Anns>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="18" Col="50" Start="431" Length="2"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="18" Col="50" Start="431" Length="2"/>
+                                                                </Anns>
+                                                                <Word>y</Word>
+                                                                <ZStrokeList>
+                                                                    <NextStroke/>
+                                                                </ZStrokeList>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                        <SetExpr>
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="18" Col="50"/>
+                                                            </Anns>
+                                                            <ZExprList>
+                                                                <NumExpr>
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="18" Col="55" Start="436" Length="1"/>
+                                                                    </Anns>
+                                                                    <ZNumeral Value="1">
+                                                                        <Anns>
+                                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="18" Col="55" Start="436" Length="1"/>
+                                                                        </Anns>
+                                                                    </ZNumeral>
+                                                                </NumExpr>
+                                                            </ZExprList>
+                                                        </SetExpr>
+                                                    </MemPred>
+                                                </AndPred>
+                                            </ZSchText>
+                                        </SchExpr>
+                                    </ConstDecl>
+                                </ZDeclList>
+                            </ZSchText>
+                        </AxPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="19" Col="5" Start="449" Length="59"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="19" Col="5" Start="449" Length="7"/>
+                                </Anns>
+                                <Word>InitFib</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:PrefixingAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="19" Col="26" Start="470" Length="38"/>
+                                </Anns>
+                                <ns3:PrefixingAction>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="19" Col="39" Start="483" Length="25"/>
+                                    </Anns>
+                                    <ns3:CallAction>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="19" Col="52" Start="496" Length="12"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="19" Col="52" Start="496" Length="12"/>
+                                            </Anns>
+                                            <Word>InitFibState</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </ns3:CallAction>
+                                    <ns3:Communication CommUsage="Normal" CommPattern="Output" MultiSych="0" Indexed="false">
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="19" Col="39" Start="483" Length="3"/>
+                                        </Anns>
+                                        <RefExpr Mixfix="false" Explicit="false">
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="19" Col="39" Start="483" Length="3"/>
+                                                </Anns>
+                                                <Word>out</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <ZExprList/>
+                                        </RefExpr>
+                                        <ns3:CircusFieldList>
+                                            <ns3:DotField>
+                                                <Anns>
+                                                    <ns3:OutputFieldAnn/>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="19" Col="43" Start="487" Length="2"/>
+                                                </Anns>
+                                                <NumExpr>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="19" Col="44" Start="488" Length="1"/>
+                                                    </Anns>
+                                                    <ZNumeral Value="1">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="19" Col="44" Start="488" Length="1"/>
+                                                        </Anns>
+                                                    </ZNumeral>
+                                                </NumExpr>
+                                            </ns3:DotField>
+                                        </ns3:CircusFieldList>
+                                    </ns3:Communication>
+                                </ns3:PrefixingAction>
+                                <ns3:Communication CommUsage="Normal" CommPattern="Output" MultiSych="0" Indexed="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="19" Col="26" Start="470" Length="3"/>
+                                    </Anns>
+                                    <RefExpr Mixfix="false" Explicit="false">
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="19" Col="26" Start="470" Length="3"/>
+                                            </Anns>
+                                            <Word>out</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </RefExpr>
+                                    <ns3:CircusFieldList>
+                                        <ns3:DotField>
+                                            <Anns>
+                                                <ns3:OutputFieldAnn/>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="19" Col="30" Start="474" Length="2"/>
+                                            </Anns>
+                                            <NumExpr>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="19" Col="31" Start="475" Length="1"/>
+                                                </Anns>
+                                                <ZNumeral Value="1">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="19" Col="31" Start="475" Length="1"/>
+                                                    </Anns>
+                                                </ZNumeral>
+                                            </NumExpr>
+                                        </ns3:DotField>
+                                    </ns3:CircusFieldList>
+                                </ns3:Communication>
+                            </ns3:PrefixingAction>
+                        </ns3:ActionPara>
+                        <AxPara Box="OmitBox">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="5" Start="517" Length="87"/>
+                            </Anns>
+                            <ZNameList/>
+                            <ZSchText>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="5" Start="517" Length="87"/>
+                                </Anns>
+                                <ZDeclList>
+                                    <ConstDecl>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="19" Start="517" Length="87"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="5" Start="517" Length="11"/>
+                                            </Anns>
+                                            <Word>OutFibState</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <SchExpr>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="24" Start="536" Length="68"/>
+                                            </Anns>
+                                            <ZSchText>
+                                                <ZDeclList>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex"/>
+                                                    </Anns>
+                                                    <InclDecl>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="27" Start="539" Length="15"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="27" Start="539" Length="15"/>
+                                                                </Anns>
+                                                                <Word>ΔFibState</Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                    </InclDecl>
+                                                    <VarDecl>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="49" Start="556" Length="11"/>
+                                                        </Anns>
+                                                        <ZNameList>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="44" Start="556" Length="5"/>
+                                                                </Anns>
+                                                                <Word>next</Word>
+                                                                <ZStrokeList>
+                                                                    <OutStroke/>
+                                                                </ZStrokeList>
+                                                            </ZName>
+                                                        </ZNameList>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="51" Start="563" Length="4"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="51" Start="563" Length="4"/>
+                                                                </Anns>
+                                                                <Word>ℕ</Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                    </VarDecl>
+                                                </ZDeclList>
+                                                <AndPred And="Wedge">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="77"/>
+                                                    </Anns>
+                                                    <AndPred And="Chain">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="66"/>
+                                                        </Anns>
+                                                        <MemPred Mixfix="true">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="64" Start="570" Length="10"/>
+                                                            </Anns>
+                                                            <RefExpr Mixfix="false" Explicit="false">
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="58" Start="570" Length="5"/>
+                                                                </Anns>
+                                                                <ZName>
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="58" Start="570" Length="5"/>
+                                                                    </Anns>
+                                                                    <Word>next</Word>
+                                                                    <ZStrokeList>
+                                                                        <OutStroke/>
+                                                                    </ZStrokeList>
+                                                                </ZName>
+                                                                <ZExprList/>
+                                                            </RefExpr>
+                                                            <SetExpr>
+                                                                <ZExprList>
+                                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                                        <Anns>
+                                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="66" Start="578" Length="2"/>
+                                                                        </Anns>
+                                                                        <ZName>
+                                                                            <Anns>
+                                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="66" Start="578" Length="2"/>
+                                                                            </Anns>
+                                                                            <Word>y</Word>
+                                                                            <ZStrokeList>
+                                                                                <NextStroke/>
+                                                                            </ZStrokeList>
+                                                                        </ZName>
+                                                                        <ZExprList/>
+                                                                    </RefExpr>
+                                                                </ZExprList>
+                                                            </SetExpr>
+                                                        </MemPred>
+                                                        <MemPred Mixfix="true">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="66"/>
+                                                            </Anns>
+                                                            <RefExpr Mixfix="false" Explicit="false">
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="66" Start="578" Length="2"/>
+                                                                </Anns>
+                                                                <ZName>
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="66" Start="578" Length="2"/>
+                                                                    </Anns>
+                                                                    <Word>y</Word>
+                                                                    <ZStrokeList>
+                                                                        <NextStroke/>
+                                                                    </ZStrokeList>
+                                                                </ZName>
+                                                                <ZExprList/>
+                                                            </RefExpr>
+                                                            <SetExpr>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="66"/>
+                                                                </Anns>
+                                                                <ZExprList>
+                                                                    <ApplExpr Mixfix="true">
+                                                                        <Anns>
+                                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="73" Start="583" Length="5"/>
+                                                                        </Anns>
+                                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                                            <Anns>
+                                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="73" Start="585" Length="1"/>
+                                                                            </Anns>
+                                                                            <ZName>
+                                                                                <Anns>
+                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="73" Start="585" Length="1"/>
+                                                                                </Anns>
+                                                                                <Word> _ + _ </Word>
+                                                                                <ZStrokeList/>
+                                                                            </ZName>
+                                                                            <ZExprList/>
+                                                                        </RefExpr>
+                                                                        <TupleExpr>
+                                                                            <ZExprList>
+                                                                                <RefExpr Mixfix="false" Explicit="false">
+                                                                                    <Anns>
+                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="71" Start="583" Length="1"/>
+                                                                                    </Anns>
+                                                                                    <ZName>
+                                                                                        <Anns>
+                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="71" Start="583" Length="1"/>
+                                                                                        </Anns>
+                                                                                        <Word>x</Word>
+                                                                                        <ZStrokeList/>
+                                                                                    </ZName>
+                                                                                    <ZExprList/>
+                                                                                </RefExpr>
+                                                                                <RefExpr Mixfix="false" Explicit="false">
+                                                                                    <Anns>
+                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="75" Start="587" Length="1"/>
+                                                                                    </Anns>
+                                                                                    <ZName>
+                                                                                        <Anns>
+                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="75" Start="587" Length="1"/>
+                                                                                        </Anns>
+                                                                                        <Word>y</Word>
+                                                                                        <ZStrokeList/>
+                                                                                    </ZName>
+                                                                                    <ZExprList/>
+                                                                                </RefExpr>
+                                                                            </ZExprList>
+                                                                        </TupleExpr>
+                                                                    </ApplExpr>
+                                                                </ZExprList>
+                                                            </SetExpr>
+                                                        </MemPred>
+                                                    </AndPred>
+                                                    <MemPred Mixfix="true">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="86" Start="595" Length="6"/>
+                                                        </Anns>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="83" Start="595" Length="2"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="83" Start="595" Length="2"/>
+                                                                </Anns>
+                                                                <Word>x</Word>
+                                                                <ZStrokeList>
+                                                                    <NextStroke/>
+                                                                </ZStrokeList>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                        <SetExpr>
+                                                            <ZExprList>
+                                                                <RefExpr Mixfix="false" Explicit="false">
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="88" Start="600" Length="1"/>
+                                                                    </Anns>
+                                                                    <ZName>
+                                                                        <Anns>
+                                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="20" Col="88" Start="600" Length="1"/>
+                                                                        </Anns>
+                                                                        <Word>y</Word>
+                                                                        <ZStrokeList/>
+                                                                    </ZName>
+                                                                    <ZExprList/>
+                                                                </RefExpr>
+                                                            </ZExprList>
+                                                        </SetExpr>
+                                                    </MemPred>
+                                                </AndPred>
+                                            </ZSchText>
+                                        </SchExpr>
+                                    </ConstDecl>
+                                </ZDeclList>
+                            </ZSchText>
+                        </AxPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="21" Col="5" Start="613" Length="113"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="21" Col="5" Start="613" Length="6"/>
+                                </Anns>
+                                <Word>OutFib</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:MuAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="21" Col="25" Start="633" Length="93"/>
+                                </Anns>
+                                <ns3:VarDeclCommand>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="21" Col="49" Start="657" Length="69"/>
+                                        <ParenAnn>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="21" Col="46" Start="654" Length="75"/>
+                                            </Anns>
+                                        </ParenAnn>
+                                    </Anns>
+                                    <ZDeclList>
+                                        <VarDecl>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="21" Col="63" Start="667" Length="10"/>
+                                            </Anns>
+                                            <ZNameList>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="21" Col="59" Start="667" Length="4"/>
+                                                    </Anns>
+                                                    <Word>next</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                            </ZNameList>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="21" Col="65" Start="673" Length="4"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="21" Col="65" Start="673" Length="4"/>
+                                                    </Anns>
+                                                    <Word>ℕ</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                        </VarDecl>
+                                    </ZDeclList>
+                                    <ns3:SeqAction>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="21" Col="80" Start="688" Length="38"/>
+                                        </Anns>
+                                        <ns3:CallAction>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="21" Col="80" Start="688" Length="11"/>
+                                            </Anns>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="21" Col="80" Start="688" Length="11"/>
+                                                </Anns>
+                                                <Word>OutFibState</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <ZExprList/>
+                                        </ns3:CallAction>
+                                        <ns3:PrefixingAction>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="21" Col="101" Start="709" Length="17"/>
+                                            </Anns>
+                                            <ns3:CallAction>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="21" Col="117" Start="725" Length="1"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="21" Col="117" Start="725" Length="1"/>
+                                                    </Anns>
+                                                    <Word>X</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </ns3:CallAction>
+                                            <ns3:Communication CommUsage="Normal" CommPattern="Output" MultiSych="0" Indexed="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="21" Col="101" Start="709" Length="3"/>
+                                                </Anns>
+                                                <RefExpr Mixfix="false" Explicit="false">
+                                                    <ZName>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="21" Col="101" Start="709" Length="3"/>
+                                                        </Anns>
+                                                        <Word>out</Word>
+                                                        <ZStrokeList/>
+                                                    </ZName>
+                                                    <ZExprList/>
+                                                </RefExpr>
+                                                <ns3:CircusFieldList>
+                                                    <ns3:DotField>
+                                                        <Anns>
+                                                            <ns3:OutputFieldAnn/>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="21" Col="105" Start="713" Length="5"/>
+                                                        </Anns>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="21" Col="106" Start="714" Length="4"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="21" Col="106" Start="714" Length="4"/>
+                                                                </Anns>
+                                                                <Word>next</Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                    </ns3:DotField>
+                                                </ns3:CircusFieldList>
+                                            </ns3:Communication>
+                                        </ns3:PrefixingAction>
+                                    </ns3:SeqAction>
+                                </ns3:VarDeclCommand>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="21" Col="34" Start="642" Length="1"/>
+                                    </Anns>
+                                    <Word>X</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                            </ns3:MuAction>
+                        </ns3:ActionPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="22" Col="5" Start="735" Length="35"/>
+                            </Anns>
+                            <ZName>
+                                <Word>$$mainAction_L22C5</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:SeqAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="22" Col="5" Start="735" Length="35"/>
+                                    <ns3:OnTheFlyDefAnn/>
+                                </Anns>
+                                <ns3:CallAction>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="22" Col="15" Start="745" Length="7"/>
+                                    </Anns>
+                                    <ZName>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="22" Col="15" Start="745" Length="7"/>
+                                        </Anns>
+                                        <Word>InitFib</Word>
+                                        <ZStrokeList/>
+                                    </ZName>
+                                    <ZExprList/>
+                                </ns3:CallAction>
+                                <ns3:CallAction>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="22" Col="34" Start="764" Length="6"/>
+                                    </Anns>
+                                    <ZName>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="22" Col="34" Start="764" Length="6"/>
+                                        </Anns>
+                                        <Word>OutFib</Word>
+                                        <ZStrokeList/>
+                                    </ZName>
+                                    <ZExprList/>
+                                </ns3:CallAction>
+                            </ns3:SeqAction>
+                        </ns3:ActionPara>
+                    </ZParaList>
+                </ns3:BasicProcess>
+            </ns3:ProcessPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/fib-singleenv.tex" Line="24" Col="12" Start="799" Length="17"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+\end{document}
+</Content>
+            </NarrPara>
+        </ZParaList>
+    </ZSect>
+</Spec>

@@ -1,0 +1,65 @@
+\documentclass{article}
+\usepackage{czt}
+
+\begin{document}
+%----------------------------------
+
+\begin{zsection}	 \SECTION simpleprint\_ref \parents~ref\_toolkit , simpleprint
+\end{zsection}
+
+VC ZSection Created at Sun Oct 18 08:41:45 UTC 2020.
+
+
+Added schema for feasibility VC signature of paragraph named OpFSBSig at unknown.
+\begin{schema}{OpFSBSig}
+\\
+ State \\
+ i? : \num 
+\where
+ true
+\end{schema}
+
+
+Added schema for feasibility VC signature of paragraph named StInitFSBSig at unknown.
+\begin{schema}{StInitFSBSig}
+\\
+ StInit 
+\where
+ StInit
+\end{schema}
+
+
+Added schema for feasibility VC signature of paragraph named StateFSBSig at unknown.
+\begin{schema}{StateFSBSig}
+\\
+ State 
+\where
+ State
+\end{schema}
+
+VC3 for line 11 column 1 start 165 length 64 in "simpleprint"
+\begin{theorem}{ State\_ vc\_ ref}\\
+ \exists StateFSBSig | true @ true \\
+
+\end{theorem}
+
+VC5 for line 17 column 1 start 231 length 77 in "simpleprint"
+\begin{theorem}{ StInit\_ vc\_ ref}\\
+ \exists StInitFSBSig | true @ true \\
+
+\end{theorem}
+
+VC7 for line 24 column 1 start 310 length 82 in "simpleprint"
+\begin{theorem}{ Op\_ vc\_ ref}\\
+ \forall OpFSBSig | true @ \pre Op \\
+
+\end{theorem}
+
+
+
+ VC Z section "simpleprintARGref" has $3$ interesting VCs (Total = 8; Simplified to $true$ = 5).
+
+
+
+%----------------------------------
+\end{document}

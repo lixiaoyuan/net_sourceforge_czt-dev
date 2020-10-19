@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Spec Version="2.1" xsi:schemaLocation="http://czt.sourceforge.net/zml http://czt.sourceforge.net/zml/Z_2_1.xsd" xmlns="http://czt.sourceforge.net/zml" xmlns:ns2="http://czt.sourceforge.net/zpatt" xmlns:ns3="http://czt.sourceforge.net/circus" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ZSect>
+        <Anns>
+            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="0" Col="0" Start="0" Length="379"/>
+        </Anns>
+        <Name>test</Name>
+        <Parent>
+            <Anns>
+                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="1" Col="27" Start="43" Length="15"/>
+            </Anns>
+            <Word>circus_toolkit</Word>
+        </Parent>
+        <ZParaList>
+            <LatexMarkupPara/>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="2" Col="14" Start="73" Length="2"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+            </NarrPara>
+            <ns3:ChannelPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="5" Col="3" Start="93" Length="30"/>
+                </Anns>
+                <ZDeclList>
+                    <ns3:ChannelDecl>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="5" Col="17" Start="107" Length="16"/>
+                        </Anns>
+                        <ZNameList/>
+                        <ZNameList>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="5" Col="17" Start="107" Length="2"/>
+                                </Anns>
+                                <Word>c1</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="5" Col="21" Start="111" Length="2"/>
+                                </Anns>
+                                <Word>c2</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                        </ZNameList>
+                        <RefExpr Mixfix="false" Explicit="false">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="5" Col="25" Start="115" Length="8"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="5" Col="25" Start="115" Length="8"/>
+                                </Anns>
+                                <Word>𝔹</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ZExprList/>
+                        </RefExpr>
+                    </ns3:ChannelDecl>
+                </ZDeclList>
+            </ns3:ChannelPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="6" Col="12" Start="136" Length="2"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+            </NarrPara>
+            <ns3:ProcessPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="9" Col="4" Start="157" Length="207"/>
+                </Anns>
+                <ZName>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="9" Col="18" Start="171" Length="1"/>
+                    </Anns>
+                    <Word>P</Word>
+                    <ZStrokeList/>
+                </ZName>
+                <ZNameList/>
+                <ns3:BasicProcess>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="9" Col="29" Start="182" Length="182"/>
+                    </Anns>
+                    <ZParaList>
+                        <AxPara Box="OmitBox">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="10" Col="21" Start="217" Length="29"/>
+                                <ns3:CircusStateAnn/>
+                            </Anns>
+                            <ZNameList/>
+                            <ZSchText>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="10" Col="21" Start="217" Length="29"/>
+                                </Anns>
+                                <ZDeclList>
+                                    <ConstDecl>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="10" Col="21" Start="217" Length="29"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="10" Col="21" Start="217" Length="5"/>
+                                            </Anns>
+                                            <Word>State</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <SchExpr>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="10" Col="30" Start="226" Length="20"/>
+                                            </Anns>
+                                            <ZSchText>
+                                                <ZDeclList>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="10" Col="34" Start="229" Length="7"/>
+                                                    </Anns>
+                                                    <VarDecl>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="10" Col="34" Start="229" Length="7"/>
+                                                        </Anns>
+                                                        <ZNameList>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="10" Col="33" Start="229" Length="1"/>
+                                                                </Anns>
+                                                                <Word>x</Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                        </ZNameList>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="10" Col="36" Start="232" Length="4"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="10" Col="36" Start="232" Length="4"/>
+                                                                </Anns>
+                                                                <Word>ℕ</Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                    </VarDecl>
+                                                </ZDeclList>
+                                                <TruePred>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="10" Col="43" Start="239" Length="4"/>
+                                                    </Anns>
+                                                </TruePred>
+                                            </ZSchText>
+                                        </SchExpr>
+                                    </ConstDecl>
+                                </ZDeclList>
+                            </ZSchText>
+                        </AxPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="11" Col="12" Start="262" Length="59"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="11" Col="12" Start="262" Length="1"/>
+                                </Anns>
+                                <Word>A</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:PrefixingAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="11" Col="23" Start="273" Length="48"/>
+                                </Anns>
+                                <ns3:PrefixingAction>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="11" Col="38" Start="288" Length="33"/>
+                                    </Anns>
+                                    <ns3:PrefixingAction>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="11" Col="54" Start="304" Length="17"/>
+                                        </Anns>
+                                        <ns3:SkipAction>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="11" Col="66" Start="316" Length="5"/>
+                                            </Anns>
+                                        </ns3:SkipAction>
+                                        <ns3:Communication CommUsage="Normal" CommPattern="Output" MultiSych="0" Indexed="false">
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="11" Col="54" Start="304" Length="2"/>
+                                            </Anns>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="11" Col="54" Start="304" Length="2"/>
+                                                    </Anns>
+                                                    <Word>c3</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                            <ns3:CircusFieldList>
+                                                <ns3:DotField>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="11" Col="56" Start="306" Length="3"/>
+                                                    </Anns>
+                                                    <NumExpr>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="11" Col="57" Start="307" Length="2"/>
+                                                        </Anns>
+                                                        <ZNumeral Value="10">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="11" Col="57" Start="307" Length="2"/>
+                                                            </Anns>
+                                                        </ZNumeral>
+                                                    </NumExpr>
+                                                </ns3:DotField>
+                                            </ns3:CircusFieldList>
+                                        </ns3:Communication>
+                                    </ns3:PrefixingAction>
+                                    <ns3:Communication CommUsage="Normal" CommPattern="Output" MultiSych="0" Indexed="false">
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="11" Col="38" Start="288" Length="2"/>
+                                        </Anns>
+                                        <RefExpr Mixfix="false" Explicit="false">
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="11" Col="38" Start="288" Length="2"/>
+                                                </Anns>
+                                                <Word>c2</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <ZExprList/>
+                                        </RefExpr>
+                                        <ns3:CircusFieldList>
+                                            <ns3:DotField>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="11" Col="40" Start="290" Length="7"/>
+                                                </Anns>
+                                                <RefExpr Mixfix="false" Explicit="false">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="11" Col="41" Start="291" Length="6"/>
+                                                    </Anns>
+                                                    <ZName>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="11" Col="41" Start="291" Length="6"/>
+                                                        </Anns>
+                                                        <Word>False</Word>
+                                                        <ZStrokeList/>
+                                                    </ZName>
+                                                    <ZExprList/>
+                                                </RefExpr>
+                                            </ns3:DotField>
+                                        </ns3:CircusFieldList>
+                                    </ns3:Communication>
+                                </ns3:PrefixingAction>
+                                <ns3:Communication CommUsage="Normal" CommPattern="Output" MultiSych="0" Indexed="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="11" Col="23" Start="273" Length="2"/>
+                                    </Anns>
+                                    <RefExpr Mixfix="false" Explicit="false">
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="11" Col="23" Start="273" Length="2"/>
+                                            </Anns>
+                                            <Word>c1</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </RefExpr>
+                                    <ns3:CircusFieldList>
+                                        <ns3:DotField>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="11" Col="25" Start="275" Length="6"/>
+                                            </Anns>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="11" Col="26" Start="276" Length="5"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="11" Col="26" Start="276" Length="5"/>
+                                                    </Anns>
+                                                    <Word>True</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                        </ns3:DotField>
+                                    </ns3:CircusFieldList>
+                                </ns3:Communication>
+                            </ns3:PrefixingAction>
+                        </ns3:ActionPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="12" Col="12" Start="337" Length="11"/>
+                            </Anns>
+                            <ZName>
+                                <Word>$$mainAction_L12C12</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:CallAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="12" Col="12" Start="337" Length="11"/>
+                                    <ns3:OnTheFlyDefAnn/>
+                                </Anns>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="12" Col="22" Start="347" Length="1"/>
+                                    </Anns>
+                                    <Word>A</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ZExprList/>
+                            </ns3:CallAction>
+                        </ns3:ActionPara>
+                    </ZParaList>
+                </ns3:BasicProcess>
+            </ns3:ProcessPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/communication.tex" Line="14" Col="12" Start="377" Length="2"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+            </NarrPara>
+        </ZParaList>
+    </ZSect>
+</Spec>

@@ -1,0 +1,7 @@
+/root/czt-code/rules/src/test/java/net/sourceforge/czt/rules/unification/OccursCheckVisitorTest.java
+/root/czt-code/rules/src/test/java/net/sourceforge/czt/rules/oldrewriter/RewriteTest.java
+/root/czt-code/rules/src/test/java/net/sourceforge/czt/rules/prover/SimpleProverTest.java
+/root/czt-code/rules/src/test/java/net/sourceforge/czt/rules/rewriter/StrategiesTest.java
+/root/czt-code/rules/src/test/java/net/sourceforge/czt/rules/rewriter/InnermostTest.java
+/root/czt-code/rules/src/test/java/net/sourceforge/czt/rules/TypeCheckRewriteTest.java
+/root/czt-code/rules/src/test/java/net/sourceforge/czt/rules/unification/UnifierTest.java

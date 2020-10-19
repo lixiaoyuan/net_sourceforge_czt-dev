@@ -1,0 +1,16 @@
+─ section sorryTest parents standard_toolkit └ 
+
+┌ Sr 
+x : ℕ 
+f : ℕ → ℕ |
+ f x > x └ 
+
+├ Sr$domainCheck 
+prove by reduce ;  
+sorry ;  
+└ 
+
+├ Sr$domainCheck 
+prove by reduce ;  
+oops ;  
+└ 

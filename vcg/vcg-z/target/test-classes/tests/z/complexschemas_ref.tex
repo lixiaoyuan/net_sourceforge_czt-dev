@@ -1,0 +1,155 @@
+\documentclass{article}
+\usepackage{czt}
+
+\begin{document}
+%----------------------------------
+
+\begin{zsection}	 \SECTION complexschemas\_ref \parents~ref\_toolkit , complexschemas
+\end{zsection}
+
+VC ZSection Created at Sun Oct 18 08:41:44 UTC 2020.
+
+
+Added schema for feasibility VC signature of paragraph named OpFSBSig at unknown.
+\begin{schema}{OpFSBSig}
+\\
+ State \\
+ in? : \nat 
+\where
+ true
+\end{schema}
+
+
+Added schema for feasibility VC signature of paragraph named OpHRFSBSig at unknown.
+\begin{schema}{OpHRFSBSig}
+\\
+ c : \nat \\
+ f : \nat \pfun \nat \\
+ in? : \nat 
+\where
+ true
+\end{schema}
+
+
+Added schema for feasibility VC signature of paragraph named OpHidden1FSBSig at unknown.
+\begin{schema}{OpHidden1FSBSig}
+\\
+ f : \nat \pfun \nat \\
+ in? : \nat \\
+ y : \power \nat 
+\where
+ true
+\end{schema}
+
+
+Added schema for feasibility VC signature of paragraph named OpHidden2FSBSig at unknown.
+\begin{schema}{OpHidden2FSBSig}
+\\
+ f : \nat \pfun \nat \\
+ in? : \nat \\
+ y : \power \nat 
+\where
+ true
+\end{schema}
+
+
+Added schema for feasibility VC signature of paragraph named OpRename1FSBSig at unknown.
+\begin{schema}{OpRename1FSBSig}
+\\
+ a : \nat \\
+ b : \power \nat \\
+ f : \nat \pfun \nat \\
+ in? : \nat 
+\where
+ true
+\end{schema}
+
+
+Added schema for feasibility VC signature of paragraph named OpRename2FSBSig at unknown.
+\begin{schema}{OpRename2FSBSig}
+\\
+ a : \nat \\
+ b : \power \nat \\
+ f : \nat \pfun \nat \\
+ param? : \nat 
+\where
+ true
+\end{schema}
+
+
+Added schema for feasibility VC signature of paragraph named StateFSBSig at unknown.
+\begin{schema}{StateFSBSig}
+\\
+ State 
+\where
+ State
+\end{schema}
+
+VC3 [AXIOM] for line 10 column 1 start 154 length 28 in "complexschemas"
+\begin{theorem}{ G\_ vc\_ ref}\\
+ \lnot G = \{ \} \\
+
+\end{theorem}
+
+VC5 [RULE] for line 15 column 1 start 247 length 76 in "complexschemas"
+\begin{theorem}{ FT\_ vc\_ ref}\\
+ func \in \nat \cross FT \inj FT \\
+
+\end{theorem}
+
+VC7 for line 20 column 1 start 345 length 38 in "complexschemas"
+\begin{theorem}{ axiom236\_ vc\_ ref}\\
+ \exists max : \nat | true @ true \\
+
+\end{theorem}
+
+VC9 for line 25 column 1 start 412 length 158 in "complexschemas"
+\begin{theorem}{ State\_ vc\_ ref}\\
+ \exists StateFSBSig | true @ true \\
+
+\end{theorem}
+
+VC11 for line 35 column 1 start 572 length 104 in "complexschemas"
+\begin{theorem}{ Op\_ vc\_ ref}\\
+ \forall OpFSBSig | true @ \pre Op \\
+
+\end{theorem}
+
+VC13 for line 44 column 4 start 693 length 31 in "complexschemas"
+\begin{theorem}{ OpHidden1\_ vc\_ ref}\\
+ \forall OpHidden1FSBSig | true @ \pre OpHidden1 \\
+
+\end{theorem}
+
+VC14 for line 45 column 4 start 731 length 33 in "complexschemas"
+\begin{theorem}{ OpHidden2\_ vc\_ ref}\\
+ \forall OpHidden2FSBSig | true @ \pre OpHidden2 \\
+
+\end{theorem}
+
+VC15 for line 46 column 4 start 771 length 39 in "complexschemas"
+\begin{theorem}{ OpRename1\_ vc\_ ref}\\
+ \forall OpRename1FSBSig | true @ \pre OpRename1 \\
+
+\end{theorem}
+
+VC16 for line 47 column 4 start 817 length 48 in "complexschemas"
+\begin{theorem}{ OpRename2\_ vc\_ ref}\\
+ \forall OpRename2FSBSig | true @ \pre OpRename2 \\
+
+\end{theorem}
+
+VC17 for line 48 column 4 start 872 length 41 in "complexschemas"
+\begin{theorem}{ OpHR\_ vc\_ ref}\\
+ \forall OpHRFSBSig | true @ \pre OpHR \\
+
+\end{theorem}
+
+
+
+ VC Z section "complexschemasARGref" has $10$ interesting VCs (Total = 18; Simplified to $true$ = 8).
+
+
+
+%----------------------------------
+\end{document}

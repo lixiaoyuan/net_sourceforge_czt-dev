@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <property name="dir" location="/root/czt-code/ui/../lib"/>
+  <mkdir dir="${dir}"/>
+  <copy file="/root/czt-code/ui/target/ui-1.6-cdh-jar-with-dependencies.jar" tofile="${dir}/czt.jar" failonerror="false"/>
+</target>
+</project>

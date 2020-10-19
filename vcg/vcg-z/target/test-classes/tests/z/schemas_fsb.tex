@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage{czt}
+
+\begin{document}
+%----------------------------------
+
+\begin{zsection}	 \SECTION schemas\_fsb \parents~fsb\_toolkit , schemas
+\end{zsection}
+
+VC ZSection Created at Sun Oct 18 08:41:44 UTC 2020.
+
+VC3 [AXIOM] for line 9 column 1 start 131 length 28 in "schemas"
+\begin{theorem}{ G\_ vc\_ fsb}\\
+ \lnot G = \{ \} \\
+
+\end{theorem}
+
+VC5 for line 13 column 1 start 161 length 205 in "schemas"
+\begin{theorem}{ State\_ vc\_ fsb}\\
+ \exists f : \nat \fun \nat ; g : G ; x : \nat ; y : \power \nat | State @ true \\
+
+\end{theorem}
+
+VC7 for line 25 column 1 start 368 length 105 in "schemas"
+\begin{theorem}{ Init\_ vc\_ fsb}\\
+ \exists f' : \nat \fun \nat ; g' : G ; x' : \nat ; y' : \power \nat | Init @ true \\
+
+\end{theorem}
+
+VC9 for line 34 column 1 start 475 length 236 in "schemas"
+\begin{theorem}{ OpUpdate\_ vc\_ fsb}\\
+ \forall f : \nat \fun \nat ; g : G ; i? : \nat ; x : \nat ; y : \power \nat | true @ \exists f' : \nat \fun \nat ; g' : G ; o! : \nat ; x' : \nat ; y' : \power \nat | true @ OpUpdate \\
+
+\end{theorem}
+
+VC11 for line 46 column 1 start 713 length 81 in "schemas"
+\begin{theorem}{ OpQuery\_ vc\_ fsb}\\
+ \forall f : \nat \fun \nat ; g : G ; x : \nat ; y : \power \nat | true @ \exists f' : \nat \fun \nat ; g' : G ; o! : \nat ; x' : \nat ; y' : \power \nat | true @ OpQuery \\
+
+\end{theorem}
+
+VC13 for line 53 column 1 start 796 length 110 in "schemas"
+\begin{theorem}{ Funny\_ vc\_ fsb}\\
+ \forall f : \nat \fun \nat ; g : G ; x : \nat ; y : \power \nat | true @ \exists f' : \nat \fun \nat ; g' : G ; x' : \nat ; y' : \power \nat | true @ Funny \\
+
+\end{theorem}
+
+
+
+ VC Z section "schemasARGfsb" has $6$ interesting VCs (Total = 14; Simplified to $true$ = 8).
+
+
+
+%----------------------------------
+\end{document}

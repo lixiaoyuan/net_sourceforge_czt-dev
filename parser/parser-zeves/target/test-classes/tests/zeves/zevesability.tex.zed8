@@ -1,0 +1,27 @@
+─ section zevesability parents standard_toolkit └ 
+
+╷ foo : ℕ |
+ foo = 10 └ 
+
+┌ ☓ S 
+x : ℕ |
+ x > 10 └ 
+
+┌═ ☓ SG [ X ] 
+x : ℙ X |
+ ¬ x = ∅ └ 
+
+─ ☓ SET == { 0 , 1 , 2 } └ ─ ☓ SET2 == ℙ ℕ └ 
+
+─ ☒ theorem rule lFooLemma 
+∀ x : ℕ ⦁ x > foo 
+└ 
+
+─ ☒ theorem rule lOptionalVDash 
+∀ x : ℕ ⦁ x > foo 
+└ 
+
+├ lFooLemma 
+apply dFoo ;  
+prove by reduce ;  
+└ 

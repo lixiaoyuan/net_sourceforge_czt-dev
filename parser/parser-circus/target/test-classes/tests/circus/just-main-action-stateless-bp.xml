@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Spec Version="2.1" xsi:schemaLocation="http://czt.sourceforge.net/zml http://czt.sourceforge.net/zml/Z_2_1.xsd" xmlns="http://czt.sourceforge.net/zml" xmlns:ns2="http://czt.sourceforge.net/zpatt" xmlns:ns3="http://czt.sourceforge.net/circus" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <NarrSect>
+        <Anns>
+            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/just-main-action-stateless-bp.tex" Line="0" Col="0" Start="0" Length="1"/>
+        </Anns>
+        <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</Content>
+    </NarrSect>
+    <ZSect>
+        <Anns>
+            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/just-main-action-stateless-bp.tex" Line="1" Col="1" Start="1" Length="294"/>
+        </Anns>
+        <Name>basic_processes1</Name>
+        <Parent>
+            <Anns>
+                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/just-main-action-stateless-bp.tex" Line="2" Col="40" Start="58" Length="15"/>
+            </Anns>
+            <Word>circus_toolkit</Word>
+        </Parent>
+        <ZParaList>
+            <LatexMarkupPara/>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/just-main-action-stateless-bp.tex" Line="3" Col="14" Start="88" Length="2"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+            </NarrPara>
+            <ns3:ChannelPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/just-main-action-stateless-bp.tex" Line="6" Col="4" Start="109" Length="23"/>
+                </Anns>
+                <ZDeclList>
+                    <ns3:ChannelDecl>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/just-main-action-stateless-bp.tex" Line="6" Col="18" Start="123" Length="9"/>
+                        </Anns>
+                        <ZNameList/>
+                        <ZNameList>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/just-main-action-stateless-bp.tex" Line="6" Col="18" Start="123" Length="3"/>
+                                </Anns>
+                                <Word>out</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                        </ZNameList>
+                        <RefExpr Mixfix="false" Explicit="false">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/just-main-action-stateless-bp.tex" Line="6" Col="23" Start="128" Length="4"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/just-main-action-stateless-bp.tex" Line="6" Col="23" Start="128" Length="4"/>
+                                </Anns>
+                                <Word>ℕ</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ZExprList/>
+                        </RefExpr>
+                    </ns3:ChannelDecl>
+                </ZDeclList>
+            </ns3:ChannelPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/just-main-action-stateless-bp.tex" Line="7" Col="12" Start="145" Length="2"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+            </NarrPara>
+            <ns3:ProcessPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/just-main-action-stateless-bp.tex" Line="10" Col="4" Start="166" Length="115"/>
+                </Anns>
+                <ZName>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/just-main-action-stateless-bp.tex" Line="10" Col="18" Start="180" Length="26"/>
+                    </Anns>
+                    <Word>JustMainActionBasicProcess</Word>
+                    <ZStrokeList/>
+                </ZName>
+                <ZNameList/>
+                <ns3:BasicProcess>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/just-main-action-stateless-bp.tex" Line="10" Col="58" Start="220" Length="61"/>
+                    </Anns>
+                    <ZParaList>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/just-main-action-stateless-bp.tex" Line="11" Col="4" Start="238" Length="27"/>
+                            </Anns>
+                            <ZName>
+                                <Word>$$mainAction_L11C4</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:PrefixingAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/just-main-action-stateless-bp.tex" Line="11" Col="4" Start="238" Length="27"/>
+                                    <ns3:OnTheFlyDefAnn/>
+                                </Anns>
+                                <ns3:SkipAction>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/just-main-action-stateless-bp.tex" Line="11" Col="26" Start="260" Length="5"/>
+                                    </Anns>
+                                </ns3:SkipAction>
+                                <ns3:Communication CommUsage="Normal" CommPattern="Output" MultiSych="0" Indexed="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/just-main-action-stateless-bp.tex" Line="11" Col="14" Start="248" Length="3"/>
+                                    </Anns>
+                                    <RefExpr Mixfix="false" Explicit="false">
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/just-main-action-stateless-bp.tex" Line="11" Col="14" Start="248" Length="3"/>
+                                            </Anns>
+                                            <Word>out</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </RefExpr>
+                                    <ns3:CircusFieldList>
+                                        <ns3:DotField>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/just-main-action-stateless-bp.tex" Line="11" Col="17" Start="251" Length="2"/>
+                                            </Anns>
+                                            <NumExpr>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/just-main-action-stateless-bp.tex" Line="11" Col="18" Start="252" Length="1"/>
+                                                </Anns>
+                                                <ZNumeral Value="0">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/just-main-action-stateless-bp.tex" Line="11" Col="18" Start="252" Length="1"/>
+                                                    </Anns>
+                                                </ZNumeral>
+                                            </NumExpr>
+                                        </ns3:DotField>
+                                    </ns3:CircusFieldList>
+                                </ns3:Communication>
+                            </ns3:PrefixingAction>
+                        </ns3:ActionPara>
+                        <AxPara Box="OmitBox">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/just-main-action-stateless-bp.tex" Line="10" Col="58" Start="220" Length="61"/>
+                                <ns3:CircusStateAnn/>
+                                <ns3:CircusStateAnn/>
+                            </Anns>
+                            <ZNameList/>
+                            <ZSchText>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/just-main-action-stateless-bp.tex" Line="10" Col="58" Start="220" Length="61"/>
+                                </Anns>
+                                <ZDeclList>
+                                    <ConstDecl>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/just-main-action-stateless-bp.tex" Line="10" Col="58" Start="220" Length="61"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/just-main-action-stateless-bp.tex" Line="10" Col="58" Start="220" Length="61"/>
+                                            </Anns>
+                                            <Word>$$defaultSt_L10C58</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <SchExpr>
+                                            <ZSchText>
+                                                <ZDeclList/>
+                                                <TruePred/>
+                                            </ZSchText>
+                                        </SchExpr>
+                                    </ConstDecl>
+                                </ZDeclList>
+                            </ZSchText>
+                        </AxPara>
+                    </ZParaList>
+                </ns3:BasicProcess>
+            </ns3:ProcessPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/just-main-action-stateless-bp.tex" Line="13" Col="12" Start="294" Length="1"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</Content>
+            </NarrPara>
+        </ZParaList>
+    </ZSect>
+</Spec>

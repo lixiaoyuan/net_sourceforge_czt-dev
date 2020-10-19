@@ -1,0 +1,15 @@
+─ section zevesrenaming parents standard_toolkit └ 
+
+┌ ☓ S 
+x : ℕ |
+ x > 10 └ 
+
+╷ a : ℕ └ 
+
+─ ☒ theorem rule lSLemma0 
+∀ S ⦁ θ ( S [ a / x ] ) 
+└ 
+
+─ ☒ theorem rule lSLemma 
+∀ S ⦁ θ ( S [ x := 1 ] ) 
+└ 

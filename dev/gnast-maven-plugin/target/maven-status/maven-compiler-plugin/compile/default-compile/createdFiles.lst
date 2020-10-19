@@ -1,0 +1,4 @@
+net/sourceforge/czt/rules/codegen/JokerClass.class
+net/sourceforge/czt/rules/codegen/GnastRuleCodegenMojo.class
+net/sourceforge/czt/gnast/maven/GnastGenerateMojo.class
+net/sourceforge/czt/rules/codegen/ErrorHandler.class

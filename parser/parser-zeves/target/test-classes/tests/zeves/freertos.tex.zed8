@@ -1,0 +1,153 @@
+─ section freertos parents standard_toolkit └ 
+
+This specification describes ...
+
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[margin=2cm, includeheadfoot]{geometry}
+\usepackage{z-eves}
+\usepackage{needspace}
+
+\begin{document}
+
+**** Context c0
+─ [ CONTEXT , TASK ] └ 
+
+╷ bare_context : CONTEXT 
+idle : TASK └ 
+
+\vspace{1em}
+**** Context c1
+─ STATE ::= nonexistent | ready | blocked | suspended | running └ 
+
+╷ transition : STATE ↔ STATE |
+ transition = { nonexistent ↦ ready , running ↦ ready , blocked ↦ ready , suspended ↦ ready , ready ↦ running , blocked ↦ running , suspended ↦ running , nonexistent ↦ running , running ↦ suspended , ready ↦ suspended , blocked ↦ suspended , running ↦ blocked , running ↦ nonexistent , ready ↦ nonexistent , blocked ↦ nonexistent , suspended ↦ nonexistent } └ 
+
+
+─ [ QUEUE ] └ 
+
+╷ slice_delay : ℕ |
+ slice_delay = 1 └ 
+
+─ BOOL ::= TRUE | FALSE └ 
+
+┌ Task 
+phy_context : CONTEXT 
+running_task : TASK 
+log_context : TASK → CONTEXT 
+state : TASK → STATE 
+prev_state : TASK → STATE 
+priority : TASK → ℕ 
+tasks : ℙ TASK |
+ running_task ∈ tasks 
+idle ∈ tasks 
+state idle ∈ { ready , running } 
+( state ∼ ) ⦇ { running } ⦈ = { running_task } 
+∀ t : TASK ⦁ prev_state t ↦ state t ∈ transition 
+tasks = TASK ∖ ( ( state ∼ ) ⦇ { nonexistent } ⦈ ) 
+priority idle = 0 
+∀ t : TASK | state t = ready ⦁ priority running_task ≥ priority t └ 
+
+
+┌ Task_Init 
+Task ′ |
+ phy_context′ = bare_context 
+running_task′ = idle 
+log_context′ = TASK × { bare_context } 
+state′ = ( TASK × { nonexistent } ) ⊕ { idle ↦ running } 
+prev_state′ = TASK × { ready } 
+priority′ = TASK × { 0 } 
+tasks′ = { idle } └ 
+
+┌ Queue 
+queue : ℙ QUEUE 
+roundto : ℕ 
+queue_max_size : QUEUE ⇸ ℤ 
+queue_size : QUEUE ⇸ ℤ 
+wait_To_snd : TASK ⇸ QUEUE 
+wait_To_rcv : TASK ⇸ QUEUE 
+delayed_task : ℙ TASK 
+clock : ℕ 
+time : TASK ⇸ ℕ 
+time_To_slice : ℕ |
+ dom queue_max_size = queue 
+ran queue_max_size ⊆ ℕ↘1↖ 
+dom queue_size = queue 
+ran queue_size ⊆ ℕ 
+∀ q : QUEUE | q ∈ queue ⦁ queue_size q ≤ queue_max_size q 
+ran wait_To_snd ⊆ queue 
+∀ q : QUEUE | q ∈ queue ∧ wait_To_snd ∼ ⦇ { q } ⦈ ≠ ∅ ⦁ queue_size q = queue_max_size q 
+ran wait_To_rcv ⊆ queue 
+∀ q : QUEUE | q ∈ queue ∧ wait_To_rcv ∼ ⦇ { q } ⦈ ≠ ∅ ⦁ queue_size q = 0 
+dom wait_To_snd ∩ dom wait_To_rcv = ∅ 
+dom wait_To_snd ∩ delayed_task = ∅ 
+dom wait_To_rcv ∩ delayed_task = ∅ 
+dom time = delayed_task ∪ dom wait_To_snd ∪ dom wait_To_rcv 
+∀ t : TASK | t ∈ dom time ⦁ time t ≥ clock └ 
+
+┌ Queue_Init 
+Queue ′ |
+ queue′ = ∅ 
+queue_max_size′ = ∅ 
+queue_size′ = ∅ 
+wait_To_snd′ = ∅ 
+wait_To_rcv′ = ∅ 
+delayed_task′ = ∅ 
+clock′ = 0 
+roundto′ = 0 
+time′ = ∅ 
+time_To_slice′ = slice_delay └ 
+
+┌ Mutex 
+semaphore : ℙ QUEUE 
+mutex : ℙ QUEUE 
+mutex_holder : QUEUE ⇸ TASK 
+mutex_bool : BOOL 
+old_priority : TASK ⇸ ℕ 
+mut : QUEUE 
+tas : TASK 
+mutex_bool_2 : BOOL 
+pri : ℕ |
+ mutex ∩ semaphore = ∅ └ 
+
+┌ Mutex_Init 
+Mutex ′ 
+q? : QUEUE 
+t? : TASK |
+ semaphore′ = ∅ 
+mutex′ = ∅ 
+mutex_holder′ = ∅ 
+mutex_bool′ = FALSE 
+old_priority′ = ∅ 
+mut′ = q? 
+tas′ = t? 
+mutex_bool_2′ = FALSE 
+pri′ = 0 └ 
+
+┌ FreeRTOS 
+Task 
+Queue 
+Mutex |
+ dom wait_To_snd ⊆ ( state ∼ ) ⦇ { blocked } ⦈ 
+dom wait_To_rcv ⊆ ( state ∼ ) ⦇ { blocked } ⦈ 
+delayed_task ⊆ ( state ∼ ) ⦇ { blocked } ⦈ 
+semaphore ⊆ queue 
+∀ s : QUEUE | s ∈ semaphore ⦁ queue_max_size s = 1 
+mutex ⊆ queue 
+∀ m : QUEUE | m ∈ mutex ⦁ queue_max_size m = 1 
+dom mutex_holder = { m : QUEUE | m ∈ mutex ∧ queue_size m = 1 } 
+ran mutex_holder ⊆ tasks 
+dom old_priority = ran mutex_holder 
+if ( mutex_bool = TRUE ) then [ | ( ∀ m : QUEUE ; n : TASK | m ∈ dom mutex_holder ∧ ( m ≠ mut ⇒ n ∈ wait_To_snd ∼ ⦇ { m } ⦈ ) ∧ ( m = mut ⇒ n ∈ wait_To_snd ∼ ⦇ { m } ⦈ ∖ { tas } ) ⦁ priority n ≤ priority ( mutex_holder m ) ) ∧ mut ∈ dom mutex_holder ∧ tas ∈ wait_To_snd ∼ ⦇ { mut } ⦈ ∧ priority tas > priority ( mutex_holder mut ) ] else [ | ( ∀ m : QUEUE ; n : TASK | m ∈ dom mutex_holder ∧ n ∈ wait_To_snd ∼ ⦇ { m } ⦈ ⦁ priority n ≤ priority ( mutex_holder m ) ) ] 
+∀ t : TASK | t ∈ ran mutex_holder ⦁ priority t ≥ old_priority t 
+mutex_bool_2 = TRUE ⇒ pri < priority running_task 
+mutex_bool_2 = TRUE ⇒ running_task ∉ ran mutex_holder └ 
+
+Missing inputs for global init
+┌ FreeRTOS_Init 
+FreeRTOS ′ 
+q? : QUEUE 
+t? : TASK |
+ Task_Init 
+Queue_Init 
+Mutex_Init └ 

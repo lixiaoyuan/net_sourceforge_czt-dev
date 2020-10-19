@@ -1,0 +1,15 @@
+net/sourceforge/czt/parser/circustime/SimpleCircusTimeFormatter.class
+net/sourceforge/czt/print/circustime/PrintTest.class
+net/sourceforge/czt/parser/circustime/AbstractParserTest$DeleteLocVisitor.class
+net/sourceforge/czt/print/circustime/PrintTest$TestNormal.class
+net/sourceforge/czt/parser/circustime/ParseErrorLogging.class
+net/sourceforge/czt/parser/circustime/ParserFailTest$TestError.class
+net/sourceforge/czt/parser/circustime/CyclicParentParserTest.class
+net/sourceforge/czt/parser/circustime/ParserTest.class
+net/sourceforge/czt/parser/circustime/DefaultCircusTimeSectionParentsTest.class
+net/sourceforge/czt/parser/circustime/ParseErrorLogging$NameFilter.class
+net/sourceforge/czt/parser/circustime/SectionManagerCircusTimeParserTest.class
+net/sourceforge/czt/parser/circustime/ParserFailTest.class
+net/sourceforge/czt/parser/circustime/AbstractParserTest.class
+net/sourceforge/czt/parser/circustime/ParserTest$TestNormal.class
+net/sourceforge/czt/parser/circustime/ParserUtilsTest.class

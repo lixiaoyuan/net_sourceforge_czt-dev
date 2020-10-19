@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: net.sourceforge.czt.eclipse.zeves.core;singleton:
+ =true
+Export-Package: net.sourceforge.czt.eclipse.zeves.core
+Bundle-Name: CZT Z/EVES Core
+Bundle-Version: 1.0.0.202010180842
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.7.0",net.so
+ urceforge.czt.eclipse.core;bundle-version="1.6.0"
+Bundle-ManifestVersion: 2
+Bundle-Activator: net.sourceforge.czt.eclipse.zeves.core.internal.ZEve
+ sCorePlugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: Community Z Tools Project
+Import-Package: net.sourceforge.czt.base.ast;version="1.6.0",net.sourc
+ eforge.czt.base.visitor;version="1.6.0",net.sourceforge.czt.parser.ut
+ il;version="1.6.0",net.sourceforge.czt.parser.zeves;version="1.6.0",n
+ et.sourceforge.czt.session;version="1.6.0",net.sourceforge.czt.text;v
+ ersion="1.6.0",net.sourceforge.czt.util;version="1.6.0",net.sourcefor
+ ge.czt.z.ast;version="1.6.0",net.sourceforge.czt.z.visitor;version="1
+ .6.0",net.sourceforge.czt.zeves;version="1.6.0",net.sourceforge.czt.z
+ eves.ast;version="1.6.0",net.sourceforge.czt.zeves.proof;version="1.6
+ .0",net.sourceforge.czt.zeves.response;version="1.6.0",net.sourceforg
+ e.czt.zeves.response.form;version="1.6.0",net.sourceforge.czt.zeves.s
+ napshot;version="1.6.0",net.sourceforge.czt.zeves.visitor;version="1.
+ 6.0",net.sourceforge.czt.zeves.z;version="1.6.0",org.apache.commons.l
+ ang
+

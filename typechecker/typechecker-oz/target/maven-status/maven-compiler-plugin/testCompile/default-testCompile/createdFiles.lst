@@ -1,0 +1,3 @@
+net/sourceforge/czt/typecheck/oz/Suite.class
+net/sourceforge/czt/typecheck/oz/TypeCheckerTest.class
+net/sourceforge/czt/typecheck/oz/CyclicParentTypeCheckerTest.class

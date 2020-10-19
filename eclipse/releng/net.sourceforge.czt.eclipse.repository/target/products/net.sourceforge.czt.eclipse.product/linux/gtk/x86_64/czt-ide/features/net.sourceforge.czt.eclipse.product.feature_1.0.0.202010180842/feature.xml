@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="net.sourceforge.czt.eclipse.product.feature"
+      label="%featureName"
+      version="1.0.0.202010180842"
+      provider-name="%providerName">
+
+   <description url="http://czt.sourceforge.net/eclipse/eclipse">
+      %description
+   </description>
+
+   <copyright url="%copyrightURL">
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <url>
+      <update label="%updateSiteName" url="http://czt.sourceforge.net/eclipse/updates/releases/"/>
+   </url>
+
+   <requires>
+      <import plugin="org.eclipse.core.runtime" version="3.2.0" match="compatible"/>
+      <import plugin="org.eclipse.ui" version="3.3.0" match="compatible"/>
+      <import plugin="com.ibm.icu"/>
+      <import feature="org.eclipse.platform"/>
+   </requires>
+
+   <plugin
+         id="org.eclipse.ui.views.log"
+         download-size="141"
+         install-size="263"
+         version="1.0.600.v20150513-1840"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.commons.lang"
+         download-size="291"
+         install-size="618"
+         version="2.6.0.v201404270220"
+         unpack="false"/>
+
+   <plugin
+         id="net.sourceforge.czt.eclipse"
+         download-size="204"
+         install-size="644"
+         version="1.6.0.202010180842"
+         unpack="false"/>
+
+</feature>

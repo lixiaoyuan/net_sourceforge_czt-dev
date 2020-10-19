@@ -1,0 +1,9 @@
+net/sourceforge/czt/rules/TypeCheckRewriteTest.class
+net/sourceforge/czt/rules/unification/UnifierTest.class
+net/sourceforge/czt/rules/rewriter/InnermostTest.class
+net/sourceforge/czt/rules/prover/SimpleProverTest.class
+net/sourceforge/czt/rules/rewriter/InnermostTest$RewriteTester.class
+net/sourceforge/czt/rules/oldrewriter/RewriteTest.class
+net/sourceforge/czt/rules/unification/OccursCheckVisitorTest.class
+net/sourceforge/czt/rules/oldrewriter/RewriteTest$RewriteTester.class
+net/sourceforge/czt/rules/rewriter/StrategiesTest.class

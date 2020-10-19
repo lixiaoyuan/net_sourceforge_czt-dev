@@ -1,0 +1,20 @@
+─ section zopt parents standard_toolkit └ 
+
+Some weird uses of Z operators
+
+╷ x : ℕ |
+ x = ( _ + _ ) ( 1 , 2 ) └ 
+
+
+─ theorem lZOpsinProof 
+true 
+└ 
+
+├ lZOpsinProof 
+prove by reduce ;  
+use finiteFunction [ Y , X ] [ f := f ( _ ∼ ) [ X , Y ] ] ;  
+└ 
+
+─ theorem lZOpsinProof 
+true 
+└ 

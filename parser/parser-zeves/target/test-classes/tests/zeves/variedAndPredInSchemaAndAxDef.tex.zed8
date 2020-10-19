@@ -1,0 +1,12 @@
+─ section variedAndPredInSchemaAndAxDef parents zeves_prelude └ 
+
+This is a test to see whether labels for schema pred will be cleaned up or not.
+┌ S 
+y , z : ℕ |
+ y > 10 ∧ y > z 
+y = z + 1 < 10 └ 
+
+
+╷ a , b : ℕ |
+ a > 20 ∧ b = a + 1 
+b = a + 1 < 30 └ 

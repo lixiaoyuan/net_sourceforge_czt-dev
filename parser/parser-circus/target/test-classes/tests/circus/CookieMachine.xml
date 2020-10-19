@@ -1,0 +1,1794 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Spec Version="2.1" xsi:schemaLocation="http://czt.sourceforge.net/zml http://czt.sourceforge.net/zml/Z_2_1.xsd" xmlns="http://czt.sourceforge.net/zml" xmlns:ns2="http://czt.sourceforge.net/zpatt" xmlns:ns3="http://czt.sourceforge.net/circus" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <NarrSect>
+        <Anns>
+            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="0" Col="0" Start="0" Length="541"/>
+        </Anns>
+        <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">\documentclass{article}
+
+\usepackage{vmargin}
+\usepackage{circus}
+
+\setpapersize{A4}
+\setmarginsrb{40mm}{20mm}{40mm}{20mm}{12pt}{11mm}{0pt}{10mm}
+
+\begin{document}
+
+\title{\Circus\ Cookie Machine - parsing}
+\author{Leonardo Freitas}
+\date{February 2007}
+
+\maketitle
+
+Examples from Manuela Xavier MSc thesis.
+
+</Content>
+    </NarrSect>
+    <ZSect>
+        <Anns>
+            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="21" Col="0" Start="541" Length="1469"/>
+        </Anns>
+        <Name>circus_cookies</Name>
+        <Parent>
+            <Anns>
+                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="22" Col="38" Start="596" Length="15"/>
+            </Anns>
+            <Word>circus_toolkit</Word>
+        </Parent>
+        <ZParaList>
+            <LatexMarkupPara/>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="23" Col="14" Start="626" Length="2"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+            </NarrPara>
+            <FreePara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="25" Col="0" Start="628" Length="46"/>
+                </Anns>
+                <ZFreetypeList>
+                    <Freetype>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="26" Col="10" Start="643" Length="21"/>
+                        </Anns>
+                        <ZName>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="26" Col="3" Start="643" Length="6"/>
+                            </Anns>
+                            <Word>COOKIE</Word>
+                            <ZStrokeList/>
+                        </ZName>
+                        <ZBranchList>
+                            <Branch>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="26" Col="14" Start="654" Length="2"/>
+                                </Anns>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="26" Col="14" Start="654" Length="2"/>
+                                    </Anns>
+                                    <Word>ok</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                            </Branch>
+                            <Branch>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="26" Col="19" Start="659" Length="5"/>
+                                </Anns>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="26" Col="19" Start="659" Length="5"/>
+                                    </Anns>
+                                    <Word>notok</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                            </Branch>
+                        </ZBranchList>
+                    </Freetype>
+                </ZFreetypeList>
+            </FreePara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="27" Col="9" Start="674" Length="2"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+            </NarrPara>
+            <ns3:ChannelPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="30" Col="3" Start="694" Length="30"/>
+                </Anns>
+                <ZDeclList>
+                    <ns3:ChannelDecl>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="30" Col="17" Start="708" Length="16"/>
+                        </Anns>
+                        <ZNameList/>
+                        <ZNameList>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="30" Col="17" Start="708" Length="2"/>
+                                </Anns>
+                                <Word>in</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="30" Col="21" Start="712" Length="6"/>
+                                </Anns>
+                                <Word>change</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                        </ZNameList>
+                        <RefExpr Mixfix="false" Explicit="false">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="30" Col="29" Start="720" Length="4"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="30" Col="29" Start="720" Length="4"/>
+                                </Anns>
+                                <Word>ℕ</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ZExprList/>
+                        </RefExpr>
+                    </ns3:ChannelDecl>
+                </ZDeclList>
+            </ns3:ChannelPara>
+            <ns3:ChannelPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="31" Col="3" Start="731" Length="25"/>
+                </Anns>
+                <ZDeclList>
+                    <ns3:ChannelDecl>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="31" Col="17" Start="745" Length="11"/>
+                        </Anns>
+                        <ZNameList/>
+                        <ZNameList>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="31" Col="17" Start="745" Length="3"/>
+                                </Anns>
+                                <Word>out</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                        </ZNameList>
+                        <RefExpr Mixfix="false" Explicit="false">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="31" Col="22" Start="750" Length="6"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="31" Col="22" Start="750" Length="6"/>
+                                </Anns>
+                                <Word>COOKIE</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ZExprList/>
+                        </RefExpr>
+                    </ns3:ChannelDecl>
+                </ZDeclList>
+            </ns3:ChannelPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="32" Col="12" Start="769" Length="2"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+            </NarrPara>
+            <AxPara Box="AxBox">
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="34" Col="0" Start="771" Length="62"/>
+                </Anns>
+                <ZNameList/>
+                <ZSchText>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="35" Col="30" Start="788" Length="33"/>
+                    </Anns>
+                    <ZDeclList>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="35" Col="30" Start="788" Length="33"/>
+                        </Anns>
+                        <VarDecl>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="35" Col="30" Start="788" Length="33"/>
+                            </Anns>
+                            <ZNameList>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="35" Col="3" Start="788" Length="11"/>
+                                    </Anns>
+                                    <Word>cookieValue</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="35" Col="16" Start="801" Length="14"/>
+                                    </Anns>
+                                    <Word>cookieQuantity</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                            </ZNameList>
+                            <RefExpr Mixfix="false" Explicit="false">
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="35" Col="32" Start="817" Length="4"/>
+                                </Anns>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="35" Col="32" Start="817" Length="4"/>
+                                    </Anns>
+                                    <Word>ℕ</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ZExprList/>
+                            </RefExpr>
+                        </VarDecl>
+                    </ZDeclList>
+                </ZSchText>
+            </AxPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="36" Col="11" Start="833" Length="2"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+            </NarrPara>
+            <ns3:ProcessPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="39" Col="4" Start="854" Length="1126"/>
+                </Anns>
+                <ZName>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="39" Col="18" Start="868" Length="13"/>
+                    </Anns>
+                    <Word>CookieMachine</Word>
+                    <ZStrokeList/>
+                </ZName>
+                <ZNameList/>
+                <ns3:BasicProcess>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="39" Col="41" Start="891" Length="1089"/>
+                    </Anns>
+                    <ZParaList>
+                        <AxPara Box="OmitBox">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="40" Col="16" Start="921" Length="40"/>
+                                <ns3:CircusStateAnn/>
+                            </Anns>
+                            <ZNameList/>
+                            <ZSchText>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="40" Col="16" Start="921" Length="40"/>
+                                </Anns>
+                                <ZDeclList>
+                                    <ConstDecl>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="40" Col="16" Start="921" Length="40"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="40" Col="16" Start="921" Length="5"/>
+                                            </Anns>
+                                            <Word>State</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <SchExpr>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="40" Col="29" Start="934" Length="27"/>
+                                            </Anns>
+                                            <ZSchText>
+                                                <ZDeclList>
+                                                    <VarDecl>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="40" Col="47" Start="937" Length="21"/>
+                                                        </Anns>
+                                                        <ZNameList>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="40" Col="32" Start="937" Length="5"/>
+                                                                </Anns>
+                                                                <Word>money</Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="40" Col="39" Start="944" Length="8"/>
+                                                                </Anns>
+                                                                <Word>quantity</Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                        </ZNameList>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="40" Col="49" Start="954" Length="4"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="40" Col="49" Start="954" Length="4"/>
+                                                                </Anns>
+                                                                <Word>ℕ</Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                    </VarDecl>
+                                                </ZDeclList>
+                                            </ZSchText>
+                                        </SchExpr>
+                                    </ConstDecl>
+                                </ZDeclList>
+                            </ZSchText>
+                        </AxPara>
+                        <AxPara Box="OmitBox">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="41" Col="4" Start="970" Length="76"/>
+                            </Anns>
+                            <ZNameList/>
+                            <ZSchText>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="41" Col="4" Start="970" Length="76"/>
+                                </Anns>
+                                <ZDeclList>
+                                    <ConstDecl>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="41" Col="16" Start="970" Length="76"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="41" Col="4" Start="970" Length="9"/>
+                                            </Anns>
+                                            <Word>InitState</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <SchExpr>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="41" Col="21" Start="987" Length="59"/>
+                                            </Anns>
+                                            <ZSchText>
+                                                <ZDeclList>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex"/>
+                                                    </Anns>
+                                                    <InclDecl>
+                                                        <DecorExpr>
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="41" Col="24" Start="990" Length="7"/>
+                                                            </Anns>
+                                                            <RefExpr Mixfix="false" Explicit="false">
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="41" Col="24" Start="990" Length="5"/>
+                                                                </Anns>
+                                                                <ZName>
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="41" Col="24" Start="990" Length="5"/>
+                                                                    </Anns>
+                                                                    <Word>State</Word>
+                                                                    <ZStrokeList/>
+                                                                </ZName>
+                                                                <ZExprList/>
+                                                            </RefExpr>
+                                                            <NextStroke>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="41" Col="30" Start="996" Length="1"/>
+                                                                </Anns>
+                                                            </NextStroke>
+                                                        </DecorExpr>
+                                                    </InclDecl>
+                                                </ZDeclList>
+                                                <AndPred And="Wedge">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="41" Col="45" Start="1000" Length="43"/>
+                                                    </Anns>
+                                                    <MemPred Mixfix="true">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="41" Col="41" Start="1000" Length="10"/>
+                                                        </Anns>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="41" Col="34" Start="1000" Length="6"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="41" Col="34" Start="1000" Length="6"/>
+                                                                </Anns>
+                                                                <Word>money</Word>
+                                                                <ZStrokeList>
+                                                                    <NextStroke/>
+                                                                </ZStrokeList>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                        <SetExpr>
+                                                            <ZExprList>
+                                                                <NumExpr>
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="41" Col="43" Start="1009" Length="1"/>
+                                                                    </Anns>
+                                                                    <ZNumeral Value="0">
+                                                                        <Anns>
+                                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="41" Col="43" Start="1009" Length="1"/>
+                                                                        </Anns>
+                                                                    </ZNumeral>
+                                                                </NumExpr>
+                                                            </ZExprList>
+                                                        </SetExpr>
+                                                    </MemPred>
+                                                    <MemPred Mixfix="true">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="41" Col="61" Start="1017" Length="26"/>
+                                                        </Anns>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="41" Col="51" Start="1017" Length="9"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="41" Col="51" Start="1017" Length="9"/>
+                                                                </Anns>
+                                                                <Word>quantity</Word>
+                                                                <ZStrokeList>
+                                                                    <NextStroke/>
+                                                                </ZStrokeList>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                        <SetExpr>
+                                                            <ZExprList>
+                                                                <RefExpr Mixfix="false" Explicit="false">
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="41" Col="63" Start="1029" Length="14"/>
+                                                                    </Anns>
+                                                                    <ZName>
+                                                                        <Anns>
+                                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="41" Col="63" Start="1029" Length="14"/>
+                                                                        </Anns>
+                                                                        <Word>cookieQuantity</Word>
+                                                                        <ZStrokeList/>
+                                                                    </ZName>
+                                                                    <ZExprList/>
+                                                                </RefExpr>
+                                                            </ZExprList>
+                                                        </SetExpr>
+                                                    </MemPred>
+                                                </AndPred>
+                                            </ZSchText>
+                                        </SchExpr>
+                                    </ConstDecl>
+                                </ZDeclList>
+                            </ZSchText>
+                        </AxPara>
+                        <AxPara Box="OmitBox">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="42" Col="4" Start="1054" Length="97"/>
+                            </Anns>
+                            <ZNameList/>
+                            <ZSchText>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="42" Col="4" Start="1054" Length="97"/>
+                                </Anns>
+                                <ZDeclList>
+                                    <ConstDecl>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="42" Col="17" Start="1054" Length="97"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="42" Col="4" Start="1054" Length="10"/>
+                                            </Anns>
+                                            <Word>InputMoney</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <SchExpr>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="42" Col="22" Start="1072" Length="79"/>
+                                            </Anns>
+                                            <ZSchText>
+                                                <ZDeclList>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex"/>
+                                                    </Anns>
+                                                    <InclDecl>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="42" Col="25" Start="1075" Length="12"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="42" Col="25" Start="1075" Length="12"/>
+                                                                </Anns>
+                                                                <Word>ΔState</Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                    </InclDecl>
+                                                    <VarDecl>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="42" Col="41" Start="1089" Length="8"/>
+                                                        </Anns>
+                                                        <ZNameList>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="42" Col="39" Start="1089" Length="2"/>
+                                                                </Anns>
+                                                                <Word>x</Word>
+                                                                <ZStrokeList>
+                                                                    <InStroke/>
+                                                                </ZStrokeList>
+                                                            </ZName>
+                                                        </ZNameList>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="42" Col="43" Start="1093" Length="4"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="42" Col="43" Start="1093" Length="4"/>
+                                                                </Anns>
+                                                                <Word>ℕ</Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                    </VarDecl>
+                                                </ZDeclList>
+                                                <AndPred And="Wedge">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="42" Col="73" Start="1100" Length="48"/>
+                                                    </Anns>
+                                                    <MemPred Mixfix="true">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="42" Col="50" Start="1100" Length="22"/>
+                                                        </Anns>
+                                                        <TupleExpr>
+                                                            <ZExprList>
+                                                                <RefExpr Mixfix="false" Explicit="false">
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="42" Col="50" Start="1100" Length="5"/>
+                                                                    </Anns>
+                                                                    <ZName>
+                                                                        <Anns>
+                                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="42" Col="50" Start="1100" Length="5"/>
+                                                                        </Anns>
+                                                                        <Word>money</Word>
+                                                                        <ZStrokeList/>
+                                                                    </ZName>
+                                                                    <ZExprList/>
+                                                                </RefExpr>
+                                                                <RefExpr Mixfix="false" Explicit="false">
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="42" Col="61" Start="1111" Length="11"/>
+                                                                    </Anns>
+                                                                    <ZName>
+                                                                        <Anns>
+                                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="42" Col="61" Start="1111" Length="11"/>
+                                                                        </Anns>
+                                                                        <Word>cookieValue</Word>
+                                                                        <ZStrokeList/>
+                                                                    </ZName>
+                                                                    <ZExprList/>
+                                                                </RefExpr>
+                                                            </ZExprList>
+                                                        </TupleExpr>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="42" Col="56" Start="1106" Length="4"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="42" Col="56" Start="1106" Length="4"/>
+                                                                </Anns>
+                                                                <Word> _ ≤ _ </Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                    </MemPred>
+                                                    <MemPred Mixfix="true">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="42" Col="86" Start="1129" Length="19"/>
+                                                        </Anns>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="42" Col="79" Start="1129" Length="6"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="42" Col="79" Start="1129" Length="6"/>
+                                                                </Anns>
+                                                                <Word>money</Word>
+                                                                <ZStrokeList>
+                                                                    <NextStroke/>
+                                                                </ZStrokeList>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                        <SetExpr>
+                                                            <ZExprList>
+                                                                <ApplExpr Mixfix="true">
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="42" Col="94" Start="1138" Length="10"/>
+                                                                    </Anns>
+                                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                                        <Anns>
+                                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="42" Col="94" Start="1144" Length="1"/>
+                                                                        </Anns>
+                                                                        <ZName>
+                                                                            <Anns>
+                                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="42" Col="94" Start="1144" Length="1"/>
+                                                                            </Anns>
+                                                                            <Word> _ + _ </Word>
+                                                                            <ZStrokeList/>
+                                                                        </ZName>
+                                                                        <ZExprList/>
+                                                                    </RefExpr>
+                                                                    <TupleExpr>
+                                                                        <ZExprList>
+                                                                            <RefExpr Mixfix="false" Explicit="false">
+                                                                                <Anns>
+                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="42" Col="88" Start="1138" Length="5"/>
+                                                                                </Anns>
+                                                                                <ZName>
+                                                                                    <Anns>
+                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="42" Col="88" Start="1138" Length="5"/>
+                                                                                    </Anns>
+                                                                                    <Word>money</Word>
+                                                                                    <ZStrokeList/>
+                                                                                </ZName>
+                                                                                <ZExprList/>
+                                                                            </RefExpr>
+                                                                            <RefExpr Mixfix="false" Explicit="false">
+                                                                                <Anns>
+                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="42" Col="96" Start="1146" Length="2"/>
+                                                                                </Anns>
+                                                                                <ZName>
+                                                                                    <Anns>
+                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="42" Col="96" Start="1146" Length="2"/>
+                                                                                    </Anns>
+                                                                                    <Word>x</Word>
+                                                                                    <ZStrokeList>
+                                                                                        <InStroke/>
+                                                                                    </ZStrokeList>
+                                                                                </ZName>
+                                                                                <ZExprList/>
+                                                                            </RefExpr>
+                                                                        </ZExprList>
+                                                                    </TupleExpr>
+                                                                </ApplExpr>
+                                                            </ZExprList>
+                                                        </SetExpr>
+                                                    </MemPred>
+                                                </AndPred>
+                                            </ZSchText>
+                                        </SchExpr>
+                                    </ConstDecl>
+                                </ZDeclList>
+                            </ZSchText>
+                        </AxPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="43" Col="4" Start="1159" Length="101"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="43" Col="4" Start="1159" Length="5"/>
+                                </Anns>
+                                <Word>Input</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:GuardedAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="43" Col="35" Start="1190" Length="70"/>
+                                </Anns>
+                                <ns3:PrefixingAction>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="43" Col="83" Start="1238" Length="22"/>
+                                    </Anns>
+                                    <ns3:CallAction>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="43" Col="95" Start="1250" Length="10"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="43" Col="95" Start="1250" Length="10"/>
+                                            </Anns>
+                                            <Word>InputMoney</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </ns3:CallAction>
+                                    <ns3:Communication CommUsage="Normal" CommPattern="Input" MultiSych="0" Indexed="false">
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="43" Col="83" Start="1238" Length="2"/>
+                                        </Anns>
+                                        <RefExpr Mixfix="false" Explicit="false">
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="43" Col="83" Start="1238" Length="2"/>
+                                                </Anns>
+                                                <Word>in</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <ZExprList/>
+                                        </RefExpr>
+                                        <ns3:CircusFieldList>
+                                            <ns3:InputField>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="43" Col="86" Start="1241" Length="2"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="43" Col="87" Start="1242" Length="1"/>
+                                                    </Anns>
+                                                    <Word>x</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <TruePred/>
+                                            </ns3:InputField>
+                                        </ns3:CircusFieldList>
+                                    </ns3:Communication>
+                                </ns3:PrefixingAction>
+                                <MemPred Mixfix="true">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="43" Col="35" Start="1190" Length="22"/>
+                                    </Anns>
+                                    <TupleExpr>
+                                        <ZExprList>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="43" Col="35" Start="1190" Length="5"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="43" Col="35" Start="1190" Length="5"/>
+                                                    </Anns>
+                                                    <Word>money</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="43" Col="46" Start="1201" Length="11"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="43" Col="46" Start="1201" Length="11"/>
+                                                    </Anns>
+                                                    <Word>cookieValue</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                        </ZExprList>
+                                    </TupleExpr>
+                                    <RefExpr Mixfix="false" Explicit="false">
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="43" Col="41" Start="1196" Length="4"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="43" Col="41" Start="1196" Length="4"/>
+                                            </Anns>
+                                            <Word> _ ≤ _ </Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </RefExpr>
+                                </MemPred>
+                            </ns3:GuardedAction>
+                        </ns3:ActionPara>
+                        <AxPara Box="OmitBox">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="44" Col="4" Start="1268" Length="183"/>
+                            </Anns>
+                            <ZNameList/>
+                            <ZSchText>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="44" Col="4" Start="1268" Length="183"/>
+                                </Anns>
+                                <ZDeclList>
+                                    <ConstDecl>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="44" Col="21" Start="1268" Length="183"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="44" Col="4" Start="1268" Length="14"/>
+                                            </Anns>
+                                            <Word>OutputCookieOk</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <SchExpr>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="44" Col="26" Start="1290" Length="161"/>
+                                            </Anns>
+                                            <ZSchText>
+                                                <ZDeclList>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex"/>
+                                                    </Anns>
+                                                    <InclDecl>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="44" Col="29" Start="1293" Length="12"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="44" Col="29" Start="1293" Length="12"/>
+                                                                </Anns>
+                                                                <Word>ΔState</Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                    </InclDecl>
+                                                    <VarDecl>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="44" Col="45" Start="1307" Length="10"/>
+                                                        </Anns>
+                                                        <ZNameList>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="44" Col="43" Start="1307" Length="2"/>
+                                                                </Anns>
+                                                                <Word>o</Word>
+                                                                <ZStrokeList>
+                                                                    <OutStroke/>
+                                                                </ZStrokeList>
+                                                            </ZName>
+                                                        </ZNameList>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="44" Col="47" Start="1311" Length="6"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="44" Col="47" Start="1311" Length="6"/>
+                                                                </Anns>
+                                                                <Word>COOKIE</Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                    </VarDecl>
+                                                </ZDeclList>
+                                                <AndPred And="Wedge">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="86" Start="1320" Length="128"/>
+                                                    </Anns>
+                                                    <AndPred And="Wedge">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="56" Start="1320" Length="115"/>
+                                                        </Anns>
+                                                        <AndPred And="Wedge">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="21" Start="1320" Length="84"/>
+                                                            </Anns>
+                                                            <AndPred And="Wedge">
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="44" Col="79" Start="1320" Length="49"/>
+                                                                </Anns>
+                                                                <MemPred Mixfix="true">
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="44" Col="56" Start="1320" Length="22"/>
+                                                                    </Anns>
+                                                                    <TupleExpr>
+                                                                        <ZExprList>
+                                                                            <RefExpr Mixfix="false" Explicit="false">
+                                                                                <Anns>
+                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="44" Col="56" Start="1320" Length="5"/>
+                                                                                </Anns>
+                                                                                <ZName>
+                                                                                    <Anns>
+                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="44" Col="56" Start="1320" Length="5"/>
+                                                                                    </Anns>
+                                                                                    <Word>money</Word>
+                                                                                    <ZStrokeList/>
+                                                                                </ZName>
+                                                                                <ZExprList/>
+                                                                            </RefExpr>
+                                                                            <RefExpr Mixfix="false" Explicit="false">
+                                                                                <Anns>
+                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="44" Col="67" Start="1331" Length="11"/>
+                                                                                </Anns>
+                                                                                <ZName>
+                                                                                    <Anns>
+                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="44" Col="67" Start="1331" Length="11"/>
+                                                                                    </Anns>
+                                                                                    <Word>cookieValue</Word>
+                                                                                    <ZStrokeList/>
+                                                                                </ZName>
+                                                                                <ZExprList/>
+                                                                            </RefExpr>
+                                                                        </ZExprList>
+                                                                    </TupleExpr>
+                                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                                        <Anns>
+                                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="44" Col="62" Start="1326" Length="4"/>
+                                                                        </Anns>
+                                                                        <ZName>
+                                                                            <Anns>
+                                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="44" Col="62" Start="1326" Length="4"/>
+                                                                            </Anns>
+                                                                            <Word> _ ≥ _ </Word>
+                                                                            <ZStrokeList/>
+                                                                        </ZName>
+                                                                        <ZExprList/>
+                                                                    </RefExpr>
+                                                                </MemPred>
+                                                                <MemPred Mixfix="true">
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="8" Start="1357" Length="12"/>
+                                                                    </Anns>
+                                                                    <TupleExpr>
+                                                                        <ZExprList>
+                                                                            <RefExpr Mixfix="false" Explicit="false">
+                                                                                <Anns>
+                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="8" Start="1357" Length="8"/>
+                                                                                </Anns>
+                                                                                <ZName>
+                                                                                    <Anns>
+                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="8" Start="1357" Length="8"/>
+                                                                                    </Anns>
+                                                                                    <Word>quantity</Word>
+                                                                                    <ZStrokeList/>
+                                                                                </ZName>
+                                                                                <ZExprList/>
+                                                                            </RefExpr>
+                                                                            <NumExpr>
+                                                                                <Anns>
+                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="19" Start="1368" Length="1"/>
+                                                                                </Anns>
+                                                                                <ZNumeral Value="0">
+                                                                                    <Anns>
+                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="19" Start="1368" Length="1"/>
+                                                                                    </Anns>
+                                                                                </ZNumeral>
+                                                                            </NumExpr>
+                                                                        </ZExprList>
+                                                                    </TupleExpr>
+                                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                                        <Anns>
+                                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="17" Start="1366" Length="2"/>
+                                                                        </Anns>
+                                                                        <ZName>
+                                                                            <Anns>
+                                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="17" Start="1366" Length="2"/>
+                                                                            </Anns>
+                                                                            <Word> _ &gt; _ </Word>
+                                                                            <ZStrokeList/>
+                                                                        </ZName>
+                                                                        <ZExprList/>
+                                                                    </RefExpr>
+                                                                </MemPred>
+                                                            </AndPred>
+                                                            <MemPred Mixfix="true">
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="34" Start="1376" Length="28"/>
+                                                                </Anns>
+                                                                <RefExpr Mixfix="false" Explicit="false">
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="27" Start="1376" Length="6"/>
+                                                                    </Anns>
+                                                                    <ZName>
+                                                                        <Anns>
+                                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="27" Start="1376" Length="6"/>
+                                                                        </Anns>
+                                                                        <Word>money</Word>
+                                                                        <ZStrokeList>
+                                                                            <NextStroke/>
+                                                                        </ZStrokeList>
+                                                                    </ZName>
+                                                                    <ZExprList/>
+                                                                </RefExpr>
+                                                                <SetExpr>
+                                                                    <ZExprList>
+                                                                        <ApplExpr Mixfix="true">
+                                                                            <Anns>
+                                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="42" Start="1385" Length="19"/>
+                                                                            </Anns>
+                                                                            <RefExpr Mixfix="false" Explicit="false">
+                                                                                <Anns>
+                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="42" Start="1391" Length="1"/>
+                                                                                </Anns>
+                                                                                <ZName>
+                                                                                    <Anns>
+                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="42" Start="1391" Length="1"/>
+                                                                                    </Anns>
+                                                                                    <Word> _ − _ </Word>
+                                                                                    <ZStrokeList/>
+                                                                                </ZName>
+                                                                                <ZExprList/>
+                                                                            </RefExpr>
+                                                                            <TupleExpr>
+                                                                                <ZExprList>
+                                                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                                                        <Anns>
+                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="36" Start="1385" Length="5"/>
+                                                                                        </Anns>
+                                                                                        <ZName>
+                                                                                            <Anns>
+                                                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="36" Start="1385" Length="5"/>
+                                                                                            </Anns>
+                                                                                            <Word>money</Word>
+                                                                                            <ZStrokeList/>
+                                                                                        </ZName>
+                                                                                        <ZExprList/>
+                                                                                    </RefExpr>
+                                                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                                                        <Anns>
+                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="44" Start="1393" Length="11"/>
+                                                                                        </Anns>
+                                                                                        <ZName>
+                                                                                            <Anns>
+                                                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="44" Start="1393" Length="11"/>
+                                                                                            </Anns>
+                                                                                            <Word>cookieValue</Word>
+                                                                                            <ZStrokeList/>
+                                                                                        </ZName>
+                                                                                        <ZExprList/>
+                                                                                    </RefExpr>
+                                                                                </ZExprList>
+                                                                            </TupleExpr>
+                                                                        </ApplExpr>
+                                                                    </ZExprList>
+                                                                </SetExpr>
+                                                            </MemPred>
+                                                        </AndPred>
+                                                        <MemPred Mixfix="true">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="72" Start="1411" Length="24"/>
+                                                            </Anns>
+                                                            <RefExpr Mixfix="false" Explicit="false">
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="62" Start="1411" Length="9"/>
+                                                                </Anns>
+                                                                <ZName>
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="62" Start="1411" Length="9"/>
+                                                                    </Anns>
+                                                                    <Word>quantity</Word>
+                                                                    <ZStrokeList>
+                                                                        <NextStroke/>
+                                                                    </ZStrokeList>
+                                                                </ZName>
+                                                                <ZExprList/>
+                                                            </RefExpr>
+                                                            <SetExpr>
+                                                                <ZExprList>
+                                                                    <ApplExpr Mixfix="true">
+                                                                        <Anns>
+                                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="83" Start="1423" Length="12"/>
+                                                                        </Anns>
+                                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                                            <Anns>
+                                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="83" Start="1432" Length="1"/>
+                                                                            </Anns>
+                                                                            <ZName>
+                                                                                <Anns>
+                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="83" Start="1432" Length="1"/>
+                                                                                </Anns>
+                                                                                <Word> _ − _ </Word>
+                                                                                <ZStrokeList/>
+                                                                            </ZName>
+                                                                            <ZExprList/>
+                                                                        </RefExpr>
+                                                                        <TupleExpr>
+                                                                            <ZExprList>
+                                                                                <RefExpr Mixfix="false" Explicit="false">
+                                                                                    <Anns>
+                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="74" Start="1423" Length="8"/>
+                                                                                    </Anns>
+                                                                                    <ZName>
+                                                                                        <Anns>
+                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="74" Start="1423" Length="8"/>
+                                                                                        </Anns>
+                                                                                        <Word>quantity</Word>
+                                                                                        <ZStrokeList/>
+                                                                                    </ZName>
+                                                                                    <ZExprList/>
+                                                                                </RefExpr>
+                                                                                <NumExpr>
+                                                                                    <Anns>
+                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="85" Start="1434" Length="1"/>
+                                                                                    </Anns>
+                                                                                    <ZNumeral Value="1">
+                                                                                        <Anns>
+                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="85" Start="1434" Length="1"/>
+                                                                                        </Anns>
+                                                                                    </ZNumeral>
+                                                                                </NumExpr>
+                                                                            </ZExprList>
+                                                                        </TupleExpr>
+                                                                    </ApplExpr>
+                                                                </ZExprList>
+                                                            </SetExpr>
+                                                        </MemPred>
+                                                    </AndPred>
+                                                    <MemPred Mixfix="true">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="95" Start="1441" Length="7"/>
+                                                        </Anns>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="92" Start="1441" Length="2"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="92" Start="1441" Length="2"/>
+                                                                </Anns>
+                                                                <Word>o</Word>
+                                                                <ZStrokeList>
+                                                                    <OutStroke/>
+                                                                </ZStrokeList>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                        <SetExpr>
+                                                            <ZExprList>
+                                                                <RefExpr Mixfix="false" Explicit="false">
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="97" Start="1446" Length="2"/>
+                                                                    </Anns>
+                                                                    <ZName>
+                                                                        <Anns>
+                                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="45" Col="97" Start="1446" Length="2"/>
+                                                                        </Anns>
+                                                                        <Word>ok</Word>
+                                                                        <ZStrokeList/>
+                                                                    </ZName>
+                                                                    <ZExprList/>
+                                                                </RefExpr>
+                                                            </ZExprList>
+                                                        </SetExpr>
+                                                    </MemPred>
+                                                </AndPred>
+                                            </ZSchText>
+                                        </SchExpr>
+                                    </ConstDecl>
+                                </ZDeclList>
+                            </ZSchText>
+                        </AxPara>
+                        <AxPara Box="OmitBox">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="46" Col="4" Start="1459" Length="145"/>
+                            </Anns>
+                            <ZNameList/>
+                            <ZSchText>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="46" Col="4" Start="1459" Length="145"/>
+                                </Anns>
+                                <ZDeclList>
+                                    <ConstDecl>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="46" Col="24" Start="1459" Length="145"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="46" Col="4" Start="1459" Length="17"/>
+                                            </Anns>
+                                            <Word>OutputCookieNotOk</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <SchExpr>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="46" Col="29" Start="1484" Length="120"/>
+                                            </Anns>
+                                            <ZSchText>
+                                                <ZDeclList>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex"/>
+                                                    </Anns>
+                                                    <InclDecl>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="46" Col="32" Start="1487" Length="12"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="46" Col="32" Start="1487" Length="12"/>
+                                                                </Anns>
+                                                                <Word>ΔState</Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                    </InclDecl>
+                                                    <VarDecl>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="46" Col="48" Start="1501" Length="10"/>
+                                                        </Anns>
+                                                        <ZNameList>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="46" Col="46" Start="1501" Length="2"/>
+                                                                </Anns>
+                                                                <Word>o</Word>
+                                                                <ZStrokeList>
+                                                                    <OutStroke/>
+                                                                </ZStrokeList>
+                                                            </ZName>
+                                                        </ZNameList>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="46" Col="50" Start="1505" Length="6"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="46" Col="50" Start="1505" Length="6"/>
+                                                                </Anns>
+                                                                <Word>COOKIE</Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                    </VarDecl>
+                                                </ZDeclList>
+                                                <AndPred And="Wedge">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="47" Col="42" Start="1514" Length="87"/>
+                                                    </Anns>
+                                                    <AndPred And="Wedge">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="47" Col="21" Start="1514" Length="70"/>
+                                                        </Anns>
+                                                        <AndPred And="Wedge">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="46" Col="82" Start="1514" Length="49"/>
+                                                            </Anns>
+                                                            <MemPred Mixfix="true">
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="46" Col="59" Start="1514" Length="22"/>
+                                                                </Anns>
+                                                                <TupleExpr>
+                                                                    <ZExprList>
+                                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                                            <Anns>
+                                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="46" Col="59" Start="1514" Length="5"/>
+                                                                            </Anns>
+                                                                            <ZName>
+                                                                                <Anns>
+                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="46" Col="59" Start="1514" Length="5"/>
+                                                                                </Anns>
+                                                                                <Word>money</Word>
+                                                                                <ZStrokeList/>
+                                                                            </ZName>
+                                                                            <ZExprList/>
+                                                                        </RefExpr>
+                                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                                            <Anns>
+                                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="46" Col="70" Start="1525" Length="11"/>
+                                                                            </Anns>
+                                                                            <ZName>
+                                                                                <Anns>
+                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="46" Col="70" Start="1525" Length="11"/>
+                                                                                </Anns>
+                                                                                <Word>cookieValue</Word>
+                                                                                <ZStrokeList/>
+                                                                            </ZName>
+                                                                            <ZExprList/>
+                                                                        </RefExpr>
+                                                                    </ZExprList>
+                                                                </TupleExpr>
+                                                                <RefExpr Mixfix="false" Explicit="false">
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="46" Col="65" Start="1520" Length="4"/>
+                                                                    </Anns>
+                                                                    <ZName>
+                                                                        <Anns>
+                                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="46" Col="65" Start="1520" Length="4"/>
+                                                                        </Anns>
+                                                                        <Word> _ ≥ _ </Word>
+                                                                        <ZStrokeList/>
+                                                                    </ZName>
+                                                                    <ZExprList/>
+                                                                </RefExpr>
+                                                            </MemPred>
+                                                            <MemPred Mixfix="true">
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="47" Col="17" Start="1551" Length="12"/>
+                                                                </Anns>
+                                                                <RefExpr Mixfix="false" Explicit="false">
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="47" Col="8" Start="1551" Length="8"/>
+                                                                    </Anns>
+                                                                    <ZName>
+                                                                        <Anns>
+                                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="47" Col="8" Start="1551" Length="8"/>
+                                                                        </Anns>
+                                                                        <Word>quantity</Word>
+                                                                        <ZStrokeList/>
+                                                                    </ZName>
+                                                                    <ZExprList/>
+                                                                </RefExpr>
+                                                                <SetExpr>
+                                                                    <ZExprList>
+                                                                        <NumExpr>
+                                                                            <Anns>
+                                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="47" Col="19" Start="1562" Length="1"/>
+                                                                            </Anns>
+                                                                            <ZNumeral Value="0">
+                                                                                <Anns>
+                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="47" Col="19" Start="1562" Length="1"/>
+                                                                                </Anns>
+                                                                            </ZNumeral>
+                                                                        </NumExpr>
+                                                                    </ZExprList>
+                                                                </SetExpr>
+                                                            </MemPred>
+                                                        </AndPred>
+                                                        <MemPred Mixfix="true">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="47" Col="34" Start="1570" Length="14"/>
+                                                            </Anns>
+                                                            <RefExpr Mixfix="false" Explicit="false">
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="47" Col="27" Start="1570" Length="6"/>
+                                                                </Anns>
+                                                                <ZName>
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="47" Col="27" Start="1570" Length="6"/>
+                                                                    </Anns>
+                                                                    <Word>money</Word>
+                                                                    <ZStrokeList>
+                                                                        <NextStroke/>
+                                                                    </ZStrokeList>
+                                                                </ZName>
+                                                                <ZExprList/>
+                                                            </RefExpr>
+                                                            <SetExpr>
+                                                                <ZExprList>
+                                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                                        <Anns>
+                                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="47" Col="36" Start="1579" Length="5"/>
+                                                                        </Anns>
+                                                                        <ZName>
+                                                                            <Anns>
+                                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="47" Col="36" Start="1579" Length="5"/>
+                                                                            </Anns>
+                                                                            <Word>money</Word>
+                                                                            <ZStrokeList/>
+                                                                        </ZName>
+                                                                        <ZExprList/>
+                                                                    </RefExpr>
+                                                                </ZExprList>
+                                                            </SetExpr>
+                                                        </MemPred>
+                                                    </AndPred>
+                                                    <MemPred Mixfix="true">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="47" Col="51" Start="1591" Length="10"/>
+                                                        </Anns>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="47" Col="48" Start="1591" Length="2"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="47" Col="48" Start="1591" Length="2"/>
+                                                                </Anns>
+                                                                <Word>o</Word>
+                                                                <ZStrokeList>
+                                                                    <OutStroke/>
+                                                                </ZStrokeList>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                        <SetExpr>
+                                                            <ZExprList>
+                                                                <RefExpr Mixfix="false" Explicit="false">
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="47" Col="53" Start="1596" Length="5"/>
+                                                                    </Anns>
+                                                                    <ZName>
+                                                                        <Anns>
+                                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="47" Col="53" Start="1596" Length="5"/>
+                                                                        </Anns>
+                                                                        <Word>notok</Word>
+                                                                        <ZStrokeList/>
+                                                                    </ZName>
+                                                                    <ZExprList/>
+                                                                </RefExpr>
+                                                            </ZExprList>
+                                                        </SetExpr>
+                                                    </MemPred>
+                                                </AndPred>
+                                            </ZSchText>
+                                        </SchExpr>
+                                    </ConstDecl>
+                                </ZDeclList>
+                            </ZSchText>
+                        </AxPara>
+                        <AxPara Box="OmitBox">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="48" Col="4" Start="1612" Length="57"/>
+                            </Anns>
+                            <ZNameList/>
+                            <ZSchText>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="48" Col="4" Start="1612" Length="57"/>
+                                </Anns>
+                                <ZDeclList>
+                                    <ConstDecl>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="48" Col="19" Start="1612" Length="57"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="48" Col="4" Start="1612" Length="12"/>
+                                            </Anns>
+                                            <Word>OutputCookie</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <OrExpr>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="48" Col="39" Start="1632" Length="37"/>
+                                            </Anns>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="48" Col="24" Start="1632" Length="14"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="48" Col="24" Start="1632" Length="14"/>
+                                                    </Anns>
+                                                    <Word>OutputCookieOk</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="48" Col="44" Start="1652" Length="17"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="48" Col="44" Start="1652" Length="17"/>
+                                                    </Anns>
+                                                    <Word>OutputCookieNotOk</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                        </OrExpr>
+                                    </ConstDecl>
+                                </ZDeclList>
+                            </ZSchText>
+                        </AxPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="49" Col="4" Start="1677" Length="186"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="49" Col="4" Start="1677" Length="6"/>
+                                </Anns>
+                                <Word>Output</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:GuardedAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="49" Col="36" Start="1709" Length="154"/>
+                                </Anns>
+                                <ns3:VarDeclCommand>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="50" Col="13" Start="1772" Length="91"/>
+                                        <ParenAnn>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="50" Col="12" Start="1771" Length="94"/>
+                                            </Anns>
+                                        </ParenAnn>
+                                    </Anns>
+                                    <ZDeclList>
+                                        <VarDecl>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="50" Col="24" Start="1782" Length="9"/>
+                                            </Anns>
+                                            <ZNameList>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="50" Col="23" Start="1782" Length="1"/>
+                                                    </Anns>
+                                                    <Word>o</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                            </ZNameList>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="50" Col="26" Start="1785" Length="6"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="50" Col="26" Start="1785" Length="6"/>
+                                                    </Anns>
+                                                    <Word>COOKIE</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                        </VarDecl>
+                                    </ZDeclList>
+                                    <ns3:SeqAction>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="50" Col="43" Start="1802" Length="61"/>
+                                        </Anns>
+                                        <ns3:CallAction>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="50" Col="43" Start="1802" Length="12"/>
+                                            </Anns>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="50" Col="43" Start="1802" Length="12"/>
+                                                </Anns>
+                                                <Word>OutputCookie</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <ZExprList/>
+                                        </ns3:CallAction>
+                                        <ns3:PrefixingAction>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="50" Col="66" Start="1825" Length="38"/>
+                                                <ParenAnn>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="50" Col="65" Start="1824" Length="40"/>
+                                                    </Anns>
+                                                </ParenAnn>
+                                            </Anns>
+                                            <ns3:PrefixingAction>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="50" Col="79" Start="1838" Length="25"/>
+                                                </Anns>
+                                                <ns3:SkipAction>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="50" Col="99" Start="1858" Length="5"/>
+                                                    </Anns>
+                                                </ns3:SkipAction>
+                                                <ns3:Communication CommUsage="Normal" CommPattern="Output" MultiSych="0" Indexed="false">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="50" Col="79" Start="1838" Length="6"/>
+                                                    </Anns>
+                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                        <ZName>
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="50" Col="79" Start="1838" Length="6"/>
+                                                            </Anns>
+                                                            <Word>change</Word>
+                                                            <ZStrokeList/>
+                                                        </ZName>
+                                                        <ZExprList/>
+                                                    </RefExpr>
+                                                    <ns3:CircusFieldList>
+                                                        <ns3:DotField>
+                                                            <Anns>
+                                                                <ns3:OutputFieldAnn/>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="50" Col="86" Start="1845" Length="6"/>
+                                                            </Anns>
+                                                            <RefExpr Mixfix="false" Explicit="false">
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="50" Col="87" Start="1846" Length="5"/>
+                                                                </Anns>
+                                                                <ZName>
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="50" Col="87" Start="1846" Length="5"/>
+                                                                    </Anns>
+                                                                    <Word>money</Word>
+                                                                    <ZStrokeList/>
+                                                                </ZName>
+                                                                <ZExprList/>
+                                                            </RefExpr>
+                                                        </ns3:DotField>
+                                                    </ns3:CircusFieldList>
+                                                </ns3:Communication>
+                                            </ns3:PrefixingAction>
+                                            <ns3:Communication CommUsage="Normal" CommPattern="Output" MultiSych="0" Indexed="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="50" Col="66" Start="1825" Length="3"/>
+                                                </Anns>
+                                                <RefExpr Mixfix="false" Explicit="false">
+                                                    <ZName>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="50" Col="66" Start="1825" Length="3"/>
+                                                        </Anns>
+                                                        <Word>out</Word>
+                                                        <ZStrokeList/>
+                                                    </ZName>
+                                                    <ZExprList/>
+                                                </RefExpr>
+                                                <ns3:CircusFieldList>
+                                                    <ns3:DotField>
+                                                        <Anns>
+                                                            <ns3:OutputFieldAnn/>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="50" Col="70" Start="1829" Length="2"/>
+                                                        </Anns>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="50" Col="71" Start="1830" Length="1"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="50" Col="71" Start="1830" Length="1"/>
+                                                                </Anns>
+                                                                <Word>o</Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                    </ns3:DotField>
+                                                </ns3:CircusFieldList>
+                                            </ns3:Communication>
+                                        </ns3:PrefixingAction>
+                                    </ns3:SeqAction>
+                                </ns3:VarDeclCommand>
+                                <MemPred Mixfix="true">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="49" Col="36" Start="1709" Length="22"/>
+                                    </Anns>
+                                    <TupleExpr>
+                                        <ZExprList>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="49" Col="36" Start="1709" Length="5"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="49" Col="36" Start="1709" Length="5"/>
+                                                    </Anns>
+                                                    <Word>money</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="49" Col="47" Start="1720" Length="11"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="49" Col="47" Start="1720" Length="11"/>
+                                                    </Anns>
+                                                    <Word>cookieValue</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                        </ZExprList>
+                                    </TupleExpr>
+                                    <RefExpr Mixfix="false" Explicit="false">
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="49" Col="42" Start="1715" Length="4"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="49" Col="42" Start="1715" Length="4"/>
+                                            </Anns>
+                                            <Word> _ ≥ _ </Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </RefExpr>
+                                </MemPred>
+                            </ns3:GuardedAction>
+                        </ns3:ActionPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="51" Col="8" Start="1877" Length="87"/>
+                            </Anns>
+                            <ZName>
+                                <Word>$$mainAction_L51C8</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:SeqAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="51" Col="8" Start="1877" Length="87"/>
+                                    <ns3:OnTheFlyDefAnn/>
+                                </Anns>
+                                <ns3:CallAction>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="51" Col="18" Start="1887" Length="9"/>
+                                    </Anns>
+                                    <ZName>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="51" Col="18" Start="1887" Length="9"/>
+                                        </Anns>
+                                        <Word>StateInit</Word>
+                                        <ZStrokeList/>
+                                    </ZName>
+                                    <ZExprList/>
+                                </ns3:CallAction>
+                                <ns3:MuAction>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="51" Col="38" Start="1907" Length="57"/>
+                                        <ParenAnn>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="51" Col="37" Start="1906" Length="59"/>
+                                            </Anns>
+                                        </ParenAnn>
+                                    </Anns>
+                                    <ns3:SeqAction>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="51" Col="60" Start="1929" Length="35"/>
+                                        </Anns>
+                                        <ns3:ExtChoiceAction>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="51" Col="60" Start="1929" Length="23"/>
+                                                <ParenAnn>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="51" Col="59" Start="1928" Length="25"/>
+                                                    </Anns>
+                                                </ParenAnn>
+                                            </Anns>
+                                            <ns3:CallAction>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="51" Col="60" Start="1929" Length="5"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="51" Col="60" Start="1929" Length="5"/>
+                                                    </Anns>
+                                                    <Word>Input</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </ns3:CallAction>
+                                            <ns3:CallAction>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="51" Col="77" Start="1946" Length="6"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="51" Col="77" Start="1946" Length="6"/>
+                                                    </Anns>
+                                                    <Word>Output</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </ns3:CallAction>
+                                        </ns3:ExtChoiceAction>
+                                        <ns3:CallAction>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="51" Col="94" Start="1963" Length="1"/>
+                                            </Anns>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="51" Col="94" Start="1963" Length="1"/>
+                                                </Anns>
+                                                <Word>X</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <ZExprList/>
+                                        </ns3:CallAction>
+                                    </ns3:SeqAction>
+                                    <ZName>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="51" Col="47" Start="1916" Length="1"/>
+                                        </Anns>
+                                        <Word>X</Word>
+                                        <ZStrokeList/>
+                                    </ZName>
+                                </ns3:MuAction>
+                            </ns3:SeqAction>
+                        </ns3:ActionPara>
+                    </ZParaList>
+                </ns3:BasicProcess>
+            </ns3:ProcessPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/CookieMachine.tex" Line="53" Col="12" Start="1993" Length="17"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+\end{document}
+</Content>
+            </NarrPara>
+        </ZParaList>
+    </ZSect>
+</Spec>

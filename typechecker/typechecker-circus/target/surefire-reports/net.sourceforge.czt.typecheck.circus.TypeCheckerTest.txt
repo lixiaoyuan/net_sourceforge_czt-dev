@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: net.sourceforge.czt.typecheck.circus.TypeCheckerTest
+-------------------------------------------------------------------------------
+Tests run: 66, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.329 sec - in net.sourceforge.czt.typecheck.circus.TypeCheckerTest

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ZSect xsi:schemaLocation="http://czt.sourceforge.net/zml http://czt.sourceforge.net/zml/Z_2_1.xsd" xmlns="http://czt.sourceforge.net/zml" xmlns:ns2="http://czt.sourceforge.net/zeves" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Anns>
+        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="0" Col="0" Start="0" Length="323"/>
+    </Anns>
+    <Name>underscoreNamedThm</Name>
+    <Parent>
+        <Anns>
+            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="1" Col="41" Start="57" Length="14"/>
+        </Anns>
+        <Word>zeves_prelude</Word>
+    </Parent>
+    <ZParaList>
+        <LatexMarkupPara/>
+        <NarrPara>
+            <Anns>
+                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="2" Col="14" Start="86" Length="2"/>
+            </Anns>
+            <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+        </NarrPara>
+        <ConjPara>
+            <Anns>
+                <ZName>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="4" Col="31" Start="119" Length="11"/>
+                    </Anns>
+                    <Word>lName_Okay</Word>
+                    <ZStrokeList/>
+                </ZName>
+                <ns2:ZEvesLabel LabelAbility="disabled" LabelUsage="rule">
+                    <ZName>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="4" Col="31" Start="119" Length="11"/>
+                        </Anns>
+                        <Word>lName_Okay</Word>
+                        <ZStrokeList/>
+                    </ZName>
+                </ns2:ZEvesLabel>
+                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="4" Col="0" Start="88" Length="85"/>
+            </Anns>
+            <ZNameList/>
+            <ExprPred>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="5" Col="3" Start="135" Length="24"/>
+                </Anns>
+                <ExistsExpr>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="5" Col="3" Start="135" Length="24"/>
+                    </Anns>
+                    <ZSchText>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="5" Col="12" Start="143" Length="7"/>
+                        </Anns>
+                        <ZDeclList>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="5" Col="12" Start="143" Length="7"/>
+                            </Anns>
+                            <VarDecl>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="5" Col="12" Start="143" Length="7"/>
+                                </Anns>
+                                <ZNameList>
+                                    <ZName>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="5" Col="11" Start="143" Length="1"/>
+                                        </Anns>
+                                        <Word>x</Word>
+                                        <ZStrokeList/>
+                                    </ZName>
+                                </ZNameList>
+                                <RefExpr Mixfix="false" Explicit="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="5" Col="14" Start="146" Length="4"/>
+                                    </Anns>
+                                    <ZName>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="5" Col="14" Start="146" Length="4"/>
+                                        </Anns>
+                                        <Word>ℕ</Word>
+                                        <ZStrokeList/>
+                                    </ZName>
+                                    <ZExprList/>
+                                </RefExpr>
+                            </VarDecl>
+                        </ZDeclList>
+                    </ZSchText>
+                    <ApplExpr Mixfix="false">
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="5" Col="21" Start="153" Length="6"/>
+                        </Anns>
+                        <ApplExpr Mixfix="false">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="5" Col="21" Start="153" Length="4"/>
+                            </Anns>
+                            <RefExpr Mixfix="false" Explicit="false">
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="5" Col="21" Start="153" Length="1"/>
+                                </Anns>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="5" Col="21" Start="153" Length="1"/>
+                                    </Anns>
+                                    <Word>x</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ZExprList/>
+                            </RefExpr>
+                            <RefExpr Mixfix="false" Explicit="false">
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="5" Col="23" Start="155" Length="2"/>
+                                </Anns>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="5" Col="23" Start="155" Length="2"/>
+                                    </Anns>
+                                    <Word>&gt;</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ZExprList/>
+                            </RefExpr>
+                        </ApplExpr>
+                        <NumExpr>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="5" Col="25" Start="157" Length="2"/>
+                            </Anns>
+                            <ZNumeral Value="10">
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="5" Col="25" Start="157" Length="2"/>
+                                </Anns>
+                            </ZNumeral>
+                        </NumExpr>
+                    </ApplExpr>
+                </ExistsExpr>
+            </ExprPred>
+        </ConjPara>
+        <NarrPara>
+            <Anns>
+                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="6" Col="13" Start="173" Length="2"/>
+            </Anns>
+            <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+        </NarrPara>
+        <ns2:ProofScript>
+            <Anns>
+                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="8" Col="0" Start="175" Length="78"/>
+            </Anns>
+            <ZName>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="8" Col="15" Start="190" Length="11"/>
+                </Anns>
+                <Word>lName_Okay</Word>
+                <ZStrokeList/>
+            </ZName>
+            <ns2:ProofCommandList>
+                <ns2:QuantifiersCommand ProofStep="1">
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="9" Col="0" Start="203" Length="19"/>
+                    </Anns>
+                    <ns2:InstantiationList>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="9" Col="12" Start="215" Length="7"/>
+                        </Anns>
+                        <ns2:Instantiation InstantiationKind="Quantifier">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="9" Col="12" Start="215" Length="7"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="9" Col="12" Start="215" Length="1"/>
+                                </Anns>
+                                <Word>x</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <NumExpr>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="9" Col="17" Start="220" Length="2"/>
+                                </Anns>
+                                <ZNumeral Value="11">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="9" Col="17" Start="220" Length="2"/>
+                                    </Anns>
+                                </ZNumeral>
+                            </NumExpr>
+                        </ns2:Instantiation>
+                    </ns2:InstantiationList>
+                </ns2:QuantifiersCommand>
+                <ns2:SimplificationCommand RewriteKind="Reduce" RewritePower="Prove" ProofStep="2">
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="10" Col="0" Start="224" Length="15"/>
+                    </Anns>
+                </ns2:SimplificationCommand>
+            </ns2:ProofCommandList>
+        </ns2:ProofScript>
+        <NarrPara>
+            <Anns>
+                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="11" Col="12" Start="253" Length="2"/>
+            </Anns>
+            <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+        </NarrPara>
+        <ConjPara>
+            <Anns>
+                <ZName>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="14" Col="11" Start="278" Length="10"/>
+                    </Anns>
+                    <Word>Test_Okay</Word>
+                    <ZStrokeList/>
+                </ZName>
+                <ns2:ZEvesLabel LabelAbility="none" LabelUsage="none">
+                    <ZName>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="14" Col="11" Start="278" Length="10"/>
+                        </Anns>
+                        <Word>Test_Okay</Word>
+                        <ZStrokeList/>
+                    </ZName>
+                </ns2:ZEvesLabel>
+                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="13" Col="0" Start="255" Length="68"/>
+            </Anns>
+            <ZNameList/>
+            <ExistsPred>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="14" Col="23" Start="290" Length="22"/>
+                    <ParenAnn>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="14" Col="22" Start="289" Length="24"/>
+                        </Anns>
+                    </ParenAnn>
+                </Anns>
+                <ZSchText>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="14" Col="32" Start="298" Length="7"/>
+                    </Anns>
+                    <ZDeclList>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="14" Col="32" Start="298" Length="7"/>
+                        </Anns>
+                        <VarDecl>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="14" Col="32" Start="298" Length="7"/>
+                            </Anns>
+                            <ZNameList>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="14" Col="31" Start="298" Length="1"/>
+                                    </Anns>
+                                    <Word>y</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                            </ZNameList>
+                            <RefExpr Mixfix="false" Explicit="false">
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="14" Col="34" Start="301" Length="4"/>
+                                </Anns>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="14" Col="34" Start="301" Length="4"/>
+                                    </Anns>
+                                    <Word>ℕ</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ZExprList/>
+                            </RefExpr>
+                        </VarDecl>
+                    </ZDeclList>
+                </ZSchText>
+                <TruePred>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" Line="14" Col="41" Start="308" Length="4"/>
+                    </Anns>
+                </TruePred>
+            </ExistsPred>
+        </ConjPara>
+    </ZParaList>
+</ZSect>

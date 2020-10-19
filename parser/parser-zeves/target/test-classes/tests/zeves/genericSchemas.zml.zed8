@@ -1,0 +1,13 @@
+─ section genericSchemas parents zeves_toolkit └ 
+
+Warning about missing hard space if no new line added. Good
+┌═ S [ X , Y ] 
+a : ℙ X 
+b : X |
+ b ∈ a └ 
+
+┌═ Init [ X , Y ] 
+S ′ |
+ a = { } └ 
+
+─ T [ X , Y ] == [ c : ℙ Y | ¬ c = { } ] └ 

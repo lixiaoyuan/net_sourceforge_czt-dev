@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Spec Version="2.1" xsi:schemaLocation="http://czt.sourceforge.net/zml http://czt.sourceforge.net/zml/Z_2_1.xsd" xmlns="http://czt.sourceforge.net/zml" xmlns:ns2="http://czt.sourceforge.net/zpatt" xmlns:ns3="http://czt.sourceforge.net/circus" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ZSect>
+        <Anns>
+            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="0" Col="0" Start="0" Length="758"/>
+        </Anns>
+        <Name>genericOpTest</Name>
+        <Parent>
+            <Anns>
+                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="1" Col="37" Start="53" Length="7"/>
+            </Anns>
+            <Word>prelude</Word>
+        </Parent>
+        <ZParaList>
+            <LatexMarkupPara>
+                <Directive DirectiveType="NONE">
+                    <Anns>
+                        <LocAnn Line="11"/>
+                    </Anns>
+                    <Command>\emptyset</Command>
+                    <Unicode>∅</Unicode>
+                </Directive>
+                <Directive DirectiveType="PRE">
+                    <Anns>
+                        <LocAnn Line="16"/>
+                    </Anns>
+                    <Command>\langle</Command>
+                    <Unicode>⟨</Unicode>
+                </Directive>
+                <Directive DirectiveType="POST">
+                    <Anns>
+                        <LocAnn Line="17"/>
+                    </Anns>
+                    <Command>\rangle</Command>
+                    <Unicode>⟩</Unicode>
+                </Directive>
+                <Directive DirectiveType="IN">
+                    <Anns>
+                        <LocAnn Line="26"/>
+                    </Anns>
+                    <Command>\bla</Command>
+                    <Unicode>bla</Unicode>
+                </Directive>
+            </LatexMarkupPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="2" Col="14" Start="75" Length="217"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+Failed attempt to reproduce a complex ternary operator.
+
+</Content>
+            </NarrPara>
+            <AxPara Box="OmitBox">
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="12" Col="0" Start="317" Length="62"/>
+                </Anns>
+                <ZNameList>
+                    <ZName>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="13" Col="12" Start="341" Length="1"/>
+                        </Anns>
+                        <Word>X</Word>
+                        <ZStrokeList/>
+                    </ZName>
+                </ZNameList>
+                <ZSchText>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="13" Col="16" Start="329" Length="40"/>
+                    </Anns>
+                    <ZDeclList>
+                        <ConstDecl>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="13" Col="16" Start="329" Length="40"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="13" Col="0" Start="329" Length="9"/>
+                                </Anns>
+                                <Word>∅</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <SetCompExpr>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="13" Col="19" Start="348" Length="21"/>
+                                </Anns>
+                                <ZSchText>
+                                    <ZDeclList>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="13" Col="25" Start="352" Length="5"/>
+                                        </Anns>
+                                        <VarDecl>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="13" Col="25" Start="352" Length="5"/>
+                                            </Anns>
+                                            <ZNameList>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="13" Col="23" Start="352" Length="1"/>
+                                                    </Anns>
+                                                    <Word>x</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                            </ZNameList>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="13" Col="27" Start="356" Length="1"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="13" Col="27" Start="356" Length="1"/>
+                                                    </Anns>
+                                                    <Word>X</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                        </VarDecl>
+                                    </ZDeclList>
+                                    <FalsePred>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="13" Col="31" Start="360" Length="5"/>
+                                        </Anns>
+                                    </FalsePred>
+                                </ZSchText>
+                            </SetCompExpr>
+                        </ConstDecl>
+                    </ZDeclList>
+                </ZSchText>
+            </AxPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="14" Col="9" Start="379" Length="2"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+            </NarrPara>
+            <OptempPara Cat="Function">
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="18" Col="0" Start="434" Length="58"/>
+                </Anns>
+                <Operator>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="19" Col="11" Start="457" Length="7"/>
+                    </Anns>
+                    <Word>⟨</Word>
+                </Operator>
+                <Operand List="true"/>
+                <Operator>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="19" Col="28" Start="474" Length="7"/>
+                    </Anns>
+                    <Word>⟩</Word>
+                </Operator>
+            </OptempPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="20" Col="9" Start="492" Length="2"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+            </NarrPara>
+            <AxPara Box="OmitBox">
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="22" Col="0" Start="494" Length="74"/>
+                </Anns>
+                <ZNameList>
+                    <ZName>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="23" Col="27" Start="533" Length="1"/>
+                        </Anns>
+                        <Word>X</Word>
+                        <ZStrokeList/>
+                    </ZName>
+                </ZNameList>
+                <ZSchText>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="23" Col="32"/>
+                    </Anns>
+                    <ZDeclList>
+                        <ConstDecl>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="23" Col="32"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="23" Col="17"/>
+                                </Anns>
+                                <Word>⟨ ,, ⟩</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <LambdaExpr>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="23" Col="35" Start="541" Length="17"/>
+                                </Anns>
+                                <ZSchText>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="23" Col="45" Start="549" Length="5"/>
+                                    </Anns>
+                                    <ZDeclList>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="23" Col="45" Start="549" Length="5"/>
+                                        </Anns>
+                                        <VarDecl>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="23" Col="45" Start="549" Length="5"/>
+                                            </Anns>
+                                            <ZNameList>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="23" Col="43" Start="549" Length="1"/>
+                                                    </Anns>
+                                                    <Word>s</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                            </ZNameList>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="23" Col="47" Start="553" Length="1"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="23" Col="47" Start="553" Length="1"/>
+                                                    </Anns>
+                                                    <Word>X</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                        </VarDecl>
+                                    </ZDeclList>
+                                </ZSchText>
+                                <RefExpr Mixfix="false" Explicit="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="23" Col="51" Start="557" Length="1"/>
+                                    </Anns>
+                                    <ZName>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="23" Col="51" Start="557" Length="1"/>
+                                        </Anns>
+                                        <Word>s</Word>
+                                        <ZStrokeList/>
+                                    </ZName>
+                                    <ZExprList/>
+                                </RefExpr>
+                            </LambdaExpr>
+                        </ConstDecl>
+                    </ZDeclList>
+                </ZSchText>
+            </AxPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="24" Col="9" Start="568" Length="2"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+            </NarrPara>
+            <OptempPara Cat="Generic" Assoc="Right" Prec="5">
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="27" Col="0" Start="589" Length="57"/>
+                </Anns>
+                <Operand List="false"/>
+                <Operator>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="28" Col="27" Start="628" Length="4"/>
+                    </Anns>
+                    <Word>bla</Word>
+                </Operator>
+                <Operand List="false"/>
+            </OptempPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="29" Col="9" Start="646" Length="2"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+            </NarrPara>
+            <AxPara Box="OmitBox">
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="31" Col="0" Start="648" Length="109"/>
+                </Anns>
+                <ZNameList>
+                    <ZName>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="0" Start="660" Length="1"/>
+                        </Anns>
+                        <Word>X</Word>
+                        <ZStrokeList/>
+                    </ZName>
+                    <ZName>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="7" Start="667" Length="1"/>
+                        </Anns>
+                        <Word>Y</Word>
+                        <ZStrokeList/>
+                    </ZName>
+                </ZNameList>
+                <ZSchText>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="7"/>
+                    </Anns>
+                    <ZDeclList>
+                        <ConstDecl>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="9"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="7"/>
+                                </Anns>
+                                <Word> _ bla _ </Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <SetCompExpr>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="12" Start="672" Length="75"/>
+                                </Anns>
+                                <ZSchText>
+                                    <ZDeclList>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="18" Start="676" Length="22"/>
+                                        </Anns>
+                                        <VarDecl>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="18" Start="676" Length="22"/>
+                                            </Anns>
+                                            <ZNameList>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="16" Start="676" Length="1"/>
+                                                    </Anns>
+                                                    <Word>f</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                            </ZNameList>
+                                            <PowerExpr>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="20" Start="680" Length="18"/>
+                                                </Anns>
+                                                <ProdExpr>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="37" Start="688" Length="10"/>
+                                                        <ParenAnn>
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="27" Start="687" Length="12"/>
+                                                            </Anns>
+                                                        </ParenAnn>
+                                                    </Anns>
+                                                    <ZExprList>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="28" Start="688" Length="1"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="28" Start="688" Length="1"/>
+                                                                </Anns>
+                                                                <Word>X</Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="37" Start="697" Length="1"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="37" Start="697" Length="1"/>
+                                                                </Anns>
+                                                                <Word>Y</Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                    </ZExprList>
+                                                </ProdExpr>
+                                            </PowerExpr>
+                                        </VarDecl>
+                                    </ZDeclList>
+                                    <ForallPred>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="42" Start="702" Length="41"/>
+                                        </Anns>
+                                        <ZSchText>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="56" Start="710" Length="21"/>
+                                            </Anns>
+                                            <ZDeclList>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="56" Start="710" Length="9"/>
+                                                </Anns>
+                                                <VarDecl>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="56" Start="710" Length="9"/>
+                                                    </Anns>
+                                                    <ZNameList>
+                                                        <ZName>
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="50" Start="710" Length="1"/>
+                                                            </Anns>
+                                                            <Word>p</Word>
+                                                            <ZStrokeList/>
+                                                        </ZName>
+                                                        <ZName>
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="54" Start="714" Length="1"/>
+                                                            </Anns>
+                                                            <Word>q</Word>
+                                                            <ZStrokeList/>
+                                                        </ZName>
+                                                    </ZNameList>
+                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="58" Start="718" Length="1"/>
+                                                        </Anns>
+                                                        <ZName>
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="58" Start="718" Length="1"/>
+                                                            </Anns>
+                                                            <Word>f</Word>
+                                                            <ZStrokeList/>
+                                                        </ZName>
+                                                        <ZExprList/>
+                                                    </RefExpr>
+                                                </VarDecl>
+                                            </ZDeclList>
+                                            <MemPred Mixfix="true">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="66" Start="722" Length="9"/>
+                                                </Anns>
+                                                <TupleSelExpr>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="63" Start="722" Length="3"/>
+                                                    </Anns>
+                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="62" Start="722" Length="1"/>
+                                                        </Anns>
+                                                        <ZName>
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="62" Start="722" Length="1"/>
+                                                            </Anns>
+                                                            <Word>p</Word>
+                                                            <ZStrokeList/>
+                                                        </ZName>
+                                                        <ZExprList/>
+                                                    </RefExpr>
+                                                    <ZNumeral Value="1">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="64" Start="724" Length="1"/>
+                                                        </Anns>
+                                                    </ZNumeral>
+                                                </TupleSelExpr>
+                                                <SetExpr>
+                                                    <ZExprList>
+                                                        <TupleSelExpr>
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="69" Start="728" Length="3"/>
+                                                            </Anns>
+                                                            <RefExpr Mixfix="false" Explicit="false">
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="68" Start="728" Length="1"/>
+                                                                </Anns>
+                                                                <ZName>
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="68" Start="728" Length="1"/>
+                                                                    </Anns>
+                                                                    <Word>q</Word>
+                                                                    <ZStrokeList/>
+                                                                </ZName>
+                                                                <ZExprList/>
+                                                            </RefExpr>
+                                                            <ZNumeral Value="1">
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="70" Start="730" Length="1"/>
+                                                                </Anns>
+                                                            </ZNumeral>
+                                                        </TupleSelExpr>
+                                                    </ZExprList>
+                                                </SetExpr>
+                                            </MemPred>
+                                        </ZSchText>
+                                        <MemPred Mixfix="true">
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="78" Start="734" Length="9"/>
+                                            </Anns>
+                                            <TupleSelExpr>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="75" Start="734" Length="3"/>
+                                                </Anns>
+                                                <RefExpr Mixfix="false" Explicit="false">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="74" Start="734" Length="1"/>
+                                                    </Anns>
+                                                    <ZName>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="74" Start="734" Length="1"/>
+                                                        </Anns>
+                                                        <Word>p</Word>
+                                                        <ZStrokeList/>
+                                                    </ZName>
+                                                    <ZExprList/>
+                                                </RefExpr>
+                                                <ZNumeral Value="2">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="76" Start="736" Length="1"/>
+                                                    </Anns>
+                                                </ZNumeral>
+                                            </TupleSelExpr>
+                                            <SetExpr>
+                                                <ZExprList>
+                                                    <TupleSelExpr>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="81" Start="740" Length="3"/>
+                                                        </Anns>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="80" Start="740" Length="1"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="80" Start="740" Length="1"/>
+                                                                </Anns>
+                                                                <Word>q</Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                        <ZNumeral Value="2">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="32" Col="82" Start="742" Length="1"/>
+                                                            </Anns>
+                                                        </ZNumeral>
+                                                    </TupleSelExpr>
+                                                </ZExprList>
+                                            </SetExpr>
+                                        </MemPred>
+                                    </ForallPred>
+                                </ZSchText>
+                            </SetCompExpr>
+                        </ConstDecl>
+                    </ZDeclList>
+                </ZSchText>
+            </AxPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/genericOpTest.tex" Line="33" Col="9" Start="757" Length="1"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</Content>
+            </NarrPara>
+        </ZParaList>
+    </ZSect>
+</Spec>

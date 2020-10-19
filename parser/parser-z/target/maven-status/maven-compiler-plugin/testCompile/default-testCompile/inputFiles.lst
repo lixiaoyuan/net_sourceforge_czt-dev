@@ -1,0 +1,17 @@
+/root/czt-code/parser/parser-z/src/test/java/net/sourceforge/czt/parser/util/LatexMarkupFunctionTest.java
+/root/czt-code/parser/parser-z/src/test/java/net/sourceforge/czt/parser/util/CztManagedTest.java
+/root/czt-code/parser/parser-z/src/test/java/net/sourceforge/czt/print/z/ZmlPrinterTest.java
+/root/czt-code/parser/parser-z/src/test/java/net/sourceforge/czt/parser/z/UnicodeScannerTest.java
+/root/czt-code/parser/parser-z/src/test/java/net/sourceforge/czt/parser/z/ParserTest.java
+/root/czt-code/parser/parser-z/src/test/java/net/sourceforge/czt/parser/z/CyclicParentParserTest.java
+/root/czt-code/parser/parser-z/src/test/java/net/sourceforge/czt/parser/z/LatexMarkupConverterTest.java
+/root/czt-code/parser/parser-z/src/test/java/net/sourceforge/czt/parser/z/SectFromSpecParserTest.java
+/root/czt-code/parser/parser-z/src/test/java/net/sourceforge/czt/parser/util/AbstractParserTest.java
+/root/czt-code/parser/parser-z/src/test/java/net/sourceforge/czt/print/z/PrecedenceParenAnnVisitorTest.java
+/root/czt-code/parser/parser-z/src/test/java/net/sourceforge/czt/parser/util/AbstractCyclicParentTest.java
+/root/czt-code/parser/parser-z/src/test/java/net/sourceforge/czt/parser/util/AbstractParserFailTest.java
+/root/czt-code/parser/parser-z/src/test/java/net/sourceforge/czt/parser/Examples.java
+/root/czt-code/parser/parser-z/src/test/java/net/sourceforge/czt/parser/util/AbstractLatexToUnicodeTest.java
+/root/czt-code/parser/parser-z/src/test/java/net/sourceforge/czt/parser/z/LatexToUnicodeTest.java
+/root/czt-code/parser/parser-z/src/test/java/net/sourceforge/czt/parser/util/CyclicParserManagerTest.java
+/root/czt-code/parser/parser-z/src/test/java/net/sourceforge/czt/parser/z/DefaultZSectionParentsTest.java

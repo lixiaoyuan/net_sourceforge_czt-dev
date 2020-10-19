@@ -1,0 +1,12 @@
+net/sourceforge/czt/vcg/util/VCGTest.class
+net/sourceforge/czt/vcg/util/DefinitionTableTest$NegativeDefTableTest.class
+net/sourceforge/czt/vcg/util/DefinitionTableTest$NormalDefTableTest.class
+net/sourceforge/czt/vcg/z/dc/DomainCheckerMondexTest.class
+net/sourceforge/czt/vcg/util/DefinitionTableMondexTest.class
+net/sourceforge/czt/vcg/z/refinement/RefinementTest.class
+net/sourceforge/czt/vcg/z/dc/DomainCheckerTest.class
+net/sourceforge/czt/vcg/z/refinement/RefinementMondexTest.class
+net/sourceforge/czt/vcg/z/feasibility/FeasibilityTest.class
+net/sourceforge/czt/vcg/util/VCGTest$NormalVCGTest.class
+net/sourceforge/czt/vcg/z/feasibility/FeasibilityMondexTest.class
+net/sourceforge/czt/vcg/util/DefinitionTableTest.class

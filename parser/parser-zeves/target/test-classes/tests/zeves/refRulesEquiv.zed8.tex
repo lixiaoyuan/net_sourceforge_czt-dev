@@ -1,0 +1,142 @@
+\begin{zsection}	 \SECTION refRulesEquiv \parents~zeves\_toolkit
+\end{zsection}
+
+
+
+Bla bla
+
+\begin{schema}{AS}
+\\
+ x : \power \nat
+\end{schema}
+
+
+\begin{zed}FI ::= NatIn \ldata \nat \rdata
+\end{zed}
+
+\begin{zed}FO ::= NatOut \ldata \nat \rdata
+\end{zed}
+
+
+
+\begin{schema}{CS}
+\\
+ y : \seq \nat
+\end{schema}
+
+
+
+The next refinement tag is mistaken on purpose - just to test the parser for it.
+
+\begin{schema}{AOper}
+\\
+ \Delta AS \\
+ ai? : \nat \\
+ ao! : \nat 
+\where
+ x' = x \cup \{ ai? \} \\
+ ao! \in x
+\end{schema}
+
+
+
+\begin{schema}{COper}
+\\
+ \Delta CS \\
+ ci? : FI \\
+ co! : FO 
+\where
+ y' = y \cat \langle ( NatIn \inv ) ( ci? ) \rangle \\
+ ( NatOut \inv ) ( co! ) \in \ran y
+\end{schema}
+
+
+
+\begin{schema}{R}
+\\
+ AS \\
+ CS 
+\where
+ x = \ran y
+\end{schema}
+
+
+
+\begin{schema}{RIn}
+\\
+ ai? : \nat \\
+ ci? : FI 
+\where
+ ai? = ( NatIn \inv ) ( ci? )
+\end{schema}
+
+
+
+\begin{schema}{ROut}
+\\
+ ao! : \nat \\
+ co! : FO 
+\where
+ ao! = ( NatOut \inv ) ( co! )
+\end{schema}
+
+
+
+\begin{theorem}{ BSCorrectnessEquiv0}\\
+ ( \forall CS ; ci? : FI | ( \forall AS ; ai? : \nat | R \land RIn @ \pre AOper ) @ ( \forall CS~' ; co! : FO ; AS~' ; ao! : \nat | COper \land R~' \land ROut @ ( \exists AS ; ai? : \nat @ R \land RIn \land AOper ) ) ) \\
+
+\end{theorem}
+
+
+
+\begin{theorem}{rule lNatInType}\\
+ \forall x : FI @ ( NatIn \inv ) x \in \num \\
+
+\end{theorem}
+
+
+
+\begin{theorem}{rule lNatInIsNat}\\
+ \forall x : FI @ ( NatIn \inv ) x \geq 0 \\
+
+\end{theorem}
+
+
+
+\begin{theorem}{ BSCorrectnessEquiv}\\
+ ( \forall CS ; ci? : FI | ( \forall AS ; ai? : \nat | R \land RIn @ \pre AOper ) @ ( \forall CS~' ; co! : FO ; AS~' ; ao! : \nat | COper \land R~' \land ROut @ ( \exists AS ; ai? : \nat @ R \land RIn \land AOper ) ) ) \iff ( \forall COper ; ROut ; R~' | ( \forall AS ; RIn | R @ \pre AOper ) @ ( \exists AS ; R ; RIn @ AOper ) ) \\
+
+\end{theorem}
+
+
+
+\begin{zproof}[BSCorrectnessEquiv]
+
+ split ( \forall CS ; ci? : FI | ( \forall AS ; ai? : \nat | R \land RIn @ \pre AOper ) @ ( \forall CS~' ; co! : FO ; AS~' ; ao! : \nat | COper \land R~' \land ROut @ ( \exists AS ; ai? : \nat @ R \land RIn \land AOper ) ) ) ;
+ 
+ cases ;
+ 
+ prove by reduce ;
+ 
+ instantiate x \defs \ran y , y\_ \_ 0 \defs y ;
+ 
+ prove by reduce ;
+ 
+ instantiate ci\_ \_ 1? \defs ci? , ai\_ \_ 0? \defs ( NatIn \inv ) ( ci? ) ;
+ 
+ prove by reduce ;
+ 
+ next ;
+ 
+ split ( \forall COper ; ROut ; R~' | ( \forall AS ; RIn | R @ \pre AOper ) @ ( \exists AS ; R ; RIn @ AOper ) ) ;
+ 
+ simplify ;
+ 
+ prove by reduce ;
+ 
+ next ;
+ 
+
+\end{zproof}
+
+

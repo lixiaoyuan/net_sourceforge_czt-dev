@@ -1,0 +1,31 @@
+─ section zeveslabels parents standard_toolkit └ 
+
+More than one labelled predicate per axiomatic box (!)
+╷ foo : ℕ |
+ 《 disabled rule dFoo 》 foo = 10 
+《 disabled rule dFoo2 》 foo > 2 
+foo < 11 └ 
+
+─ ☒ theorem rule lFooLemma 
+∀ x : ℕ ⦁ x > foo 
+└ 
+
+─ ☒ theorem rule lOptionalVDash 
+∀ x : ℕ ⦁ x > foo 
+└ 
+
+├ lFooLemma 
+apply dFoo ;  
+prove by reduce ;  
+└ 
+
+┌ ☓ S 
+x : ℕ └ 
+
+─ [ GS , Audit ] └ 
+
+Problem: \IF entry \in log \THEN the predicate within gets a label (!)
+╷ sizeElement0 : Audit → ℕ 
+sizeLog0 : 𝔽 Audit → ℕ |
+ 《 disabled rule dSizeLogEmpty0 》 sizeLog0 ∅ = 0 
+《 disabled rule dSizeLog0 》 ∀ log : 𝔽 Audit ; entry : Audit ⦁ sizeLog0 log = if ( entry ∈ log ) then sizeLog0 ( log ∖ { entry } ) + sizeElement0 entry else sizeLog0 log └ 

@@ -1,0 +1,13 @@
+─ section toolkitThms parents standard_toolkit └ 
+
+─ ☒ theorem rule lNonMaximalCardEquiv [ X ] 
+∀ A : ℙ X ⦁ ∀ S : 𝔽 A ⦁ # S = ( # _ ) [ A ] S 
+└ 
+As below, it's not a valid/complete Reference Name
+(Syntax error at symbol RSQUARE: \#[A]~S)
+
+
+─ ☒ theorem rule lUnitElemBelongs 
+e ∈ ⟨ x ⟩ ⇔ e = ( BLA , x ) 
+└ 
+(Syntax error at symbol MEM: e \in \langle x\rangle)

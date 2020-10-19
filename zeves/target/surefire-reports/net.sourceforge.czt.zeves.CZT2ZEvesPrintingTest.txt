@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: net.sourceforge.czt.zeves.CZT2ZEvesPrintingTest
+-------------------------------------------------------------------------------
+Tests run: 38, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.285 sec - in net.sourceforge.czt.zeves.CZT2ZEvesPrintingTest

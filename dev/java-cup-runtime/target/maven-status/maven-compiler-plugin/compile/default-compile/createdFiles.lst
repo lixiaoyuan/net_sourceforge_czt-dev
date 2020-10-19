@@ -1,0 +1,9 @@
+java_cup/runtime/virtual_parse_stack.class
+java_cup/runtime/Scanner.class
+java_cup/runtime/ComplexSymbolFactory$Location.class
+java_cup/runtime/lr_parser.class
+java_cup/runtime/ComplexSymbolFactory$ComplexSymbol.class
+java_cup/runtime/Symbol.class
+java_cup/runtime/ComplexSymbolFactory.class
+java_cup/runtime/DefaultSymbolFactory.class
+java_cup/runtime/SymbolFactory.class

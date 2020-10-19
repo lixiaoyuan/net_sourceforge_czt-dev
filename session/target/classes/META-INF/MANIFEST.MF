@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1603010259866
+Build-Jdk: 1.8.0_262
+Built-By: root
+Bundle-Description: Provides classes for managing and caching Z sections
+  and other    Z-related artifacts.
+Bundle-DocURL: http://czt.sourceforge.net
+Bundle-License: http://www.gnu.org/copyleft/gpl.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: CZT Session
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-SymbolicName: net.sourceforge.czt.session;singleton:=false
+Bundle-Vendor: Community Z Tools Project
+Bundle-Version: 1.6.0.cdh
+Created-By: Apache Maven Bundle Plugin
+DynamicImport-Package: *
+Embed-Transitive: true
+Export-Package: circus.commands;version="1.6.0.cdh",circusconf.commands;
+ version="1.6.0.cdh",circuspatt.commands;version="1.6.0.cdh",circustime.
+ commands;version="1.6.0.cdh",net.sourceforge.czt.session;version="1.6.0
+ .cdh",oz.commands;version="1.6.0.cdh",ozpatt.commands;version="1.6.0.cd
+ h",toolkit.loc;version="1.6.0.cdh",z.commands;version="1.6.0.cdh",zeves
+ .commands;version="1.6.0.cdh",zpatt.commands;version="1.6.0.cdh"
+Import-Package: net.sourceforge.czt.util;version="[1.6,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-2.3.0.201405100607

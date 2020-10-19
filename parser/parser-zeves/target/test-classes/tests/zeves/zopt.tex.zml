@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ZSect xsi:schemaLocation="http://czt.sourceforge.net/zml http://czt.sourceforge.net/zml/Z_2_1.xsd" xmlns="http://czt.sourceforge.net/zml" xmlns:ns2="http://czt.sourceforge.net/zeves" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Anns>
+        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="0" Col="0" Start="0" Length="398"/>
+    </Anns>
+    <Name>zopt</Name>
+    <Parent>
+        <Anns>
+            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="1" Col="27" Start="43" Length="17"/>
+        </Anns>
+        <Word>standard_toolkit</Word>
+    </Parent>
+    <ZParaList>
+        <LatexMarkupPara/>
+        <NarrPara>
+            <Anns>
+                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="2" Col="14" Start="75" Length="34"/>
+            </Anns>
+            <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+Some weird uses of Z operators
+
+</Content>
+        </NarrPara>
+        <AxPara Box="AxBox">
+            <Anns>
+                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="6" Col="0" Start="109" Length="66"/>
+            </Anns>
+            <ZNameList/>
+            <ZSchText>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="7" Col="4" Start="126" Length="37"/>
+                </Anns>
+                <ZDeclList>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="7" Col="4" Start="126" Length="7"/>
+                    </Anns>
+                    <VarDecl>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="7" Col="4" Start="126" Length="7"/>
+                        </Anns>
+                        <ZNameList>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="7" Col="3" Start="126" Length="1"/>
+                                </Anns>
+                                <Word>x</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                        </ZNameList>
+                        <RefExpr Mixfix="false" Explicit="false">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="7" Col="6" Start="129" Length="4"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="7" Col="6" Start="129" Length="4"/>
+                                </Anns>
+                                <Word>ℕ</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ZExprList/>
+                        </RefExpr>
+                    </VarDecl>
+                </ZDeclList>
+                <MemPred Mixfix="true">
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="9" Col="5" Start="144" Length="19"/>
+                        <ns2:ZEvesLabel LabelAbility="none" LabelUsage="none">
+                            <ZName>
+                                <Word>Axiom_zopt1</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                        </ns2:ZEvesLabel>
+                    </Anns>
+                    <RefExpr Mixfix="false" Explicit="false">
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="9" Col="3" Start="144" Length="1"/>
+                        </Anns>
+                        <ZName>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="9" Col="3" Start="144" Length="1"/>
+                            </Anns>
+                            <Word>x</Word>
+                            <ZStrokeList/>
+                        </ZName>
+                        <ZExprList/>
+                    </RefExpr>
+                    <SetExpr>
+                        <ZExprList>
+                            <ApplExpr Mixfix="false">
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="9" Col="7" Start="148" Length="15"/>
+                                </Anns>
+                                <RefExpr Mixfix="false" Explicit="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="9" Col="7" Start="148" Length="9"/>
+                                    </Anns>
+                                    <ZName>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="9" Col="7" Start="148" Length="9"/>
+                                            <ParenAnn/>
+                                        </Anns>
+                                        <Word> _ + _ </Word>
+                                        <ZStrokeList/>
+                                    </ZName>
+                                    <ZExprList/>
+                                </RefExpr>
+                                <TupleExpr>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="9" Col="16" Start="157" Length="6"/>
+                                    </Anns>
+                                    <ZExprList>
+                                        <NumExpr>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="9" Col="17" Start="158" Length="1"/>
+                                            </Anns>
+                                            <ZNumeral Value="1">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="9" Col="17" Start="158" Length="1"/>
+                                                </Anns>
+                                            </ZNumeral>
+                                        </NumExpr>
+                                        <NumExpr>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="9" Col="20" Start="161" Length="1"/>
+                                            </Anns>
+                                            <ZNumeral Value="2">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="9" Col="20" Start="161" Length="1"/>
+                                                </Anns>
+                                            </ZNumeral>
+                                        </NumExpr>
+                                    </ZExprList>
+                                </TupleExpr>
+                            </ApplExpr>
+                        </ZExprList>
+                    </SetExpr>
+                </MemPred>
+            </ZSchText>
+        </AxPara>
+        <NarrPara>
+            <Anns>
+                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="10" Col="11" Start="175" Length="3"/>
+            </Anns>
+            <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+</Content>
+        </NarrPara>
+        <ConjPara>
+            <Anns>
+                <ZName>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="13" Col="16" Start="194" Length="12"/>
+                    </Anns>
+                    <Word>lZOpsinProof</Word>
+                    <ZStrokeList/>
+                </ZName>
+                <ns2:ZEvesLabel LabelAbility="none" LabelUsage="none">
+                    <ZName>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="13" Col="16" Start="194" Length="12"/>
+                        </Anns>
+                        <Word>lZOpsinProof</Word>
+                        <ZStrokeList/>
+                    </ZName>
+                </ns2:ZEvesLabel>
+                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="13" Col="0" Start="178" Length="51"/>
+            </Anns>
+            <ZNameList/>
+            <TruePred>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="14" Col="3" Start="211" Length="4"/>
+                </Anns>
+            </TruePred>
+        </ConjPara>
+        <NarrPara>
+            <Anns>
+                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="15" Col="13" Start="229" Length="2"/>
+            </Anns>
+            <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+        </NarrPara>
+        <ns2:ProofScript>
+            <Anns>
+                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="17" Col="0" Start="231" Length="113"/>
+            </Anns>
+            <ZName>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="17" Col="15" Start="246" Length="12"/>
+                </Anns>
+                <Word>lZOpsinProof</Word>
+                <ZStrokeList/>
+            </ZName>
+            <ns2:ProofCommandList>
+                <ns2:SimplificationCommand RewriteKind="Reduce" RewritePower="Prove" ProofStep="1">
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="18" Col="2" Start="262" Length="15"/>
+                    </Anns>
+                </ns2:SimplificationCommand>
+                <ns2:UseCommand ProofStep="2">
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="19" Col="2" Start="281" Length="49"/>
+                    </Anns>
+                    <ns2:InstantiationList>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="19" Col="26" Start="305" Length="25"/>
+                        </Anns>
+                        <ns2:Instantiation InstantiationKind="ThmReplacement">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="19" Col="27" Start="306" Length="23"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="19" Col="27" Start="306" Length="1"/>
+                                </Anns>
+                                <Word>f</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ApplExpr Mixfix="false">
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="19" Col="32" Start="311" Length="18"/>
+                                </Anns>
+                                <RefExpr Mixfix="false" Explicit="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="19" Col="32" Start="311" Length="1"/>
+                                    </Anns>
+                                    <ZName>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="19" Col="32" Start="311" Length="1"/>
+                                        </Anns>
+                                        <Word>f</Word>
+                                        <ZStrokeList/>
+                                    </ZName>
+                                    <ZExprList/>
+                                </RefExpr>
+                                <RefExpr Mixfix="false" Explicit="true">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="19" Col="34" Start="313" Length="16"/>
+                                    </Anns>
+                                    <ZName>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="19" Col="34" Start="313" Length="9"/>
+                                            <ParenAnn/>
+                                        </Anns>
+                                        <Word> _ ∼</Word>
+                                        <ZStrokeList/>
+                                    </ZName>
+                                    <ZExprList>
+                                        <RefExpr Mixfix="false" Explicit="false">
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="19" Col="45" Start="324" Length="1"/>
+                                            </Anns>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="19" Col="45" Start="324" Length="1"/>
+                                                </Anns>
+                                                <Word>X</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <ZExprList/>
+                                        </RefExpr>
+                                        <RefExpr Mixfix="false" Explicit="false">
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="19" Col="48" Start="327" Length="1"/>
+                                            </Anns>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="19" Col="48" Start="327" Length="1"/>
+                                                </Anns>
+                                                <Word>Y</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <ZExprList/>
+                                        </RefExpr>
+                                    </ZExprList>
+                                </RefExpr>
+                            </ApplExpr>
+                        </ns2:Instantiation>
+                    </ns2:InstantiationList>
+                    <RefExpr Mixfix="false" Explicit="true">
+                        <ZName>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="19" Col="6" Start="285" Length="14"/>
+                            </Anns>
+                            <Word>finiteFunction</Word>
+                            <ZStrokeList/>
+                        </ZName>
+                        <ZExprList>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="19" Col="20" Start="299" Length="6"/>
+                            </Anns>
+                            <RefExpr Mixfix="false" Explicit="false">
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="19" Col="21" Start="300" Length="1"/>
+                                </Anns>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="19" Col="21" Start="300" Length="1"/>
+                                    </Anns>
+                                    <Word>Y</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ZExprList/>
+                            </RefExpr>
+                            <RefExpr Mixfix="false" Explicit="false">
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="19" Col="24" Start="303" Length="1"/>
+                                </Anns>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="19" Col="24" Start="303" Length="1"/>
+                                    </Anns>
+                                    <Word>X</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ZExprList/>
+                            </RefExpr>
+                        </ZExprList>
+                    </RefExpr>
+                </ns2:UseCommand>
+            </ns2:ProofCommandList>
+        </ns2:ProofScript>
+        <NarrPara>
+            <Anns>
+                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="20" Col="12" Start="344" Length="2"/>
+            </Anns>
+            <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+        </NarrPara>
+        <ConjPara>
+            <Anns>
+                <ZName>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="22" Col="16" Start="362" Length="12"/>
+                    </Anns>
+                    <Word>lZOpsinProof</Word>
+                    <ZStrokeList/>
+                </ZName>
+                <ns2:ZEvesLabel LabelAbility="none" LabelUsage="none">
+                    <ZName>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="22" Col="16" Start="362" Length="12"/>
+                        </Anns>
+                        <Word>lZOpsinProof</Word>
+                        <ZStrokeList/>
+                    </ZName>
+                </ns2:ZEvesLabel>
+                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="22" Col="0" Start="346" Length="51"/>
+            </Anns>
+            <ZNameList/>
+            <TruePred>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="23" Col="3" Start="379" Length="4"/>
+                </Anns>
+            </TruePred>
+        </ConjPara>
+        <NarrPara>
+            <Anns>
+                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" Line="24" Col="13" Start="397" Length="1"/>
+            </Anns>
+            <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</Content>
+        </NarrPara>
+    </ZParaList>
+</ZSect>

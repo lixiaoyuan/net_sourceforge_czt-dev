@@ -1,0 +1,2720 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491166</millis>
+  <sequence>74</sequence>
+  <logger>net.sourceforge.czt.rules</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProverTest</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Starting to prove conjecture: /simpleUnfold.tex: [ x : \nat | true ] unfoldsTo [ x : \arithmos | x \in \nat ]</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491169</millis>
+  <sequence>75</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule VarDecl.657, children=3</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491173</millis>
+  <sequence>76</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Empty.288, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491174</millis>
+  <sequence>77</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Empty.288</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491175</millis>
+  <sequence>78</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule TrueRight.815, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491175</millis>
+  <sequence>79</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule TrueRight.815</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491175</millis>
+  <sequence>80</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule VarDecl.657</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491178</millis>
+  <sequence>81</sequence>
+  <logger>net.sourceforge.czt.rules</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProverTest</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Starting to prove conjecture: /simpleUnfold.tex: [ S1 | true ] unfoldsTo [ x : \arithmos | x &lt; 10 \land x \in \nat ]</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491181</millis>
+  <sequence>82</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule IncludeDecl.596, children=4</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491185</millis>
+  <sequence>83</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule SchemaRef.736, children=3</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491188</millis>
+  <sequence>84</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule VarDeclBaseType.148, children=2</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491191</millis>
+  <sequence>85</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Undid rule VarDeclBaseType.148 because premiss 0 failed</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491191</millis>
+  <sequence>86</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule VarDecl.434, children=3</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491194</millis>
+  <sequence>87</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Empty.882, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491194</millis>
+  <sequence>88</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Empty.882</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491195</millis>
+  <sequence>89</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule TrueRight.331, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491196</millis>
+  <sequence>90</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule TrueRight.331</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491196</millis>
+  <sequence>91</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule VarDecl.434</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491197</millis>
+  <sequence>92</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Impl.73, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491197</millis>
+  <sequence>93</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Impl.73</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491197</millis>
+  <sequence>94</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule SchemaRef.736</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491199</millis>
+  <sequence>95</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Empty.102, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491200</millis>
+  <sequence>96</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Empty.102</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491201</millis>
+  <sequence>97</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule TrueRight.399, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491201</millis>
+  <sequence>98</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule TrueRight.399</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491202</millis>
+  <sequence>99</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule IncludeDecl.596</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491205</millis>
+  <sequence>100</sequence>
+  <logger>net.sourceforge.czt.rules</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProverTest</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Starting to prove conjecture: /simpleUnfold.tex: [ S1 ; y : \nat | true ] unfoldsTo [ x : \arithmos ; y : \arithmos | x &lt; 10 \land x \in \nat \land y \in \nat ]</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491209</millis>
+  <sequence>101</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule IncludeDecl.502, children=4</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491211</millis>
+  <sequence>102</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule SchemaRef.466, children=3</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491213</millis>
+  <sequence>103</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule VarDeclBaseType.677, children=2</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491217</millis>
+  <sequence>104</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Undid rule VarDeclBaseType.677 because premiss 0 failed</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491217</millis>
+  <sequence>105</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule VarDecl.256, children=3</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491220</millis>
+  <sequence>106</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Empty.522, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491220</millis>
+  <sequence>107</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Empty.522</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491221</millis>
+  <sequence>108</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule TrueRight.675, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491221</millis>
+  <sequence>109</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule TrueRight.675</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491221</millis>
+  <sequence>110</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule VarDecl.256</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491222</millis>
+  <sequence>111</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Impl.837, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491222</millis>
+  <sequence>112</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Impl.837</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491223</millis>
+  <sequence>113</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule SchemaRef.466</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491224</millis>
+  <sequence>114</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule VarDeclBaseType.4, children=2</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491227</millis>
+  <sequence>115</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Undid rule VarDeclBaseType.4 because premiss 0 failed</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491228</millis>
+  <sequence>116</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule VarDecl.518, children=3</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491230</millis>
+  <sequence>117</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Empty.822, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491231</millis>
+  <sequence>118</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Empty.822</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491232</millis>
+  <sequence>119</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule TrueRight.884, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491232</millis>
+  <sequence>120</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule TrueRight.884</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491232</millis>
+  <sequence>121</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule VarDecl.518</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491234</millis>
+  <sequence>122</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Impl.681, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491234</millis>
+  <sequence>123</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Impl.681</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491234</millis>
+  <sequence>124</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule IncludeDecl.502</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491238</millis>
+  <sequence>125</sequence>
+  <logger>net.sourceforge.czt.rules</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProverTest</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Starting to prove conjecture: /simpleUnfold.tex: [ S2 | true ] unfoldsTo [ x : \arithmos ; y : \arithmos | y &lt; x \land ( x &lt; 10 \land x \in \nat \land y \in \nat ) ]</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491242</millis>
+  <sequence>126</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule IncludeDecl.461, children=4</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491244</millis>
+  <sequence>127</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule SchemaRef.225, children=3</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491247</millis>
+  <sequence>128</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule IncludeDecl.47, children=4</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491249</millis>
+  <sequence>129</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule SchemaRef.9, children=3</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491251</millis>
+  <sequence>130</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule VarDeclBaseType.803, children=2</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491254</millis>
+  <sequence>131</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Undid rule VarDeclBaseType.803 because premiss 0 failed</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491255</millis>
+  <sequence>132</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule VarDecl.728, children=3</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491257</millis>
+  <sequence>133</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Empty.466, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491257</millis>
+  <sequence>134</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Empty.466</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491258</millis>
+  <sequence>135</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule TrueRight.423, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491259</millis>
+  <sequence>136</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule TrueRight.423</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491259</millis>
+  <sequence>137</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule VarDecl.728</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491260</millis>
+  <sequence>138</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Impl.628, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491260</millis>
+  <sequence>139</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Impl.628</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491260</millis>
+  <sequence>140</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule SchemaRef.9</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491262</millis>
+  <sequence>141</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule VarDeclBaseType.801, children=2</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491265</millis>
+  <sequence>142</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Undid rule VarDeclBaseType.801 because premiss 0 failed</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491265</millis>
+  <sequence>143</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule VarDecl.508, children=3</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491268</millis>
+  <sequence>144</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Empty.444, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491268</millis>
+  <sequence>145</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Empty.444</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491269</millis>
+  <sequence>146</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule TrueRight.566, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491269</millis>
+  <sequence>147</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule TrueRight.566</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491269</millis>
+  <sequence>148</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule VarDecl.508</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491271</millis>
+  <sequence>149</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Impl.264, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491271</millis>
+  <sequence>150</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Impl.264</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491271</millis>
+  <sequence>151</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule IncludeDecl.47</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491272</millis>
+  <sequence>152</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Impl.719, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491273</millis>
+  <sequence>153</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Impl.719</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491273</millis>
+  <sequence>154</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule SchemaRef.225</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491275</millis>
+  <sequence>155</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Empty.530, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491275</millis>
+  <sequence>156</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Empty.530</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491277</millis>
+  <sequence>157</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule TrueRight.390, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491277</millis>
+  <sequence>158</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule TrueRight.390</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491277</millis>
+  <sequence>159</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule IncludeDecl.461</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491281</millis>
+  <sequence>160</sequence>
+  <logger>net.sourceforge.czt.rules</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProverTest</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Starting to prove conjecture: /simpleUnfold.tex: [ S1~' | true ] unfoldsTo [ x' : \arithmos | x' &lt; 10 \land x' \in \nat ]</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491285</millis>
+  <sequence>161</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule DecorDecl.219, children=5</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491287</millis>
+  <sequence>162</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule SchemaRef.369, children=3</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491289</millis>
+  <sequence>163</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule VarDeclBaseType.19, children=2</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491292</millis>
+  <sequence>164</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Undid rule VarDeclBaseType.19 because premiss 0 failed</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491292</millis>
+  <sequence>165</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule VarDecl.567, children=3</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491295</millis>
+  <sequence>166</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Empty.421, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491295</millis>
+  <sequence>167</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Empty.421</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491296</millis>
+  <sequence>168</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule TrueRight.678, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491296</millis>
+  <sequence>169</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule TrueRight.678</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491296</millis>
+  <sequence>170</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule VarDecl.567</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491298</millis>
+  <sequence>171</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Impl.340, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491298</millis>
+  <sequence>172</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Impl.340</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491298</millis>
+  <sequence>173</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule SchemaRef.369</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491301</millis>
+  <sequence>174</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Empty.56, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491301</millis>
+  <sequence>175</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Empty.56</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491303</millis>
+  <sequence>176</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule TrueRight.845, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491303</millis>
+  <sequence>177</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule TrueRight.845</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491303</millis>
+  <sequence>178</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule DecorDecl.219</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491306</millis>
+  <sequence>179</sequence>
+  <logger>net.sourceforge.czt.rules</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProverTest</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Starting to prove conjecture: /simpleUnfold.tex: [ x : \arithmos | true ] unfoldsTo [ x : \arithmos | true ]</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491308</millis>
+  <sequence>180</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule VarDeclBaseType.7, children=2</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491311</millis>
+  <sequence>181</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Empty.243, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491311</millis>
+  <sequence>182</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Empty.243</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491311</millis>
+  <sequence>183</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule VarDeclBaseType.7</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491314</millis>
+  <sequence>184</sequence>
+  <logger>net.sourceforge.czt.rules</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProverTest</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Starting to prove conjecture: /simpleUnfold.tex: ( \exists [ x : \arithmos | true ] @ [ y : \arithmos | true ] ) unfoldsTo [ y : \arithmos | ( \exists [ x : \arithmos | true ] @ true ) ]</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491318</millis>
+  <sequence>185</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule ExistsSchema.141, children=3</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491320</millis>
+  <sequence>186</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule VarDeclBaseType.902, children=2</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491323</millis>
+  <sequence>187</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Empty.949, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491323</millis>
+  <sequence>188</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Empty.949</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491323</millis>
+  <sequence>189</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule VarDeclBaseType.902</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491325</millis>
+  <sequence>190</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule VarDeclBaseType.291, children=2</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491328</millis>
+  <sequence>191</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Empty.748, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491328</millis>
+  <sequence>192</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Empty.748</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491328</millis>
+  <sequence>193</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule VarDeclBaseType.291</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491329</millis>
+  <sequence>194</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule ExistsSchema.141</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491332</millis>
+  <sequence>195</sequence>
+  <logger>net.sourceforge.czt.rules</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProverTest</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Starting to prove conjecture: /simpleUnfold.tex: ( \exists [ x : \arithmos | true ] @ [ x : \arithmos | true ] ) unfoldsTo [ | ( \exists [ x : \arithmos | true ] @ true ) ]</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491336</millis>
+  <sequence>196</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule ExistsSchema.312, children=3</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491338</millis>
+  <sequence>197</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule VarDeclBaseType.434, children=2</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491341</millis>
+  <sequence>198</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Empty.190, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491341</millis>
+  <sequence>199</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Empty.190</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491341</millis>
+  <sequence>200</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule VarDeclBaseType.434</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491343</millis>
+  <sequence>201</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule VarDeclBaseType.160, children=2</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491345</millis>
+  <sequence>202</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Empty.191, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491346</millis>
+  <sequence>203</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Empty.191</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491346</millis>
+  <sequence>204</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule VarDeclBaseType.160</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491347</millis>
+  <sequence>205</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule ExistsSchema.312</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491350</millis>
+  <sequence>206</sequence>
+  <logger>net.sourceforge.czt.rules</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProverTest</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Starting to prove conjecture: /simpleUnfold.tex: ( \exists [ x , z : \arithmos | true ] @ [ y , z : \arithmos | true ] ) unfoldsTo [ y : \arithmos | ( \exists [ x : \arithmos ; z : \arithmos | true ] @ true ) ]</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491356</millis>
+  <sequence>207</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule ExistsSchema.907, children=3</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491358</millis>
+  <sequence>208</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule VarDeclBaseType.309, children=2</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491360</millis>
+  <sequence>209</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule VarDeclBaseType.161, children=2</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491363</millis>
+  <sequence>210</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Empty.598, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491363</millis>
+  <sequence>211</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Empty.598</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491363</millis>
+  <sequence>212</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule VarDeclBaseType.161</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491363</millis>
+  <sequence>213</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule VarDeclBaseType.309</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491365</millis>
+  <sequence>214</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule VarDeclBaseType.402, children=2</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491367</millis>
+  <sequence>215</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule VarDeclBaseType.966, children=2</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491370</millis>
+  <sequence>216</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Empty.867, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491370</millis>
+  <sequence>217</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Empty.867</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491370</millis>
+  <sequence>218</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule VarDeclBaseType.966</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491370</millis>
+  <sequence>219</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule VarDeclBaseType.402</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491371</millis>
+  <sequence>220</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule ExistsSchema.907</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491375</millis>
+  <sequence>221</sequence>
+  <logger>net.sourceforge.czt.rules</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProverTest</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Starting to prove conjecture: /simpleUnfold.tex: [ a : \arithmos ; b : \nat | a &lt; b ] ' \is [ a' : \arithmos ; b' : \nat | a' &lt; b' ]</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491476</millis>
+  <sequence>222</sequence>
+  <logger>net.sourceforge.czt.rules</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProverTest</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Starting to prove conjecture: /simple1.tex: true</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491476</millis>
+  <sequence>223</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule True.787, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491476</millis>
+  <sequence>224</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule True.787</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491478</millis>
+  <sequence>225</sequence>
+  <logger>net.sourceforge.czt.rules</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProverTest</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Starting to prove conjecture: /simple1.tex: \lnot false</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491479</millis>
+  <sequence>226</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule False.219, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491479</millis>
+  <sequence>227</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule False.219</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491483</millis>
+  <sequence>228</sequence>
+  <logger>net.sourceforge.czt.rules</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProverTest</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Starting to prove conjecture: /simple1.tex: true \land true</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491483</millis>
+  <sequence>229</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule And.938, children=2</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491483</millis>
+  <sequence>230</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule True.561, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491483</millis>
+  <sequence>231</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule True.561</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491483</millis>
+  <sequence>232</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule True.143, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491483</millis>
+  <sequence>233</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule True.143</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491483</millis>
+  <sequence>234</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule And.938</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491485</millis>
+  <sequence>235</sequence>
+  <logger>net.sourceforge.czt.rules</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProverTest</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Starting to prove conjecture: /simple1.tex: true \land true \land true</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491486</millis>
+  <sequence>236</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule And.797, children=2</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491486</millis>
+  <sequence>237</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule And.905, children=2</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491486</millis>
+  <sequence>238</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule True.283, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491486</millis>
+  <sequence>239</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule True.283</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491486</millis>
+  <sequence>240</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule True.111, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491486</millis>
+  <sequence>241</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule True.111</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491486</millis>
+  <sequence>242</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule And.905</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491487</millis>
+  <sequence>243</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule True.15, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491487</millis>
+  <sequence>244</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule True.15</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491487</millis>
+  <sequence>245</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule And.797</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491491</millis>
+  <sequence>246</sequence>
+  <logger>net.sourceforge.czt.rules</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProverTest</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Starting to prove conjecture: /simple1.tex: true \lor false</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491492</millis>
+  <sequence>247</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Or↘1↖.853, children=1</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491492</millis>
+  <sequence>248</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule True.988, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491492</millis>
+  <sequence>249</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule True.988</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491492</millis>
+  <sequence>250</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Or↘1↖.853</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491494</millis>
+  <sequence>251</sequence>
+  <logger>net.sourceforge.czt.rules</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProverTest</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Starting to prove conjecture: /simple1.tex: false \lor true</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491494</millis>
+  <sequence>252</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Or↘1↖.243, children=1</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491494</millis>
+  <sequence>253</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Undid rule Or↘1↖.243 because premiss 0 failed</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491494</millis>
+  <sequence>254</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Or↘2↖.251, children=1</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491495</millis>
+  <sequence>255</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule True.47, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491495</millis>
+  <sequence>256</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule True.47</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491495</millis>
+  <sequence>257</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Or↘2↖.251</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491500</millis>
+  <sequence>258</sequence>
+  <logger>net.sourceforge.czt.rules</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProverTest</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Starting to prove conjecture: /simple1.tex: false \lor ( false \lor \lnot false )</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491500</millis>
+  <sequence>259</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Or↘1↖.897, children=1</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491501</millis>
+  <sequence>260</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Undid rule Or↘1↖.897 because premiss 0 failed</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491501</millis>
+  <sequence>261</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Or↘2↖.258, children=1</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491501</millis>
+  <sequence>262</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule OrNot.285, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491501</millis>
+  <sequence>263</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule OrNot.285</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491501</millis>
+  <sequence>264</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Or↘2↖.258</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491504</millis>
+  <sequence>265</sequence>
+  <logger>net.sourceforge.czt.rules</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProverTest</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Starting to prove conjecture: /simple1.tex: 1 + 1 = 2 \lor \lnot 1 + 1 = 2</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491505</millis>
+  <sequence>266</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule OrNot.72, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491505</millis>
+  <sequence>267</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule OrNot.72</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491508</millis>
+  <sequence>268</sequence>
+  <logger>net.sourceforge.czt.rules</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProverTest</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Starting to prove conjecture: /simple1.tex: ( false \lor \lnot \lnot true \lor false ) \lor ( false \lor \lnot false )</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491508</millis>
+  <sequence>269</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Or↘1↖.395, children=1</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491509</millis>
+  <sequence>270</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Or↘1↖.877, children=1</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491509</millis>
+  <sequence>271</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Or↘1↖.265, children=1</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491509</millis>
+  <sequence>272</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Undid rule Or↘1↖.265 because premiss 0 failed</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491510</millis>
+  <sequence>273</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Or↘2↖.704, children=1</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491510</millis>
+  <sequence>274</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Not.100, children=1</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491510</millis>
+  <sequence>275</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule True.146, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491510</millis>
+  <sequence>276</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule True.146</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491510</millis>
+  <sequence>277</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Not.100</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491510</millis>
+  <sequence>278</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Or↘2↖.704</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491510</millis>
+  <sequence>279</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Or↘1↖.877</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491510</millis>
+  <sequence>280</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Or↘1↖.395</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491512</millis>
+  <sequence>281</sequence>
+  <logger>net.sourceforge.czt.rules</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProverTest</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Starting to prove conjecture: /simple1.tex: ( false \lor \lnot \lnot true \lor false ) \land ( false \lor \lnot false )</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491513</millis>
+  <sequence>282</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule And.756, children=2</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491513</millis>
+  <sequence>283</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Or↘1↖.309, children=1</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491513</millis>
+  <sequence>284</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Or↘1↖.53, children=1</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491514</millis>
+  <sequence>285</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Undid rule Or↘1↖.53 because premiss 0 failed</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491514</millis>
+  <sequence>286</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Or↘2↖.326, children=1</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491514</millis>
+  <sequence>287</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Not.369, children=1</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491514</millis>
+  <sequence>288</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule True.594, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491514</millis>
+  <sequence>289</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule True.594</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491515</millis>
+  <sequence>290</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Not.369</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491515</millis>
+  <sequence>291</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Or↘2↖.326</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491515</millis>
+  <sequence>292</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Or↘1↖.309</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491515</millis>
+  <sequence>293</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule OrNot.99, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491515</millis>
+  <sequence>294</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule OrNot.99</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491515</millis>
+  <sequence>295</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule And.756</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491664</millis>
+  <sequence>296</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Quantifiers.923, children=1</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491668</millis>
+  <sequence>297</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule SchemaConstruction1.836, children=1</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491670</millis>
+  <sequence>298</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule VarDecl1.834, children=2</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491673</millis>
+  <sequence>299</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule EmptyDeclList.615, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491673</millis>
+  <sequence>300</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule EmptyDeclList.615</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491673</millis>
+  <sequence>301</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule VarDecl1.834</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491673</millis>
+  <sequence>302</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule SchemaConstruction1.836</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491673</millis>
+  <sequence>303</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Quantifiers.923</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491675</millis>
+  <sequence>304</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule TopLevel.954, children=2</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491682</millis>
+  <sequence>305</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Undid rule TopLevel.954 because premiss 0 failed</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491686</millis>
+  <sequence>306</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule TopLevel.749, children=2</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491693</millis>
+  <sequence>307</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Undid rule TopLevel.749 because premiss 0 failed</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491707</millis>
+  <sequence>308</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule Quantifiers.224, children=1</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491712</millis>
+  <sequence>309</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule SchemaConstruction1.869, children=1</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491723</millis>
+  <sequence>310</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Undid rule SchemaConstruction1.869 because premiss 0 failed</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491723</millis>
+  <sequence>311</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule SchemaConstruction2.951, children=1</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491726</millis>
+  <sequence>312</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule ConstDecl.960, children=2</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491729</millis>
+  <sequence>313</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule EmptyDeclList.42, children=0</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491730</millis>
+  <sequence>314</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule EmptyDeclList.42</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491730</millis>
+  <sequence>315</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule ConstDecl.960</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491730</millis>
+  <sequence>316</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule SchemaConstruction2.951</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491730</millis>
+  <sequence>317</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Finished rule Quantifiers.224</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491731</millis>
+  <sequence>318</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule TopLevel.793, children=2</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491738</millis>
+  <sequence>319</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Undid rule TopLevel.793 because premiss 0 failed</message>
+</record>
+<record>
+  <date>2020-10-18T08:41:31</date>
+  <millis>1603010491742</millis>
+  <sequence>320</sequence>
+  <logger>net.sourceforge.czt.rules.prover.SimpleProver</logger>
+  <level>FINE</level>
+  <class>net.sourceforge.czt.rules.prover.SimpleProver</class>
+  <method>prove</method>
+  <thread>1</thread>
+  <message>Applied rule TopLevel.971, children=2</message>
+</record>

@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Spec Version="2.1" xsi:schemaLocation="http://czt.sourceforge.net/zml http://czt.sourceforge.net/zml/Z_2_1.xsd" xmlns="http://czt.sourceforge.net/zml" xmlns:ns2="http://czt.sourceforge.net/zpatt" xmlns:ns3="http://czt.sourceforge.net/circus" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <NarrSect>
+        <Anns>
+            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="0" Col="0" Start="0" Length="1"/>
+        </Anns>
+        <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</Content>
+    </NarrSect>
+    <ZSect>
+        <Anns>
+            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="1" Col="1" Start="1" Length="469"/>
+        </Anns>
+        <Name>param_process</Name>
+        <Parent>
+            <Anns>
+                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="2" Col="37" Start="55" Length="15"/>
+            </Anns>
+            <Word>circus_toolkit</Word>
+        </Parent>
+        <ZParaList>
+            <LatexMarkupPara/>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="3" Col="14" Start="85" Length="2"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+            </NarrPara>
+            <AxPara Box="AxBox">
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="5" Col="0" Start="87" Length="52"/>
+                </Anns>
+                <ZNameList/>
+                <ZSchText>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="6" Col="4" Start="104" Length="23"/>
+                    </Anns>
+                    <ZDeclList>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="6" Col="4" Start="104" Length="7"/>
+                        </Anns>
+                        <VarDecl>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="6" Col="4" Start="104" Length="7"/>
+                            </Anns>
+                            <ZNameList>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="6" Col="3" Start="104" Length="1"/>
+                                    </Anns>
+                                    <Word>v</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                            </ZNameList>
+                            <RefExpr Mixfix="false" Explicit="false">
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="6" Col="6" Start="107" Length="4"/>
+                                </Anns>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="6" Col="6" Start="107" Length="4"/>
+                                    </Anns>
+                                    <Word>ℕ</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ZExprList/>
+                            </RefExpr>
+                        </VarDecl>
+                    </ZDeclList>
+                    <MemPred Mixfix="true">
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="8" Col="5" Start="122" Length="5"/>
+                        </Anns>
+                        <RefExpr Mixfix="false" Explicit="false">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="8" Col="3" Start="122" Length="1"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="8" Col="3" Start="122" Length="1"/>
+                                </Anns>
+                                <Word>v</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ZExprList/>
+                        </RefExpr>
+                        <SetExpr>
+                            <ZExprList>
+                                <NumExpr>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="8" Col="7" Start="126" Length="1"/>
+                                    </Anns>
+                                    <ZNumeral Value="1">
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="8" Col="7" Start="126" Length="1"/>
+                                        </Anns>
+                                    </ZNumeral>
+                                </NumExpr>
+                            </ZExprList>
+                        </SetExpr>
+                    </MemPred>
+                </ZSchText>
+            </AxPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="9" Col="11" Start="139" Length="2"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+            </NarrPara>
+            <ns3:ProcessPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="12" Col="4" Start="160"/>
+                </Anns>
+                <ZName>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="12" Col="22" Start="178" Length="1"/>
+                    </Anns>
+                    <Word>P</Word>
+                    <ZStrokeList/>
+                </ZName>
+                <ZNameList>
+                    <ZName>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="12" Col="19" Start="175" Length="1"/>
+                        </Anns>
+                        <Word>T</Word>
+                        <ZStrokeList/>
+                    </ZName>
+                </ZNameList>
+                <ns3:ParamProcess>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="12" Col="38"/>
+                    </Anns>
+                    <ns3:BasicProcess>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="12" Col="50" Start="206" Length="54"/>
+                        </Anns>
+                        <ZParaList>
+                            <ns3:ActionPara>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="13" Col="8" Start="229" Length="15"/>
+                                </Anns>
+                                <ZName>
+                                    <Word>$$mainAction_L13C8</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ns3:SkipAction>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="13" Col="8" Start="229" Length="15"/>
+                                        <ns3:OnTheFlyDefAnn/>
+                                    </Anns>
+                                </ns3:SkipAction>
+                            </ns3:ActionPara>
+                            <AxPara Box="OmitBox">
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="12" Col="50" Start="206" Length="54"/>
+                                    <ns3:CircusStateAnn/>
+                                    <ns3:CircusStateAnn/>
+                                </Anns>
+                                <ZNameList/>
+                                <ZSchText>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="12" Col="50" Start="206" Length="54"/>
+                                    </Anns>
+                                    <ZDeclList>
+                                        <ConstDecl>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="12" Col="50" Start="206" Length="54"/>
+                                            </Anns>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="12" Col="50" Start="206" Length="54"/>
+                                                </Anns>
+                                                <Word>$$defaultSt_L12C50</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <SchExpr>
+                                                <ZSchText>
+                                                    <ZDeclList/>
+                                                    <TruePred/>
+                                                </ZSchText>
+                                            </SchExpr>
+                                        </ConstDecl>
+                                    </ZDeclList>
+                                </ZSchText>
+                            </AxPara>
+                        </ZParaList>
+                    </ns3:BasicProcess>
+                    <ZDeclList>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="12" Col="35" Start="190" Length="5"/>
+                        </Anns>
+                        <VarDecl>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="12" Col="35" Start="190" Length="5"/>
+                            </Anns>
+                            <ZNameList>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="12" Col="34" Start="190" Length="1"/>
+                                    </Anns>
+                                    <Word>v</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                            </ZNameList>
+                            <RefExpr Mixfix="false" Explicit="false">
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="12" Col="38" Start="194" Length="1"/>
+                                </Anns>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="12" Col="38" Start="194" Length="1"/>
+                                    </Anns>
+                                    <Word>T</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ZExprList/>
+                            </RefExpr>
+                        </VarDecl>
+                    </ZDeclList>
+                </ns3:ParamProcess>
+            </ns3:ProcessPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="15" Col="12" Start="273" Length="3"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+</Content>
+            </NarrPara>
+            <ns3:ProcessPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="27" Col="3" Start="295"/>
+                </Anns>
+                <ZName>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="19" Col="22" Start="313" Length="1"/>
+                    </Anns>
+                    <Word>Q</Word>
+                    <ZStrokeList/>
+                </ZName>
+                <ZNameList>
+                    <ZName>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="19" Col="19" Start="310" Length="1"/>
+                        </Anns>
+                        <Word>T</Word>
+                        <ZStrokeList/>
+                    </ZName>
+                </ZNameList>
+                <ns3:ParamProcess>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="19" Col="38"/>
+                    </Anns>
+                    <ns3:BasicProcess>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="19" Col="50"/>
+                        </Anns>
+                        <ZParaList>
+                            <NarrPara>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="20" Col="12" Start="364" Length="2"/>
+                                </Anns>
+                                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+                            </NarrPara>
+                            <ns3:ActionPara>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="23" Col="7" Start="394" Length="15"/>
+                                </Anns>
+                                <ZName>
+                                    <Word>$$mainAction_L23C7</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ns3:StopAction>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="23" Col="7" Start="394" Length="15"/>
+                                        <ns3:OnTheFlyDefAnn/>
+                                    </Anns>
+                                </ns3:StopAction>
+                            </ns3:ActionPara>
+                            <NarrPara>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="24" Col="18" Start="428" Length="2"/>
+                                </Anns>
+                                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+                            </NarrPara>
+                            <AxPara Box="OmitBox">
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="19" Col="50"/>
+                                    <ns3:CircusStateAnn/>
+                                    <ns3:CircusStateAnn/>
+                                </Anns>
+                                <ZNameList/>
+                                <ZSchText>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="19" Col="50"/>
+                                    </Anns>
+                                    <ZDeclList>
+                                        <ConstDecl>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="19" Col="50"/>
+                                            </Anns>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="19" Col="50"/>
+                                                </Anns>
+                                                <Word>$$defaultSt_L19C50</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <SchExpr>
+                                                <ZSchText>
+                                                    <ZDeclList/>
+                                                    <TruePred/>
+                                                </ZSchText>
+                                            </SchExpr>
+                                        </ConstDecl>
+                                    </ZDeclList>
+                                </ZSchText>
+                            </AxPara>
+                        </ZParaList>
+                    </ns3:BasicProcess>
+                    <ZDeclList>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="19" Col="35" Start="325" Length="5"/>
+                        </Anns>
+                        <VarDecl>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="19" Col="35" Start="325" Length="5"/>
+                            </Anns>
+                            <ZNameList>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="19" Col="34" Start="325" Length="1"/>
+                                    </Anns>
+                                    <Word>v</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                            </ZNameList>
+                            <RefExpr Mixfix="false" Explicit="false">
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="19" Col="38" Start="329" Length="1"/>
+                                </Anns>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="19" Col="38" Start="329" Length="1"/>
+                                    </Anns>
+                                    <Word>T</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ZExprList/>
+                            </RefExpr>
+                        </VarDecl>
+                    </ZDeclList>
+                </ns3:ParamProcess>
+            </ns3:ProcessPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/param_process.tex" Line="28" Col="12" Start="469" Length="1"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</Content>
+            </NarrPara>
+        </ZParaList>
+    </ZSect>
+</Spec>

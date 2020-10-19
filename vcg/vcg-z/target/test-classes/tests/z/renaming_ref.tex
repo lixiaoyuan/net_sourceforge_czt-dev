@@ -1,0 +1,84 @@
+\documentclass{article}
+\usepackage{czt}
+
+\begin{document}
+%----------------------------------
+
+\begin{zsection}	 \SECTION renaming\_ref \parents~ref\_toolkit , renaming
+\end{zsection}
+
+VC ZSection Created at Sun Oct 18 08:41:45 UTC 2020.
+
+
+Added schema for feasibility VC signature of paragraph named OpFSBSig at unknown.
+\begin{schema}{OpFSBSig}
+\\
+ State \\
+ in? : \nat 
+\where
+ true
+\end{schema}
+
+
+Added schema for feasibility VC signature of paragraph named OpRename1FSBSig at unknown.
+\begin{schema}{OpRename1FSBSig}
+\\
+ a : \nat \\
+ b : \power \nat \\
+ in? : \nat 
+\where
+ true
+\end{schema}
+
+
+Added schema for feasibility VC signature of paragraph named OpRename2FSBSig at unknown.
+\begin{schema}{OpRename2FSBSig}
+\\
+ a : \nat \\
+ b : \power \nat \\
+ param? : \nat 
+\where
+ true
+\end{schema}
+
+
+Added schema for feasibility VC signature of paragraph named StateFSBSig at unknown.
+\begin{schema}{StateFSBSig}
+\\
+ State 
+\where
+ State
+\end{schema}
+
+VC3 for line 9 column 1 start 137 length 84 in "renaming"
+\begin{theorem}{ State\_ vc\_ ref}\\
+ \exists StateFSBSig | true @ true \\
+
+\end{theorem}
+
+VC5 for line 16 column 1 start 223 length 103 in "renaming"
+\begin{theorem}{ Op\_ vc\_ ref}\\
+ \forall OpFSBSig | true @ \pre Op \\
+
+\end{theorem}
+
+VC7 for line 25 column 4 start 343 length 39 in "renaming"
+\begin{theorem}{ OpRename1\_ vc\_ ref}\\
+ \forall OpRename1FSBSig | true @ \pre OpRename1 \\
+
+\end{theorem}
+
+VC8 for line 26 column 4 start 389 length 48 in "renaming"
+\begin{theorem}{ OpRename2\_ vc\_ ref}\\
+ \forall OpRename2FSBSig | true @ \pre OpRename2 \\
+
+\end{theorem}
+
+
+
+ VC Z section "renamingARGref" has $4$ interesting VCs (Total = 9; Simplified to $true$ = 5).
+
+
+
+%----------------------------------
+\end{document}

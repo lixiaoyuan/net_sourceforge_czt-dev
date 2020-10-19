@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="net.sourceforge.czt.core.feature"
+      label="%featureName"
+      version="1.6.0.202010180842"
+      provider-name="%providerName"
+      plugin="net.sourceforge.czt.core.feature.branding">
+
+   <description url="http://czt.sourceforge.net/eclipse">
+      %description
+   </description>
+
+   <copyright url="%copyrightURL">
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <url>
+      <update label="%updateSiteName" url="http://czt.sourceforge.net/eclipse/updates/releases/"/>
+   </url>
+
+   <plugin
+         id="net.sourceforge.czt.corejava-z"
+         download-size="647"
+         install-size="1507"
+         version="1.6.0.cdh"
+         unpack="false"/>
+
+   <plugin
+         id="net.sourceforge.czt.corejava-zpatt"
+         download-size="161"
+         install-size="359"
+         version="1.6.0.cdh"
+         unpack="false"/>
+
+   <plugin
+         id="net.sourceforge.czt.corejava-oz"
+         download-size="189"
+         install-size="439"
+         version="1.6.0.cdh"
+         unpack="false"/>
+
+   <plugin
+         id="net.sourceforge.czt.corejava-circus"
+         download-size="660"
+         install-size="1597"
+         version="1.6.0.cdh"
+         unpack="false"/>
+
+   <plugin
+         id="net.sourceforge.czt.corejava-circuspatt"
+         download-size="101"
+         install-size="233"
+         version="1.6.0.cdh"
+         unpack="false"/>
+
+   <plugin
+         id="net.sourceforge.czt.corejava-zeves"
+         download-size="182"
+         install-size="421"
+         version="1.6.0.cdh"
+         unpack="false"/>
+
+   <plugin
+         id="net.sourceforge.czt.dev.java-cup-runtime"
+         download-size="15"
+         install-size="28"
+         version="0.11.0.a-czt01-SNAPSHOT"
+         unpack="false"/>
+
+   <plugin
+         id="net.sourceforge.czt.parser-z"
+         download-size="529"
+         install-size="2968"
+         version="1.6.0.cdh"
+         unpack="false"/>
+
+   <plugin
+         id="net.sourceforge.czt.parser-circus"
+         download-size="381"
+         install-size="2030"
+         version="1.6.0.cdh"
+         unpack="false"/>
+
+   <plugin
+         id="net.sourceforge.czt.parser-oz"
+         download-size="243"
+         install-size="615"
+         version="1.6.0.cdh"
+         unpack="false"/>
+
+   <plugin
+         id="net.sourceforge.czt.parser-ozpatt"
+         download-size="191"
+         install-size="502"
+         version="1.6.0.cdh"
+         unpack="false"/>
+
+   <plugin
+         id="net.sourceforge.czt.parser-zeves"
+         download-size="286"
+         install-size="727"
+         version="1.6.0.cdh"
+         unpack="false"/>
+
+   <plugin
+         id="net.sourceforge.czt.parser-zpatt"
+         download-size="220"
+         install-size="559"
+         version="1.6.0.cdh"
+         unpack="false"/>
+
+   <plugin
+         id="net.sourceforge.czt.session"
+         download-size="50"
+         install-size="107"
+         version="1.6.0.cdh"
+         unpack="false"/>
+
+   <plugin
+         id="net.sourceforge.czt.typechecker-z"
+         download-size="163"
+         install-size="400"
+         version="1.6.0.cdh"
+         unpack="false"/>
+
+   <plugin
+         id="net.sourceforge.czt.typechecker-circus"
+         download-size="134"
+         install-size="370"
+         version="1.6.0.cdh"
+         unpack="false"/>
+
+   <plugin
+         id="net.sourceforge.czt.typechecker-oz"
+         download-size="79"
+         install-size="200"
+         version="1.6.0.cdh"
+         unpack="false"/>
+
+   <plugin
+         id="net.sourceforge.czt.typechecker-zeves"
+         download-size="50"
+         install-size="120"
+         version="1.6.0.cdh"
+         unpack="false"/>
+
+   <plugin
+         id="net.sourceforge.czt.util"
+         download-size="52"
+         install-size="90"
+         version="1.6.0.cdh"
+         unpack="false"/>
+
+   <plugin
+         id="net.sourceforge.czt.vcg-z"
+         download-size="244"
+         install-size="567"
+         version="1.6.0.cdh"
+         unpack="false"/>
+
+   <plugin
+         id="net.sourceforge.czt.zeves"
+         download-size="169"
+         install-size="345"
+         version="1.6.0.cdh"
+         unpack="false"/>
+
+   <plugin
+         id="net.sourceforge.czt.core.feature.branding"
+         download-size="8"
+         install-size="8"
+         version="1.6.0.202010180842"
+         unpack="false"/>
+
+   <plugin
+         id="net.sourceforge.czt.corejava-circustime"
+         download-size="93"
+         install-size="207"
+         version="1.6.0.cdh"
+         unpack="false"/>
+
+   <plugin
+         id="net.sourceforge.czt.parser-circustime"
+         download-size="318"
+         install-size="874"
+         version="1.6.0.cdh"
+         unpack="false"/>
+
+</feature>

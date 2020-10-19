@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: net.sourceforge.czt.typecheck.oz.TypeCheckerTest
+-------------------------------------------------------------------------------
+Tests run: 337, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.524 sec - in net.sourceforge.czt.typecheck.oz.TypeCheckerTest

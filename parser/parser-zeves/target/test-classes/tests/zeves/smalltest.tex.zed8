@@ -1,0 +1,18 @@
+─ section smalltest parents standard_toolkit └ 
+
+┌ S 
+y : ℕ |
+ y > 10 └ 
+
+
+╷═ [ X ] 
+x : X 
+e : ( ℤ × X ) |
+ ∀ A : ℙ X ⦁ ∀ S : ℙ A ⦁ S ≠ ∅ [ A ] ∧ ( # _ ) [ A ] S > 0 ∧ # S = 1 └ 
+
+─ theorem Test [ X ] 
+e [ X ] ∈ ⟨ x [ X ] ⟩ ⇔ e [ X ] = ( 1 , x [ X ] ) 
+└ 
+
+
+

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<artifacts size='1'>
+  <artifact classifier='osgi.bundle' id='net.sourceforge.czt.eclipse.core' version='1.6.0.202010180842'>
+    <properties size='5'>
+      <property name='artifact.size' value='10027'/>
+      <property name='download.size' value='10027'/>
+      <property name='maven-groupId' value='net.sourceforge.czt.eclipse'/>
+      <property name='maven-artifactId' value='net.sourceforge.czt.eclipse.core'/>
+      <property name='maven-version' value='1.6.0-SNAPSHOT'/>
+    </properties>
+  </artifact>
+</artifacts>

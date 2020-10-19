@@ -1,0 +1,3661 @@
+
+─ section TID_proofs parents zeves_toolkit └ 
+
+\syndef{\Optional}{pregen}{Optional}
+─ generic ( Optional _ ) └ 
+
+─ ☓ Optional X == { x : 𝔽 X | # x ≤ 1 } └ 
+
+├ Optional$domainCheck 
+prove by rewrite ;  
+└ 
+
+─ ☓ Nil [ X ] == ∅ [ X ] └ 
+
+─ ☓ The [ X ] == { x : X ⦁ { x } ↦ x } └ 
+
+─ ☒ theorem rule lOptionalMember [ X ] 
+∀ m : X ; M : Optional X ⦁ m ∈ M ⇔ M = { m } 
+└ 
+
+├ lOptionalMember 
+invoke ( Optional _ ) ;  
+apply extensionality to predicate M = { m } ;  
+use cardIsNonNegative [ X ] [ S := M ] ;  
+split M = { } ;  
+prove by rewrite ;  
+use card0 [ X ] [ S := M ] ;  
+rearrange ;  
+simplify ;  
+simplify ;  
+split ∃ i : ℕ ⦁ i = ( # _ ) [ X ] M ;  
+cases ;  
+prove by rewrite ;  
+equality substitute ( # _ ) [ X ] M ;  
+next ;  
+rearrange ;  
+instantiate i == 1 ;  
+prove by rewrite ;  
+next ;  
+split ¬ i = 1 ;  
+cases ;  
+split i ≤ 1 ;  
+simplify ;  
+split i ≥ 0 ;  
+simplify ;  
+next ;  
+split m ∈ M ;  
+rewrite ;  
+use sizeDef [ X ] [ S := M ] ;  
+prenex ;  
+rearrange ;  
+rewrite ;  
+invoke ( _ ⤖ _ ) ;  
+invoke ( _ ↠ _ ) ;  
+invoke ( _ ↣ _ ) ;  
+invoke ( _ → _ ) ;  
+invoke ( _ ⤀ _ ) ;  
+invoke ( _ ⤔ _ ) ;  
+rewrite ;  
+prenex ;  
+invoke ( _ ⇸ _ ) ;  
+invoke ( _ ↔ _ ) ;  
+rewrite ;  
+rearrange ;  
+split ran [ { 1 } , M ] f = M ;  
+rewrite ;  
+equality substitute M ;  
+apply inRan ;  
+invoke ( _ ↔ _ ) ;  
+rearrange ;  
+prenex ;  
+rewrite ;  
+instantiate y1 == m , y2 == x ;  
+apply inPower to predicate f ∈ ℙ ( { 1 } × M ) ;  
+instantiate e == ( 1 , m ) ;  
+instantiate e == ( 1 , x ) ;  
+rearrange ;  
+rewrite ;  
+next ;  
+split m ∈ M ;  
+rewrite ;  
+use card0 [ X ] [ S := M ] ;  
+rearrange ;  
+simplify ;  
+└ 
+
+─ ☒ theorem rule lOptionalWeakening [ X ] 
+x ∈ Optional X ⇒ x ∈ ℙ X 
+└ 
+
+├ lOptionalWeakening 
+rewrite ;  
+invoke ( Optional _ ) ;  
+rewrite ;  
+└ 
+
+─ ☒ theorem rule lOptionalWeakening2 [ X ] 
+∀ S : ℙ X | x ∈ Optional S ⦁ x ∈ ℙ S 
+└ 
+
+├ lOptionalWeakening2 
+apply lOptionalWeakening to predicate x ∈ ℙ S ;  
+rewrite ;  
+└ 
+
+─ theorem frule lOptionalFinWeakening [ X ] 
+∀ x : Optional X ⦁ x ∈ 𝔽 X 
+└ 
+
+├ lOptionalFinWeakening 
+invoke ( Optional _ ) ;  
+rewrite ;  
+└ 
+
+─ ☒ theorem rule lOptionalMemberElem [ X ] 
+∀ x : 𝔽 X ⦁ x ∈ Optional X ⇔ x = { } ∨ ( ∃ y : X ⦁ x = { y } ) 
+└ 
+
+├ lOptionalMemberElem 
+use cardIsNonNegative [ X ] [ S := x ] ;  
+prove by rewrite ;  
+use card0 [ X ] [ S := x ] ;  
+rearrange ;  
+simplify ;  
+split x = { } ;  
+rewrite ;  
+cases ;  
+invoke ( Optional _ ) ;  
+rewrite ;  
+next ;  
+apply extensionality to predicate x = { } ;  
+prove by rewrite ;  
+use lOptionalMember [ X ] [ M := x , m := x__0 ] ;  
+rearrange ;  
+rewrite ;  
+rewrite ;  
+with normalization rewrite ;  
+rewrite ;  
+prenex ;  
+rewrite ;  
+cases ;  
+instantiate y__0 == x__0 ;  
+rewrite ;  
+next ;  
+rearrange ;  
+split x = { y } ;  
+rewrite ;  
+invoke ( Optional _ ) ;  
+rewrite ;  
+prove by rewrite ;  
+next ;  
+└ 
+
+─ theorem lNonemptyOptionalMemberElem [ X ] 
+∀ x : Optional X | ¬ x = { } ⦁ ∃ y : X ⦁ x = { y } 
+└ 
+
+├ lNonemptyOptionalMemberElem 
+use lOptionalFinWeakening [ X ] ;  
+use lOptionalMemberElem [ X ] ;  
+rearrange ;  
+rewrite ;  
+└ 
+
+─ ☒ theorem rule lInNil [ X ] 
+∀ x : X ⦁ ¬ x ∈ Nil 
+└ 
+
+├ lInNil 
+invoke Nil ;  
+rewrite ;  
+└ 
+
+─ ☒ theorem rule lNilSubset [ X ] 
+Nil ∈ ℙ X 
+└ 
+
+├ lNilSubset 
+invoke Nil ;  
+rewrite ;  
+└ 
+
+─ theorem grule gTheRelType [ X ] 
+The [ X ] ∈ ℙ X ↔ X 
+└ 
+
+├ gTheRelType 
+invoke ( _ ↔ _ ) ;  
+invoke The ;  
+prove by reduce ;  
+└ 
+
+─ ☒ theorem rule lTheMember [ X ] 
+∀ y : X ⦁ x = { y } ⇒ ( x , y ) ∈ The [ X ] 
+└ 
+
+├ lTheMember 
+invoke The ;  
+prove by reduce ;  
+└ 
+
+─ ☒ theorem rule lTheAppliesToDef [ X ] 
+∀ x : 𝔽 X | ¬ x = { } ∧ x ∈ Optional X ⦁ The [ X ] applies$to x 
+└ 
+
+├ lTheAppliesToDef 
+apply appliesToDef ;  
+rewrite ;  
+invoke The ;  
+prove by rewrite ;  
+apply lOptionalMemberElem ;  
+prove by rewrite ;  
+└ 
+
+─ theorem lBijectionFinite [ X , Y ] 
+∀ A : 𝔽 X ; B : ℙ Y ⦁ ∀ f : A ⤖ B ⦁ f ∈ A ⇻ B ∧ B ∈ 𝔽 Y ∧ # B = # A = # f 
+└ 
+
+├ lBijectionFinite 
+use functionFinite [ X , Y ] ;  
+use finiteFunction [ X , Y ] ;  
+use functionFinite [ X , Y ] [ A := X , B := Y ] ;  
+use finiteFunction [ Y , X ] [ f := f ( _ ∼ ) [ X , Y ] ] ;  
+use functionFinite [ Y , X ] [ A := B , B := A , f := f ( _ ∼ ) [ X , Y ] ] ;  
+prove by rewrite ;  
+└ 
+
+─ ☒ theorem rule lNonMaximalCard [ X ] 
+∀ A : ℙ X ⦁ ∀ S : 𝔽 A ⦁ ( # _ ) [ A ] S = ( # _ ) [ X ] S 
+└ 
+
+├ lNonMaximalCard 
+use sizeDef [ X ] ;  
+use sizeDef [ A ] ;  
+prove by rewrite ;  
+use lBijectionFinite [ ℤ , X ] [ f := f , A := 1 .. ( # _ ) [ A ] S , B := S ] ;  
+use lBijectionFinite [ ℤ , X ] [ f := f__0 , A := 1 .. ( # _ ) [ X ] S , B := S ] ;  
+with disabled ( sizeRange ) prove by rewrite ;  
+use cardIsNonNegative [ A ] ;  
+rearrange ;  
+rewrite ;  
+└ 
+
+─ ☒ theorem rule lOptionalSubtypeWeakening [ X ] 
+∀ S : ℙ X | x ∈ Optional S ⦁ x ∈ Optional X 
+└ 
+
+├ lOptionalSubtypeWeakening 
+invoke ( Optional _ ) ;  
+rewrite ;  
+use lNonMaximalCard [ X ] [ A := S , S := x ] ;  
+rearrange ;  
+rewrite ;  
+└ 
+
+─ theorem grule gTheMaxType [ X ] 
+The [ X ] ∈ ℙ X ⇸ X 
+└ 
+
+├ gTheMaxType 
+invoke The ;  
+invoke ( _ ⇸ _ ) ;  
+invoke ( _ ↔ _ ) ;  
+prove by rewrite ;  
+└ 
+
+─ theorem rule lNilNotInThe [ X ] 
+¬ Nil [ X ] ∈ dom The [ X ] 
+└ 
+
+├ lNilNotInThe 
+apply inDom ;  
+rewrite ;  
+invoke The ;  
+invoke Nil ;  
+rewrite ;  
+└ 
+
+─ theorem rule lNilIsOptional [ X ] 
+∀ A : ℙ X ⦁ { } ∈ Optional A 
+└ 
+
+├ lNilIsOptional 
+invoke ( Optional _ ) ;  
+rewrite ;  
+└ 
+
+─ theorem rule lInTheDomain [ X ] 
+∀ x : Optional X | ¬ x = Nil ⦁ x ∈ dom The 
+└ 
+
+├ lInTheDomain 
+apply inDom to predicate x ∈ dom [ ( ℙ X ) , X ] The [ X ] ;  
+rewrite ;  
+invoke The ;  
+invoke Nil ;  
+apply lOptionalMemberElem ;  
+prove by rewrite ;  
+└ 
+
+─ theorem rule lOptionalSubtying [ X ] 
+∀ A : ℙ X ⦁ ∀ x : Optional A ⦁ x ∈ Optional X 
+└ 
+
+├ lOptionalSubtying 
+invoke ( Optional _ ) ;  
+rewrite ;  
+use lNonMaximalCard [ X ] [ S := x ] ;  
+prove by rewrite ;  
+└ 
+
+─ ☒ theorem rule lOptionalWeakening3 [ X ] 
+∀ S : ℙ X | x ∈ Optional S ⦁ x ∈ ℙ X 
+└ 
+
+├ lOptionalWeakening3 
+apply lOptionalWeakening to predicate x ∈ ℙ X ;  
+rewrite ;  
+└ 
+
+─ ☒ theorem rule lTheAppliesElem [ X ] 
+∀ x : X ⦁ The [ X ] { x } = x 
+└ 
+
+├ lTheAppliesElem 
+use lInTheDomain [ X ] [ x := { x } ] ;  
+apply inDom to predicate { x } ∈ dom [ ( ℙ X ) , X ] The [ X ] ;  
+rearrange ;  
+invoke Nil ;  
+invoke ( Optional _ ) ;  
+rewrite ;  
+prenex ;  
+use pairInFunction [ ℙ X , X ] [ f := The [ X ] , x := { x } , y := y ] ;  
+prove by rewrite ;  
+equality substitute The [ X ] { x } ;  
+invoke The ;  
+rewrite ;  
+└ 
+
+─ theorem rule lTheResultType [ X ] 
+∀ S : Optional X | ¬ S = { } ⦁ The [ X ] S ∈ X 
+└ 
+
+├ lTheResultType 
+apply lOptionalMemberElem ;  
+prove by rewrite ;  
+apply lTheAppliesElem ;  
+prove by rewrite ;  
+└ 
+
+─ theorem rule lElemDiffAbsorption [ X ] 
+∀ x : X ; S : ℙ X | ¬ x ∈ S ⦁ S ∖ { x } = S 
+└ 
+
+├ lElemDiffAbsorption 
+apply extensionality ;  
+prove by rewrite ;  
+└ 
+
+─ TIME == ℕ └ 
+
+─ zeroTime == 0 └ 
+
+─ PRESENCE ::= present | absent └ 
+
+─ CLASS ::= unmarked | unclassified | restricted | confidential | secret | topsecret └ 
+
+┌ Clearance 
+class : CLASS └ 
+
+╷ minClearance : Clearance × Clearance → Clearance └ 
+
+─ PRIVILEGE ::= userOnly | guard | securityOfficer | auditManager └ 
+
+─ [ USER ] └ 
+
+╷ ISSUER : ℙ USER └ 
+
+─ [ FINGERPRINT ] └ 
+
+─ [ FINGERPRINTTEMPLATE ] └ 
+
+┌ FingerprintTemplate 
+template : FINGERPRINTTEMPLATE └ 
+
+─ [ KEYPART ] └ 
+
+┌ CertificateId 
+issuer : ISSUER └ 
+
+┌ Certificate 
+cid : CertificateId 
+validityPeriod : ℙ TIME 
+isValidatedBy : Optional KEYPART └ 
+
+┌ IDCert 
+Certificate 
+subject : USER 
+subjectPubK : KEYPART └ 
+
+┌ CAIdCert 
+IDCert |
+ isValidatedBy = { subjectPubK } └ 
+
+─ [ TOKENID ] └ 
+
+┌ AttCertificate 
+Certificate 
+baseCertId : CertificateId 
+tokenID : TOKENID └ 
+
+┌ PrivCert 
+AttCertificate 
+role : PRIVILEGE 
+clearance : Clearance └ 
+
+┌ AuthCert 
+AttCertificate 
+role : PRIVILEGE 
+clearance : Clearance └ 
+
+┌ IandACert 
+AttCertificate 
+template : FingerprintTemplate └ 
+
+┌ Token 
+tokenID : TOKENID 
+idCert : IDCert 
+privCert : PrivCert 
+iandACert : IandACert 
+authCert : Optional AuthCert └ 
+
+┌ ValidToken 
+Token |
+ privCert . baseCertId = idCert . cid 
+iandACert . baseCertId = idCert . cid 
+privCert . tokenID = tokenID 
+iandACert . tokenID = tokenID └ 
+
+┌ TokenWithValidAuth 
+Token |
+ authCert ≠ Nil ∧ ( The authCert ) . tokenID = tokenID ∧ ( The authCert ) . baseCertId = idCert . cid └ 
+
+├ TokenWithValidAuth$domainCheck 
+invoke Token ;  
+prove by rewrite ;  
+apply lInTheDomain to predicate authCert ∈ dom The ;  
+rewrite ;  
+use lOptionalSubtying [ ⦉ baseCertId : ⦉ issuer : USER ⦊ ; cid : ⦉ issuer : USER ⦊ ; clearance : ⦉ class : CLASS ⦊ ; isValidatedBy : ℙ KEYPART ; role : PRIVILEGE ; tokenID : TOKENID ; validityPeriod : ℙ ℤ ⦊ ] [ A := AuthCert , x := authCert ] ;  
+prove by rewrite ;  
+└ 
+
+┌ TokenWithValidAuth0 
+Token 
+ac : AuthCert |
+ authCert ≠ Nil 
+The authCert = ac 
+tokenID = ac . tokenID 
+idCert . cid = ac . baseCertId └ 
+
+├ TokenWithValidAuth0$domainCheck 
+apply lTheAppliesToDef ;  
+prove by rewrite ;  
+└ 
+
+─ TokenWithValidAuth1 == TokenWithValidAuth0 ∖ ( ac ) └ 
+
+─ ☒ theorem rule lTokenWithValidAuthEquiv 
+TokenWithValidAuth ⇔ TokenWithValidAuth1 
+└ 
+
+├ lTokenWithValidAuthEquiv 
+split TokenWithValidAuth ;  
+cases ;  
+with enabled ( PrivCert$inSet , AuthCert$member , Nil ) prove by reduce ;  
+apply lOptionalMemberElem ;  
+prove by rewrite ;  
+apply lTheAppliesElem ;  
+prove by rewrite ;  
+with enabled ( lOptionalWeakening , AuthCert$member ) prove by reduce ;  
+next ;  
+split TokenWithValidAuth1 ;  
+with enabled ( PrivCert$inSet , AuthCert$member , Nil ) prove by reduce ;  
+next ;  
+└ 
+
+┌ CurrentToken 
+ValidToken 
+now : TIME |
+ now ∈ idCert . validityPeriod ∩ privCert . validityPeriod ∩ iandACert . validityPeriod └ 
+
+┌ Enrol 
+idStationCert : IDCert 
+issuerCerts : ℙ IDCert |
+ idStationCert ∈ issuerCerts └ 
+
+┌ ValidEnrol 
+Enrol |
+ issuerCerts ∩ { CAIdCert | true } ≠ ∅ 
+∀ cert : issuerCerts ⦁ cert . isValidatedBy ≠ Nil ∧ ( ∃ issuerCert : issuerCerts ⦁ ( issuerCert ∈ CAIdCert ∧ The cert . isValidatedBy = issuerCert . subjectPubK ∧ cert . cid . issuer = issuerCert . subject ) ) └ 
+
+├ ValidEnrol$domainCheck 
+rewrite ;  
+apply lInTheDomain to predicate cert . isValidatedBy ∈ dom The ;  
+rewrite ;  
+invoke Enrol ;  
+apply inPower to predicate issuerCerts ∈ ℙ IDCert ;  
+instantiate e == cert ;  
+apply IDCert$member to predicate cert ∈ IDCert ;  
+prove by rewrite ;  
+└ 
+
+─ DOOR ::= open | closed └ 
+
+─ LATCH ::= unlocked | locked └ 
+
+─ ALARM ::= silent | alarming └ 
+
+─ DISPLAYMESSAGE ::= blank | welcome | insertFinger | openDoor | wait | removeToken | tokenUpdateFailed | doorUnlocked └ 
+
+─ FINGERPRINTTRY ::= noFP | badFP | goodFP ⟪ FINGERPRINT ⟫ └ 
+
+─ TOKENTRY ::= noT | badT | goodT ⟪ Token ⟫ └ 
+
+─ [ Audit ] └ 
+
+\The next constant must be $\nat_1$, otherwise $Config$ is infeasible.
+╷ maxSupportedLogSize : ℕ↘1↖ └ 
+
+┌ Config 
+alarmSilentDuration , latchUnlockDuration : TIME 
+tokenRemovalDuration : TIME 
+enclaveClearance : Clearance 
+authPeriod : PRIVILEGE → TIME → ℙ TIME 
+entryPeriod : PRIVILEGE → CLASS → ℙ TIME 
+minPreservedLogSize : ℕ 
+alarmThresholdSize : ℕ |
+ alarmThresholdSize < minPreservedLogSize 
+minPreservedLogSize ≤ maxSupportedLogSize └ 
+
+─ FLOPPY ::= noFloppy | emptyFloppy | badFloppy | enrolmentFile ⟪ ValidEnrol ⟫ | auditFile ⟪ 𝔽 Audit ⟫ | configFile ⟪ Config ⟫ └ 
+
+─ ADMINOP ::= archiveLog | updateConfigData | overrideLock | shutdownOp └ 
+
+─ KEYBOARD ::= noKB | badKB | keyedOps ⟪ ADMINOP ⟫ └ 
+
+┌ Stats 
+successEntry : ℕ 
+failEntry : ℕ 
+successBio : ℕ 
+failBio : ℕ └ 
+
+─ SCREENTEXT ::= clear | welcomeAdmin | busy | removeAdminToken | closeDoor | requestAdminOp | doingOp | invalidRequest | invalidData | insertEnrolmentData | validatingEnrolmentData | enrolmentFailed | archiveFailed | insertBlankFloppy | insertConfigData | displayStats ⟪ Stats ⟫ | displayConfigData ⟪ Config ⟫ └ 
+
+┌ Screen 
+screenStats : SCREENTEXT 
+screenMsg : SCREENTEXT 
+screenConfig : SCREENTEXT └ 
+
+┌ TISControlledRealWorld 
+latch : LATCH 
+alarm : ALARM 
+display : DISPLAYMESSAGE 
+screen : Screen └ 
+
+┌ TISMonitoredRealWorld 
+now : TIME 
+door : DOOR 
+finger : FINGERPRINTTRY 
+userToken , adminToken : TOKENTRY 
+floppy : FLOPPY 
+keyboard : KEYBOARD └ 
+
+─ RealWorld == TISControlledRealWorld ∧ TISMonitoredRealWorld └ 
+
+Function $sizeLog$ is not well defined originally. It doesn't have
+a case for when $entry \neq log$, despite being a total function.
+Also, if we assume a naive interpretation for this case, where the
+entry's size is simply ignored (as given below), then the axiom is
+inconsistent because $sizeLog$ might never terminate (e.g., until we
+find an $entry \in log$, which might take unbounded amounts of time).
+╷ sizeElement0 : Audit → ℕ 
+sizeLog0 : 𝔽 Audit → ℕ |
+ 《 disabled rule dSizeLogEmpty0 》 sizeLog0 ∅ = 0 
+《 disabled rule dSizeLog0 》 ∀ log : 𝔽 Audit ; entry : Audit ⦁ sizeLog0 log = if ( entry ∈ log ) then sizeLog0 ( log ∖ { entry } ) + sizeElement0 entry else sizeLog0 log └ 
+
+├ unnamedn3$domainCheck 
+prove by rewrite ;  
+└ 
+
+╷ sizeElement : Audit → ℕ 
+sizeLog : 𝔽 Audit → ℕ |
+ 《 disabled rule dSizeLogBase 》 sizeLog { } = 0 
+《 disabled rule dSizeLogInduc 》 ∀ log : 𝔽 Audit ; entry : Audit ⦁ sizeLog ( { entry } ∪ log ) = sizeElement entry + sizeLog ( log ∖ { entry } ) └ 
+
+├ unnamedn4$domainCheck 
+prove by rewrite ;  
+└ 
+
+┌ AuditLog 
+auditLog : 𝔽 Audit 
+auditAlarm : ALARM └ 
+
+╷ oldestLogTime : 𝔽 Audit → TIME 
+newestLogTime : 𝔽 Audit → TIME |
+ 《 disabled rule dNewestLogTime 》 ∀ A , B : 𝔽 Audit ⦁ newestLogTime ( A ∪ B ) ≥ newestLogTime A 
+《 disabled rule dOldestLogTime 》 ∀ C , D : 𝔽 Audit ⦁ oldestLogTime ( C ∪ D ) ≤ oldestLogTime C └ 
+
+├ unnamedn5$domainCheck 
+prove by reduce ;  
+└ 
+
+┌ KeyStore 
+issuerKey : ISSUER ⇸ KEYPART 
+ownName : Optional ISSUER |
+ ownName ≠ Nil ⇒ The ownName ∈ dom issuerKey └ 
+
+├ KeyStore$domainCheck 
+rewrite ;  
+└ 
+
+─ ADMINPRIVILEGE == { guard , auditManager , securityOfficer } └ 
+
+─ theorem grule gAdminPriviledgeIsPriviledge 
+ADMINPRIVILEGE ∈ ℙ PRIVILEGE 
+└ 
+
+├ gAdminPriviledgeIsPriviledge 
+prove by reduce ;  
+└ 
+
+┌ Admin 
+rolePresent : Optional ADMINPRIVILEGE 
+availableOps : ℙ ADMINOP 
+currentAdminOp : Optional ADMINOP |
+ rolePresent = Nil ⇒ availableOps = ∅ 
+rolePresent ≠ Nil ∧ The rolePresent = guard ⇒ availableOps = { overrideLock } 
+rolePresent ≠ Nil ∧ The rolePresent = auditManager ⇒ availableOps = { archiveLog } 
+rolePresent ≠ Nil ∧ The rolePresent = securityOfficer ⇒ availableOps = { updateConfigData , shutdownOp } 
+currentAdminOp ≠ Nil ⇒ The currentAdminOp ∈ availableOps ∧ rolePresent ≠ Nil └ 
+
+This an other proofs (commented above) are much simpler thanks to
+the enabled rewrite rules in backward chaining:lInTheDomain,
+lOptionalSubtying; and in forward chaining :lOptionalFinWeakening.
+├ Admin$domainCheck 
+rewrite ;  
+└ 
+
+\The next lemma is logically equivalent to $Admin$'s invariant, yet in a form
+that we find more intuitive, and also it is easier to do proof with (e.g., it leads
+to less case splits).
+─ theorem lAdminInvLemma 
+∀ Admin ⦁ ( rolePresent = Nil ∧ availableOps = Nil ∧ currentAdminOp = Nil ) ∨ ( rolePresent ≠ Nil ∧ availableOps ≠ Nil ∧ ( currentAdminOp ≠ Nil ⇒ The currentAdminOp ∈ availableOps ) ∧ ( The rolePresent = guard ⇒ availableOps = { overrideLock } ) ∧ ( The rolePresent = auditManager ⇒ availableOps = { archiveLog } ) ∧ ( The rolePresent = securityOfficer ⇒ availableOps = { updateConfigData , shutdownOp } ) ) 
+└ 
+
+├ lAdminInvLemma 
+invoke Admin ;  
+invoke Nil ;  
+with enabled ( lOptionalWeakening ) prove by rewrite ;  
+apply lOptionalMemberElem ;  
+prove by rewrite ;  
+split currentAdminOp = { } ;  
+rewrite ;  
+cases ;  
+apply lTheAppliesElem ;  
+rewrite ;  
+with normalization prove by reduce ;  
+next ;  
+equality substitute ;  
+apply lTheAppliesElem ;  
+rewrite ;  
+apply extensionality to predicate availableOps = { } ;  
+prove by rewrite ;  
+instantiate x == y__0 ;  
+rewrite ;  
+next ;  
+└ 
+
+┌ Admin1 
+rolePresent : Optional ADMINPRIVILEGE 
+availableOps : ℙ ADMINOP 
+currentAdminOp : Optional ADMINOP |
+ ( rolePresent = Nil ∧ availableOps = Nil ∧ currentAdminOp = Nil ) ∨ ( rolePresent ≠ Nil ∧ availableOps ≠ Nil ∧ ( currentAdminOp ≠ Nil ⇒ The currentAdminOp ∈ availableOps ) ∧ ( The rolePresent = guard ⇒ availableOps = { overrideLock } ) ∧ ( The rolePresent = auditManager ⇒ availableOps = { archiveLog } ) ∧ ( The rolePresent = securityOfficer ⇒ availableOps = { updateConfigData , shutdownOp } ) ) └ 
+
+├ Admin1$domainCheck 
+prove by rewrite ;  
+└ 
+
+─ ☒ theorem rule lAdminEquiv 
+Admin ⇔ Admin1 
+└ 
+
+├ lAdminEquiv 
+split Admin ;  
+cases ;  
+use lAdminInvLemma ;  
+invoke Admin1 ;  
+prove by rewrite ;  
+next ;  
+split Admin1 ;  
+with enabled ( Nil , lOptionalWeakening ) prove by reduce ;  
+next ;  
+└ 
+
+
+┌ DoorLatchAlarm 
+currentTime : TIME 
+currentDoor : DOOR 
+currentLatch : LATCH 
+doorAlarm : ALARM 
+latchTimeout : TIME 
+alarmTimeout : TIME |
+ currentLatch = locked ⇔ currentTime ≥ latchTimeout 
+doorAlarm = alarming ⇔ currentDoor = open ∧ currentLatch = locked ∧ currentTime ≥ alarmTimeout └ 
+
+A clearer(?) version of $DoorLatchAlarm$? It leads to nearly
+as complex proofs. It has at least a clearer picture of the
+various cases and dependencies involved. First we decompose and
+reorder each equivalence
+┌ DoorLatchAlarm0 
+currentTime : TIME 
+currentDoor : DOOR 
+currentLatch : LATCH 
+doorAlarm : ALARM 
+latchTimeout : TIME 
+alarmTimeout : TIME |
+ doorAlarm = alarming ⇒ currentDoor = open ∧ currentLatch = locked ∧ currentTime ≥ alarmTimeout 
+currentLatch = locked ⇒ currentTime ≥ latchTimeout 
+currentTime ≥ latchTimeout ⇒ currentLatch = locked 
+currentDoor = open ∧ currentLatch = locked ∧ currentTime ≥ alarmTimeout ⇒ doorAlarm = alarming └ 
+Then, we decompose the implications into clearer combination of cases.
+We also add a few redundant conjuncts about $doorAlarm$ and $currentLatch$
+when their $\IF-\THEN-\ELSE$ statements evaluate to $false$. This is helpful
+because it avoids expanding their underlying free (enumerated) types
+┌ DoorLatchAlarm1 
+currentTime : TIME 
+currentDoor : DOOR 
+currentLatch : LATCH 
+doorAlarm : ALARM 
+latchTimeout : TIME 
+alarmTimeout : TIME |
+ if ( doorAlarm = alarming ) then [ | currentDoor = open ∧ currentLatch = locked ∧ currentTime ≥ alarmTimeout ∧ currentTime ≥ latchTimeout ] else doorAlarm = silent ∧ ( if ( currentLatch = locked ) then [ | currentTime ≥ latchTimeout ∧ ( currentDoor = open ⇒ currentTime < alarmTimeout ) ] else [ | currentLatch = unlocked ∧ currentTime < latchTimeout ] ) └ 
+To make sure all is okay, we prove they are equivalent, and leave it as a
+disabled rule:~whenever one needs, just apply them.
+─ ☒ theorem rule lDoorLatchAlarmEquiv0 
+DoorLatchAlarm ⇔ DoorLatchAlarm0 
+└ 
+
+├ lDoorLatchAlarmEquiv0 
+with normalization prove by reduce ;  
+└ 
+
+─ ☒ theorem rule lDoorLatchAlarmEquiv1 
+DoorLatchAlarm ⇔ DoorLatchAlarm1 
+└ 
+
+├ lDoorLatchAlarmEquiv1 
+with enabled ( ALARM$member , LATCH$member ) with normalization reduce ;  
+└ 
+
+─ ☒ theorem rule lDoorLatchAlarmEquiv2 
+DoorLatchAlarm0 ⇔ DoorLatchAlarm1 
+└ 
+
+├ lDoorLatchAlarmEquiv2 
+with enabled ( ALARM$member , LATCH$member ) with normalization reduce ;  
+└ 
+
+
+┌ UserToken 
+currentUserToken : TOKENTRY 
+userTokenPresence : PRESENCE └ 
+
+┌ AdminToken 
+currentAdminToken : TOKENTRY 
+adminTokenPresence : PRESENCE └ 
+
+┌ Finger 
+currentFinger : FINGERPRINTTRY 
+fingerPresence : PRESENCE └ 
+
+┌ Floppy 
+currentFloppy : FLOPPY 
+writtenFloppy : FLOPPY 
+floppyPresence : PRESENCE └ 
+
+┌ Keyboard 
+currentKeyedData : KEYBOARD 
+keyedDataPresence : PRESENCE └ 
+
+─ STATUS ::= quiescent | gotUserToken | waitingFinger | gotFinger | waitingUpdateToken | waitingEntry | waitingRemoveTokenSuccess | waitingRemoveTokenFail └ 
+
+─ ENCLAVESTATUS ::= notEnrolled | waitingEnrol | waitingEndEnrol | enclaveQuiescent | gotAdminToken | waitingRemoveAdminTokenFail | waitingStartAdminOp | waitingFinishAdminOp | shutdown └ 
+
+┌ Internal 
+tkstatus : STATUS 
+enclaveStatus : ENCLAVESTATUS 
+tokenRemovalTimeout : TIME └ 
+
+┌ IDStation 
+UserToken 
+AdminToken 
+Finger 
+DoorLatchAlarm 
+Floppy 
+Keyboard 
+Config 
+Stats 
+KeyStore 
+Admin 
+AuditLog 
+Internal 
+currentDisplay : DISPLAYMESSAGE 
+currentScreen : Screen |
+ tkstatus ∈ { gotFinger , waitingFinger , waitingUpdateToken , waitingEntry } ⇒ ( ∃ ValidToken ⦁ goodT ( θ ValidToken ) = currentUserToken ) ∨ ( ∃ TokenWithValidAuth ⦁ goodT ( θ TokenWithValidAuth ) = currentUserToken ) 
+rolePresent ≠ Nil ⇒ ( ∃ TokenWithValidAuth ⦁ goodT ( θ TokenWithValidAuth ) = currentAdminToken ) 
+enclaveStatus ∉ { notEnrolled , waitingEnrol , waitingEndEnrol } ⇒ ownName ≠ Nil 
+enclaveStatus ∈ { waitingStartAdminOp , waitingFinishAdminOp } ⇔ currentAdminOp ≠ Nil 
+currentAdminOp ≠ Nil ∧ The currentAdminOp ∈ { shutdownOp , overrideLock } ⇒ enclaveStatus = waitingStartAdminOp 
+enclaveStatus = gotAdminToken ⇒ rolePresent = Nil 
+currentScreen . screenStats = displayStats ( θ Stats ) 
+currentScreen . screenConfig = displayConfigData ( θ Config ) └ 
+
+├ IDStation$domainCheck 
+rewrite ;  
+└ 
+
+┌ IDStationState 
+UserToken 
+AdminToken 
+Finger 
+DoorLatchAlarm 
+Floppy 
+Keyboard 
+Config 
+Stats 
+KeyStore 
+Admin 
+AuditLog 
+Internal 
+currentDisplay : DISPLAYMESSAGE 
+currentScreen : Screen |
+ true └ 
+
+┌ IDStation1 
+IDStationState |
+ currentScreen . screenStats = displayStats ( θ Stats ) 
+currentScreen . screenConfig = displayConfigData ( θ Config ) 
+rolePresent ≠ Nil ⇒ enclaveStatus ≠ gotAdminToken ∧ ( ∃ TokenWithValidAuth ⦁ currentAdminToken = goodT ( θ TokenWithValidAuth ) ) 
+currentAdminOp = Nil ⇒ enclaveStatus ≠ waitingStartAdminOp ∧ enclaveStatus ≠ waitingFinishAdminOp 
+ownName = Nil ⇒ enclaveStatus ∈ { notEnrolled , waitingEnrol , waitingEndEnrol } 
+enclaveStatus ≠ waitingStartAdminOp ∧ currentAdminOp ≠ Nil ⇒ enclaveStatus = waitingFinishAdminOp ∧ The currentAdminOp ≠ shutdownOp ∧ The currentAdminOp ≠ overrideLock 
+( ∀ ValidToken ⦁ goodT ( θ Token ) ≠ currentUserToken ) ∧ ( ∀ TokenWithValidAuth ⦁ goodT ( θ TokenWithValidAuth ) ≠ currentUserToken ) ⇒ tkstatus ∉ { waitingFinger , gotFinger , waitingUpdateToken , waitingEntry } └ 
+
+├ IDStation1$domainCheck 
+prove by rewrite ;  
+└ 
+
+─ ☒ theorem rule lIDStationEquiv1 
+IDStation ⇔ IDStation1 
+└ 
+
+├ lIDStationEquiv1 
+split IDStation ;  
+simplify ;  
+cases ;  
+invoke IDStation ;  
+invoke IDStation1 ;  
+invoke IDStationState ;  
+invoke Nil ;  
+with enabled ( lOptionalWeakening ) prove by rewrite ;  
+cases ;  
+rearrange ;  
+simplify ;  
+equality substitute currentAdminToken ;  
+prove by rewrite ;  
+next ;  
+instantiate authCert__4 == authCert__0 , iandACert__4 == iandACert__0 , idCert__4 == idCert__0 , privCert__4 == privCert__0 , tokenID__4 == tokenID__0 ;  
+split TokenWithValidAuth [ authCert__0 / authCert , iandACert__0 / iandACert , idCert__0 / idCert , privCert__0 / privCert , tokenID__0 / tokenID ] ⇒ ¬ goodT ( θ ( Token [ authCert__0 / authCert , iandACert__0 / iandACert , idCert__0 / idCert , privCert__0 / privCert , tokenID__0 / tokenID ] ) ) = currentUserToken ;  
+simplify ;  
+instantiate authCert__2 == authCert , iandACert__2 == iandACert , idCert__2 == idCert , privCert__2 == privCert , tokenID__2 == tokenID ;  
+split ValidToken [ authCert__0 / authCert , iandACert__0 / iandACert , idCert__0 / idCert , privCert__0 / privCert , tokenID__0 / tokenID ] ⇒ ¬ goodT ( θ ( Token [ authCert__0 / authCert , iandACert__0 / iandACert , idCert__0 / idCert , privCert__0 / privCert , tokenID__0 / tokenID ] ) ) = currentUserToken ;  
+simplify ;  
+next ;  
+split IDStation1 ;  
+simplify ;  
+invoke IDStation ;  
+invoke IDStation1 ;  
+invoke Nil ;  
+with disabled ( inCup ) with enabled ( lOptionalWeakening ) prove by rewrite ;  
+cases ;  
+prove by rewrite ;  
+next ;  
+with disabled ( inCup ) with enabled ( lOptionalWeakening ) prove by rewrite ;  
+instantiate authCert__3 == authCert__1 , iandACert__3 == iandACert__1 , idCert__3 == idCert__1 , privCert__3 == privCert__1 , tokenID__3 == tokenID__1 ;  
+with disabled ( inCup ) with enabled ( lOptionalWeakening ) prove by rewrite ;  
+split TokenWithValidAuth [ authCert__1 / authCert , iandACert__1 / iandACert , idCert__1 / idCert , privCert__1 / privCert , tokenID__1 / tokenID ] ⇒ ¬ goodT ( θ ( Token [ authCert__1 / authCert , iandACert__1 / iandACert , idCert__1 / idCert , privCert__1 / privCert , tokenID__1 / tokenID ] ) ) = currentUserToken ;  
+simplify ;  
+rearrange ;  
+equality substitute currentUserToken ;  
+with disabled ( inCup ) rewrite ;  
+simplify ;  
+next ;  
+rearrange ;  
+simplify ;  
+equality substitute currentAdminToken ;  
+with disabled ( inCup ) rewrite ;  
+simplify ;  
+next ;  
+use lOptionalWeakening3 [ USER ] [ S := ISSUER , x := ownName ] ;  
+rearrange ;  
+rewrite ;  
+next ;  
+rearrange ;  
+rewrite ;  
+next ;  
+use lOptionalWeakening3 [ PRIVILEGE ] [ S := ADMINPRIVILEGE , x := rolePresent ] ;  
+rearrange ;  
+rewrite ;  
+next ;  
+└ 
+
+┌ RealWorldChanges 
+ΔRealWorld |
+ now′ ≥ now └ 
+
+┌ PollTime 
+ΔDoorLatchAlarm 
+RealWorld |
+ currentTime′ = now └ 
+
+┌ PollDoor 
+ΔDoorLatchAlarm 
+RealWorld |
+ currentDoor′ = door 
+latchTimeout′ = latchTimeout 
+alarmTimeout′ = alarmTimeout └ 
+
+┌ PollUserToken 
+ΔUserToken 
+RealWorld |
+ userTokenPresence′ = present ⇔ userToken ≠ noT 
+currentUserToken′ = if ( userToken ≠ noT ) then userToken else currentUserToken └ 
+
+┌ PollAdminToken 
+ΔAdminToken 
+RealWorld |
+ adminTokenPresence′ = present ⇔ adminToken ≠ noT 
+currentAdminToken′ = if ( adminToken ≠ noT ) then adminToken else currentAdminToken └ 
+
+┌ PollFinger 
+ΔFinger 
+RealWorld |
+ fingerPresence′ = present ⇔ finger ≠ noFP 
+currentFinger′ = if ( finger ≠ noFP ) then finger else currentFinger └ 
+
+┌ PollFloppy 
+ΔFloppy 
+RealWorld |
+ floppyPresence′ = present ⇔ floppy ≠ noFloppy 
+currentFloppy′ = if ( floppy ≠ noFloppy ) then floppy else currentFloppy 
+writtenFloppy′ = writtenFloppy └ 
+
+┌ PollKeyboard 
+ΔKeyboard 
+RealWorld |
+ keyedDataPresence = present ⇔ keyboard ≠ noKB 
+currentKeyedData′ = if ( keyboard ≠ noKB ) then keyboard else currentKeyedData └ 
+
+─ theorem grule gTIMEMaxType 
+TIME ∈ ℙ ℤ 
+└ 
+
+├ gTIMEMaxType 
+prove by reduce ;  
+└ 
+
+┌ AddElementsToLog 
+Config 
+ΔAuditLog |
+ ∃ newElements : 𝔽↘1↖ Audit ⦁ oldestLogTime newElements ≥ newestLogTime auditLog ∧ ( auditLog′ = auditLog ∪ newElements ∧ ( sizeLog auditLog′ < alarmThresholdSize ∧ auditAlarm′ = auditAlarm ∨ sizeLog auditLog′ ≥ alarmThresholdSize ∧ auditAlarm′ = alarming ) ∨ sizeLog auditLog + sizeLog newElements > minPreservedLogSize ∧ ( ∃ oldElements : 𝔽 Audit ⦁ ( oldElements ∪ auditLog′ = auditLog ∪ newElements ∧ oldestLogTime auditLog′ ≥ newestLogTime oldElements ) ) ∧ sizeLog auditLog′ ≥ minPreservedLogSize ∧ auditAlarm′ = alarming ) └ 
+
+├ AddElementsToLog$domainCheck 
+rewrite ;  
+└ 
+
+┌ AuditDoor 
+ΔDoorLatchAlarm 
+AddElementsToLog |
+ currentDoor ≠ currentDoor′ └ 
+
+┌ AuditLatch 
+ΔDoorLatchAlarm 
+AddElementsToLog |
+ currentLatch′ ≠ currentLatch └ 
+
+┌ AuditAlarm 
+ΔDoorLatchAlarm 
+AddElementsToLog |
+ doorAlarm ≠ doorAlarm′ └ 
+
+┌ AuditLogAlarm 
+AddElementsToLog |
+ auditAlarm ≠ auditAlarm′ └ 
+
+┌ AuditDisplay 
+AddElementsToLog 
+ΔIDStation |
+ currentDisplay′ ≠ currentDisplay └ 
+
+┌ AuditScreen 
+ΔIDStation 
+AddElementsToLog |
+ currentScreen′ . screenMsg ≠ currentScreen . screenMsg └ 
+
+┌ NoChange 
+ΔIDStation |
+ currentDoor = currentDoor′ 
+currentLatch′ = currentLatch 
+doorAlarm = doorAlarm′ 
+auditAlarm = auditAlarm′ 
+currentDisplay′ = currentDisplay 
+currentScreen′ . screenMsg = currentScreen . screenMsg 
+AddElementsToLog ∨ ΞAuditLog └ 
+
+─ LogChange == AuditAlarm ∨ AuditLatch ∨ AuditDoor ∨ AuditLogAlarm ∨ AuditScreen ∨ AuditDisplay ∨ NoChange └ 
+
+┌ TISPoll 
+ΔIDStation 
+ΞRealWorld 
+PollTime 
+PollDoor 
+PollUserToken 
+PollAdminToken 
+PollFinger 
+PollFloppy 
+PollKeyboard 
+LogChange 
+ΞConfig 
+ΞKeyStore 
+ΞAdmin 
+ΞStats 
+ΞInternal |
+ currentScreen′ = currentScreen 
+currentDisplay = doorUnlocked ∧ currentLatch′ = locked ∧ ( tkstatus ≠ waitingRemoveTokenFail ∧ currentDisplay′ = welcome ∨ tkstatus = waitingRemoveTokenFail ∧ currentDisplay = removeToken ) ∨ ¬ ( currentDisplay = doorUnlocked ∧ currentLatch′ = locked ) ∧ currentDisplay′ = currentDisplay └ 
+
+┌ UpdateLatch 
+ΞDoorLatchAlarm 
+RealWorldChanges |
+ latch′ = currentLatch └ 
+
+┌ UpdateAlarm 
+ΞDoorLatchAlarm 
+AuditLog 
+RealWorldChanges |
+ alarm′ = alarming ⇔ doorAlarm = alarming ∨ auditAlarm = alarming └ 
+
+┌ UpdateDisplay 
+ΔIDStation 
+RealWorldChanges |
+ display′ = currentDisplay 
+currentDisplay′ = currentDisplay └ 
+
+Missing DCC (Domain check condition): $rolePresent \neq \nil$
+┌ UpdateScreen 
+ΔIDStation 
+ΞAdmin 
+RealWorldChanges |
+ screen′ . screenMsg = currentScreen . screenMsg 
+screen′ . screenConfig = if ( rolePresent ≠ Nil ∧ The rolePresent = securityOfficer ) then currentScreen . screenConfig else clear 
+screen′ . screenStats = if ( rolePresent ≠ Nil ) then currentScreen . screenStats else clear └ 
+Here there is a choice: either (as it is) with conjunction on the first IF with the missing condition;
+or with a more complicated IF-THEN-ELSE, where $rolePresent \neq Nil$ is brought outside the two IFs.
+\The later might make proof easier. (Is it the same?
+
+├ UpdateScreen$domainCheck 
+rewrite ;  
+apply lInTheDomain to predicate rolePresent ∈ dom The ;  
+invoke ΞAdmin ;  
+invoke predicate Admin ;  
+rewrite ;  
+└ 
+
+┌ UpdateUserToken 
+ΞIDStation 
+RealWorldChanges 
+ΞTISControlledRealWorld |
+ userToken′ = currentUserToken └ 
+
+─ TISUpdate == UpdateLatch ∧ UpdateAlarm ∧ UpdateDisplay ∧ UpdateScreen ∧ ΞUserToken ∧ ΞAdminToken ∧ ΞFinger ∧ ΞFloppy ∧ ΞKeyStore ∧ ΞAdmin ∧ ΞInternal ∧ ( AddElementsToLog ∨ ΞAuditLog ) └ 
+
+┌ UpdateFloppy 
+ΔIDStation 
+RealWorldChanges 
+ΞUserToken 
+ΞAdminToken 
+ΞFinger 
+ΞDoorLatchAlarm 
+ΞKeyboard 
+ΞConfig 
+ΞStats 
+ΞKeyStore 
+ΞAdmin 
+ΞAuditLog 
+ΞInternal 
+ΞTISControlledRealWorld |
+ floppy′ = writtenFloppy 
+currentFloppy′ = badFloppy 
+floppyPresence′ = floppyPresence 
+currentDisplay′ = currentDisplay 
+currentScreen′ = currentScreen └ 
+
+This operation is not quite rightly defined. $archive$ needs to be an
+output variable, as this is what it is meant to be, and because it would
+otherwise mess precondition operations.
+┌ ArchiveLog 
+Config 
+ΔAuditLog 
+archive! : 𝔽 Audit |
+ ∃ notArchived , newElements : 𝔽 Audit ⦁ archive ⊆ auditLog ∪ newElements ∧ auditLog′ ⊆ archive ∪ notArchived ∧ newestLogTime archive ≤ oldestLogTime notArchived ∧ AddElementsToLog └ 
+
+├ ArchiveLog$domainCheck 
+rewrite ;  
+└ 
+
+┌ ClearLog 
+Config 
+ΔAuditLog 
+archive! : 𝔽 Audit |
+ ∃ sinceArchive , lostSinceArchive : 𝔽 Audit ⦁ archive ∪ sinceArchive = lostSinceArchive ∪ auditLog ∧ oldestLogTime sinceArchive ≥ newestLogTime archive ∧ newestLogTime lostSinceArchive ≤ oldestLogTime auditLog ∧ auditLog′ = sinceArchive 
+sizeLog auditLog′ < alarmThresholdSize ∧ auditAlarm′ = silent ∨ sizeLog auditLog′ ≥ alarmThresholdSize ∧ auditAlarm′ = alarming └ 
+
+├ ClearLog$domainCheck 
+rewrite ;  
+└ 
+
+┌ AddSuccessfulEntryToStats 
+ΔStats |
+ failEntry′ = failEntry 
+successEntry′ = successEntry + 1 
+failBio′ = failBio 
+successBio′ = successBio └ 
+
+┌ AddFailedEntryToStats 
+ΔStats |
+ failEntry′ = failEntry + 1 
+successEntry′ = successEntry 
+failBio′ = failBio 
+successBio′ = successBio └ 
+
+┌ AddSuccessfulBioCheckToStats 
+ΔStats |
+ failEntry′ = failEntry 
+successEntry′ = successEntry 
+failBio′ = failBio 
+successBio′ = successBio + 1 └ 
+
+┌ AddFailedBioCheckToStats 
+ΔStats |
+ failEntry′ = failEntry 
+successEntry′ = successEntry 
+failBio′ = failBio + 1 
+successBio′ = successBio └ 
+
+┌ UnlockDoor 
+ΔDoorLatchAlarm 
+Config |
+ latchTimeout′ = currentTime + latchUnlockDuration 
+alarmTimeout′ = currentTime + latchUnlockDuration + alarmSilentDuration 
+currentTime′ = currentTime 
+currentDoor′ = currentDoor └ 
+
+┌ LockDoor 
+ΔDoorLatchAlarm |
+ currentLatch′ = locked 
+latchTimeout′ = currentTime 
+alarmTimeout′ = currentTime 
+currentTime′ = currentTime 
+currentDoor′ = currentDoor └ 
+
+┌ CertIssuerKnown 
+KeyStore 
+Certificate |
+ cid . issuer ∈ dom issuerKey └ 
+
+┌ CertOK 
+CertIssuerKnown |
+ issuerKey cid . issuer ∈ isValidatedBy └ 
+
+├ CertOK$domainCheck 
+invoke CertIssuerKnown ;  
+simplify ;  
+└ 
+
+┌ CertIssuerIsThisTIS 
+KeyStore 
+Certificate |
+ ownName ≠ Nil 
+cid . issuer = The ownName └ 
+
+├ CertIssuerIsThisTIS$domainCheck 
+rewrite ;  
+invoke Certificate ;  
+invoke KeyStore ;  
+rewrite ;  
+└ 
+
+─ AuthCertOK == CertIssuerIsThisTIS ∧ CertOK └ 
+
+─ theorem rule lConfigAuthPeriodTotalOnFirstArg 
+∀ Config ; p : PRIVILEGE ; t : TIME ⦁ t ∈ dom ( authPeriod p ) 
+└ 
+
+├ lConfigAuthPeriodTotalOnFirstArg 
+invoke Config ;  
+invoke ( _ → _ ) ;  
+rewrite ;  
+instantiate x == p ;  
+prove by rewrite ;  
+use pairInFunction [ PRIVILEGE , ℙ ( TIME × ℙ TIME ) ] [ f := authPeriod , x := p , y := y ] ;  
+rearrange ;  
+rewrite ;  
+equality substitute authPeriod p ;  
+apply inDom ;  
+rewrite ;  
+instantiate x__1 == t ;  
+prenex ;  
+instantiate y__4 == y__0 ;  
+rewrite ;  
+└ 
+
+┌ NewAuthCert 
+ValidToken 
+KeyStore 
+Config 
+newAuthCert : AuthCert 
+currentTime : TIME |
+ ownName ≠ Nil 
+newAuthCert . cid . issuer = The ownName 
+newAuthCert . validityPeriod = ( authPeriod privCert . role ) currentTime 
+newAuthCert . baseCertId = idCert . cid 
+newAuthCert . tokenID = tokenID 
+newAuthCert . role = privCert . role 
+newAuthCert . clearance = minClearance ( enclaveClearance , privCert . clearance ) 
+newAuthCert . isValidatedBy = { issuerKey ( The ownName ) } └ 
+
+├ NewAuthCert$domainCheck 
+rewrite ;  
+cases ;  
+apply lInTheDomain ;  
+invoke KeyStore ;  
+rewrite ;  
+next ;  
+invoke ValidToken ;  
+invoke Token ;  
+apply PrivCert$member to predicate privCert ∈ PrivCert ;  
+prove by rewrite ;  
+next ;  
+invoke ValidToken ;  
+invoke Token ;  
+apply PrivCert$member ;  
+prove by rewrite ;  
+next ;  
+invoke KeyStore ;  
+prove by rewrite ;  
+next ;  
+└ 
+
+─ theorem grule gGoodTMaxInjType 
+goodT ∈ ⦉ authCert : ℙ ⦉ baseCertId : ⦉ issuer : USER ⦊ ; cid : ⦉ issuer : USER ⦊ ; clearance : ⦉ class : CLASS ⦊ ; isValidatedBy : ℙ KEYPART ; role : PRIVILEGE ; tokenID : TOKENID ; validityPeriod : ℙ ℤ ⦊ ; iandACert : ⦉ baseCertId : ⦉ issuer : USER ⦊ ; cid : ⦉ issuer : USER ⦊ ; isValidatedBy : ℙ KEYPART ; template : ⦉ template : FINGERPRINTTEMPLATE ⦊ ; tokenID : TOKENID ; validityPeriod : ℙ ℤ ⦊ ; idCert : ⦉ cid : ⦉ issuer : USER ⦊ ; isValidatedBy : ℙ KEYPART ; subject : USER ; subjectPubK : KEYPART ; validityPeriod : ℙ ℤ ⦊ ; privCert : ⦉ baseCertId : ⦉ issuer : USER ⦊ ; cid : ⦉ issuer : USER ⦊ ; clearance : ⦉ class : CLASS ⦊ ; isValidatedBy : ℙ KEYPART ; role : PRIVILEGE ; tokenID : TOKENID ; validityPeriod : ℙ ℤ ⦊ ; tokenID : TOKENID ⦊ ⤔ TOKENTRY 
+└ 
+
+├ gGoodTMaxInjType 
+invoke ( _ ⤔ _ ) ;  
+rewrite ;  
+invoke ( _ ⇸ _ ) ;  
+prove by rewrite ;  
+use goodT$injective [ x$ := y1 , x$′ := y2 ] ;  
+use pairInFunction [ ⦉ authCert : ℙ ⦉ baseCertId : ⦉ issuer : USER ⦊ ; cid : ⦉ issuer : USER ⦊ ; clearance : ⦉ class : CLASS ⦊ ; isValidatedBy : ℙ KEYPART ; role : PRIVILEGE ; tokenID : TOKENID ; validityPeriod : ℙ ℤ ⦊ ; iandACert : ⦉ baseCertId : ⦉ issuer : USER ⦊ ; cid : ⦉ issuer : USER ⦊ ; isValidatedBy : ℙ KEYPART ; template : ⦉ template : FINGERPRINTTEMPLATE ⦊ ; tokenID : TOKENID ; validityPeriod : ℙ ℤ ⦊ ; idCert : ⦉ cid : ⦉ issuer : USER ⦊ ; isValidatedBy : ℙ KEYPART ; subject : USER ; subjectPubK : KEYPART ; validityPeriod : ℙ ℤ ⦊ ; privCert : ⦉ baseCertId : ⦉ issuer : USER ⦊ ; cid : ⦉ issuer : USER ⦊ ; clearance : ⦉ class : CLASS ⦊ ; isValidatedBy : ℙ KEYPART ; role : PRIVILEGE ; tokenID : TOKENID ; validityPeriod : ℙ ℤ ⦊ ; tokenID : TOKENID ⦊ , TOKENTRY ] [ f := goodT , x := y1 , y := x ] ;  
+use pairInFunction [ ⦉ authCert : ℙ ⦉ baseCertId : ⦉ issuer : USER ⦊ ; cid : ⦉ issuer : USER ⦊ ; clearance : ⦉ class : CLASS ⦊ ; isValidatedBy : ℙ KEYPART ; role : PRIVILEGE ; tokenID : TOKENID ; validityPeriod : ℙ ℤ ⦊ ; iandACert : ⦉ baseCertId : ⦉ issuer : USER ⦊ ; cid : ⦉ issuer : USER ⦊ ; isValidatedBy : ℙ KEYPART ; template : ⦉ template : FINGERPRINTTEMPLATE ⦊ ; tokenID : TOKENID ; validityPeriod : ℙ ℤ ⦊ ; idCert : ⦉ cid : ⦉ issuer : USER ⦊ ; isValidatedBy : ℙ KEYPART ; subject : USER ; subjectPubK : KEYPART ; validityPeriod : ℙ ℤ ⦊ ; privCert : ⦉ baseCertId : ⦉ issuer : USER ⦊ ; cid : ⦉ issuer : USER ⦊ ; clearance : ⦉ class : CLASS ⦊ ; isValidatedBy : ℙ KEYPART ; role : PRIVILEGE ; tokenID : TOKENID ; validityPeriod : ℙ ℤ ⦊ ; tokenID : TOKENID ⦊ , TOKENTRY ] [ f := goodT , x := y2 , y := x ] ;  
+prove by rewrite ;  
+use goodT$declaration ;  
+invoke ( _ → _ ) ;  
+invoke ( _ ⇸ _ ) ;  
+invoke ( _ ↔ _ ) ;  
+rewrite ;  
+trivial rewrite ;  
+prenex ;  
+apply inPower to predicate r ∈ ℙ ( Token × TOKENTRY ) ;  
+instantiate e == ( y1 , x ) ;  
+instantiate e == ( y2 , x ) ;  
+prove by rewrite ;  
+└ 
+
+Missing DCC: $authCert' \neq nil$ and that $currentUserToken' \in \ran gootT$.
+┌ AddAuthCertToUserToken 
+ΔUserToken 
+KeyStore 
+Config 
+currentTime : TIME |
+ userTokenPresence = present 
+currentUserToken ∈ ran goodT 
+currentUserToken′ ∈ ran goodT 
+∃ ValidToken ; ValidToken′ ⦁ θ ValidToken = ( goodT ∼ ) currentUserToken ∧ θ ValidToken′ = ( goodT ∼ ) currentUserToken′ ∧ ( ∃ newAuthCert : AuthCert ⦁ ( authCert′ ≠ Nil ∧ The authCert′ = newAuthCert ∧ NewAuthCert ) ) ∧ tokenID′ = tokenID ∧ idCert′ = idCert ∧ privCert′ = privCert ∧ iandACert′ = iandACert 
+userTokenPresence′ = userTokenPresence └ 
+
+├ AddAuthCertToUserToken$domainCheck 
+prove by rewrite ;  
+└ 
+
+┌ UpdateKeyStore 
+ΔKeyStore 
+ValidEnrol |
+ ownName ≠ Nil ∧ ownName′ ≠ Nil 
+The ownName′ = idStationCert . subject 
+issuerKey′ = issuerKey ⊕ { c : issuerCerts ⦁ ( c . subject ↦ c . subjectPubK ) } ⊕ { ( The ownName ↦ idStationCert . subjectPubK ) } └ 
+
+├ UpdateKeyStore$domainCheck 
+rewrite ;  
+apply lInTheDomain ;  
+invoke ΔKeyStore ;  
+invoke KeyStore ;  
+rewrite ;  
+cases ;  
+next ;  
+next ;  
+└ 
+
+─ theorem grule gEnrolementFilePInjType 
+enrolmentFile ∈ ⦉ idStationCert : ⦉ cid : ⦉ issuer : USER ⦊ ; isValidatedBy : ℙ KEYPART ; subject : USER ; subjectPubK : KEYPART ; validityPeriod : ℙ ℤ ⦊ ; issuerCerts : ℙ ⦉ cid : ⦉ issuer : USER ⦊ ; isValidatedBy : ℙ KEYPART ; subject : USER ; subjectPubK : KEYPART ; validityPeriod : ℙ ℤ ⦊ ⦊ ⤔ FLOPPY 
+└ 
+
+├ gEnrolementFilePInjType 
+invoke ( _ ⤔ _ ) ;  
+rewrite ;  
+invoke ( _ ⇸ _ ) ;  
+prove by rewrite ;  
+use enrolmentFile$injective [ x$ := y1 , x$′ := y2 ] ;  
+use pairInFunction [ ⦉ idStationCert : ⦉ cid : ⦉ issuer : USER ⦊ ; isValidatedBy : ℙ KEYPART ; subject : USER ; subjectPubK : KEYPART ; validityPeriod : ℙ ℤ ⦊ ; issuerCerts : ℙ ⦉ cid : ⦉ issuer : USER ⦊ ; isValidatedBy : ℙ KEYPART ; subject : USER ; subjectPubK : KEYPART ; validityPeriod : ℙ ℤ ⦊ ⦊ , FLOPPY ] [ f := enrolmentFile , x := y1 , y := x ] ;  
+use pairInFunction [ ⦉ idStationCert : ⦉ cid : ⦉ issuer : USER ⦊ ; isValidatedBy : ℙ KEYPART ; subject : USER ; subjectPubK : KEYPART ; validityPeriod : ℙ ℤ ⦊ ; issuerCerts : ℙ ⦉ cid : ⦉ issuer : USER ⦊ ; isValidatedBy : ℙ KEYPART ; subject : USER ; subjectPubK : KEYPART ; validityPeriod : ℙ ℤ ⦊ ⦊ , FLOPPY ] [ f := enrolmentFile , x := y2 , y := x ] ;  
+prove by rewrite ;  
+use enrolmentFile$declaration ;  
+invoke ( _ → _ ) ;  
+invoke ( _ ⇸ _ ) ;  
+invoke ( _ ↔ _ ) ;  
+rewrite ;  
+trivial rewrite ;  
+prenex ;  
+apply inPower to predicate r ∈ ℙ ( ValidEnrol × FLOPPY ) ;  
+instantiate e == ( y1 , x ) ;  
+instantiate e == ( y2 , x ) ;  
+prove by rewrite ;  
+└ 
+
+┌ UpdateKeyStoreFromFloppy 
+ΔKeyStore 
+Floppy |
+ currentFloppy ∈ ran enrolmentFile 
+∃ ValidEnrol ⦁ θ ValidEnrol = ( enrolmentFile ∼ ) ( currentFloppy ) ∧ UpdateKeyStore └ 
+
+├ UpdateKeyStoreFromFloppy$domainCheck 
+rewrite ;  
+└ 
+
+┌ AdminLogon 
+ΔAdmin 
+AdminToken |
+ rolePresent = Nil 
+∃ ValidToken ⦁ goodT ( θ ValidToken ) = currentAdminToken ∧ rolePresent′ ≠ Nil ∧ authCert ≠ Nil ∧ The rolePresent′ = ( The authCert ) . role 
+currentAdminOp′ = Nil └ 
+
+├ AdminLogon$domainCheck 
+rewrite ;  
+apply lInTheDomain ;  
+invoke ΔAdmin ;  
+invoke Admin ;  
+rewrite ;  
+use lOptionalSubtying [ ⦉ baseCertId : ⦉ issuer : USER ⦊ ; cid : ⦉ issuer : USER ⦊ ; clearance : ⦉ class : CLASS ⦊ ; isValidatedBy : ℙ KEYPART ; role : PRIVILEGE ; tokenID : TOKENID ; validityPeriod : ℙ ℤ ⦊ ] [ A := AuthCert , x := authCert ] ;  
+rearrange ;  
+rewrite ;  
+└ 
+
+┌ AdminLogout 
+ΔAdmin |
+ rolePresent ≠ Nil 
+rolePresent′ = Nil 
+currentAdminOp′ = Nil └ 
+
+─ theorem grule gKeyedOpsPInjType 
+keyedOps ∈ ADMINOP ⤔ KEYBOARD 
+└ 
+
+├ gKeyedOpsPInjType 
+invoke ( _ ⤔ _ ) ;  
+rewrite ;  
+invoke ( _ ⇸ _ ) ;  
+prove by rewrite ;  
+use keyedOps$injective [ x$ := y1 , x$′ := y2 ] ;  
+use pairInFunction [ ADMINOP , KEYBOARD ] [ f := keyedOps , x := y1 , y := x ] ;  
+use pairInFunction [ ADMINOP , KEYBOARD ] [ f := keyedOps , x := y2 , y := x ] ;  
+prove by rewrite ;  
+└ 
+
+┌ AdminStartOp 
+ΔAdmin 
+Keyboard |
+ rolePresent ≠ Nil 
+currentAdminOp = Nil 
+currentKeyedData ∈ keyedOps ⦇ availableOps ⦈ 
+rolePresent′ = rolePresent 
+currentAdminOp′ ≠ Nil 
+The currentAdminOp′ = ( keyedOps ∼ ) ( currentKeyedData ) └ 
+
+├ AdminStartOp$domainCheck 
+rewrite ;  
+invoke ΔAdmin ;  
+apply inImage ;  
+apply inRan ;  
+invoke Nil ;  
+prove by rewrite ;  
+instantiate x__0 == x ;  
+prove by rewrite ;  
+└ 
+
+┌ AdminFinishOp 
+ΔAdmin |
+ rolePresent ≠ Nil 
+currentAdminOp ≠ Nil 
+rolePresent′ = rolePresent 
+currentAdminOp′ = Nil └ 
+
+┌ ResetScreenMessage 
+ΔInternal 
+ΔAdmin 
+currentScreen , currentScreen′ : Screen |
+ tkstatus′ ∉ { quiescent , waitingRemoveTokenFail } ∧ currentScreen′ . screenMsg = busy ∨ tkstatus′ ∈ { quiescent , waitingRemoveTokenFail } ∧ ( enclaveStatus′ = enclaveQuiescent ∧ rolePresent′ = Nil ∧ currentScreen′ . screenMsg = welcomeAdmin ∨ enclaveStatus′ = enclaveQuiescent ∧ rolePresent′ ≠ Nil ∧ currentScreen′ . screenMsg = requestAdminOp ∨ enclaveStatus′ = waitingRemoveAdminTokenFail ∧ currentScreen′ . screenMsg = removeAdminToken ∨ enclaveStatus′ ∉ { enclaveQuiescent , waitingRemoveAdminTokenFail } ∧ currentScreen′ . screenMsg = currentScreen . screenMsg ) └ 
+
+┌ UserEntryContext 
+ΔIDStation 
+RealWorldChanges 
+ΞConfig 
+ΞAdminToken 
+ΞKeyStore 
+ΞAdmin 
+ΞKeyboard 
+ΞFloppy 
+ΞFinger 
+ΞTISControlledRealWorld 
+ResetScreenMessage |
+ enclaveStatus′ = enclaveStatus 
+tkstatus ≠ waitingEntry ⇒ tokenRemovalTimeout′ = tokenRemovalTimeout └ 
+
+┌ UserTokenTorn 
+UserEntryContext 
+ΞUserToken 
+ΞDoorLatchAlarm 
+AddFailedEntryToStats 
+AddElementsToLog |
+ tkstatus ∈ { gotUserToken , waitingUpdateToken , waitingFinger , gotFinger , waitingEntry } 
+userTokenPresence = absent 
+currentDisplay′ = welcome 
+tkstatus′ = quiescent └ 
+
+┌ ReadUserToken 
+UserEntryContext 
+ΞUserToken 
+ΞDoorLatchAlarm 
+ΞStats 
+AddElementsToLog |
+ enclaveStatus ∈ { enclaveQuiescent , waitingRemoveAdminTokenFail } 
+tkstatus = quiescent 
+userTokenPresence = present 
+currentDisplay′ = wait 
+tkstatus′ = gotUserToken └ 
+
+─ TISReadUserToken == ReadUserToken └ 
+
+┌ UserTokenWithOKAuthCert 
+KeyStore 
+UserToken 
+currentTime : TIME |
+ currentUserToken ∈ ran goodT 
+∃ TokenWithValidAuth ⦁ goodT ( θ TokenWithValidAuth ) = currentUserToken ∧ currentTime ∈ ( The authCert ) . validityPeriod ∧ ( ∃ IDCert ⦁ ( θ IDCert = idCert ∧ CertOK ) ) ∧ ( ∃ AuthCert ⦁ ( θ AuthCert = The authCert ∧ AuthCertOK ) ) └ 
+
+├ UserTokenWithOKAuthCert$domainCheck 
+rewrite ;  
+apply lInTheDomain to predicate authCert ∈ dom The ;  
+use lOptionalSubtying [ ⦉ baseCertId : ⦉ issuer : USER ⦊ ; cid : ⦉ issuer : USER ⦊ ; clearance : ⦉ class : CLASS ⦊ ; isValidatedBy : ℙ KEYPART ; role : PRIVILEGE ; tokenID : TOKENID ; validityPeriod : ℙ ℤ ⦊ ] [ A := AuthCert , x := authCert ] ;  
+invoke TokenWithValidAuth ;  
+prove by rewrite ;  
+└ 
+
+┌ UserTokenOK 
+KeyStore 
+UserToken 
+currentTime : TIME |
+ currentUserToken ∈ ran goodT 
+∃ CurrentToken ⦁ goodT ( θ ValidToken ) = currentUserToken ∧ now = currentTime ∧ ( ∃ IDCert ⦁ ( θ IDCert = idCert ∧ CertOK ) ) ∧ ( ∃ PrivCert ⦁ ( θ PrivCert = privCert ∧ CertOK ) ) ∧ ( ∃ IandACert ⦁ ( θ IandACert = iandACert ∧ CertOK ) ) └ 
+
+├ UserTokenOK$domainCheck 
+rewrite ;  
+└ 
+
+┌ BioCheckNotRequired 
+UserEntryContext 
+ΞUserToken 
+ΞDoorLatchAlarm 
+ΞStats 
+AddElementsToLog |
+ tkstatus = gotUserToken 
+userTokenPresence = present 
+UserTokenWithOKAuthCert 
+tkstatus′ = waitingEntry 
+currentDisplay′ = wait └ 
+
+┌ BioCheckRequired 
+UserEntryContext 
+ΞUserToken 
+ΞDoorLatchAlarm 
+ΞStats 
+AddElementsToLog |
+ tkstatus = gotUserToken 
+userTokenPresence = present 
+¬ UserTokenWithOKAuthCert ∧ UserTokenOK 
+tkstatus′ = waitingEntry 
+currentDisplay′ = insertFinger └ 
+
+─ ValidateUserTokenOK == BioCheckRequired ∨ BioCheckNotRequired └ 
+
+┌ ValidateUserTokenFail 
+UserEntryContext 
+ΞUserToken 
+ΞDoorLatchAlarm 
+ΞStats 
+AddElementsToLog |
+ tkstatus = gotUserToken 
+userTokenPresence = present 
+¬ UserTokenWithOKAuthCert ∧ ¬ UserTokenOK 
+tkstatus′ = waitingRemoveTokenFail 
+currentDisplay′ = removeToken └ 
+
+─ TISValidateUserToken == ValidateUserTokenOK ∨ ValidateUserTokenFail ∨ [ UserTokenTorn | tkstatus = gotUserToken ] └ 
+
+┌ ReadFingerOK 
+UserEntryContext 
+ΞUserToken 
+ΞDoorLatchAlarm 
+ΞStats 
+AddElementsToLog |
+ tkstatus = waitingFinger 
+fingerPresence = present 
+userTokenPresence = present 
+tkstatus′ = gotFinger 
+currentDisplay′ = wait └ 
+
+┌ FingerTimeout 
+UserEntryContext 
+ΞUserToken 
+ΞDoorLatchAlarm 
+ΞStats 
+AddElementsToLog |
+ tkstatus = waitingFinger 
+userTokenPresence = present 
+tkstatus′ = waitingRemoveTokenFail 
+currentDisplay′ = removeToken └ 
+
+┌ NoFinger 
+ΞIDStation 
+RealWorldChanges 
+ΞTISControlledRealWorld |
+ tkstatus = waitingFinger 
+fingerPresence = absent 
+userTokenPresence = present └ 
+
+─ TISReadFinger == ReadFingerOK ∨ FingerTimeout ∨ NoFinger ∨ [ UserTokenTorn | tkstatus = waitingFinger ] └ 
+
+┌ FingerOK 
+Finger 
+UserToken |
+ currentFinger ∈ ran goodFP └ 
+
+┌ ValidateFingerOK 
+UserEntryContext 
+ΞUserToken 
+ΞDoorLatchAlarm 
+AddSuccessfulBioCheckToStats 
+AddElementsToLog |
+ tkstatus = gotFinger 
+userTokenPresence = present 
+FingerOK 
+tkstatus′ = waitingUpdateToken 
+currentDisplay′ = wait └ 
+
+┌ ValidateFingerFail 
+UserEntryContext 
+ΞUserToken 
+ΞDoorLatchAlarm 
+AddFailedBioCheckToStats 
+AddElementsToLog |
+ tkstatus = gotFinger 
+userTokenPresence = present 
+tkstatus′ = waitingRemoveTokenFail 
+currentDisplay′ = removeToken └ 
+
+─ TISValidateFinger == ValidateFingerOK ∨ ValidateFingerFail ∨ [ UserTokenTorn | tkstatus = gotFinger ] └ 
+
+┌ WriteUserTokenOK 
+UserEntryContext 
+ΞUserToken 
+ΞDoorLatchAlarm 
+AddAuthCertToUserToken 
+AddElementsToLog |
+ tkstatus = waitingUpdateToken 
+userTokenPresence = present 
+tkstatus′ = waitingEntry 
+currentDisplay′ = wait └ 
+
+┌ WriteUserTokenFail 
+UserEntryContext 
+ΞUserToken 
+ΞDoorLatchAlarm 
+AddAuthCertToUserToken 
+AddElementsToLog |
+ tkstatus = waitingUpdateToken 
+userTokenPresence = present 
+tkstatus′ = waitingEntry 
+currentDisplay′ = tokenUpdateFailed └ 
+
+─ WriteUserToken == WriteUserTokenOK ∨ WriteUserTokenFail └ 
+
+─ theorem rule lConfigEntryPeriodTotalOnFirstArg 
+∀ Config ; p : PRIVILEGE ; c : CLASS ⦁ c ∈ dom ( entryPeriod p ) 
+└ 
+
+├ lConfigEntryPeriodTotalOnFirstArg 
+invoke Config ;  
+invoke ( _ → _ ) ;  
+rewrite ;  
+instantiate x__0 == p ;  
+prove by rewrite ;  
+use pairInFunction [ PRIVILEGE , ℙ ( CLASS × ℙ TIME ) ] [ f := entryPeriod , x := p , y := y ] ;  
+rearrange ;  
+rewrite ;  
+equality substitute entryPeriod p ;  
+apply inDom ;  
+rewrite ;  
+instantiate x__1 == c ;  
+prenex ;  
+instantiate y__4 == y__0 ;  
+rewrite ;  
+└ 
+
+┌ UserAllowedEntry 
+UserToken 
+Config 
+currentTime : TIME |
+ ( ∃ ValidToken ⦁ goodT ( θ ValidToken ) = currentUserToken ∧ currentTime ∈ ( entryPeriod privCert . role ) privCert . clearance . class ) ∨ ( ∃ TokenWithValidAuth ⦁ goodT ( θ TokenWithValidAuth ) = currentUserToken ∧ currentTime ∈ entryPeriod ( The authCert ) . role ( The authCert ) . clearance . class ) └ 
+
+├ UserAllowedEntry$domainCheck 
+prove by rewrite ;  
+cases ;  
+invoke ValidToken ;  
+invoke Token ;  
+apply PrivCert$member ;  
+prove by rewrite ;  
+invoke PrivCert ;  
+apply Clearance$member ;  
+prove by rewrite ;  
+next ;  
+invoke TokenWithValidAuth ;  
+cases ;  
+apply lInTheDomain to predicate authCert__0 ∈ dom The ;  
+use lOptionalSubtying [ ⦉ baseCertId : ⦉ issuer : USER ⦊ ; cid : ⦉ issuer : USER ⦊ ; clearance : ⦉ class : CLASS ⦊ ; isValidatedBy : ℙ KEYPART ; role : PRIVILEGE ; tokenID : TOKENID ; validityPeriod : ℙ ℤ ⦊ ] [ A := AuthCert , x := authCert__0 ] ;  
+prove by rewrite ;  
+next ;  
+use lInTheDomain [ ⦉ baseCertId : ⦉ issuer : USER ⦊ ; cid : ⦉ issuer : USER ⦊ ; clearance : ⦉ class : CLASS ⦊ ; isValidatedBy : ℙ KEYPART ; role : PRIVILEGE ; tokenID : TOKENID ; validityPeriod : ℙ ℤ ⦊ ] [ x := authCert__0 ] ;  
+use lOptionalSubtying [ ⦉ baseCertId : ⦉ issuer : USER ⦊ ; cid : ⦉ issuer : USER ⦊ ; clearance : ⦉ class : CLASS ⦊ ; isValidatedBy : ℙ KEYPART ; role : PRIVILEGE ; tokenID : TOKENID ; validityPeriod : ℙ ℤ ⦊ ] [ A := AuthCert , x := authCert__0 ] ;  
+apply inDom to predicate authCert__0 ∈ dom The ;  
+prenex ;  
+rearrange ;  
+rewrite ;  
+rearrange ;  
+use pairInFunction [ ℙ ⦉ baseCertId : ⦉ issuer : USER ⦊ ; cid : ⦉ issuer : USER ⦊ ; clearance : ⦉ class : CLASS ⦊ ; isValidatedBy : ℙ KEYPART ; role : PRIVILEGE ; tokenID : TOKENID ; validityPeriod : ℙ ℤ ⦊ , ⦉ baseCertId : ⦉ issuer : USER ⦊ ; cid : ⦉ issuer : USER ⦊ ; clearance : ⦉ class : CLASS ⦊ ; isValidatedBy : ℙ KEYPART ; role : PRIVILEGE ; tokenID : TOKENID ; validityPeriod : ℙ ℤ ⦊ ] [ f := The [ ⦉ baseCertId : ⦉ issuer : USER ⦊ ; cid : ⦉ issuer : USER ⦊ ; clearance : ⦉ class : CLASS ⦊ ; isValidatedBy : ℙ KEYPART ; role : PRIVILEGE ; tokenID : TOKENID ; validityPeriod : ℙ ℤ ⦊ ] , x := authCert__0 , y := y ] ;  
+rearrange ;  
+rewrite ;  
+equality substitute The authCert__0 ;  
+apply PrivCert$inSet ;  
+prenex ;  
+equality substitute y ;  
+rewrite ;  
+apply Clearance$inSet ;  
+prenex ;  
+equality substitute clearance ;  
+rewrite ;  
+next ;  
+└ 
+
+try lemma UserAllowedEntry\$domainCheck;
+prove by rewrite;
+cases;
+invoke ValidToken;
+invoke Token;
+apply PrivCert\$member;
+prove by rewrite;
+invoke PrivCert;
+apply Clearance\$member;
+prove by rewrite;
+next;
+invoke TokenWithValidAuth;
+cases;
+apply lInTheDomain to predicate authCert\_\_0 \in \dom \The;
+use
+  lOptionalSubtying[\lblot baseCertId: \lblot issuer: USER \rblot;
+                           cid: \lblot issuer: USER \rblot;
+                           clearance: \lblot class: CLASS \rblot;
+                           isValidatedBy: \power KEYPART; role: PRIVILEGE;
+                           tokenID: TOKENID;
+                           validityPeriod: \power \num \rblot][A := AuthCert,
+                                                               x := authCert\_\_0];
+prove by rewrite;
+next;
+use
+  lInTheDomain[\lblot baseCertId: \lblot issuer: USER \rblot;
+                      cid: \lblot issuer: USER \rblot;
+                      clearance: \lblot class: CLASS \rblot;
+                      isValidatedBy: \power KEYPART; role: PRIVILEGE;
+                      tokenID: TOKENID;
+                      validityPeriod: \power \num \rblot][x := authCert\_\_0];
+use
+  lOptionalSubtying[\lblot baseCertId: \lblot issuer: USER \rblot;
+                           cid: \lblot issuer: USER \rblot;
+                           clearance: \lblot class: CLASS \rblot;
+                           isValidatedBy: \power KEYPART; role: PRIVILEGE;
+                           tokenID: TOKENID;
+                           validityPeriod: \power \num \rblot][A := AuthCert,
+                                                               x := authCert\_\_0];
+apply inDom to predicate authCert\_\_0 \in \dom \The;
+prenex;
+rearrange;
+rewrite;
+rearrange;
+use
+  pairInFunction[\power \lblot baseCertId: \lblot issuer: USER \rblot;
+                               cid: \lblot issuer: USER \rblot;
+                               clearance: \lblot class: CLASS \rblot;
+                               isValidatedBy: \power KEYPART; role: PRIVILEGE;
+                               tokenID: TOKENID;
+                               validityPeriod: \power \num \rblot,
+                 \lblot baseCertId: \lblot issuer: USER \rblot;
+                        cid: \lblot issuer: USER \rblot;
+                        clearance: \lblot class: CLASS \rblot;
+                        isValidatedBy: \power KEYPART; role: PRIVILEGE;
+                        tokenID: TOKENID;
+                        validityPeriod:
+                          \power \num \rblot][f
+                                                := \The[\lblot baseCertId:
+                                                                \lblot issuer:
+                                                                         USER \rblot;
+                                                              cid:
+                                                                \lblot issuer:
+                                                                         USER \rblot;
+                                                              clearance:
+                                                                \lblot class:
+                                                                         CLASS \rblot;
+                                                              isValidatedBy:
+                                                                \power KEYPART;
+                                                              role: PRIVILEGE;
+                                                              tokenID: TOKENID;
+                                                              validityPeriod:
+                                                                \power \num \rblot],
+                                              x := authCert\_\_0, y := y];
+rearrange;
+rewrite;
+equality substitute \The authCert\_\_0;
+apply PrivCert\$inSet;
+prenex;
+equality substitute y;
+rewrite;
+apply Clearance\$inSet;
+prenex;
+equality substitute clearance;
+rewrite;
+next;
+
+
+
+┌ EntryOK 
+UserEntryContext 
+ΞUserToken 
+ΞDoorLatchAlarm 
+ΞStats 
+AddElementsToLog |
+ tkstatus = waitingUpdateToken 
+userTokenPresence = present 
+UserAllowedEntry 
+tkstatus′ = waitingRemoveTokenSuccess 
+currentDisplay′ = openDoor 
+tokenRemovalTimeout′ = currentTime + tokenRemovalDuration └ 
+
+┌ EntryNotAllowed 
+UserEntryContext 
+ΞUserToken 
+ΞDoorLatchAlarm 
+ΞStats 
+AddElementsToLog |
+ tkstatus = waitingEntry 
+userTokenPresence = present 
+¬ UserAllowedEntry 
+tkstatus′ = waitingRemoveTokenFail 
+currentDisplay′ = removeToken 
+tokenRemovalTimeout′ = tokenRemovalTimeout └ 
+
+─ TISValidateEntry == EntryOK ∨ EntryNotAllowed ∨ [ UserTokenTorn | tkstatus = waitingEntry ] └ 
+
+┌ UnlockDoorOK 
+UserEntryContext 
+ΞUserToken 
+UnlockDoor 
+AddSuccessfulEntryToStats 
+AddElementsToLog |
+ tkstatus = waitingRemoveTokenSuccess 
+userTokenPresence = absent 
+tkstatus′ = quiescent 
+currentDisplay′ = doorUnlocked └ 
+
+┌ WaitingTokenRemoval 
+ΞIDStation 
+RealWorldChanges 
+ΞTISControlledRealWorld |
+ tkstatus ∈ { waitingRemoveTokenSuccess , waitingRemoveTokenFail } 
+tkstatus = waitingRemoveTokenSuccess ⇒ currentTime ≤ tokenRemovalTimeout 
+userTokenPresence = present └ 
+
+┌ TokenRemovalTimeout 
+UserEntryContext 
+ΞUserToken 
+ΞDoorLatchAlarm 
+ΞStats 
+AddElementsToLog |
+ tkstatus = waitingRemoveTokenSuccess 
+userTokenPresence = present 
+currentTime > tokenRemovalTimeout 
+tkstatus′ = waitingRemoveTokenFail 
+currentDisplay′ = removeToken └ 
+
+─ TISUnlockDoor == UnlockDoorOK ∨ [ WaitingTokenRemoval | tkstatus = waitingRemoveTokenSuccess ] ∨ TokenRemovalTimeout └ 
+
+┌ FailedAccessTokenRemoved 
+UserEntryContext 
+ΞUserToken 
+ΞDoorLatchAlarm 
+AddFailedEntryToStats 
+AddElementsToLog |
+ tkstatus = waitingRemoveTokenFail 
+userTokenPresence = absent 
+tkstatus′ = quiescent 
+currentDisplay′ = welcome └ 
+
+─ TISCompleteFailedAccess == FailedAccessTokenRemoved ∨ [ WaitingTokenRemoval | tkstatus = waitingRemoveTokenFail ] └ 
+
+─ TISUserEntryOp == TISReadUserToken ∨ TISValidateUserToken ∨ TISReadFinger ∨ TISValidateFinger ∨ TISValidateEntry ∨ TISUnlockDoor ∨ TISCompleteFailedAccess └ 
+
+╷ foo : ℕ |
+ 《 disabled rule dIssuerNotEmpty 》 ISSUER ≠ ∅ 
+《 disabled rule dKeypartNotEmpty 》 KEYPART ≠ ∅ 
+《 disabled rule dTokenIDNotEmpty 》 TOKENID ≠ ∅ 
+《 disabled rule dFingerprintTemplateNotEmpty 》 FINGERPRINTTEMPLATE ≠ ∅ 
+《 disabled rule dAuditNotEmpty 》 Audit ≠ ∅ └ 
+
+─ theorem tClearanceFeasible 
+∃ Clearance ⦁ true 
+└ 
+
+├ tClearanceFeasible 
+instantiate class == unmarked ;  
+prove by reduce ;  
+└ 
+
+─ theorem tFingerprintTemplateFeasible 
+∃ FingerprintTemplate ⦁ true 
+└ 
+
+├ tFingerprintTemplateFeasible 
+use dFingerprintTemplateNotEmpty ;  
+prove by rewrite ;  
+apply extensionality ;  
+prove by rewrite ;  
+instantiate template == x ;  
+prove by reduce ;  
+└ 
+
+─ theorem tCertificateIdFeasible 
+∃ CertificateId ⦁ true 
+└ 
+
+├ tCertificateIdFeasible 
+use dIssuerNotEmpty ;  
+prove by rewrite ;  
+apply extensionality ;  
+prove by rewrite ;  
+instantiate issuer == x ;  
+prove by reduce ;  
+└ 
+
+─ theorem tCertificateFeasible 
+∃ Certificate ⦁ true 
+└ 
+
+├ tCertificateFeasible 
+use dIssuerNotEmpty ;  
+rewrite ;  
+apply extensionality to predicate ISSUER = { } ;  
+prove by rewrite ;  
+instantiate cid == θ ( CertificateId [ issuer := x ] ) , isValidatedBy == { } , validityPeriod == { } ;  
+invoke Certificate ;  
+invoke ( Optional _ ) ;  
+rewrite ;  
+invoke CertificateId ;  
+rewrite ;  
+└ 
+
+─ theorem tIDCertFeasible 
+∃ IDCert ⦁ true 
+└ 
+
+├ tIDCertFeasible 
+use dKeypartNotEmpty ;  
+use tCertificateFeasible ;  
+prenex ;  
+rewrite ;  
+apply extensionality to predicate KEYPART = { } ;  
+prove by rewrite ;  
+instantiate cid__0 == cid , isValidatedBy__0 == isValidatedBy , validityPeriod__0 == validityPeriod , subject == cid . issuer , subjectPubK == x ;  
+invoke IDCert ;  
+rewrite ;  
+invoke Certificate ;  
+apply CertificateId$member to predicate cid ∈ CertificateId ;  
+prove by rewrite ;  
+└ 
+
+─ theorem tCAIdCertFeasible 
+∃ CAIdCert ⦁ true 
+└ 
+
+├ tCAIdCertFeasible 
+use dKeypartNotEmpty ;  
+use tCertificateFeasible ;  
+prenex ;  
+rewrite ;  
+apply extensionality to predicate KEYPART = { } ;  
+prove by rewrite ;  
+instantiate cid__0 == cid , isValidatedBy__0 == { x } , validityPeriod__0 == validityPeriod , subject == cid . issuer , subjectPubK == x ;  
+invoke CAIdCert ;  
+invoke IDCert ;  
+invoke Certificate ;  
+apply CertificateId$member to predicate cid ∈ CertificateId ;  
+prove by rewrite ;  
+apply lOptionalMemberElem to predicate { x } ∈ Optional KEYPART ;  
+rewrite ;  
+└ 
+
+try lemma tCAIdCertFeasible;
+use dKeypartNotEmpty;
+use tCertificateFeasible;
+prenex;
+rewrite;
+apply extensionality to predicate KEYPART = \{\};
+prove by rewrite;
+instantiate
+  cid\_\_0 == cid, isValidatedBy\_\_0 == \{ x \},
+  validityPeriod\_\_0 == validityPeriod, subject == cid.issuer,
+  subjectPubK == x;
+invoke CAIdCert;
+invoke IDCert;
+invoke Certificate;
+apply CertificateId\$member to predicate cid \in CertificateId;
+prove by rewrite;
+apply lOptionalMemberElem to predicate \{ x \} \in \Optional KEYPART;
+rewrite;
+
+
+─ theorem tAttCertificateFeasible 
+∃ AttCertificate ⦁ true 
+└ 
+
+├ tAttCertificateFeasible 
+use tCertificateFeasible ;  
+use tCertificateIdFeasible ;  
+use dTokenIDNotEmpty ;  
+prenex ;  
+rewrite ;  
+apply extensionality to predicate TOKENID = { } ;  
+prove by rewrite ;  
+instantiate cid__0 == cid , isValidatedBy__0 == isValidatedBy , validityPeriod__0 == validityPeriod , tokenID == x , baseCertId == θ CertificateId ;  
+prove by reduce ;  
+└ 
+
+try lemma tAttCertificateFeasible;
+use tCertificateFeasible;
+use tCertificateIdFeasible;
+use dTokenIDNotEmpty;
+prenex;
+rewrite;
+apply extensionality to predicate TOKENID = \{\};
+prove by rewrite;
+instantiate
+  cid\_\_0 == cid, isValidatedBy\_\_0 == isValidatedBy,
+  validityPeriod\_\_0 == validityPeriod, tokenID == x,
+  baseCertId == \theta CertificateId;
+prove by reduce;
+use tCertificateFeasible;
+use tCertificateIdFeasible;
+use dTokenIDNotEmpty;
+prenex;
+rewrite;
+use tCertificateFeasible;
+use tCertificateIdFeasible;
+use dTokenIDNotEmpty;
+prenex;
+rewrite;
+
+
+─ theorem tPrivCertFeasible 
+∃ PrivCert ⦁ true 
+└ 
+
+├ tPrivCertFeasible 
+use tClearanceFeasible ;  
+use tAttCertificateFeasible ;  
+prenex ;  
+instantiate baseCertId__0 == baseCertId , isValidatedBy__0 == isValidatedBy , cid__0 == cid , tokenID__0 == tokenID , validityPeriod__0 == validityPeriod , role == userOnly , clearance == θ Clearance ;  
+invoke PrivCert ;  
+rewrite ;  
+└ 
+
+try lemma tPrivCertFeasible;
+use tClearanceFeasible;
+use tAttCertificateFeasible;
+prenex;
+instantiate
+  baseCertId\_\_0 == baseCertId, isValidatedBy\_\_0 == isValidatedBy,
+  cid\_\_0 == cid, tokenID\_\_0 == tokenID,
+  validityPeriod\_\_0 == validityPeriod, role == userOnly,
+  clearance == \theta Clearance;
+invoke PrivCert;
+rewrite;
+
+
+─ theorem tAuthCertFeasible 
+∃ AuthCert ⦁ true 
+└ 
+
+├ tAuthCertFeasible 
+use tClearanceFeasible ;  
+use tAttCertificateFeasible ;  
+prenex ;  
+instantiate baseCertId__0 == baseCertId , isValidatedBy__0 == isValidatedBy , cid__0 == cid , tokenID__0 == tokenID , validityPeriod__0 == validityPeriod , role == userOnly , clearance == θ Clearance ;  
+invoke AuthCert ;  
+rewrite ;  
+└ 
+
+try lemma tAuthCertFeasible;
+use tClearanceFeasible;
+use tAttCertificateFeasible;
+prenex;
+instantiate
+  baseCertId\_\_0 == baseCertId, isValidatedBy\_\_0 == isValidatedBy,
+  cid\_\_0 == cid, tokenID\_\_0 == tokenID,
+  validityPeriod\_\_0 == validityPeriod, role == userOnly,
+  clearance == \theta Clearance;
+invoke AuthCert;
+rewrite;
+
+
+─ theorem tIandACertFeasible 
+∃ IandACert ⦁ true 
+└ 
+
+├ tIandACertFeasible 
+use tAttCertificateFeasible ;  
+use tFingerprintTemplateFeasible ;  
+prenex ;  
+instantiate baseCertId__0 == baseCertId , isValidatedBy__0 == isValidatedBy , cid__0 == cid , tokenID__0 == tokenID , validityPeriod__0 == validityPeriod , template__0 == θ FingerprintTemplate ;  
+invoke IandACert ;  
+rewrite ;  
+└ 
+
+try lemma tIandACertFeasible;
+use tAttCertificateFeasible;
+use tFingerprintTemplateFeasible;
+prenex;
+instantiate
+  baseCertId\_\_0 == baseCertId, isValidatedBy\_\_0 == isValidatedBy,
+  cid\_\_0 == cid, tokenID\_\_0 == tokenID,
+  validityPeriod\_\_0 == validityPeriod,
+  template\_\_0 == \theta FingerprintTemplate;
+invoke IandACert;
+rewrite;
+
+
+─ theorem tTokenFeasible 
+∃ Token ⦁ true 
+└ 
+
+├ tTokenFeasible 
+use tIDCertFeasible ;  
+use tPrivCertFeasible ;  
+use tIandACertFeasible ;  
+use tAuthCertFeasible ;  
+prenex ;  
+instantiate tokenID__2 == tokenID , idCert == θ ( IDCert [ cid__2 / cid , isValidatedBy__2 / isValidatedBy , validityPeriod__2 / validityPeriod ] ) , privCert == θ ( PrivCert [ baseCertId__1 / baseCertId , cid__1 / cid , clearance__0 / clearance , isValidatedBy__1 / isValidatedBy , role__0 / role , tokenID__1 / tokenID , validityPeriod__1 / validityPeriod ] ) , iandACert == θ ( IandACert [ baseCertId__0 / baseCertId , cid__0 / cid , isValidatedBy__0 / isValidatedBy , tokenID__0 / tokenID , validityPeriod__0 / validityPeriod ] ) , authCert == { θ AuthCert } ;  
+invoke Token ;  
+rewrite ;  
+apply lOptionalMemberElem ;  
+rewrite ;  
+└ 
+
+try lemma tTokenFeasible;
+use tIDCertFeasible;
+use tPrivCertFeasible;
+use tIandACertFeasible;
+use tAuthCertFeasible;
+prenex;
+instantiate
+  tokenID\_\_2 == tokenID,
+  idCert
+    == \theta
+         IDCert[cid\_\_2/cid, isValidatedBy\_\_2/isValidatedBy,
+                validityPeriod\_\_2/validityPeriod],
+  privCert
+    == \theta
+         PrivCert[baseCertId\_\_1/baseCertId, cid\_\_1/cid,
+                  clearance\_\_0/clearance, isValidatedBy\_\_1/isValidatedBy,
+                  role\_\_0/role, tokenID\_\_1/tokenID,
+                  validityPeriod\_\_1/validityPeriod],
+  iandACert
+    == \theta
+         IandACert[baseCertId\_\_0/baseCertId, cid\_\_0/cid,
+                   isValidatedBy\_\_0/isValidatedBy, tokenID\_\_0/tokenID,
+                   validityPeriod\_\_0/validityPeriod],
+  authCert == \{\theta AuthCert\};
+invoke Token;
+rewrite;
+apply lOptionalMemberElem;
+rewrite;
+
+─ theorem tValidTokenFeasible 
+∃ ValidToken ⦁ true 
+└ 
+
+├ tValidTokenFeasible 
+use tPrivCertFeasible ;  
+prenex ;  
+use dFingerprintTemplateNotEmpty ;  
+use dIssuerNotEmpty ;  
+use dKeypartNotEmpty ;  
+prove by rewrite ;  
+apply extensionality ;  
+prove by rewrite ;  
+instantiate idCert == θ ( IDCert [ cid := baseCertId , subject := x__0 , subjectPubK := x ] ) , iandACert == θ ( IandACert [ cid := baseCertId , template := θ ( FingerprintTemplate [ template := x__1 ] ) ] ) , privCert == θ PrivCert , authCert == { θ PrivCert } , tokenID__0 == tokenID ;  
+with enabled ( Optional _ ) prove by reduce ;  
+└ 
+
+─ theorem tTokenWithValidAuthFeasible 
+∃ TokenWithValidAuth ⦁ true 
+└ 
+
+├ tTokenWithValidAuthFeasible 
+use tPrivCertFeasible ;  
+prenex ;  
+use dFingerprintTemplateNotEmpty ;  
+use dIssuerNotEmpty ;  
+use dKeypartNotEmpty ;  
+prove by rewrite ;  
+apply extensionality ;  
+prove by rewrite ;  
+instantiate idCert == θ ( IDCert [ cid := baseCertId , subject := x__0 , subjectPubK := x ] ) , iandACert == θ ( IandACert [ cid := baseCertId , template := θ ( FingerprintTemplate [ template := x__1 ] ) ] ) , privCert == θ PrivCert , authCert == { θ PrivCert } , tokenID__0 == tokenID ;  
+with disabled ( PrivCert ) prove by reduce ;  
+apply lTheAppliesElem ;  
+prove by rewrite ;  
+with enabled ( Nil , Optional _ ) prove by reduce ;  
+└ 
+
+─ theorem tCurrentTokenFeasible 
+∃ CurrentToken ⦁ true 
+└ 
+
+├ tCurrentTokenFeasible 
+use tPrivCertFeasible ;  
+prenex ;  
+use dFingerprintTemplateNotEmpty ;  
+use dIssuerNotEmpty ;  
+use dKeypartNotEmpty ;  
+prove by rewrite ;  
+apply extensionality ;  
+prove by rewrite ;  
+instantiate idCert == θ ( IDCert [ cid := baseCertId , subject := x__0 , subjectPubK := x , validityPeriod := { 0 } ] ) , iandACert == θ ( IandACert [ cid := baseCertId , validityPeriod := { 0 } , template := θ ( FingerprintTemplate [ template := x__1 ] ) ] ) , privCert == θ ( PrivCert [ validityPeriod := { 0 } ] ) , authCert == { } , tokenID__0 == tokenID , now == 0 ;  
+prove by reduce ;  
+└ 
+
+─ theorem tEnrolFeasible 
+∃ Enrol ⦁ true 
+└ 
+
+├ tEnrolFeasible 
+use tIDCertFeasible ;  
+prenex ;  
+instantiate idStationCert == θ IDCert , issuerCerts == { θ IDCert } ;  
+invoke Enrol ;  
+rewrite ;  
+└ 
+
+─ theorem rule gCAIdCert 
+{ CAIdCert | true } ∈ ℙ ⦉ cid : ⦉ issuer : USER ⦊ ; isValidatedBy : ℙ KEYPART ; subject : USER ; subjectPubK : KEYPART ; validityPeriod : ℙ ℤ ⦊ 
+└ 
+
+├ gCAIdCert 
+apply inPower ;  
+with enabled ( CAIdCert$member ) prove by reduce ;  
+└ 
+
+─ theorem lValidEnrolCAIdCert 
+∃ CAIdCert ⦁ θ CAIdCert ∈ { CAIdCert′ | θ CAIdCert . cid . issuer = subject′ } 
+└ 
+
+├ lValidEnrolCAIdCert 
+use dKeypartNotEmpty ;  
+use dIssuerNotEmpty ;  
+with predicate ( ( ISSUER ≠ ∅ ⇔ true ) ∧ KEYPART ≠ ∅ ) rewrite ;  
+apply extensionality ;  
+prenex ;  
+apply inNull ;  
+instantiate cid == θ ( CertificateId [ issuer := x ] ) , isValidatedBy == { x__0 } , validityPeriod == { } , subjectPubK == x__0 ;  
+prove by reduce ;  
+invoke ( Optional _ ) ;  
+rewrite ;  
+└ 
+
+─ theorem tValidEnrolFeasible 
+∃ ValidEnrol ⦁ true 
+└ 
+
+├ tValidEnrolFeasible 
+use lValidEnrolCAIdCert ;  
+prenex ;  
+instantiate idStationCert == θ CAIdCert , issuerCerts == { θ CAIdCert } ;  
+invoke ValidEnrol ;  
+invoke Enrol ;  
+invoke Nil ;  
+prove by rewrite ;  
+invoke CAIdCert ;  
+invoke IDCert ;  
+prove by rewrite ;  
+apply lTheAppliesElem ;  
+prove by reduce ;  
+└ 
+
+─ theorem tScreenFeasible 
+∃ Screen ⦁ true 
+└ 
+
+├ tScreenFeasible 
+instantiate screenStats == clear , screenMsg == clear , screenConfig == clear ;  
+prove by reduce ;  
+└ 
+
+─ theorem tAdimFeasible 
+∃ Admin ⦁ true 
+└ 
+
+├ tAdimFeasible 
+instantiate availableOps == { } , currentAdminOp == { } , rolePresent == { } ;  
+cases ;  
+invoke Admin ;  
+invoke Nil ;  
+rewrite ;  
+apply lOptionalMemberElem to predicate { } ∈ Optional ADMINOP ;  
+rewrite ;  
+next ;  
+└ 
+
+─ theorem tRealWorldFeasible 
+∃ RealWorld ⦁ true 
+└ 
+
+├ tRealWorldFeasible 
+use tScreenFeasible ;  
+prenex ;  
+instantiate latch == locked , alarm == silent , display == blank , screen == θ Screen , now == 0 , door == closed , finger == noFP , userToken == noT , adminToken == noT , floppy == noFloppy , keyboard == noKB ;  
+prove by reduce ;  
+└ 
+
+try lemma tRealWorldFeasible;
+use tScreenFeasible;
+prenex;
+instantiate
+  latch == locked, alarm == silent, display == blank, screen == \theta Screen,
+  now == 0, door == closed, finger == noFP, userToken == noT,
+  adminToken == noT, floppy == noFloppy, keyboard == noKB;
+prove by reduce;
+
+
+─ AUTH_PERIOD == ( λ p : PRIVILEGE ⦁ ( λ t : TIME ⦁ ∅ [ ℤ ] ) ) └ 
+
+─ ENTRY_PERIOD == ( λ p : PRIVILEGE ⦁ ( λ c : CLASS ⦁ ∅ [ ℤ ] ) ) └ 
+
+─ ☒ theorem rule dMaxSupportedLogSize 
+1 ≤ maxSupportedLogSize 
+└ 
+
+├ dMaxSupportedLogSize 
+use maxSupportedLogSize$declaration ;  
+apply inNat1 ;  
+rewrite ;  
+└ 
+
+─ theorem tIDStationFeasible 
+∃ IDStation ⦁ true 
+└ 
+
+├ tIDStationFeasible 
+use tScreenFeasible ;  
+prenex ;  
+instantiate alarmSilentDuration == 0 , latchUnlockDuration == 0 , tokenRemovalDuration == 0 , enclaveClearance == θ ( Clearance [ class := unmarked ] ) , authPeriod == AUTH_PERIOD , entryPeriod == ENTRY_PERIOD , minPreservedLogSize == 1 , alarmThresholdSize == 0 , auditLog == { } , auditAlarm == silent , issuerKey == { } , ownName == { } , successEntry == 0 , failEntry == 0 , successBio == 0 , failBio == 0 , rolePresent == { } , availableOps == { } , currentAdminOp == { } , currentTime == 0 , currentDoor == closed , currentLatch == locked , doorAlarm == silent , latchTimeout == 0 , alarmTimeout == 0 , currentUserToken == noT , userTokenPresence == absent , currentAdminToken == noT , adminTokenPresence == absent , currentFinger == noFP , fingerPresence == absent , currentFloppy == noFloppy , writtenFloppy == noFloppy , floppyPresence == absent , currentKeyedData == noKB , keyedDataPresence == absent , tkstatus == quiescent , enclaveStatus == notEnrolled , tokenRemovalTimeout == 0 , currentDisplay == blank , currentScreen == θ ( Screen [ screenStats := displayStats θ ( Stats [ successEntry := 0 , failEntry := 0 , successBio := 0 , failBio := 0 ] ) , screenConfig := displayConfigData θ ( Config [ alarmSilentDuration := 0 , latchUnlockDuration := 0 , tokenRemovalDuration := 0 , enclaveClearance := θ ( Clearance [ class := unmarked ] ) , authPeriod := AUTH_PERIOD , entryPeriod := ENTRY_PERIOD , minPreservedLogSize := 1 , alarmThresholdSize := 0 ] ) ] ) ;  
+with enabled ( Nil , Optional _ ) prove by reduce ;  
+apply dMaxSupportedLogSize ;  
+simplify ;  
+└ 
+
+─ theorem frule fRealWorldNowType 
+∀ RealWorld ⦁ now ≥ 0 
+└ 
+
+├ fRealWorldNowType 
+prove by reduce ;  
+└ 
+
+
+
+We use PollTimeSig to avoid expanding $DoorLatchAlarm$ too early.
+┌ PollTimeSig 
+DoorLatchAlarm 
+RealWorld |
+ true └ 
+
+─ theorem tPollTimePRE 
+∀ PollTimeSig ⦁ pre PollTime 
+└ 
+
+├ tPollTimePRE 
+invoke PollTime ;  
+invoke ΔDoorLatchAlarm ;  
+rewrite ;  
+invoke DoorLatchAlarm ;  
+prove by rewrite ;  
+instantiate currentDoor′ == if ( doorAlarm ≠ alarming ) then closed else open , currentLatch′ == if ( doorAlarm ≠ alarming ) then unlocked else locked , alarmTimeout′ == if ( doorAlarm ≠ alarming ) then now + 1 else now , latchTimeout′ == if ( doorAlarm ≠ alarming ) then now + 1 else now , doorAlarm′ == doorAlarm ;  
+prove by rewrite ;  
+invoke TIME ;  
+rewrite ;  
+└ 
+
+┌ PollDoorSig 
+DoorLatchAlarm 
+RealWorld |
+ true └ 
+
+─ theorem tPollDoorPRE 
+∀ PollDoorSig ⦁ pre PollDoor 
+└ 
+
+├ tPollDoorPRE 
+invoke PollDoor ;  
+invoke ΔDoorLatchAlarm ;  
+invoke DoorLatchAlarm ;  
+prove by rewrite ;  
+invoke PollDoorSig ;  
+invoke DoorLatchAlarm ;  
+prove by rewrite ;  
+split door = currentDoor ;  
+cases ;  
+instantiate currentLatch′ == currentLatch , currentTime′ == currentTime , doorAlarm′ == doorAlarm ;  
+prove by rewrite ;  
+next ;  
+rearrange ;  
+rewrite ;  
+split door = open ;  
+rewrite ;  
+cases ;  
+instantiate doorAlarm′ == alarming ;  
+prove by rewrite ;  
+instantiate currentLatch′ == locked ;  
+rewrite ;  
+split currentLatch = locked ;  
+rewrite ;  
+cases ;  
+rewrite ;  
+instantiate currentTime′ == currentTime ;  
+rewrite ;  
+instantiate doorAlarm′ == silent ;  
+rewrite ;  
+next ;  
+rewrite ;  
+instantiate currentTime′ == latchTimeout ;  
+invoke TIME ;  
+instantiate doorAlarm′ == silent ;  
+rewrite ;  
+next ;  
+invoke RealWorld ;  
+invoke TISMonitoredRealWorld ;  
+apply DOOR$member ;  
+prove by rewrite ;  
+instantiate currentLatch′ == currentLatch , currentTime′ == currentTime ;  
+rewrite ;  
+instantiate doorAlarm′ == silent ;  
+rewrite ;  
+next ;  
+└ 
+
+An alternative proof using the $DoorLatchAlarm1$ equivalence.
+─ theorem tPollDoorPREAlternative 
+∀ PollDoorSig ⦁ pre PollDoor 
+└ 
+
+├ tPollDoorPREAlternative 
+invoke PollDoor ;  
+invoke ΔDoorLatchAlarm ;  
+prove by rewrite ;  
+invoke PollDoorSig ;  
+apply lDoorLatchAlarmEquiv1 ;  
+invoke DoorLatchAlarm1 ;  
+invoke TIME ;  
+prove by rewrite ;  
+split door = currentDoor ;  
+cases ;  
+instantiate currentLatch′ == currentLatch , currentTime′ == currentTime , doorAlarm′ == doorAlarm ;  
+with normalization rewrite ;  
+next ;  
+rearrange ;  
+rewrite ;  
+split door = open ;  
+rewrite ;  
+cases ;  
+instantiate doorAlarm′ == alarming ;  
+prove by rewrite ;  
+instantiate currentLatch′ == locked ;  
+rewrite ;  
+split currentLatch = locked ;  
+rewrite ;  
+cases ;  
+instantiate currentTime′ == currentTime ;  
+rewrite ;  
+next ;  
+rewrite ;  
+instantiate currentTime′ == latchTimeout ;  
+rewrite ;  
+next ;  
+rewrite ;  
+with enabled ( DOOR$member ) prove by reduce ;  
+with normalization rewrite ;  
+cases ;  
+instantiate currentLatch′ == currentLatch , currentTime′ == currentTime ;  
+rewrite ;  
+next ;  
+rewrite ;  
+cases ;  
+instantiate currentLatch′ == currentLatch , currentTime′ == currentTime ;  
+rewrite ;  
+next ;  
+rewrite ;  
+instantiate currentLatch′ == currentLatch , currentTime′ == currentTime ;  
+rewrite ;  
+next ;  
+└ 
+
+─ theorem tPollUserTokenPRE 
+∀ UserToken ; RealWorld ⦁ pre PollUserToken 
+└ 
+
+├ tPollUserTokenPRE 
+invoke PollUserToken ;  
+invoke ΔUserToken ;  
+with normalization prove by rewrite ;  
+invoke UserToken ;  
+prove by rewrite ;  
+split userToken = noT ;  
+prove by rewrite ;  
+instantiate userTokenPresence′ == absent ;  
+prove by rewrite ;  
+└ 
+
+─ theorem tPollAdminTokenPRE 
+∀ AdminToken ; RealWorld ⦁ pre PollAdminToken 
+└ 
+
+├ tPollAdminTokenPRE 
+invoke PollAdminToken ;  
+invoke ΔAdminToken ;  
+invoke AdminToken ;  
+with normalization prove by rewrite ;  
+split adminToken = noT ;  
+prove by rewrite ;  
+instantiate adminTokenPresence′ == absent ;  
+prove by rewrite ;  
+└ 
+
+─ theorem tPollFingerPRE 
+∀ Finger ; RealWorld ⦁ pre PollFinger 
+└ 
+
+├ tPollFingerPRE 
+invoke PollFinger ;  
+invoke ΔFinger ;  
+invoke Finger ;  
+with normalization prove by rewrite ;  
+split finger = noFP ;  
+prove by rewrite ;  
+instantiate fingerPresence′ == absent ;  
+prove by rewrite ;  
+└ 
+
+─ theorem tPollFloppyPRE 
+∀ Floppy ; RealWorld ⦁ pre PollFloppy 
+└ 
+
+├ tPollFloppyPRE 
+invoke PollFloppy ;  
+invoke ΔFloppy ;  
+invoke Floppy ;  
+with normalization prove by rewrite ;  
+split floppy = noFloppy ;  
+prove by rewrite ;  
+instantiate floppyPresence′ == absent ;  
+prove by rewrite ;  
+└ 
+
+┌ PollKeyboardSig 
+Keyboard 
+RealWorld |
+ keyedDataPresence = if ( keyboard = noKB ) then absent else present └ 
+
+─ theorem tPollKeyboardPRE 
+∀ PollKeyboardSig ⦁ pre PollKeyboard 
+└ 
+
+├ tPollKeyboardPRE 
+invoke PollKeyboard ;  
+invoke ΔKeyboard ;  
+invoke Keyboard ;  
+invoke PollKeyboardSig ;  
+with normalization prove by reduce ;  
+instantiate keyedDataPresence′ == absent ;  
+prove by rewrite ;  
+└ 
+
+┌ TISPollSig 
+IDStation 
+RealWorld |
+ PollTimeSig 
+PollDoorSig 
+PollKeyboardSig └ 
+
+─ theorem lTISPollPREStdUpdLemma 
+∀ TISPollSig ⦁ TISPoll [ adminToken := adminToken′ , adminTokenPresence′ := ( if ( adminToken = noT ) then absent else present ) , alarm := alarm′ , alarmSilentDuration := alarmSilentDuration′ , alarmThresholdSize := alarmThresholdSize′ , alarmTimeout := alarmTimeout′ , auditAlarm := auditAlarm′ , auditLog := auditLog′ , authPeriod := authPeriod′ , availableOps := availableOps′ , currentAdminOp := currentAdminOp′ , currentAdminToken′ := if ( adminToken = noT ) then currentAdminToken else adminToken , currentDisplay := currentDisplay′ , currentDoor := currentDoor′ , currentFinger′ := if ( finger = noFP ) then currentFinger else finger , currentFloppy′ := if ( floppy = noFloppy ) then currentFloppy else floppy , currentKeyedData′ := if ( keyboard = noKB ) then currentKeyedData else keyboard , currentLatch′ := if ( currentDisplay = doorUnlocked ) then unlocked else locked , currentScreen := currentScreen′ , now := currentTime′ , currentUserToken′ := if ( userToken = noT ) then currentUserToken else userToken , display := display′ , door := door′ , doorAlarm := doorAlarm′ , enclaveClearance := enclaveClearance′ , enclaveStatus := enclaveStatus′ , entryPeriod := entryPeriod′ , failBio := failBio′ , failEntry := failEntry′ , finger := finger′ , fingerPresence′ := if ( finger = noFP ) then absent else present , floppy := floppy′ , floppyPresence′ := if ( floppy = noFloppy ) then absent else present , issuerKey := issuerKey′ , keyboard := keyboard′ , keyedDataPresence := keyedDataPresence′ , latch := latch′ , latchTimeout := latchTimeout′ , latchUnlockDuration := latchUnlockDuration′ , minPreservedLogSize := minPreservedLogSize′ , now := now′ , ownName := ownName′ , rolePresent := rolePresent′ , screen := screen′ , tkstatus := tkstatus′ , successBio := successBio′ , successEntry := successEntry′ , tokenRemovalDuration := tokenRemovalDuration′ , tokenRemovalTimeout := tokenRemovalTimeout′ , userToken := userToken′ , userTokenPresence′ := if ( userToken = noT ) then absent else present , writtenFloppy := writtenFloppy′ ] 
+└ 
+
+DoorLatchAlarm[currentLatch
+                          := \IF currentDisplay = doorUnlocked
+                             \THEN unlocked
+                             \ELSE locked, now/currentTime]
+
+ TISPollSig \\
+\implies (\IF enclaveStatus = waitingStartAdminOp
+          \THEN       currentAdminOp \in \power ADMINOP \\
+                \land Nil \in \power ADMINOP \\
+                \land \lnot currentAdminOp = Nil
+          \ELSE (\IF enclaveStatus = waitingFinishAdminOp
+                 \THEN       currentAdminOp \in \power ADMINOP \\
+                       \land Nil \in \power ADMINOP \\
+                       \land \lnot currentAdminOp = Nil
+                 \ELSE                currentAdminOp \in \power ADMINOP \\
+                                \land Nil \in \power ADMINOP \\
+                       \implies currentAdminOp = Nil))
+
+ TISPollSig \\
+\implies (     enclaveStatus
+               \in \{waitingStartAdminOp\} \cup \{waitingFinishAdminOp\} \\
+          \iff currentAdminOp \neq Nil)
+   TISPollSig \\
+         \land
+          \lnot (\exists ValidToken @ goodT \theta Token = currentUserToken) \\
+         \land (     tkstatus = waitingFinger \\
+                \lor tkstatus = gotFinger \\
+                \lor tkstatus = waitingUpdateToken \\
+                \lor tkstatus = waitingEntry) \\
+\implies
+ (\exists
+    TokenWithValidAuth[authCert\_\_0/authCert, iandACert\_\_0/iandACert,
+                       idCert\_\_0/idCert, privCert\_\_0/privCert,
+                       tokenID\_\_0/tokenID]
+    @ goodT
+      \theta
+        Token[authCert\_\_0/authCert, iandACert\_\_0/iandACert,
+              idCert\_\_0/idCert, privCert\_\_0/privCert, tokenID\_\_0/tokenID]
+      = currentUserToken)
+
+TISPollSig \\
+         \land rolePresent \in \power PRIVILEGE \\
+         \land Nil \in \power PRIVILEGE \\
+         \land \lnot rolePresent = Nil \\
+\implies (\exists TokenWithValidAuth @ goodT \theta Token = currentAdminToken)
+
+ TISPollSig \\
+         \land enclaveStatus
+               \notin \{notEnrolled\}
+                      \cup (\{waitingEnrol\} \cup \{waitingEndEnrol\}) \\
+\implies ownName \neq Nil
+
+ TISPollSig \\
+         \land currentAdminOp \neq Nil \\
+         \land \The currentAdminOp \in \{shutdownOp\} \cup \{overrideLock\} \\
+\implies enclaveStatus = waitingStartAdminOp
+
+  TISPollSig \\
+         \land enclaveStatus = gotAdminToken \\
+\implies rolePresent = Nil
+
+ TISPollSig \\
+         \land \lnot (\exists ValidToken
+                        @ (\IF userToken = noT
+                           \THEN goodT \theta Token = currentUserToken
+                           \ELSE goodT \theta Token = userToken)) \\
+         \land (     tkstatus = waitingFinger \\
+                \lor tkstatus = gotFinger \\
+                \lor tkstatus = waitingUpdateToken \\
+                \lor tkstatus = waitingEntry) \\
+\implies
+(\exists
+   TokenWithValidAuth[authCert\_\_0/authCert, iandACert\_\_0/iandACert,
+                      idCert\_\_0/idCert, privCert\_\_0/privCert,
+                      tokenID\_\_0/tokenID]
+   @ (\IF userToken = noT
+      \THEN
+      goodT
+      \theta
+        Token[authCert\_\_0/authCert, iandACert\_\_0/iandACert,
+              idCert\_\_0/idCert, privCert\_\_0/privCert, tokenID\_\_0/tokenID]
+      = currentUserToken
+      \ELSE
+      goodT
+      \theta
+        Token[authCert\_\_0/authCert, iandACert\_\_0/iandACert,
+              idCert\_\_0/idCert, privCert\_\_0/privCert, tokenID\_\_0/tokenID]
+      = userToken))
+
+    TISPollSig \\
+         \land rolePresent \in \power PRIVILEGE \\
+         \land Nil \in \power PRIVILEGE \\
+         \land \lnot rolePresent = Nil \\
+\implies (\exists TokenWithValidAuth
+            @ (\IF adminToken = noT
+               \THEN goodT \theta Token = currentAdminToken
+               \ELSE goodT \theta Token = adminToken))
+
+TISPollSig \\
+         \land enclaveStatus
+               \notin \{notEnrolled\}
+                      \cup (\{waitingEnrol\} \cup \{waitingEndEnrol\}) \\
+\implies ownName \neq Nil
+
+TISPollSig \\
+         \land currentAdminOp \neq Nil \\
+         \land \The currentAdminOp \in \{shutdownOp\} \cup \{overrideLock\} \\
+\implies enclaveStatus = waitingStartAdminOp
+
+  TISPollSig \\
+         \land enclaveStatus = gotAdminToken \\
+\implies rolePresent = Nil
+
+    TISPollSig \\
+\implies (\IF currentDisplay = doorUnlocked
+          \THEN       now \geq 0 \\
+                \land latchTimeout \geq 0 \\
+                \land alarmTimeout \geq 0 \\
+                \land (     false \\
+                       \iff now \geq latchTimeout) \\
+                \land \lnot doorAlarm = alarming
+          \ELSE       now \geq 0 \\
+                \land latchTimeout \geq 0 \\
+                \land alarmTimeout \geq 0 \\
+                \land now \geq latchTimeout \\
+                \land (\IF currentDoor = open
+                       \THEN (\IF now \geq alarmTimeout
+                              \THEN doorAlarm = alarming
+                              \ELSE \lnot doorAlarm = alarming)
+                       \ELSE \lnot doorAlarm = alarming))
+
+    TISPollSig \\
+\implies (\IF keyboard = noKB
+          \THEN \lnot keyedDataPresence = present
+          \ELSE keyedDataPresence = present)
+
+
+try lemma lTISPollPREStdUpdLemma;
+invoke TISPoll;
+cases;
+invoke \Delta IDStation;
+invoke IDStation;
+rearrange;
+cases;
+rewrite;
+next;
+rewrite;
+next;
+rewrite;
+next;
+rewrite;
+next;
+rewrite;
+next;
+rewrite;
+next;
+rewrite;
+next;
+rewrite;
+next;
+rewrite;
+next;
+rewrite;
+next;
+rewrite;
+next;
+rewrite;
+next;
+rewrite;
+next;
+rewrite;
+next;
+with disabled (TISPollSig) reduce;
+next;
+with disabled (TISPollSig) reduce;
+next;
+with disabled (TISPollSig) reduce;
+next;
+rewrite;
+next;
+next;
+with disabled (TISPollSig) reduce;
+next;
+with disabled (TISPollSig) reduce;
+next;
+rewrite;
+next;
+rewrite;
+next;
+rewrite;
+next;
+rewrite;
+next;
+rewrite;
+next;
+rewrite;
+next;
+rewrite;
+next;
+with normalization rewrite;
+next;
+invoke TISPollSig;
+invoke IDStation;
+rewrite;
+next;
+invoke TISPollSig;
+invoke IDStation;
+rewrite;
+next;
+next;
+invoke TISPollSig;
+invoke IDStation;
+rewrite;
+next;
+invoke TISPollSig;
+invoke IDStation;
+rewrite;
+next;
+prove by rewrite;
+next;
+prove by rewrite;
+next;
+next;
+next;
+next;
+prove by rewrite;
+next;
+prove by rewrite;
+next;
+next;
+next;
+next;
+next;
+with disabled (TISPollSig) prove by reduce;
+next;
+with disabled (TISPollSig) prove by reduce;
+next;
+with disabled (TISPollSig) prove by reduce;
+next;
+with disabled (TISPollSig) prove by reduce;
+next;
+with disabled (TISPollSig) prove by reduce;
+next;
+with disabled (TISPollSig) prove by reduce;
+next;
+with disabled (TISPollSig) prove by reduce;
+next;
+with disabled (TISPollSig) prove by reduce;
+next;
+next;
+with disabled (TISPollSig) prove by reduce;
+next;
+with disabled (TISPollSig) prove by reduce;
+next;
+with disabled (TISPollSig) prove by reduce;
+next;
+with disabled (TISPollSig) prove by reduce;
+next;
+with disabled (TISPollSig) prove by reduce;
+next;
+simplify;
+next;
+prove by rewrite;
+next;
+
+\begin{}[lTISPollPREStdUpdLemma]
+invoke TISPoll;
+cases;
+TODO
+next;
+invoke \Xi RealWorld;
+rewrite;
+next;
+with disabled (IDStation, RealWorld, PollDoorSig, PollKeyboardSig)
+  with normalization prove by reduce;
+TODO
+next;
+with disabled (IDStation, RealWorld, PollTimeSig, PollKeyboardSig)
+  with normalization prove by reduce;
+TODO
+next;
+with disabled (IDStation, RealWorld, PollDoorSig, PollTimeSig, PollKeyboardSig)
+  with normalization prove by reduce;
+next;
+with disabled (IDStation, RealWorld, PollDoorSig, PollTimeSig, PollKeyboardSig)
+  with normalization prove by reduce;
+next;
+with disabled (IDStation, RealWorld, PollDoorSig, PollTimeSig, PollKeyboardSig)
+  with normalization prove by reduce;
+next;
+with disabled (IDStation, RealWorld, PollDoorSig, PollTimeSig, PollKeyboardSig)
+  with normalization prove by reduce;
+next;
+with disabled (IDStation, RealWorld, PollDoorSig, PollTimeSig)
+  with normalization prove by reduce;
+next;
+invoke LogChange;
+next;
+invoke \Xi Config;
+rewrite;
+next;
+invoke \Xi KeyStore;
+rewrite;
+next;
+invoke \Xi Admin;
+rewrite;
+next;
+invoke \Xi Stats;
+rewrite;
+next;
+invoke \Xi Internal;
+rewrite;
+next;
+simplify;
+next;
+with normalization prove by rewrite;
+next;
+rearrange;
+\end{}
+
+─ theorem tTISPollPRE 
+∀ TISPollSig ⦁ pre TISPoll 
+└ 
+
+\begin{}[tTISPollPRE]
+instantiate
+  currentTime' == now,
+  currentUserToken'
+    == \IF userToken = noT \THEN currentUserToken \ELSE userToken,
+  userTokenPresence' == \IF userToken = noT \THEN absent \ELSE present,
+  currentAdminToken'
+    == \IF adminToken = noT \THEN currentAdminToken \ELSE adminToken,
+  adminTokenPresence' == \IF adminToken = noT \THEN absent \ELSE present,
+  currentFinger' == \IF finger = noFP \THEN currentFinger \ELSE finger,
+  fingerPresence' == \IF finger = noFP \THEN absent \ELSE present,
+  currentFloppy' == \IF floppy = noFloppy \THEN currentFloppy \ELSE floppy,
+  floppyPresence' == \IF floppy = noFloppy \THEN absent \ELSE present,
+  currentKeyedData'
+    == \IF keyboard = noKB \THEN currentKeyedData \ELSE keyboard,
+  currentLatch'
+    == \IF currentDisplay = doorUnlocked \THEN unlocked \ELSE locked,
+  adminToken' == adminToken, alarm' == alarm,
+  alarmSilentDuration' == alarmSilentDuration,
+  alarmThresholdSize' == alarmThresholdSize, alarmTimeout' == alarmTimeout,
+  auditAlarm' == auditAlarm, auditLog' == auditLog, authPeriod' == authPeriod,
+  availableOps' == availableOps, currentAdminOp' == currentAdminOp,
+  currentDisplay' == currentDisplay, currentDoor' == currentDoor,
+  currentScreen' == currentScreen, display' == display, door' == door,
+  doorAlarm' == doorAlarm, enclaveClearance' == enclaveClearance,
+  enclaveStatus' == enclaveStatus, entryPeriod' == entryPeriod,
+  failBio' == failBio, failEntry' == failEntry, finger' == finger,
+  floppy' == floppy, issuerKey' == issuerKey, keyboard' == keyboard,
+  keyedDataPresence' == keyedDataPresence, latch' == latch,
+  latchTimeout' == latchTimeout, latchUnlockDuration' == latchUnlockDuration,
+  minPreservedLogSize' == minPreservedLogSize, now' == now,
+  ownName' == ownName, rolePresent' == rolePresent, screen' == screen,
+  tkstatus' == tkstatus, successBio' == successBio, successEntry' == successEntry,
+  tokenRemovalDuration' == tokenRemovalDuration,
+  tokenRemovalTimeout' == tokenRemovalTimeout, userToken' == userToken,
+  writtenFloppy' == writtenFloppy;
+use lTISPollPREStdUpdLemma;
+rearrange;
+with predicate (TISPollSig) simplify;
+trivial simplify;
+with predicate
+  (               adminToken \in TOKENTRY \\
+            \land alarm \in ALARM \\
+            \land alarmSilentDuration \in \num \\
+            \land alarmThresholdSize \in \num \\
+            \land alarmTimeout \in \num \\
+            \land auditAlarm \in ALARM \\
+            \land auditLog \in \power Audit \\
+            \land
+             authPeriod
+             \in \power (PRIVILEGE \cross \power (\num \cross \power \num)) \\
+            \land availableOps \in \power ADMINOP \\
+            \land currentAdminOp \in \power ADMINOP \\
+            \land currentDisplay \in DISPLAYMESSAGE \\
+            \land currentDoor \in DOOR \\
+            \land currentScreen
+                  \in \lblot screenConfig: SCREENTEXT; screenMsg: SCREENTEXT;
+                             screenStats: SCREENTEXT \rblot \\
+            \land now \in \num \\
+            \land display \in DISPLAYMESSAGE \\
+            \land door \in DOOR \\
+            \land doorAlarm \in ALARM \\
+            \land enclaveClearance \in \lblot class: CLASS \rblot \\
+            \land enclaveStatus \in ENCLAVESTATUS \\
+            \land
+             entryPeriod
+             \in \power (PRIVILEGE \cross \power (CLASS \cross \power \num)) \\
+            \land failBio \in \num \\
+            \land failEntry \in \num \\
+            \land finger \in FINGERPRINTTRY \\
+            \land floppy \in FLOPPY \\
+            \land issuerKey \in \power (USER \cross KEYPART) \\
+            \land keyboard \in KEYBOARD \\
+            \land keyedDataPresence \in PRESENCE \\
+            \land latch \in LATCH \\
+            \land latchTimeout \in \num \\
+            \land latchUnlockDuration \in \num \\
+            \land minPreservedLogSize \in \num \\
+            \land ownName \in \power USER \\
+            \land rolePresent \in \power PRIVILEGE \\
+            \land screen
+                  \in \lblot screenConfig: SCREENTEXT; screenMsg: SCREENTEXT;
+                             screenStats: SCREENTEXT \rblot \\
+            \land tkstatus \in STATUS \\
+            \land successBio \in \num \\
+            \land successEntry \in \num \\
+            \land tokenRemovalDuration \in \num \\
+            \land tokenRemovalTimeout \in \num \\
+            \land userToken \in TOKENTRY \\
+            \land writtenFloppy \in FLOPPY \\
+            \land
+             \IF adminToken = noT \THEN absent \ELSE present \in PRESENCE \\
+            \land \IF adminToken = noT \THEN currentAdminToken \ELSE adminToken
+                  \in TOKENTRY \\
+            \land \IF finger = noFP \THEN currentFinger \ELSE finger
+                  \in FINGERPRINTTRY \\
+            \land \IF floppy = noFloppy \THEN currentFloppy \ELSE floppy
+                  \in FLOPPY \\
+            \land \IF keyboard = noKB \THEN currentKeyedData \ELSE keyboard
+                  \in KEYBOARD \\
+            \land \IF currentDisplay = doorUnlocked \THEN unlocked \ELSE locked
+                  \in LATCH \\
+            \land \IF userToken = noT \THEN currentUserToken \ELSE userToken
+                  \in TOKENTRY \\
+            \land \IF finger = noFP \THEN absent \ELSE present \in PRESENCE \\
+            \land
+             \IF floppy = noFloppy \THEN absent \ELSE present \in PRESENCE \\
+   \implies \lnot \IF userToken = noT \THEN absent \ELSE present \in PRESENCE)
+  with enabled (lOptionalWeakening) rewrite;
+use lOptionalWeakening3[PRIVILEGE][S := ADMINPRIVILEGE, x := rolePresent];
+rearrange;
+rewrite;
+\end{}
+
+invoke TISPoll;
+rearrange;
+invoke \Xi RealWorld;
+invoke \Xi Config;
+invoke \Xi KeyStore;
+invoke \Xi Admin;
+invoke \Xi Stats;
+invoke \Xi Internal;
+rearrange;
+invoke TISPollSig;
+invoke PollTime;
+invoke PollTimeSig;
+invoke PollDoor;
+invoke PollDoorSig;
+invoke PollUserToken;
+invoke PollAdminToken;
+invoke PollFinger;
+invoke PollFloppy;
+invoke PollKeyboard;
+invoke PollKeyboardSig;
+invoke \Delta IDStation;
+invoke \Delta UserToken;
+invoke \Delta AdminToken;
+invoke \Delta Finger;
+invoke \Delta Floppy;
+invoke \Delta DoorLatchAlarm;
+rearrange;
+simplify;
+invoke Floppy;
+invoke DoorLatchAlarm;
+invoke IDStation;
+simplify;
+prove by rewrite;
+
+─ theorem tUpdateLatchPRE 
+∀ DoorLatchAlarm ; RealWorld ⦁ pre UpdateLatch 
+└ 
+
+├ tUpdateLatchPRE 
+invoke UpdateLatch ;  
+invoke RealWorldChanges ;  
+invoke ΞDoorLatchAlarm ;  
+invoke ΔRealWorld ;  
+invoke RealWorld ;  
+invoke TISControlledRealWorld ;  
+invoke TISMonitoredRealWorld ;  
+rewrite ;  
+instantiate adminToken′ == adminToken , alarm′ == alarm , display′ == display , door′ == door , finger′ == finger , floppy′ == floppy , keyboard′ == keyboard , userToken′ == userToken , screen′ == screen , now′ == now ;  
+invoke TIME ;  
+rewrite ;  
+└ 
+
+─ theorem tUpdateAlarmPRE 
+∀ DoorLatchAlarm ; RealWorld ; AuditLog ⦁ pre UpdateAlarm 
+└ 
+
+├ tUpdateAlarmPRE 
+invoke UpdateAlarm ;  
+invoke ΞDoorLatchAlarm ;  
+invoke RealWorldChanges ;  
+invoke AuditLog ;  
+invoke ΔRealWorld ;  
+rearrange ;  
+rewrite ;  
+split doorAlarm = alarming ;  
+cases ;  
+instantiate adminToken′ == adminToken , alarm′ == alarming , display′ == display , door′ == door , finger′ == finger , floppy′ == floppy , keyboard′ == keyboard , userToken′ == userToken , screen′ == screen , now′ == now , latch′ == latch ;  
+invoke RealWorld ;  
+invoke TISMonitoredRealWorld ;  
+invoke TISControlledRealWorld ;  
+invoke TIME ;  
+rewrite ;  
+next ;  
+rearrange ;  
+simplify ;  
+instantiate adminToken′ == adminToken , alarm′ == silent , display′ == display , door′ == door , finger′ == finger , floppy′ == floppy , keyboard′ == keyboard , userToken′ == userToken , screen′ == screen , now′ == now , latch′ == latch ;  
+invoke RealWorld ;  
+invoke TISControlledRealWorld ;  
+invoke TISMonitoredRealWorld ;  
+invoke TIME ;  
+rewrite ;  
+simplify ;  
+rearrange ;  
+instantiate adminToken′ == adminToken , display′ == display , door′ == door , finger′ == finger , floppy′ == floppy , keyboard′ == keyboard , userToken′ == userToken , screen′ == screen , now′ == now , latch′ == latch ;  
+rewrite ;  
+next ;  
+└ 
+
+─ theorem lIDStationDoorLatchAlarmInv 
+∀ IDStation ⦁ DoorLatchAlarm 
+└ 
+
+├ lIDStationDoorLatchAlarmInv 
+simplify ;  
+└ 
+
+─ theorem lIDStationCurrentTimeUpdateLemma 
+∀ IDStation ; PollTimeSig ⦁ IDStation [ now / currentTime ] 
+└ 
+
+├ lIDStationCurrentTimeUpdateLemma 
+invoke predicate IDStation [ now / currentTime ] ;  
+simplify ;  
+cases ;  
+use lIDStationDoorLatchAlarmInv ;  
+invoke DoorLatchAlarm ;  
+rearrange ;  
+simplify ;  
+invoke PollTimeSig ;  
+simplify ;  
+next ;  
+next ;  
+next ;  
+next ;  
+next ;  
+next ;  
+next ;  
+next ;  
+next ;  
+invoke IDStation ;  
+simplify ;  
+└ 
+
+─ theorem tUpdateDisplayPRE 
+∀ IDStation ; RealWorld ⦁ pre UpdateDisplay 
+└ 
+
+├ tUpdateDisplayPRE 
+instantiate currentTime′ == currentTime , currentUserToken′ == currentUserToken , userTokenPresence′ == userTokenPresence , currentAdminToken′ == currentAdminToken , adminTokenPresence′ == adminTokenPresence , currentFinger′ == currentFinger , fingerPresence′ == fingerPresence , currentFloppy′ == currentFloppy , floppyPresence′ == floppyPresence , currentKeyedData′ == currentKeyedData , currentLatch′ == currentLatch , adminToken′ == adminToken , alarm′ == alarm , alarmSilentDuration′ == alarmSilentDuration , alarmThresholdSize′ == alarmThresholdSize , alarmTimeout′ == alarmTimeout , auditAlarm′ == auditAlarm , auditLog′ == auditLog , authPeriod′ == authPeriod , availableOps′ == availableOps , currentAdminOp′ == currentAdminOp , currentDoor′ == currentDoor , currentScreen′ == currentScreen , door′ == door , doorAlarm′ == doorAlarm , enclaveClearance′ == enclaveClearance , enclaveStatus′ == enclaveStatus , entryPeriod′ == entryPeriod , failBio′ == failBio , failEntry′ == failEntry , finger′ == finger , floppy′ == floppy , issuerKey′ == issuerKey , keyboard′ == keyboard , keyedDataPresence′ == keyedDataPresence , latch′ == latch , latchTimeout′ == latchTimeout , latchUnlockDuration′ == latchUnlockDuration , minPreservedLogSize′ == minPreservedLogSize , now′ == now , ownName′ == ownName , rolePresent′ == rolePresent , screen′ == screen , tkstatus′ == tkstatus , successBio′ == successBio , successEntry′ == successEntry , tokenRemovalDuration′ == tokenRemovalDuration , tokenRemovalTimeout′ == tokenRemovalTimeout , userToken′ == userToken , writtenFloppy′ == writtenFloppy ;  
+with disabled ( IDStation , PollTimeSig ) invoke ;  
+rearrange ;  
+rewrite ;  
+use lOptionalWeakening3 [ PRIVILEGE ] [ S := ADMINPRIVILEGE , x := rolePresent ] ;  
+use lOptionalWeakening3 [ USER ] [ S := ISSUER , x := ownName ] ;  
+rearrange ;  
+rewrite ;  
+apply lOptionalWeakening ;  
+rewrite ;  
+└ 
+
+─ theorem frule fIDStationOwnNameMaxOptType 
+∀ IDStation ⦁ ownName ∈ Optional USER 
+└ 
+
+├ fIDStationOwnNameMaxOptType 
+use lOptionalWeakening3 [ USER ] [ S := ISSUER , x := ownName ] ;  
+prove by rewrite ;  
+└ 
+
+─ theorem frule fIDStationRolePresentMaxOptType 
+∀ IDStation ⦁ rolePresent ∈ Optional PRIVILEGE 
+└ 
+
+├ fIDStationRolePresentMaxOptType 
+use lOptionalWeakening3 [ PRIVILEGE ] [ S := ADMINPRIVILEGE , x := rolePresent ] ;  
+prove by rewrite ;  
+└ 
+
+─ theorem frule fIDStationCurrentAdminOpMaxOptType 
+∀ IDStation ⦁ currentAdminOp ∈ Optional ADMINOP 
+└ 
+
+├ fIDStationCurrentAdminOpMaxOptType 
+use lOptionalWeakening3 [ ADMINOP ] [ S := ADMINOP , x := currentAdminOp ] ;  
+prove by rewrite ;  
+└ 
+
+─ theorem frule fIDStationCurrentScreenType 
+∀ IDStation ⦁ currentScreen ∈ Screen 
+└ 
+
+├ fIDStationCurrentScreenType 
+invoke IDStation ;  
+simplify ;  
+└ 
+
+─ theorem fIDStationAdminInv 
+∀ IDStation ⦁ Admin 
+└ 
+
+├ fIDStationAdminInv 
+invoke IDStation ;  
+simplify ;  
+└ 
+
+Although this precondition is just $true$, it is a rather convoluted because of
+the (unhelpful) way conditional and various other invariants were (logically) given.
+\The next lemma illustrates this by providing a simpler formulation that is equivalent
+to the one in Admin.
+─ theorem tUpdateScreenPRE 
+∀ IDStation ; RealWorld ⦁ pre UpdateScreen 
+└ 
+
+├ tUpdateScreenPRE 
+instantiate currentTime′ == currentTime , currentUserToken′ == currentUserToken , userTokenPresence′ == userTokenPresence , currentAdminToken′ == currentAdminToken , adminTokenPresence′ == adminTokenPresence , currentFinger′ == currentFinger , fingerPresence′ == fingerPresence , currentFloppy′ == currentFloppy , floppyPresence′ == floppyPresence , currentKeyedData′ == currentKeyedData , currentLatch′ == currentLatch , adminToken′ == adminToken , alarm′ == alarm , alarmSilentDuration′ == alarmSilentDuration , alarmThresholdSize′ == alarmThresholdSize , alarmTimeout′ == alarmTimeout , auditAlarm′ == auditAlarm , auditLog′ == auditLog , authPeriod′ == authPeriod , availableOps′ == availableOps , currentAdminOp′ == currentAdminOp , currentDoor′ == currentDoor , currentScreen′ == currentScreen , door′ == door , doorAlarm′ == doorAlarm , enclaveClearance′ == enclaveClearance , enclaveStatus′ == enclaveStatus , entryPeriod′ == entryPeriod , failBio′ == failBio , failEntry′ == failEntry , finger′ == finger , floppy′ == floppy , issuerKey′ == issuerKey , keyboard′ == keyboard , keyedDataPresence′ == keyedDataPresence , latch′ == latch , latchTimeout′ == latchTimeout , latchUnlockDuration′ == latchUnlockDuration , minPreservedLogSize′ == minPreservedLogSize , now′ == now , ownName′ == ownName , rolePresent′ == rolePresent , tkstatus′ == tkstatus , successBio′ == successBio , successEntry′ == successEntry , tokenRemovalDuration′ == tokenRemovalDuration , tokenRemovalTimeout′ == tokenRemovalTimeout , userToken′ == userToken , writtenFloppy′ == writtenFloppy , currentDisplay′ == currentDisplay , display′ == display , screen′ == θ ( Screen [ screenMsg := currentScreen . screenMsg , screenConfig := if ( rolePresent ≠ Nil ∧ The rolePresent = securityOfficer ) then currentScreen . screenConfig else clear , screenStats := if ( rolePresent ≠ Nil ) then currentScreen . screenStats else clear ] ) ;  
+use fIDStationCurrentScreenType ;  
+use fIDStationAdminInv ;  
+with disabled ( IDStation , ADMINPRIVILEGE ) invoke ;  
+invoke Nil ;  
+rearrange ;  
+apply Screen$member to predicate currentScreen ∈ Screen ;  
+prenex ;  
+with predicate ( IDStation ) simplify ;  
+equality substitute currentScreen ;  
+with enabled ( lOptionalWeakening ) rewrite ;  
+invoke Screen ;  
+prove by rewrite ;  
+└ 
+
+─ ☒ theorem rule lSizeLogCup 
+∀ log : 𝔽 Audit ; entry : Audit ⦁ sizeLog ( log ∪ { entry } ) = sizeLog ( log ∖ { entry } ) + sizeElement entry 
+└ 
+
+├ lSizeLogCup 
+apply cupCommutes ;  
+with disabled ( cupCommutes ) rewrite ;  
+apply dSizeLogInduc ;  
+rewrite ;  
+└ 
+
+─ ☒ theorem rule lSizeLogSetDiff 
+∀ log : 𝔽 Audit ; entry : Audit ⦁ sizeLog ( log ∖ { entry } ) = sizeLog log − ( if ( entry ∈ log ) then sizeElement entry else 0 ) 
+└ 
+
+├ lSizeLogSetDiff 
+rewrite ;  
+use dSizeLogInduc ;  
+rearrange ;  
+apply cupSubsetLeft to expression { entry } ∪ log ;  
+rewrite ;  
+equality substitute ;  
+rewrite ;  
+└ 
+
+─ theorem lAuditWitness 
+∃ adt : Audit ⦁ true 
+└ 
+
+├ lAuditWitness 
+use dAuditNotEmpty ;  
+prove by rewrite ;  
+apply extensionality ;  
+prove by rewrite ;  
+instantiate adt == x ;  
+prove by rewrite ;  
+└ 
+
+┌ AddElementsToLogSig 
+Config 
+AuditLog |
+ ∃ newLog : 𝔽↘1↖ Audit ⦁ oldestLogTime newLog ≥ newestLogTime auditLog └ 
+
+├ AddElementsToLogSig$domainCheck 
+prove by rewrite ;  
+└ 
+
+─ ☒ theorem rule lSizeLogSingleton 
+∀ x : Audit ⦁ sizeLog { x } = sizeElement x 
+└ 
+
+├ lSizeLogSingleton 
+use dSizeLogInduc [ log := { } , entry := x ] ;  
+with enabled ( dSizeLogBase ) prove by rewrite ;  
+└ 
+
+─ ☒ theorem rule lElemUnionDiffAbsorption [ X ] 
+∀ x : X ; S : ℙ X | x ∈ S ⦁ { x } ∪ ( S ∖ { x } ) = S 
+└ 
+
+├ lElemUnionDiffAbsorption 
+apply extensionality to predicate { x } ( _ ∪ _ ) [ X ] ( S ( _ ∖ _ ) [ X ] { x } ) = S ;  
+prenex ;  
+with normalization rewrite ;  
+└ 
+
+─ ☒ theorem rule lCupDisThroughDiff [ X ] 
+∀ x : X ; S , R : ℙ X | ¬ x ∈ S ⦁ S ∪ ( R ∖ { x } ) = S ∪ R ∖ { x } 
+└ 
+
+├ lCupDisThroughDiff 
+apply extensionality to predicate S ( _ ∪ _ ) [ X ] ( R ( _ ∖ _ ) [ X ] { x } ) = ( S ( _ ∪ _ ) [ X ] R ) ( _ ∖ _ ) [ X ] { x } ;  
+prove by rewrite ;  
+└ 
+
+─ theorem rule lCapDisThroughDiff [ X ] 
+∀ x : X ; S , R : ℙ X ⦁ S ∩ ( R ∖ { x } ) = S ∩ R ∖ { x } 
+└ 
+
+├ lCapDisThroughDiff 
+apply extensionality to predicate ( _ ∩ _ ) [ X ] ( S , ( ( _ ∖ _ ) [ X ] ( R , { x } ) ) ) = ( _ ∖ _ ) [ X ] ( ( _ ∩ _ ) [ X ] ( S , R ) , { x } ) ;  
+prove by rewrite ;  
+└ 
+
+─ theorem lSizeLogCupSumZEves 
+𝔽 Audit ⊆ { v : 𝔽 Audit | ∀ r , s : 𝔽 Audit | r ∪ s = v ⦁ sizeLog r + sizeLog s = sizeLog ( r ∪ s ) + sizeLog ( r ∩ s ) } 
+└ 
+
+├ lSizeLogCupSumZEves 
+apply finiteInduction ;  
+with enabled ( dSizeLogBase ) prove by rewrite ;  
+apply lSizeLogCup to expression sizeLog ( Y ∪ { x } ) ;  
+rewrite ;  
+apply lSizeLogSetDiff to expression sizeLog ( Y ∖ { x } ) ;  
+rewrite ;  
+split x ∈ Y ;  
+rewrite ;  
+cases ;  
+apply cupSubsetRight to expression Y ∪ { x } ;  
+instantiate r__0 == r , s__0 == s ;  
+prove by rewrite ;  
+next ;  
+split x ∈ r ∧ x ∉ s ;  
+rewrite ;  
+cases ;  
+instantiate r__0 == r ∖ { x } , s__0 == s ;  
+rearrange ;  
+rewrite ;  
+apply lCupDisThroughDiff to expression s ∪ ( r ∖ { x } ) ;  
+rewrite ;  
+apply lSizeLogSetDiff ;  
+rewrite ;  
+split r ∪ s ∖ { x } = Y ;  
+cases ;  
+equality substitute ;  
+rearrange ;  
+apply lSizeLogSetDiff to expression sizeLog ( r ∪ s ∖ { x } ) ;  
+rewrite ;  
+next ;  
+rearrange ;  
+rewrite ;  
+apply extensionality to predicate r ∪ s ∖ { x } = Y ;  
+prove by rewrite ;  
+next ;  
+prove by rewrite ;  
+split x ∈ r ;  
+simplify ;  
+cases ;  
+instantiate r__0 == r ∖ { x } , s__0 == s ∖ { x } ;  
+rearrange ;  
+rewrite ;  
+next ;  
+simplify ;  
+instantiate r__0 == r , s__0 == s ∖ { x } ;  
+rearrange ;  
+rewrite ;  
+apply lCupDisThroughDiff to expression r ∪ ( s ∖ { x } ) ;  
+rewrite ;  
+apply lSizeLogSetDiff ;  
+rewrite ;  
+split r ∪ s ∖ { x } = Y ;  
+simplify ;  
+cases ;  
+equality substitute ;  
+rewrite ;  
+apply extensionality to predicate r ∪ s = { x } ∪ ( r ∪ s ∖ { x } ) ;  
+prove by rewrite ;  
+apply lSizeLogSetDiff to expression sizeLog ( r ∪ s ∖ { x } ) ;  
+instantiate y == x ;  
+rewrite ;  
+next ;  
+apply extensionality to predicate r ∪ s ∖ { x } = Y ;  
+prove by rewrite ;  
+next ;  
+use distributeDiffOverCupLeft [ Audit ] [ A := s , B := r , C := { x } ] ;  
+rearrange ;  
+rewrite ;  
+equality substitute r ∖ { x } ∪ ( s ∖ { x } ) ;  
+apply lSizeLogSetDiff ;  
+rewrite ;  
+split r ∪ s ∖ { x } = Y ;  
+simplify ;  
+cases ;  
+equality substitute ;  
+apply lSizeLogSetDiff to expression sizeLog ( r ∪ s ∖ { x } ) ;  
+rewrite ;  
+next ;  
+apply extensionality to predicate r ∪ s ∖ { x } = Y ;  
+prove by rewrite ;  
+apply distributeDiffOverCupLeft to expression Y ∪ { x } ∖ { x } ;  
+rewrite ;  
+equality substitute ;  
+rewrite ;  
+next ;  
+└ 
+
+─ ☒ theorem rule lSizeLogCupSum 
+∀ a , b : 𝔽 Audit ⦁ sizeLog a + sizeLog b = sizeLog ( a ∪ b ) + sizeLog ( a ∩ b ) 
+└ 
+
+├ lSizeLogCupSum 
+use lSizeLogCupSumZEves ;  
+prove by rewrite ;  
+apply inPower ;  
+prove by rewrite ;  
+instantiate r == a , s == b ;  
+rearrange ;  
+rewrite ;  
+└ 
+
+─ theorem tAddElementsToLogPRE 
+∀ AddElementsToLogSig ⦁ pre AddElementsToLog 
+└ 
+
+├ tAddElementsToLogPRE 
+use lAuditWitness ;  
+invoke AddElementsToLog ;  
+invoke ΔAuditLog ;  
+prove by rewrite ;  
+invoke AddElementsToLogSig ;  
+invoke AuditLog ;  
+prenex ;  
+instantiate newElements == newLog , oldElements == auditLog ;  
+prove by rewrite ;  
+split sizeLog ( auditLog ∪ newLog ) < alarmThresholdSize ;  
+rewrite ;  
+cases ;  
+instantiate auditAlarm′ == auditAlarm , auditLog′ == auditLog ∪ newLog ;  
+rewrite ;  
+next ;  
+rearrange ;  
+rewrite ;  
+instantiate auditLog′ == auditLog ∪ newLog , auditAlarm′ == alarming ;  
+use applyInRanFun [ 𝔽 Audit , TIME ] [ f := sizeLog , a := auditLog ∪ newLog ] ;  
+invoke Config ;  
+invoke TIME ;  
+prove by rewrite ;  
+split sizeLog ( auditLog ∪ newLog ) ≥ 0 ;  
+simplify ;  
+next ;  
+└ 
+
+─ AddElementsToLogState == Config ∧ ΔAuditLog └ 
+
+┌ AddElementsToLog00 
+AddElementsToLogState 
+newElements : 𝔽↘1↖ Audit |
+ oldestLogTime newElements ≥ newestLogTime auditLog 
+auditLog′ = auditLog ∪ newElements 
+sizeLog auditLog′ < alarmThresholdSize 
+auditAlarm′ = auditAlarm └ 
+
+├ AddElementsToLog00$domainCheck 
+prove by rewrite ;  
+└ 
+
+┌ AddElementsToLog01 
+AddElementsToLogState 
+newElements : 𝔽↘1↖ Audit |
+ oldestLogTime newElements ≥ newestLogTime auditLog 
+auditLog′ = auditLog ∪ newElements 
+sizeLog auditLog′ ≥ alarmThresholdSize 
+auditAlarm′ = alarming └ 
+
+├ AddElementsToLog01$domainCheck 
+prove by rewrite ;  
+└ 
+
+─ AddElementsToLog0 == AddElementsToLog00 ∨ AddElementsToLog01 └ 
+
+┌ AddElementsToLog1 
+AddElementsToLogState 
+newElements : 𝔽↘1↖ Audit |
+ oldestLogTime newElements ≥ newestLogTime auditLog 
+sizeLog auditLog + sizeLog newElements > minPreservedLogSize 
+∃ oldElements : 𝔽 Audit ⦁ oldElements ∪ auditLog′ = auditLog ∪ newElements ∧ oldestLogTime auditLog′ ≥ newestLogTime oldElements 
+sizeLog auditLog′ ≥ minPreservedLogSize 
+auditAlarm′ = alarming └ 
+
+├ AddElementsToLog1$domainCheck 
+prove by rewrite ;  
+└ 
+
+─ AddElementsToLog20 == AddElementsToLog0 ∨ AddElementsToLog1 └ 
+
+─ AddElementsToLog2 == AddElementsToLog20 ∖ ( newElements ) └ 
+
+─ ☒ theorem rule lAddElementsToLogEquiv 
+AddElementsToLog ⇔ AddElementsToLog2 
+└ 
+
+├ lAddElementsToLogEquiv 
+split AddElementsToLog ;  
+simplify ;  
+cases ;  
+with disabled ( Config , AuditLog ) prove by reduce ;  
+instantiate newElements__0 == newElements , oldElements__0 == oldElements ;  
+with normalization rewrite ;  
+next ;  
+split AddElementsToLog2 ;  
+simplify ;  
+invoke AddElementsToLog2 ;  
+prenex ;  
+invoke AddElementsToLog20 ;  
+split AddElementsToLog1 ;  
+simplify ;  
+cases ;  
+with disabled ( Config , AuditLog ) prove by reduce ;  
+instantiate newElements__0 == newElements , oldElements__0 == oldElements ;  
+prove by rewrite ;  
+next ;  
+invoke AddElementsToLog0 ;  
+split AddElementsToLog01 ;  
+simplify ;  
+cases ;  
+with disabled ( Config , AuditLog , AddElementsToLog1 ) prove by reduce ;  
+instantiate newElements__0 == newElements ;  
+prove by rewrite ;  
+next ;  
+with disabled ( Config , AuditLog , AddElementsToLog1 , AddElementsToLog01 ) prove by reduce ;  
+instantiate newElements__0 == newElements ;  
+prove by rewrite ;  
+next ;  
+└ 
+
+┌ AddElementsToLog00Sig 
+Config 
+AuditLog |
+ ∃ newLog : 𝔽↘1↖ Audit ⦁ oldestLogTime newLog ≥ newestLogTime auditLog ∧ sizeLog ( auditLog ∪ newLog ) < alarmThresholdSize └ 
+
+├ AddElementsToLog00Sig$domainCheck 
+prove by rewrite ;  
+└ 
+
+─ theorem tAddElementsToLog00PRE 
+∀ AddElementsToLog00Sig ⦁ ∃ newElements : 𝔽↘1↖ Audit ⦁ pre AddElementsToLog00 
+└ 
+
+├ tAddElementsToLog00PRE 
+with disabled ( Config ) prove by reduce ;  
+└ 
+
+┌ AddElementsToLog01Sig 
+Config 
+AuditLog |
+ ∃ newLog : 𝔽↘1↖ Audit ⦁ oldestLogTime newLog ≥ newestLogTime auditLog ∧ sizeLog ( auditLog ∪ newLog ) ≥ alarmThresholdSize └ 
+
+├ AddElementsToLog01Sig$domainCheck 
+prove by rewrite ;  
+└ 
+
+─ theorem tAddElementsToLog01PRE 
+∀ AddElementsToLog01Sig ⦁ ∃ newElements : 𝔽↘1↖ Audit ⦁ pre AddElementsToLog01 
+└ 
+
+├ tAddElementsToLog01PRE 
+with disabled ( Config ) prove by reduce ;  
+└ 
+
+─ theorem tAddElementsToLog0PRE 
+∀ AddElementsToLogSig ⦁ ∃ newElements : 𝔽↘1↖ Audit ⦁ pre AddElementsToLog0 
+└ 
+
+├ tAddElementsToLog0PRE 
+with disabled ( Config ) prove by reduce ;  
+instantiate newElements == newLog , auditAlarm′ == if ( sizeLog ( auditLog ∪ newLog ) < alarmThresholdSize ) then auditAlarm else alarming , auditLog′ == auditLog ∪ newLog ;  
+prove by rewrite ;  
+invoke Config ;  
+invoke TIME ;  
+use applyInRanFun [ 𝔽 Audit , ℕ ] [ f := sizeLog , a := auditLog ∪ newLog ] ;  
+prove by rewrite ;  
+split sizeLog ( auditLog ∪ newLog ) ≥ 0 ;  
+simplify ;  
+└ 
+
+┌ AddElementsToLog1Sig 
+Config 
+AuditLog |
+ ∃ newLog : 𝔽↘1↖ Audit ⦁ oldestLogTime newLog ≥ newestLogTime auditLog ∧ sizeLog auditLog + sizeLog newLog > minPreservedLogSize ∧ auditLog ∩ newLog = ∅ ∧ ( ∃ oldLog : 𝔽 Audit ⦁ ( oldLog = auditLog ∪ newLog ∧ oldestLogTime oldLog ≥ newestLogTime ( oldLog ∖ newLog ) ) ) └ 
+
+├ AddElementsToLog1Sig$domainCheck 
+prove by rewrite ;  
+└ 
+
+─ ☒ theorem rule lCupAbsorbsDisjointSetDiff [ X ] 
+∀ S , R : ℙ X | S ∩ R = { } ⦁ S ∪ R ∖ R = S 
+└ 
+
+├ lCupAbsorbsDisjointSetDiff 
+apply extensionality ;  
+prove by rewrite ;  
+instantiate x == y ;  
+prove by rewrite ;  
+└ 
+
+─ theorem tAddElementsToLog1PRE 
+∀ AddElementsToLog1Sig ⦁ ∃ newElements : 𝔽↘1↖ Audit ⦁ pre AddElementsToLog1 
+└ 
+
+├ tAddElementsToLog1PRE 
+with disabled ( Config ) prove by reduce ;  
+instantiate newElements == newLog , oldElements == auditLog , auditLog′ == auditLog ∪ newLog ;  
+prove by rewrite ;  
+apply cupSubsetLeft to expression auditLog ∪ ( auditLog ∪ newLog ) ;  
+prove by rewrite ;  
+apply lSizeLogCupSum to expression sizeLog auditLog + sizeLog newLog ;  
+prove by rewrite ;  
+split auditLog ∩ newLog = { } ;  
+with enabled ( dSizeLogBase ) rewrite ;  
+apply lCupAbsorbsDisjointSetDiff to expression auditLog ∪ newLog ∖ newLog ;  
+rewrite ;  
+└ 
+
+─ theorem tAddElementsToLog2PRE 
+∀ AddElementsToLogSig ⦁ pre AddElementsToLog2 
+└ 
+
+├ tAddElementsToLog2PRE 
+use tAddElementsToLogPRE ;  
+prenex ;  
+use lAddElementsToLogEquiv ;  
+prove by rewrite ;  
+instantiate auditAlarm__0′ == auditAlarm′ , auditLog__0′ == auditLog′ ;  
+rewrite ;  
+└ 
+
+┌ ArchiveLogSig 
+Config 
+AuditLog 
+archive : 𝔽 Audit |
+ ∃ ignored : 𝔽 Audit ⦁ newestLogTime archive ≤ oldestLogTime ignored └ 
+
+├ ArchiveLogSig$domainCheck 
+prove by rewrite ;  
+└ 
+
+─ theorem tArchiveLogPRE 
+∀ ArchiveLogSig ⦁ pre ArchiveLog 
+└ 
+
+├ tArchiveLogPRE 
+use tAddElementsToLogPRE ;  
+rearrange ;  
+prenex ;  
+rewrite ;  
+invoke ArchiveLogSig ;  
+invoke ArchiveLog ;  
+invoke ΔAuditLog ;  
+invoke AuditLog ;  
+with disabled ( subsetDef ) prove by rewrite ;  
+instantiate auditAlarm__0′ == auditAlarm′ , auditLog__0′ == archive ∪ auditLog ;  
+with disabled ( subsetDef ) prove by rewrite ;  
+instantiate newElements == archive , notArchived == ignored ;  
+rewrite ;  
+invoke AddElementsToLog ;  
+prenex ;  
+split sizeLog auditLog + sizeLog newElements > minPreservedLogSize ∧ oldElements ∈ 𝔽 Audit ∧ oldElements ∪ auditLog′ = auditLog ∪ newElements ∧ oldestLogTime auditLog′ ≥ newestLogTime oldElements ∧ sizeLog auditLog′ ≥ minPreservedLogSize ∧ auditAlarm′ = alarming ;  
+simplify ;  
+cases ;  
+rearrange ;  
+split auditLog′ = auditLog ∪ newElements ∧ ( sizeLog auditLog′ < alarmThresholdSize ∧ auditAlarm′ = auditAlarm ∨ sizeLog auditLog′ ≥ alarmThresholdSize ∧ auditAlarm′ = alarming ) ;  
+simplify ;  
+cases ;  
+simplify ;  
+rewrite ;  
+└ 
+
+
+

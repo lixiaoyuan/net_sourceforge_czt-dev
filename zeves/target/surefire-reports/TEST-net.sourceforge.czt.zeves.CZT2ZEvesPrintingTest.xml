@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="net.sourceforge.czt.zeves.CZT2ZEvesPrintingTest" time="10.277" tests="38" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-0.el7_8.x86_64/jre/lib/amd64"/>
+    <property name="java.vm.version" value="25.262-b10"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="/root/czt-code"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/root/czt-code"/>
+    <property name="java.runtime.version" value="1.8.0_262-b10"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-0.el7_8.x86_64/jre/lib/endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Linux"/>
+    <property name="classworlds.conf" value="/usr/local/apache-maven-3.5.4/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="maven.conf" value="/usr/local/apache-maven-3.5.4/conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="3.10.0-1062.12.1.el7.x86_64"/>
+    <property name="library.jansi.path" value="/usr/local/apache-maven-3.5.4/lib/jansi-native"/>
+    <property name="user.home" value="/root"/>
+    <property name="user.timezone" value="UTC"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="root"/>
+    <property name="java.class.path" value="/usr/local/apache-maven-3.5.4/boot/plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-0.el7_8.x86_64/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install -U"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_262"/>
+    <property name="java.ext.dirs" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-0.el7_8.x86_64/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-0.el7_8.x86_64/jre/lib/resources.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-0.el7_8.x86_64/jre/lib/rt.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-0.el7_8.x86_64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-0.el7_8.x86_64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-0.el7_8.x86_64/jre/lib/jce.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-0.el7_8.x86_64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-0.el7_8.x86_64/jre/lib/jfr.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-0.el7_8.x86_64/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/usr/local/apache-maven-3.5.4"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="org.w3c.dom.DOMImplementationSourceList" value="org.apache.xerces.dom.DOMXSImplementationSourceImpl"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.font.fontmanager" value="sun.awt.X11FontManager"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/TID-proofs.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="5.806"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/appTo.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.173"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/atm_bags.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.129"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/bagtoolkit.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.126"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/bbook.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.171"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/bbook.zed8" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.19"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/bbook.zev" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.15"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/bindSel.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.102"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/caviar.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.107"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/chain.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.869"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/cliffs-experiment.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.118"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/dollarNamedThm.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.08"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/forest.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.085"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/freertos.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.08"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/genActs.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.13"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/ifthenElse.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.078"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/instantiateTest.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.113"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/markedforesttoy.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.102"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/mondex.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.091"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/negate.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.093"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/opnames.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.064"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/proofCmds.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.158"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/refexpr_test.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.072"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/schemaCalculus.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.077"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/schemaSet.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.018"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/simple.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.179"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/simpleUnicode.zed8" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.083"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/smalltest.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.079"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/toolkitThms.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.097"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/underscoreNamedThm.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.015"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/workflow.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.08"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/zevesability.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.093"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/zeveslabels.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.075"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/zeveslabelsUnicode.zed8" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.08"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/zevesopt.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.072"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/zevesrenaming.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.078"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/zevesspecialops.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.084"/>
+  <testcase name="Test normal: file:/root/czt-code/zeves/target/test-classes/tests/zopt.tex" classname="net.sourceforge.czt.parser.util.CztManagedTest$TestNormal" time="0.08"/>
+</testsuite>

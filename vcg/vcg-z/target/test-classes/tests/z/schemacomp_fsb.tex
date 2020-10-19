@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage{czt}
+
+\begin{document}
+%----------------------------------
+
+\begin{zsection}	 \SECTION schemacomp\_fsb \parents~fsb\_toolkit , schemacomp
+\end{zsection}
+
+VC ZSection Created at Sun Oct 18 08:41:44 UTC 2020.
+
+VC3 for line 6 column 5 in "schemacomp"
+\begin{theorem}{ Data\_ vc\_ fsb}\\
+ \lnot Data = \{ \} \land \lnot Service = \{ \} \\
+
+\end{theorem}
+
+VC4 for line 8 column 5 start 119 length 63 in "schemacomp"
+\begin{theorem}{ W\_ vc\_ fsb}\\
+ \exists readBy : Data \rel Service ; writes : Service \rel Data | W @ true \\
+
+\end{theorem}
+
+VC6 for line 11 column 1 start 194 length 81 in "schemacomp"
+\begin{theorem}{ WFOp\_ vc\_ fsb}\\
+ \forall d? : Data ; readBy : Data \rel Service ; s? : Service ; writes : Service \rel Data | true @ \exists readBy' : Data \rel Service ; writes' : Service \rel Data | true @ WFOp \\
+
+\end{theorem}
+
+VC7 for line 17 column 1 start 279 length 147 in "schemacomp"
+\begin{theorem}{ AddReadBy\_ vc\_ fsb}\\
+ \forall d? : Data ; readBy : Data \rel Service ; s? : Service ; writes : Service \rel Data | true @ \exists readBy' : Data \rel Service ; writes' : Service \rel Data | true @ AddReadBy \\
+
+\end{theorem}
+
+VC8 for line 25 column 1 start 430 length 125 in "schemacomp"
+\begin{theorem}{ AddWrites\_ vc\_ fsb}\\
+ \forall d? : Data ; readBy : Data \rel Service ; s? : Service ; writes : Service \rel Data | true @ \exists readBy' : Data \rel Service ; writes' : Service \rel Data | true @ AddWrites \\
+
+\end{theorem}
+
+
+
+ VC Z section "schemacompARGfsb" has $5$ interesting VCs (Total = 9; Simplified to $true$ = 4).
+
+
+
+%----------------------------------
+\end{document}

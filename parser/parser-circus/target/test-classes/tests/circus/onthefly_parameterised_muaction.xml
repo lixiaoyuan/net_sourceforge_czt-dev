@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Spec Version="2.1" xsi:schemaLocation="http://czt.sourceforge.net/zml http://czt.sourceforge.net/zml/Z_2_1.xsd" xmlns="http://czt.sourceforge.net/zml" xmlns:ns2="http://czt.sourceforge.net/zpatt" xmlns:ns3="http://czt.sourceforge.net/circus" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ZSect>
+        <Anns>
+            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="0" Col="0" Start="0" Length="282"/>
+        </Anns>
+        <Name>onthefly_parameterised_muaction</Name>
+        <Parent>
+            <Anns>
+                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="1" Col="57" Start="73" Length="15"/>
+            </Anns>
+            <Word>circus_toolkit</Word>
+        </Parent>
+        <ZParaList>
+            <LatexMarkupPara/>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="2" Col="14" Start="103" Length="2"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+            </NarrPara>
+            <ns3:ProcessPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="5" Col="3" Start="123" Length="145"/>
+                </Anns>
+                <ZName>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="5" Col="17" Start="137" Length="1"/>
+                    </Anns>
+                    <Word>P</Word>
+                    <ZStrokeList/>
+                </ZName>
+                <ZNameList/>
+                <ns3:BasicProcess>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="5" Col="28" Start="148" Length="120"/>
+                    </Anns>
+                    <ZParaList>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="6" Col="20" Start="182"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="6" Col="20" Start="182"/>
+                                </Anns>
+                                <Word>$$implicitAct0_L6C20</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:MuAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="6" Col="20" Start="182"/>
+                                    <ParenAnn>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="6" Col="19" Start="181" Length="46"/>
+                                        </Anns>
+                                    </ParenAnn>
+                                    <ns3:OnTheFlyDefAnn/>
+                                </Anns>
+                                <ns3:ParamAction>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="6" Col="44"/>
+                                    </Anns>
+                                    <ns3:SkipAction>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="6" Col="59" Start="221" Length="5"/>
+                                        </Anns>
+                                    </ns3:SkipAction>
+                                    <ZDeclList>
+                                        <VarDecl>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="6" Col="42" Start="203" Length="7"/>
+                                            </Anns>
+                                            <ZNameList>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="6" Col="41" Start="203" Length="1"/>
+                                                    </Anns>
+                                                    <Word>n</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                            </ZNameList>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="6" Col="44" Start="206" Length="4"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="6" Col="44" Start="206" Length="4"/>
+                                                    </Anns>
+                                                    <Word>ℕ</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                        </VarDecl>
+                                    </ZDeclList>
+                                </ns3:ParamAction>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="6" Col="29" Start="191" Length="1"/>
+                                    </Anns>
+                                    <Word>X</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                            </ns3:MuAction>
+                        </ns3:ActionPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="6" Col="8" Start="170" Length="59"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="6" Col="8" Start="170" Length="1"/>
+                                </Anns>
+                                <Word>A</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:CallAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="6" Col="19" Start="181" Length="48"/>
+                                </Anns>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="6" Col="20" Start="182"/>
+                                    </Anns>
+                                    <Word>$$implicitAct0_L6C20</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ZExprList>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="6" Col="65" Start="227" Length="3"/>
+                                    </Anns>
+                                    <NumExpr>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="6" Col="66" Start="228" Length="1"/>
+                                        </Anns>
+                                        <ZNumeral Value="0">
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="6" Col="66" Start="228" Length="1"/>
+                                            </Anns>
+                                        </ZNumeral>
+                                    </NumExpr>
+                                </ZExprList>
+                            </ns3:CallAction>
+                        </ns3:ActionPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="7" Col="8" Start="242" Length="11"/>
+                            </Anns>
+                            <ZName>
+                                <Word>$$mainAction_L7C8</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:CallAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="7" Col="8" Start="242" Length="11"/>
+                                    <ns3:OnTheFlyDefAnn/>
+                                </Anns>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="7" Col="18" Start="252" Length="1"/>
+                                    </Anns>
+                                    <Word>A</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ZExprList/>
+                            </ns3:CallAction>
+                        </ns3:ActionPara>
+                        <AxPara Box="OmitBox">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="5" Col="28" Start="148" Length="120"/>
+                                <ns3:CircusStateAnn/>
+                                <ns3:CircusStateAnn/>
+                            </Anns>
+                            <ZNameList/>
+                            <ZSchText>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="5" Col="28" Start="148" Length="120"/>
+                                </Anns>
+                                <ZDeclList>
+                                    <ConstDecl>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="5" Col="28" Start="148" Length="120"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="5" Col="28" Start="148" Length="120"/>
+                                            </Anns>
+                                            <Word>$$defaultSt_L5C28</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <SchExpr>
+                                            <ZSchText>
+                                                <ZDeclList/>
+                                                <TruePred/>
+                                            </ZSchText>
+                                        </SchExpr>
+                                    </ConstDecl>
+                                </ZDeclList>
+                            </ZSchText>
+                        </AxPara>
+                    </ZParaList>
+                </ns3:BasicProcess>
+            </ns3:ProcessPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/onthefly_parameterised_muaction.tex" Line="9" Col="12" Start="281" Length="1"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</Content>
+            </NarrPara>
+        </ZParaList>
+    </ZSect>
+</Spec>

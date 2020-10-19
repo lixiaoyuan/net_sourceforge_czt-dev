@@ -1,0 +1,1753 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Spec Version="2.1" xsi:schemaLocation="http://czt.sourceforge.net/zml http://czt.sourceforge.net/zml/Z_2_1.xsd" xmlns="http://czt.sourceforge.net/zml" xmlns:ns2="http://czt.sourceforge.net/zpatt" xmlns:ns3="http://czt.sourceforge.net/circus" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ZSect>
+        <Anns>
+            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="0" Col="0" Start="0" Length="1307"/>
+        </Anns>
+        <Name>dot_field_singleenv</Name>
+        <Parent>
+            <Anns>
+                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="1" Col="45" Start="61" Length="15"/>
+            </Anns>
+            <Word>circus_toolkit</Word>
+        </Parent>
+        <ZParaList>
+            <LatexMarkupPara/>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="2" Col="14" Start="91" Length="1"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</Content>
+            </NarrPara>
+            <ns3:ChannelPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="4" Col="3" Start="110" Length="57"/>
+                </Anns>
+                <ZDeclList>
+                    <ns3:ChannelDecl>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="4" Col="17" Start="124" Length="43"/>
+                        </Anns>
+                        <ZNameList/>
+                        <ZNameList>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="4" Col="17" Start="124" Length="1"/>
+                                </Anns>
+                                <Word>c</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                        </ZNameList>
+                        <ProdExpr>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="4" Col="56" Start="127" Length="40"/>
+                            </Anns>
+                            <ZExprList>
+                                <RefExpr Mixfix="false" Explicit="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="4" Col="20" Start="127" Length="4"/>
+                                    </Anns>
+                                    <ZName>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="4" Col="20" Start="127" Length="4"/>
+                                        </Anns>
+                                        <Word>ℕ</Word>
+                                        <ZStrokeList/>
+                                    </ZName>
+                                    <ZExprList/>
+                                </RefExpr>
+                                <RefExpr Mixfix="false" Explicit="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="4" Col="32" Start="139" Length="4"/>
+                                    </Anns>
+                                    <ZName>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="4" Col="32" Start="139" Length="4"/>
+                                        </Anns>
+                                        <Word>ℕ</Word>
+                                        <ZStrokeList/>
+                                    </ZName>
+                                    <ZExprList/>
+                                </RefExpr>
+                                <RefExpr Mixfix="false" Explicit="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="4" Col="44" Start="151" Length="4"/>
+                                    </Anns>
+                                    <ZName>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="4" Col="44" Start="151" Length="4"/>
+                                        </Anns>
+                                        <Word>ℕ</Word>
+                                        <ZStrokeList/>
+                                    </ZName>
+                                    <ZExprList/>
+                                </RefExpr>
+                                <RefExpr Mixfix="false" Explicit="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="4" Col="56" Start="163" Length="4"/>
+                                    </Anns>
+                                    <ZName>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="4" Col="56" Start="163" Length="4"/>
+                                        </Anns>
+                                        <Word>ℕ</Word>
+                                        <ZStrokeList/>
+                                    </ZName>
+                                    <ZExprList/>
+                                </RefExpr>
+                            </ZExprList>
+                        </ProdExpr>
+                    </ns3:ChannelDecl>
+                </ZDeclList>
+            </ns3:ChannelPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="5" Col="12" Start="180" Length="2"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+            </NarrPara>
+            <AxPara Box="AxBox">
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="7" Col="0" Start="182" Length="64"/>
+                </Anns>
+                <ZNameList/>
+                <ZSchText>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="8" Col="9" Start="199" Length="35"/>
+                    </Anns>
+                    <ZDeclList>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="8" Col="9" Start="199" Length="35"/>
+                        </Anns>
+                        <VarDecl>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="8" Col="9" Start="199" Length="12"/>
+                            </Anns>
+                            <ZNameList>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="8" Col="3" Start="199" Length="2"/>
+                                    </Anns>
+                                    <Word>n1</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="8" Col="7" Start="203" Length="2"/>
+                                    </Anns>
+                                    <Word>n2</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                            </ZNameList>
+                            <RefExpr Mixfix="false" Explicit="false">
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="8" Col="11" Start="207" Length="4"/>
+                                </Anns>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="8" Col="11" Start="207" Length="4"/>
+                                    </Anns>
+                                    <Word>ℕ</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ZExprList/>
+                            </RefExpr>
+                        </VarDecl>
+                        <VarDecl>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="9" Col="13" Start="218" Length="16"/>
+                            </Anns>
+                            <ZNameList>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="9" Col="3" Start="218" Length="2"/>
+                                    </Anns>
+                                    <Word>x</Word>
+                                    <ZStrokeList>
+                                        <InStroke/>
+                                    </ZStrokeList>
+                                </ZName>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="9" Col="7" Start="222" Length="2"/>
+                                    </Anns>
+                                    <Word>y</Word>
+                                    <ZStrokeList>
+                                        <OutStroke/>
+                                    </ZStrokeList>
+                                </ZName>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="9" Col="11" Start="226" Length="2"/>
+                                    </Anns>
+                                    <Word>z</Word>
+                                    <ZStrokeList>
+                                        <InStroke/>
+                                    </ZStrokeList>
+                                </ZName>
+                            </ZNameList>
+                            <RefExpr Mixfix="false" Explicit="false">
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="9" Col="15" Start="230" Length="4"/>
+                                </Anns>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="9" Col="15" Start="230" Length="4"/>
+                                    </Anns>
+                                    <Word>ℕ</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ZExprList/>
+                            </RefExpr>
+                        </VarDecl>
+                    </ZDeclList>
+                </ZSchText>
+            </AxPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="10" Col="11" Start="246" Length="2"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+            </NarrPara>
+            <AxPara Box="AxBox">
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="12" Col="0" Start="248" Length="59"/>
+                </Anns>
+                <ZNameList/>
+                <ZSchText>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="13" Col="5" Start="265" Length="30"/>
+                    </Anns>
+                    <ZDeclList>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="13" Col="5" Start="265" Length="30"/>
+                        </Anns>
+                        <VarDecl>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="13" Col="5" Start="265" Length="30"/>
+                            </Anns>
+                            <ZNameList>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="13" Col="3" Start="265" Length="1"/>
+                                    </Anns>
+                                    <Word>f</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                            </ZNameList>
+                            <RefExpr Mixfix="true" Explicit="true">
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="13" Col="12" Start="274" Length="4"/>
+                                    </Anns>
+                                    <Word> _ → _ </Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ZExprList>
+                                    <RefExpr Mixfix="false" Explicit="false">
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="13" Col="7" Start="269" Length="4"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="13" Col="7" Start="269" Length="4"/>
+                                            </Anns>
+                                            <Word>ℕ</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </RefExpr>
+                                    <ProdExpr>
+                                        <ZExprList>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="13" Col="17" Start="279" Length="4"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="13" Col="17" Start="279" Length="4"/>
+                                                    </Anns>
+                                                    <Word>ℕ</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="13" Col="29" Start="291" Length="4"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="13" Col="29" Start="291" Length="4"/>
+                                                    </Anns>
+                                                    <Word>ℕ</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                        </ZExprList>
+                                    </ProdExpr>
+                                </ZExprList>
+                            </RefExpr>
+                        </VarDecl>
+                    </ZDeclList>
+                </ZSchText>
+            </AxPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="14" Col="11" Start="307" Length="2"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+            </NarrPara>
+            <AxPara Box="OmitBox">
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="16" Col="0" Start="309" Length="43"/>
+                </Anns>
+                <ZNameList/>
+                <ZSchText>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="17" Col="3" Start="324" Length="18"/>
+                    </Anns>
+                    <ZDeclList>
+                        <ConstDecl>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="17" Col="5" Start="324" Length="18"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="17" Col="3" Start="324" Length="1"/>
+                                </Anns>
+                                <Word>S</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <SchExpr>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="17" Col="8" Start="329" Length="13"/>
+                                </Anns>
+                                <ZSchText>
+                                    <ZDeclList>
+                                        <VarDecl>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="17" Col="12" Start="332" Length="7"/>
+                                            </Anns>
+                                            <ZNameList>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="17" Col="11" Start="332" Length="1"/>
+                                                    </Anns>
+                                                    <Word>y</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                            </ZNameList>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="17" Col="14" Start="335" Length="4"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="17" Col="14" Start="335" Length="4"/>
+                                                    </Anns>
+                                                    <Word>ℕ</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                        </VarDecl>
+                                    </ZDeclList>
+                                </ZSchText>
+                            </SchExpr>
+                        </ConstDecl>
+                    </ZDeclList>
+                </ZSchText>
+            </AxPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="18" Col="9" Start="352" Length="82"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+For a detailed explanation of these examples, see ``./dot-field-multennv.tex''.
+</Content>
+            </NarrPara>
+            <ns3:ProcessPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="23" Col="2" Start="453" Length="838"/>
+                </Anns>
+                <ZName>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="23" Col="16" Start="467" Length="13"/>
+                    </Anns>
+                    <Word>DotTestSingle</Word>
+                    <ZStrokeList/>
+                </ZName>
+                <ZNameList/>
+                <ns3:BasicProcess>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="23" Col="39" Start="490" Length="801"/>
+                    </Anns>
+                    <ZParaList>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="25" Col="7" Start="518" Length="34"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="25" Col="7" Start="518" Length="5"/>
+                                </Anns>
+                                <Word>Test0</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:PrefixingAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="25" Col="22" Start="533" Length="19"/>
+                                </Anns>
+                                <ns3:SkipAction>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="25" Col="36" Start="547" Length="5"/>
+                                    </Anns>
+                                </ns3:SkipAction>
+                                <ns3:Communication CommUsage="Normal" CommPattern="Input" MultiSych="0" Indexed="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="25" Col="22" Start="533" Length="2"/>
+                                    </Anns>
+                                    <RefExpr Mixfix="false" Explicit="false">
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="25" Col="22" Start="533" Length="2"/>
+                                            </Anns>
+                                            <Word>c</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </RefExpr>
+                                    <ns3:CircusFieldList>
+                                        <ns3:InputField>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="25" Col="24" Start="535" Length="2"/>
+                                                </Anns>
+                                                <Word>x</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <TruePred/>
+                                        </ns3:InputField>
+                                        <ns3:InputField>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="25" Col="26" Start="537" Length="2"/>
+                                                </Anns>
+                                                <Word>y</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <TruePred/>
+                                        </ns3:InputField>
+                                        <ns3:InputField>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="25" Col="28" Start="539" Length="1"/>
+                                                </Anns>
+                                                <Word>z</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <TruePred/>
+                                        </ns3:InputField>
+                                    </ns3:CircusFieldList>
+                                </ns3:Communication>
+                            </ns3:PrefixingAction>
+                        </ns3:ActionPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="27" Col="7" Start="569" Length="36"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="27" Col="7" Start="569" Length="5"/>
+                                </Anns>
+                                <Word>Test1</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:PrefixingAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="27" Col="22" Start="584" Length="21"/>
+                                </Anns>
+                                <ns3:SkipAction>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="27" Col="38" Start="600" Length="5"/>
+                                    </Anns>
+                                </ns3:SkipAction>
+                                <ns3:Communication CommUsage="Normal" CommPattern="Mixed" MultiSych="0" Indexed="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="27" Col="22" Start="584" Length="2"/>
+                                    </Anns>
+                                    <RefExpr Mixfix="false" Explicit="false">
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="27" Col="22" Start="584" Length="2"/>
+                                            </Anns>
+                                            <Word>c</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </RefExpr>
+                                    <ns3:CircusFieldList>
+                                        <ns3:InputField>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="27" Col="24" Start="586" Length="2"/>
+                                                </Anns>
+                                                <Word>x</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <TruePred/>
+                                        </ns3:InputField>
+                                        <ns3:DotField>
+                                            <Anns>
+                                                <ns3:OutputFieldAnn/>
+                                            </Anns>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="27" Col="26" Start="588" Length="2"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="27" Col="26" Start="588" Length="2"/>
+                                                    </Anns>
+                                                    <Word>n1</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                        </ns3:DotField>
+                                        <ns3:DotField>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="27" Col="28" Start="590" Length="3"/>
+                                            </Anns>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="27" Col="29" Start="591" Length="2"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="27" Col="29" Start="591" Length="2"/>
+                                                    </Anns>
+                                                    <Word>n2</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                        </ns3:DotField>
+                                    </ns3:CircusFieldList>
+                                </ns3:Communication>
+                            </ns3:PrefixingAction>
+                        </ns3:ActionPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="28" Col="7" Start="616" Length="36"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="28" Col="7" Start="616" Length="5"/>
+                                </Anns>
+                                <Word>Test2</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:PrefixingAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="28" Col="22" Start="631" Length="21"/>
+                                </Anns>
+                                <ns3:SkipAction>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="28" Col="38" Start="647" Length="5"/>
+                                    </Anns>
+                                </ns3:SkipAction>
+                                <ns3:Communication CommUsage="Normal" CommPattern="Mixed" MultiSych="0" Indexed="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="28" Col="22" Start="631" Length="2"/>
+                                    </Anns>
+                                    <RefExpr Mixfix="false" Explicit="false">
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="28" Col="22" Start="631" Length="2"/>
+                                            </Anns>
+                                            <Word>c</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </RefExpr>
+                                    <ns3:CircusFieldList>
+                                        <ns3:DotField>
+                                            <Anns>
+                                                <ns3:OutputFieldAnn/>
+                                            </Anns>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="28" Col="24" Start="633" Length="3"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="28" Col="24" Start="633" Length="3"/>
+                                                    </Anns>
+                                                    <Word>n1</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                        </ns3:DotField>
+                                        <ns3:InputField>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="28" Col="27" Start="636" Length="1"/>
+                                                </Anns>
+                                                <Word>x</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <TruePred/>
+                                        </ns3:InputField>
+                                        <ns3:DotField>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="28" Col="28" Start="637" Length="3"/>
+                                            </Anns>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="28" Col="29" Start="638" Length="2"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="28" Col="29" Start="638" Length="2"/>
+                                                    </Anns>
+                                                    <Word>n2</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                        </ns3:DotField>
+                                    </ns3:CircusFieldList>
+                                </ns3:Communication>
+                            </ns3:PrefixingAction>
+                        </ns3:ActionPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="30" Col="7" Start="669" Length="38"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="30" Col="7" Start="669" Length="5"/>
+                                </Anns>
+                                <Word>Test3</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:PrefixingAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="30" Col="22" Start="684" Length="23"/>
+                                </Anns>
+                                <ns3:CallAction>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="30" Col="38" Start="700" Length="7"/>
+                                    </Anns>
+                                    <ZName>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="30" Col="38" Start="700" Length="7"/>
+                                        </Anns>
+                                        <Word>dSkip</Word>
+                                        <ZStrokeList/>
+                                    </ZName>
+                                    <ZExprList/>
+                                </ns3:CallAction>
+                                <ns3:Communication CommUsage="Normal" CommPattern="Mixed" MultiSych="0" Indexed="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="30" Col="22" Start="684" Length="1"/>
+                                    </Anns>
+                                    <RefExpr Mixfix="false" Explicit="false">
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="30" Col="22" Start="684" Length="1"/>
+                                            </Anns>
+                                            <Word>c</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </RefExpr>
+                                    <ns3:CircusFieldList>
+                                        <ns3:DotField>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="30" Col="23" Start="685" Length="4"/>
+                                            </Anns>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="30" Col="24" Start="686" Length="3"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="30" Col="24" Start="686" Length="3"/>
+                                                    </Anns>
+                                                    <Word>n1</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                        </ns3:DotField>
+                                        <ns3:DotField>
+                                            <Anns>
+                                                <ns3:OutputFieldAnn/>
+                                            </Anns>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="30" Col="27" Start="689" Length="3"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="30" Col="27" Start="689" Length="3"/>
+                                                    </Anns>
+                                                    <Word>n2</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                        </ns3:DotField>
+                                        <ns3:InputField>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="30" Col="30" Start="692" Length="1"/>
+                                                </Anns>
+                                                <Word>x</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <TruePred/>
+                                        </ns3:InputField>
+                                    </ns3:CircusFieldList>
+                                </ns3:Communication>
+                            </ns3:PrefixingAction>
+                        </ns3:ActionPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="31" Col="7" Start="718" Length="36"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="31" Col="7" Start="718" Length="5"/>
+                                </Anns>
+                                <Word>Test4</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:PrefixingAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="31" Col="22" Start="733" Length="21"/>
+                                </Anns>
+                                <ns3:PrefixingAction>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="31" Col="30" Start="741" Length="13"/>
+                                    </Anns>
+                                    <ns3:SkipAction>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="31" Col="38" Start="749" Length="5"/>
+                                        </Anns>
+                                    </ns3:SkipAction>
+                                    <ns3:Communication CommUsage="Normal" CommPattern="Synch" MultiSych="0" Indexed="false">
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="31" Col="30" Start="741" Length="1"/>
+                                        </Anns>
+                                        <RefExpr Mixfix="false" Explicit="false">
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="31" Col="30" Start="741" Length="1"/>
+                                                </Anns>
+                                                <Word>e</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <ZExprList/>
+                                        </RefExpr>
+                                        <ns3:CircusFieldList/>
+                                    </ns3:Communication>
+                                </ns3:PrefixingAction>
+                                <ns3:Communication CommUsage="Normal" CommPattern="Synch" MultiSych="0" Indexed="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="31" Col="22" Start="733" Length="1"/>
+                                    </Anns>
+                                    <RefExpr Mixfix="false" Explicit="false">
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="31" Col="22" Start="733" Length="1"/>
+                                            </Anns>
+                                            <Word>d</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </RefExpr>
+                                    <ns3:CircusFieldList/>
+                                </ns3:Communication>
+                            </ns3:PrefixingAction>
+                        </ns3:ActionPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="32" Col="7" Start="765" Length="38"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="32" Col="7" Start="765" Length="5"/>
+                                </Anns>
+                                <Word>Test5</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:PrefixingAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="32" Col="22" Start="780" Length="23"/>
+                                </Anns>
+                                <ns3:SkipAction>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="32" Col="40" Start="798" Length="5"/>
+                                    </Anns>
+                                </ns3:SkipAction>
+                                <ns3:Communication CommUsage="Normal" CommPattern="Mixed" MultiSych="0" Indexed="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="32" Col="22" Start="780" Length="1"/>
+                                    </Anns>
+                                    <RefExpr Mixfix="false" Explicit="false">
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="32" Col="22" Start="780" Length="1"/>
+                                            </Anns>
+                                            <Word>c</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </RefExpr>
+                                    <ns3:CircusFieldList>
+                                        <ns3:InputField>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="32" Col="24" Start="782" Length="2"/>
+                                            </Anns>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="32" Col="25" Start="783" Length="1"/>
+                                                </Anns>
+                                                <Word>i</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <TruePred/>
+                                        </ns3:InputField>
+                                        <ns3:DotField>
+                                            <Anns>
+                                                <ns3:OutputFieldAnn/>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="32" Col="27" Start="785" Length="5"/>
+                                            </Anns>
+                                            <ApplExpr Mixfix="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="32" Col="29" Start="787" Length="3"/>
+                                                    <ParenAnn>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="32" Col="28" Start="786" Length="5"/>
+                                                        </Anns>
+                                                    </ParenAnn>
+                                                </Anns>
+                                                <RefExpr Mixfix="false" Explicit="false">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="32" Col="29" Start="787" Length="1"/>
+                                                    </Anns>
+                                                    <ZName>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="32" Col="29" Start="787" Length="1"/>
+                                                        </Anns>
+                                                        <Word>f</Word>
+                                                        <ZStrokeList/>
+                                                    </ZName>
+                                                    <ZExprList/>
+                                                </RefExpr>
+                                                <RefExpr Mixfix="false" Explicit="false">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="32" Col="31" Start="789" Length="1"/>
+                                                    </Anns>
+                                                    <ZName>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="32" Col="31" Start="789" Length="1"/>
+                                                        </Anns>
+                                                        <Word>i</Word>
+                                                        <ZStrokeList/>
+                                                    </ZName>
+                                                    <ZExprList/>
+                                                </RefExpr>
+                                            </ApplExpr>
+                                        </ns3:DotField>
+                                    </ns3:CircusFieldList>
+                                </ns3:Communication>
+                            </ns3:PrefixingAction>
+                        </ns3:ActionPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="34" Col="7" Start="824" Length="36"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="34" Col="7" Start="824" Length="5"/>
+                                </Anns>
+                                <Word>Test6</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:PrefixingAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="34" Col="22" Start="839" Length="21"/>
+                                </Anns>
+                                <ns3:SkipAction>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="34" Col="38" Start="855" Length="5"/>
+                                    </Anns>
+                                </ns3:SkipAction>
+                                <ns3:Communication CommUsage="Normal" CommPattern="Mixed" MultiSych="0" Indexed="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="34" Col="22" Start="839" Length="1"/>
+                                    </Anns>
+                                    <RefExpr Mixfix="false" Explicit="false">
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="34" Col="22" Start="839" Length="1"/>
+                                            </Anns>
+                                            <Word>c</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </RefExpr>
+                                    <ns3:CircusFieldList>
+                                        <ns3:DotField>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="34" Col="23" Start="840" Length="5"/>
+                                            </Anns>
+                                            <BindSelExpr>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="34" Col="26" Start="842" Length="3"/>
+                                                    <ParenAnn>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="34" Col="24" Start="841" Length="5"/>
+                                                        </Anns>
+                                                    </ParenAnn>
+                                                </Anns>
+                                                <RefExpr Mixfix="false" Explicit="false">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="34" Col="25" Start="842" Length="1"/>
+                                                    </Anns>
+                                                    <ZName>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="34" Col="25" Start="842" Length="1"/>
+                                                        </Anns>
+                                                        <Word>S</Word>
+                                                        <ZStrokeList/>
+                                                    </ZName>
+                                                    <ZExprList/>
+                                                </RefExpr>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="34" Col="27" Start="844" Length="1"/>
+                                                    </Anns>
+                                                    <Word>y</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                            </BindSelExpr>
+                                        </ns3:DotField>
+                                        <ns3:InputField>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="34" Col="29" Start="846" Length="2"/>
+                                            </Anns>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="34" Col="30" Start="847" Length="1"/>
+                                                </Anns>
+                                                <Word>z</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <TruePred/>
+                                        </ns3:InputField>
+                                    </ns3:CircusFieldList>
+                                </ns3:Communication>
+                            </ns3:PrefixingAction>
+                        </ns3:ActionPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="36" Col="7" Start="881" Length="43"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="36" Col="7" Start="881" Length="5"/>
+                                </Anns>
+                                <Word>Test7</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:PrefixingAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="36" Col="22" Start="896" Length="28"/>
+                                </Anns>
+                                <ns3:SkipAction>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="36" Col="45" Start="919" Length="5"/>
+                                    </Anns>
+                                </ns3:SkipAction>
+                                <ns3:Communication CommUsage="Normal" CommPattern="Output" MultiSych="0" Indexed="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="36" Col="22" Start="896" Length="1"/>
+                                    </Anns>
+                                    <RefExpr Mixfix="false" Explicit="false">
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="36" Col="22" Start="896" Length="1"/>
+                                            </Anns>
+                                            <Word>c</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </RefExpr>
+                                    <ns3:CircusFieldList>
+                                        <ns3:DotField>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="36" Col="23" Start="897" Length="4"/>
+                                            </Anns>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="36" Col="25" Start="899" Length="2"/>
+                                                    <ParenAnn>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="36" Col="24" Start="898" Length="4"/>
+                                                        </Anns>
+                                                    </ParenAnn>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="36" Col="25" Start="899" Length="2"/>
+                                                    </Anns>
+                                                    <Word>x</Word>
+                                                    <ZStrokeList>
+                                                        <InStroke/>
+                                                    </ZStrokeList>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                        </ns3:DotField>
+                                        <ns3:DotField>
+                                            <Anns>
+                                                <ns3:OutputFieldAnn/>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="36" Col="28" Start="902" Length="4"/>
+                                            </Anns>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="36" Col="30" Start="904" Length="2"/>
+                                                    <ParenAnn>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="36" Col="29" Start="903" Length="4"/>
+                                                        </Anns>
+                                                    </ParenAnn>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="36" Col="30" Start="904" Length="2"/>
+                                                    </Anns>
+                                                    <Word>y</Word>
+                                                    <ZStrokeList>
+                                                        <OutStroke/>
+                                                    </ZStrokeList>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                        </ns3:DotField>
+                                        <ns3:DotField>
+                                            <Anns>
+                                                <ns3:OutputFieldAnn/>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="36" Col="33" Start="907" Length="4"/>
+                                            </Anns>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="36" Col="35" Start="909" Length="2"/>
+                                                    <ParenAnn>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="36" Col="34" Start="908" Length="4"/>
+                                                        </Anns>
+                                                    </ParenAnn>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="36" Col="35" Start="909" Length="2"/>
+                                                    </Anns>
+                                                    <Word>z</Word>
+                                                    <ZStrokeList>
+                                                        <InStroke/>
+                                                    </ZStrokeList>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                        </ns3:DotField>
+                                    </ns3:CircusFieldList>
+                                </ns3:Communication>
+                            </ns3:PrefixingAction>
+                        </ns3:ActionPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="37" Col="7" Start="935" Length="57"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="37" Col="7" Start="935" Length="5"/>
+                                </Anns>
+                                <Word>Test8</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:PrefixingAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="37" Col="22" Start="950" Length="42"/>
+                                </Anns>
+                                <ns3:SkipAction>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="37" Col="59" Start="987" Length="5"/>
+                                    </Anns>
+                                </ns3:SkipAction>
+                                <ns3:Communication CommUsage="Normal" CommPattern="Mixed" MultiSych="0" Indexed="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="37" Col="22" Start="950" Length="2"/>
+                                    </Anns>
+                                    <RefExpr Mixfix="false" Explicit="false">
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="37" Col="22" Start="950" Length="2"/>
+                                            </Anns>
+                                            <Word>c</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </RefExpr>
+                                    <ns3:CircusFieldList>
+                                        <ns3:InputField>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="37" Col="24" Start="952" Length="1"/>
+                                                </Anns>
+                                                <Word>x</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <MemPred Mixfix="true">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="37" Col="40" Start="968" Length="5"/>
+                                                </Anns>
+                                                <TupleExpr>
+                                                    <ZExprList>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="37" Col="40" Start="968" Length="1"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="37" Col="40" Start="968" Length="1"/>
+                                                                </Anns>
+                                                                <Word>x</Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                        <NumExpr>
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="37" Col="44" Start="972" Length="1"/>
+                                                            </Anns>
+                                                            <ZNumeral Value="1">
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="37" Col="44" Start="972" Length="1"/>
+                                                                </Anns>
+                                                            </ZNumeral>
+                                                        </NumExpr>
+                                                    </ZExprList>
+                                                </TupleExpr>
+                                                <RefExpr Mixfix="false" Explicit="false">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="37" Col="42" Start="970" Length="2"/>
+                                                    </Anns>
+                                                    <ZName>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="37" Col="42" Start="970" Length="2"/>
+                                                        </Anns>
+                                                        <Word> _ &gt; _ </Word>
+                                                        <ZStrokeList/>
+                                                    </ZName>
+                                                    <ZExprList/>
+                                                </RefExpr>
+                                            </MemPred>
+                                        </ns3:InputField>
+                                        <ns3:DotField>
+                                            <Anns>
+                                                <ns3:OutputFieldAnn/>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="37" Col="46" Start="974" Length="5"/>
+                                            </Anns>
+                                            <ApplExpr Mixfix="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="37" Col="48" Start="976" Length="3"/>
+                                                    <ParenAnn>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="37" Col="47" Start="975" Length="5"/>
+                                                        </Anns>
+                                                    </ParenAnn>
+                                                </Anns>
+                                                <RefExpr Mixfix="false" Explicit="false">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="37" Col="48" Start="976" Length="1"/>
+                                                    </Anns>
+                                                    <ZName>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="37" Col="48" Start="976" Length="1"/>
+                                                        </Anns>
+                                                        <Word>f</Word>
+                                                        <ZStrokeList/>
+                                                    </ZName>
+                                                    <ZExprList/>
+                                                </RefExpr>
+                                                <RefExpr Mixfix="false" Explicit="false">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="37" Col="50" Start="978" Length="1"/>
+                                                    </Anns>
+                                                    <ZName>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="37" Col="50" Start="978" Length="1"/>
+                                                        </Anns>
+                                                        <Word>x</Word>
+                                                        <ZStrokeList/>
+                                                    </ZName>
+                                                    <ZExprList/>
+                                                </RefExpr>
+                                            </ApplExpr>
+                                        </ns3:DotField>
+                                    </ns3:CircusFieldList>
+                                </ns3:Communication>
+                            </ns3:PrefixingAction>
+                        </ns3:ActionPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="39" Col="7" Start="1010" Length="102"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="39" Col="7" Start="1010" Length="5"/>
+                                </Anns>
+                                <Word>Test9</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:PrefixingAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="39" Col="22" Start="1025" Length="87"/>
+                                </Anns>
+                                <ns3:PrefixingAction>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="40" Col="22" Start="1060" Length="52"/>
+                                    </Anns>
+                                    <ns3:SkipAction>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="40" Col="69" Start="1107" Length="5"/>
+                                        </Anns>
+                                    </ns3:SkipAction>
+                                    <ns3:Communication CommUsage="Normal" CommPattern="Mixed" MultiSych="0" Indexed="false">
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="40" Col="22" Start="1060" Length="2"/>
+                                        </Anns>
+                                        <RefExpr Mixfix="false" Explicit="false">
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="40" Col="22" Start="1060" Length="2"/>
+                                                </Anns>
+                                                <Word>c</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <ZExprList/>
+                                        </RefExpr>
+                                        <ns3:CircusFieldList>
+                                            <ns3:InputField>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="40" Col="24" Start="1062" Length="1"/>
+                                                    </Anns>
+                                                    <Word>z</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <MemPred Mixfix="true">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="40" Col="40" Start="1078" Length="7"/>
+                                                    </Anns>
+                                                    <TupleExpr>
+                                                        <ZExprList>
+                                                            <RefExpr Mixfix="false" Explicit="false">
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="40" Col="40" Start="1078" Length="1"/>
+                                                                </Anns>
+                                                                <ZName>
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="40" Col="40" Start="1078" Length="1"/>
+                                                                    </Anns>
+                                                                    <Word>z</Word>
+                                                                    <ZStrokeList/>
+                                                                </ZName>
+                                                                <ZExprList/>
+                                                            </RefExpr>
+                                                            <TupleSelExpr>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="40" Col="45" Start="1082" Length="3"/>
+                                                                </Anns>
+                                                                <RefExpr Mixfix="false" Explicit="false">
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="40" Col="44" Start="1082" Length="1"/>
+                                                                    </Anns>
+                                                                    <ZName>
+                                                                        <Anns>
+                                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="40" Col="44" Start="1082" Length="1"/>
+                                                                        </Anns>
+                                                                        <Word>x</Word>
+                                                                        <ZStrokeList/>
+                                                                    </ZName>
+                                                                    <ZExprList/>
+                                                                </RefExpr>
+                                                                <ZNumeral Value="1">
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="40" Col="46" Start="1084" Length="1"/>
+                                                                    </Anns>
+                                                                </ZNumeral>
+                                                            </TupleSelExpr>
+                                                        </ZExprList>
+                                                    </TupleExpr>
+                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="40" Col="42" Start="1080" Length="2"/>
+                                                        </Anns>
+                                                        <ZName>
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="40" Col="42" Start="1080" Length="2"/>
+                                                            </Anns>
+                                                            <Word> _ &gt; _ </Word>
+                                                            <ZStrokeList/>
+                                                        </ZName>
+                                                        <ZExprList/>
+                                                    </RefExpr>
+                                                </MemPred>
+                                            </ns3:InputField>
+                                            <ns3:DotField>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="40" Col="48" Start="1086" Length="12"/>
+                                                </Anns>
+                                                <ApplExpr Mixfix="false">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="40" Col="50" Start="1088" Length="10"/>
+                                                        <ParenAnn>
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="40" Col="49" Start="1087" Length="13"/>
+                                                            </Anns>
+                                                        </ParenAnn>
+                                                    </Anns>
+                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="40" Col="50" Start="1088" Length="1"/>
+                                                        </Anns>
+                                                        <ZName>
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="40" Col="50" Start="1088" Length="1"/>
+                                                            </Anns>
+                                                            <Word>f</Word>
+                                                            <ZStrokeList/>
+                                                        </ZName>
+                                                        <ZExprList/>
+                                                    </RefExpr>
+                                                    <ApplExpr Mixfix="true">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="40" Col="56" Start="1091" Length="7"/>
+                                                            <ParenAnn>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="40" Col="52" Start="1090" Length="9"/>
+                                                                </Anns>
+                                                            </ParenAnn>
+                                                        </Anns>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="40" Col="56" Start="1094" Length="1"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="40" Col="56" Start="1094" Length="1"/>
+                                                                </Anns>
+                                                                <Word> _ + _ </Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                        <TupleExpr>
+                                                            <ZExprList>
+                                                                <TupleSelExpr>
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="40" Col="54" Start="1091" Length="3"/>
+                                                                    </Anns>
+                                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                                        <Anns>
+                                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="40" Col="53" Start="1091" Length="1"/>
+                                                                        </Anns>
+                                                                        <ZName>
+                                                                            <Anns>
+                                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="40" Col="53" Start="1091" Length="1"/>
+                                                                            </Anns>
+                                                                            <Word>x</Word>
+                                                                            <ZStrokeList/>
+                                                                        </ZName>
+                                                                        <ZExprList/>
+                                                                    </RefExpr>
+                                                                    <ZNumeral Value="2">
+                                                                        <Anns>
+                                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="40" Col="55" Start="1093" Length="1"/>
+                                                                        </Anns>
+                                                                    </ZNumeral>
+                                                                </TupleSelExpr>
+                                                                <TupleSelExpr>
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="40" Col="58" Start="1095" Length="3"/>
+                                                                    </Anns>
+                                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                                        <Anns>
+                                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="40" Col="57" Start="1095" Length="1"/>
+                                                                        </Anns>
+                                                                        <ZName>
+                                                                            <Anns>
+                                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="40" Col="57" Start="1095" Length="1"/>
+                                                                            </Anns>
+                                                                            <Word>x</Word>
+                                                                            <ZStrokeList/>
+                                                                        </ZName>
+                                                                        <ZExprList/>
+                                                                    </RefExpr>
+                                                                    <ZNumeral Value="3">
+                                                                        <Anns>
+                                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="40" Col="59" Start="1097" Length="1"/>
+                                                                        </Anns>
+                                                                    </ZNumeral>
+                                                                </TupleSelExpr>
+                                                            </ZExprList>
+                                                        </TupleExpr>
+                                                    </ApplExpr>
+                                                </ApplExpr>
+                                            </ns3:DotField>
+                                        </ns3:CircusFieldList>
+                                    </ns3:Communication>
+                                </ns3:PrefixingAction>
+                                <ns3:Communication CommUsage="Normal" CommPattern="Input" MultiSych="0" Indexed="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="39" Col="22" Start="1025" Length="2"/>
+                                    </Anns>
+                                    <RefExpr Mixfix="false" Explicit="false">
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="39" Col="22" Start="1025" Length="2"/>
+                                            </Anns>
+                                            <Word>c</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </RefExpr>
+                                    <ns3:CircusFieldList>
+                                        <ns3:InputField>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="39" Col="24" Start="1027" Length="1"/>
+                                                </Anns>
+                                                <Word>x</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <TruePred/>
+                                        </ns3:InputField>
+                                    </ns3:CircusFieldList>
+                                </ns3:Communication>
+                            </ns3:PrefixingAction>
+                        </ns3:ActionPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="41" Col="7" Start="1123" Length="67"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="41" Col="7" Start="1123" Length="6"/>
+                                </Anns>
+                                <Word>Test10</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:PrefixingAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="41" Col="23" Start="1139" Length="51"/>
+                                </Anns>
+                                <ns3:SkipAction>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="41" Col="69" Start="1185" Length="5"/>
+                                    </Anns>
+                                </ns3:SkipAction>
+                                <ns3:Communication CommUsage="Generic" CommPattern="Mixed" MultiSych="0" Indexed="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="41" Col="23" Start="1139" Length="1"/>
+                                    </Anns>
+                                    <RefExpr Mixfix="false" Explicit="true">
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="41" Col="23" Start="1139" Length="1"/>
+                                            </Anns>
+                                            <Word>g</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList>
+                                            <ProdExpr>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="41" Col="49" Start="1141" Length="28"/>
+                                                </Anns>
+                                                <ZExprList>
+                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="41" Col="25" Start="1141" Length="4"/>
+                                                        </Anns>
+                                                        <ZName>
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="41" Col="25" Start="1141" Length="4"/>
+                                                            </Anns>
+                                                            <Word>ℕ</Word>
+                                                            <ZStrokeList/>
+                                                        </ZName>
+                                                        <ZExprList/>
+                                                    </RefExpr>
+                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="41" Col="37" Start="1153" Length="4"/>
+                                                        </Anns>
+                                                        <ZName>
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="41" Col="37" Start="1153" Length="4"/>
+                                                            </Anns>
+                                                            <Word>ℕ</Word>
+                                                            <ZStrokeList/>
+                                                        </ZName>
+                                                        <ZExprList/>
+                                                    </RefExpr>
+                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="41" Col="49" Start="1165" Length="4"/>
+                                                        </Anns>
+                                                        <ZName>
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="41" Col="49" Start="1165" Length="4"/>
+                                                            </Anns>
+                                                            <Word>ℕ</Word>
+                                                            <ZStrokeList/>
+                                                        </ZName>
+                                                        <ZExprList/>
+                                                    </RefExpr>
+                                                </ZExprList>
+                                            </ProdExpr>
+                                        </ZExprList>
+                                    </RefExpr>
+                                    <ns3:CircusFieldList>
+                                        <ns3:InputField>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="41" Col="54" Start="1170" Length="3"/>
+                                            </Anns>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="41" Col="55" Start="1171" Length="2"/>
+                                                </Anns>
+                                                <Word>x</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <TruePred/>
+                                        </ns3:InputField>
+                                        <ns3:DotField>
+                                            <Anns>
+                                                <ns3:OutputFieldAnn/>
+                                            </Anns>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="41" Col="57" Start="1173" Length="2"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="41" Col="57" Start="1173" Length="2"/>
+                                                    </Anns>
+                                                    <Word>n1</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                        </ns3:DotField>
+                                        <ns3:DotField>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="41" Col="59" Start="1175" Length="3"/>
+                                            </Anns>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="41" Col="60" Start="1176" Length="2"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="41" Col="60" Start="1176" Length="2"/>
+                                                    </Anns>
+                                                    <Word>n2</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                        </ns3:DotField>
+                                    </ns3:CircusFieldList>
+                                </ns3:Communication>
+                            </ns3:PrefixingAction>
+                        </ns3:ActionPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="43" Col="7" Start="1212" Length="39"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="43" Col="7" Start="1212" Length="6"/>
+                                </Anns>
+                                <Word>Test10</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:PrefixingAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="43" Col="23" Start="1228" Length="23"/>
+                                </Anns>
+                                <ns3:SkipAction>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="43" Col="41" Start="1246" Length="5"/>
+                                    </Anns>
+                                </ns3:SkipAction>
+                                <ns3:Communication CommUsage="Normal" CommPattern="Output" MultiSych="0" Indexed="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="43" Col="23" Start="1228" Length="1"/>
+                                    </Anns>
+                                    <RefExpr Mixfix="false" Explicit="false">
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="43" Col="23" Start="1228" Length="1"/>
+                                            </Anns>
+                                            <Word>g</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </RefExpr>
+                                    <ns3:CircusFieldList>
+                                        <ns3:DotField>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="43" Col="24" Start="1229" Length="3"/>
+                                            </Anns>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="43" Col="25" Start="1230" Length="2"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="43" Col="25" Start="1230" Length="2"/>
+                                                    </Anns>
+                                                    <Word>n1</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                        </ns3:DotField>
+                                        <ns3:DotField>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="43" Col="27" Start="1232" Length="6"/>
+                                            </Anns>
+                                            <ApplExpr Mixfix="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="43" Col="29" Start="1234" Length="4"/>
+                                                    <ParenAnn>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="43" Col="28" Start="1233" Length="6"/>
+                                                        </Anns>
+                                                    </ParenAnn>
+                                                </Anns>
+                                                <RefExpr Mixfix="false" Explicit="false">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="43" Col="29" Start="1234" Length="1"/>
+                                                    </Anns>
+                                                    <ZName>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="43" Col="29" Start="1234" Length="1"/>
+                                                        </Anns>
+                                                        <Word>f</Word>
+                                                        <ZStrokeList/>
+                                                    </ZName>
+                                                    <ZExprList/>
+                                                </RefExpr>
+                                                <RefExpr Mixfix="false" Explicit="false">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="43" Col="31" Start="1236" Length="2"/>
+                                                    </Anns>
+                                                    <ZName>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="43" Col="31" Start="1236" Length="2"/>
+                                                        </Anns>
+                                                        <Word>n1</Word>
+                                                        <ZStrokeList/>
+                                                    </ZName>
+                                                    <ZExprList/>
+                                                </RefExpr>
+                                            </ApplExpr>
+                                        </ns3:DotField>
+                                    </ns3:CircusFieldList>
+                                </ns3:Communication>
+                            </ns3:PrefixingAction>
+                        </ns3:ActionPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="44" Col="3" Start="1261" Length="15"/>
+                            </Anns>
+                            <ZName>
+                                <Word>$$mainAction_L44C3</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:SkipAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="44" Col="3" Start="1261" Length="15"/>
+                                    <ns3:OnTheFlyDefAnn/>
+                                </Anns>
+                            </ns3:SkipAction>
+                        </ns3:ActionPara>
+                        <AxPara Box="OmitBox">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="23" Col="39" Start="490" Length="801"/>
+                                <ns3:CircusStateAnn/>
+                                <ns3:CircusStateAnn/>
+                            </Anns>
+                            <ZNameList/>
+                            <ZSchText>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="23" Col="39" Start="490" Length="801"/>
+                                </Anns>
+                                <ZDeclList>
+                                    <ConstDecl>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="23" Col="39" Start="490" Length="801"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="23" Col="39" Start="490" Length="801"/>
+                                            </Anns>
+                                            <Word>$$defaultSt_L23C39</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <SchExpr>
+                                            <ZSchText>
+                                                <ZDeclList/>
+                                                <TruePred/>
+                                            </ZSchText>
+                                        </SchExpr>
+                                    </ConstDecl>
+                                </ZDeclList>
+                            </ZSchText>
+                        </AxPara>
+                    </ZParaList>
+                </ns3:BasicProcess>
+            </ns3:ProcessPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/dot-field-singleenv.tex" Line="46" Col="12" Start="1304" Length="3"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+</Content>
+            </NarrPara>
+        </ZParaList>
+    </ZSect>
+</Spec>

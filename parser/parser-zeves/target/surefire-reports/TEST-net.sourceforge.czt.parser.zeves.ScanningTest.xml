@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="net.sourceforge.czt.parser.zeves.ScanningTest" time="3.376" tests="91" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-0.el7_8.x86_64/jre/lib/amd64"/>
+    <property name="java.vm.version" value="25.262-b10"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="/root/czt-code"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/root/czt-code"/>
+    <property name="java.runtime.version" value="1.8.0_262-b10"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-0.el7_8.x86_64/jre/lib/endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Linux"/>
+    <property name="classworlds.conf" value="/usr/local/apache-maven-3.5.4/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="maven.conf" value="/usr/local/apache-maven-3.5.4/conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="3.10.0-1062.12.1.el7.x86_64"/>
+    <property name="library.jansi.path" value="/usr/local/apache-maven-3.5.4/lib/jansi-native"/>
+    <property name="user.home" value="/root"/>
+    <property name="user.timezone" value="UTC"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="root"/>
+    <property name="java.class.path" value="/usr/local/apache-maven-3.5.4/boot/plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-0.el7_8.x86_64/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install -U"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_262"/>
+    <property name="java.ext.dirs" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-0.el7_8.x86_64/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-0.el7_8.x86_64/jre/lib/resources.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-0.el7_8.x86_64/jre/lib/rt.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-0.el7_8.x86_64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-0.el7_8.x86_64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-0.el7_8.x86_64/jre/lib/jce.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-0.el7_8.x86_64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-0.el7_8.x86_64/jre/lib/jfr.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-0.el7_8.x86_64/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/usr/local/apache-maven-3.5.4"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.font.fontmanager" value="sun.awt.X11FontManager"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/TID-proofs.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.683"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/appTo.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.06"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/appTo.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/atm_bags.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.067"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/bar.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/bbook.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.052"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/bbook.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.024"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/bindExpr.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.042"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/bindExpr.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.022"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/chain.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.332"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/dollarNamedThm.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.053"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/dollarNamedThm.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.011"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/foo.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/freertos.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.074"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/genericSchemas.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.048"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/genericSchemas.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.007"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/instantiateTest.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.044"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/keywordProblems.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.049"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/missingHardSpace.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.047"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/opnames.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.048"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofCmds.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.063"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.044"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.006"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoalPP.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.048"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoalPP.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.011"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/refRulesEquiv.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.047"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/refRulesEquiv.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.011"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/simple.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.047"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/simple.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.011"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/smalltest.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.047"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/sorryTest.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.044"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/toolkitThms.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.048"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.007"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/variedAndPredInSchemaAndAxDef.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.007"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zevesability.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.045"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zeveslabels.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.049"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zeveslabels.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.006"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zevesopt.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.047"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zevesrenaming.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.059"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.041"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zstateref.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.052"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zstateref.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.012"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/TID-proofs.tex.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.099"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/appTo.tex.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.002"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/appTo.zed8.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.062"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/atm_bags.tex.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/bar.tex.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/bbook.tex.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/bbook.zed8.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.062"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/bbook.zev.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/bindExpr.tex.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.006"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/bindExpr.zed8.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.043"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/chain.tex.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.044"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/dollarNamedThm.tex.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.003"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/dollarNamedThm.zed8.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.064"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/foo.tex.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/freertos.tex.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/genericSchemas.tex.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.012"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/genericSchemas.zed8.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.034"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/genericSchemas.zml.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.059"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/genericSchemas.zml.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/instantiateTest.tex.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/keywordProblems.tex.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/missingHardSpace.tex.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/opnames.tex.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofCmds.tex.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.012"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.zed8.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.051"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoalPP.tex.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoalPP.zed8.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.053"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/refRulesEquiv.tex.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/refRulesEquiv.zed8.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.058"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/refRulesEquiv.zml.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.045"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/refRulesEquiv.zml.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.003"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/simple.tex.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.009"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/simple.zed8.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.046"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/smalltest.tex.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.003"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/sorryTest.tex.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.007"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/toolkitThms.tex.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/underscoreNamedThm.tex.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.003"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/variedAndPredInSchemaAndAxDef.tex.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.002"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zevesability.tex.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.01"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zeveslabels.tex.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zeveslabels.zed8.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.063"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zevesopt.tex.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zevesrenaming.tex.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zopt.tex.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zstateref.tex.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zstateref.zed8.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.049"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zstateref.zml.tex" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.046"/>
+  <testcase name="Test normal: /root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/zstateref.zml.zed8" classname="net.sourceforge.czt.parser.zeves.ScanningTest$TestNormal" time="0.011"/>
+</testsuite>

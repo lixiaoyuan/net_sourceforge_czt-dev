@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='1'>
+  <unit id='net.sourceforge.czt.eclipse.ui' version='1.6.0.202010180842'>
+    <update id='net.sourceforge.czt.eclipse.ui' range='[0.0.0,1.6.0.202010180842)' severity='0'/>
+    <properties size='8'>
+      <property name='df_LT.Plugin.providerName' value='Community Z Tools Project'/>
+      <property name='df_LT.Plugin.name' value='CZT Eclipse UI'/>
+      <property name='org.eclipse.equinox.p2.name' value='%Plugin.name'/>
+      <property name='org.eclipse.equinox.p2.provider' value='%Plugin.providerName'/>
+      <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+      <property name='maven-groupId' value='net.sourceforge.czt.eclipse'/>
+      <property name='maven-artifactId' value='net.sourceforge.czt.eclipse.ui'/>
+      <property name='maven-version' value='1.6.0-SNAPSHOT'/>
+    </properties>
+    <provides size='10'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='net.sourceforge.czt.eclipse.ui' version='1.6.0.202010180842'/>
+      <provided namespace='osgi.bundle' name='net.sourceforge.czt.eclipse.ui' version='1.6.0.202010180842'/>
+      <provided namespace='java.package' name='net.sourceforge.czt.eclipse.ui' version='0.0.0'/>
+      <provided namespace='java.package' name='net.sourceforge.czt.eclipse.ui.compile' version='0.0.0'/>
+      <provided namespace='java.package' name='net.sourceforge.czt.eclipse.ui.document' version='0.0.0'/>
+      <provided namespace='java.package' name='net.sourceforge.czt.eclipse.ui.editors' version='0.0.0'/>
+      <provided namespace='java.package' name='net.sourceforge.czt.eclipse.ui.util' version='0.0.0'/>
+      <provided namespace='java.package' name='net.sourceforge.czt.eclipse.ui.views' version='0.0.0'/>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+    </provides>
+    <requires size='44'>
+      <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.ui.workbench.texteditor' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.jface.text' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.ui.editors' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.ui.console' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.ui.views' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.search' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.ui.forms' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.ui.navigator' range='3.2.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.core.expressions' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='net.sourceforge.czt.eclipse.core' range='1.6.0'/>
+      <required namespace='java.package' name='net.sourceforge.czt.base.ast' range='1.6.0'/>
+      <required namespace='java.package' name='net.sourceforge.czt.base.visitor' range='1.6.0'/>
+      <required namespace='java.package' name='net.sourceforge.czt.circus.ast' range='1.6.0.SNAPSHOT'/>
+      <required namespace='java.package' name='net.sourceforge.czt.circus.util' range='1.6.0'/>
+      <required namespace='java.package' name='net.sourceforge.czt.circus.visitor' range='1.6.0.SNAPSHOT'/>
+      <required namespace='java.package' name='net.sourceforge.czt.circustime.ast' range='1.6.0.SNAPSHOT'/>
+      <required namespace='java.package' name='net.sourceforge.czt.circustime.util' range='1.6.0.SNAPSHOT'/>
+      <required namespace='java.package' name='net.sourceforge.czt.circustime.visitor' range='1.6.0.SNAPSHOT'/>
+      <required namespace='java.package' name='net.sourceforge.czt.oz.ast' range='1.6.0'/>
+      <required namespace='java.package' name='net.sourceforge.czt.oz.visitor' range='1.6.0'/>
+      <required namespace='java.package' name='net.sourceforge.czt.parser.circus' range='1.6.0.SNAPSHOT'/>
+      <required namespace='java.package' name='net.sourceforge.czt.parser.circustime' range='1.6.0.SNAPSHOT'/>
+      <required namespace='java.package' name='net.sourceforge.czt.parser.oz' range='1.6.0.SNAPSHOT'/>
+      <required namespace='java.package' name='net.sourceforge.czt.parser.util' range='1.6.0'/>
+      <required namespace='java.package' name='net.sourceforge.czt.parser.z' range='1.6.0.SNAPSHOT'/>
+      <required namespace='java.package' name='net.sourceforge.czt.parser.zeves' range='1.6.0.SNAPSHOT'/>
+      <required namespace='java.package' name='net.sourceforge.czt.print.util' range='1.6.0'/>
+      <required namespace='java.package' name='net.sourceforge.czt.session' range='1.6.0'/>
+      <required namespace='java.package' name='net.sourceforge.czt.text' range='1.6.0'/>
+      <required namespace='java.package' name='net.sourceforge.czt.typecheck.oz' range='1.6.0'/>
+      <required namespace='java.package' name='net.sourceforge.czt.typecheck.z' range='1.6.0'/>
+      <required namespace='java.package' name='net.sourceforge.czt.typecheck.z.util' range='1.6.0'/>
+      <required namespace='java.package' name='net.sourceforge.czt.util' range='1.6.0'/>
+      <required namespace='java.package' name='net.sourceforge.czt.z.ast' range='1.6.0'/>
+      <required namespace='java.package' name='net.sourceforge.czt.z.util' range='1.6.0'/>
+      <required namespace='java.package' name='net.sourceforge.czt.z.visitor' range='1.6.0'/>
+      <required namespace='java.package' name='net.sourceforge.czt.zeves.ast' range='1.6.0'/>
+      <required namespace='java.package' name='net.sourceforge.czt.zeves.util' range='1.6.0'/>
+      <required namespace='java.package' name='net.sourceforge.czt.zeves.visitor' range='1.6.0'/>
+      <required namespace='java.package' name='net.sourceforge.czt.zpatt.util' range='1.6.0'/>
+    </requires>
+    <artifacts size='1'>
+      <artifact classifier='osgi.bundle' id='net.sourceforge.czt.eclipse.ui' version='1.6.0.202010180842'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='manifest'>
+          Bundle-SymbolicName: net.sourceforge.czt.eclipse.ui;singleton:=true&#xA;Bundle-Version: 1.6.0.202010180842&#xA;
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+</units>

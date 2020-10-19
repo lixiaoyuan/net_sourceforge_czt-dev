@@ -1,0 +1,10 @@
+/root/czt-code/parser/parser-circustime/src/test/java/net/sourceforge/czt/parser/circustime/ParseErrorLogging.java
+/root/czt-code/parser/parser-circustime/src/test/java/net/sourceforge/czt/parser/circustime/ParserFailTest.java
+/root/czt-code/parser/parser-circustime/src/test/java/net/sourceforge/czt/parser/circustime/DefaultCircusTimeSectionParentsTest.java
+/root/czt-code/parser/parser-circustime/src/test/java/net/sourceforge/czt/print/circustime/PrintTest.java
+/root/czt-code/parser/parser-circustime/src/test/java/net/sourceforge/czt/parser/circustime/AbstractParserTest.java
+/root/czt-code/parser/parser-circustime/src/test/java/net/sourceforge/czt/parser/circustime/ParserUtilsTest.java
+/root/czt-code/parser/parser-circustime/src/test/java/net/sourceforge/czt/parser/circustime/SectionManagerCircusTimeParserTest.java
+/root/czt-code/parser/parser-circustime/src/test/java/net/sourceforge/czt/parser/circustime/CyclicParentParserTest.java
+/root/czt-code/parser/parser-circustime/src/test/java/net/sourceforge/czt/parser/circustime/ParserTest.java
+/root/czt-code/parser/parser-circustime/src/test/java/net/sourceforge/czt/parser/circustime/SimpleCircusTimeFormatter.java

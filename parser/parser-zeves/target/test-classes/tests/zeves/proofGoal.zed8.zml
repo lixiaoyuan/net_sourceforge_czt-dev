@@ -1,0 +1,1737 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ZSect xsi:schemaLocation="http://czt.sourceforge.net/zml http://czt.sourceforge.net/zml/Z_2_1.xsd" xmlns="http://czt.sourceforge.net/zml" xmlns:ns2="http://czt.sourceforge.net/zeves" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Anns>
+        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="0" Col="0" Start="0" Length="1085"/>
+    </Anns>
+    <Name>proofGoal</Name>
+    <Parent>
+        <Anns>
+            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="1" Col="32" Start="48" Length="17"/>
+        </Anns>
+        <Word>standard_toolkit</Word>
+    </Parent>
+    <ZParaList>
+        <LatexMarkupPara/>
+        <NarrPara>
+            <Anns>
+                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="2" Col="14" Start="80" Length="2"/>
+            </Anns>
+            <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+        </NarrPara>
+        <ConjPara>
+            <Anns>
+                <ZName>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="4" Col="16" Start="98" Length="4"/>
+                    </Anns>
+                    <Word>Test</Word>
+                    <ZStrokeList/>
+                </ZName>
+                <ns2:ZEvesLabel LabelAbility="none" LabelUsage="none">
+                    <ZName>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="4" Col="16" Start="98" Length="4"/>
+                        </Anns>
+                        <Word>Test</Word>
+                        <ZStrokeList/>
+                    </ZName>
+                </ns2:ZEvesLabel>
+                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="4" Col="0" Start="82" Length="1002"/>
+            </Anns>
+            <ZNameList/>
+            <ForallPred>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="5" Col="4" Start="108" Length="962"/>
+                </Anns>
+                <ZSchText>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex"/>
+                    </Anns>
+                    <ZDeclList>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex"/>
+                        </Anns>
+                        <InclDecl>
+                            <RefExpr Mixfix="false" Explicit="false">
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="5" Col="12" Start="116" Length="14"/>
+                                </Anns>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="5" Col="12" Start="116" Length="14"/>
+                                    </Anns>
+                                    <Word>WFBellLapadula</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ZExprList/>
+                            </RefExpr>
+                        </InclDecl>
+                    </ZDeclList>
+                </ZSchText>
+                <ImpliesPred>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="15" Col="33" Start="139" Length="931"/>
+                    </Anns>
+                    <AndPred And="Wedge">
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="15" Col="6" Start="139" Length="874"/>
+                        </Anns>
+                        <AndPred And="Wedge">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="48" Start="139" Length="839"/>
+                            </Anns>
+                            <AndPred And="Wedge">
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="13" Col="96" Start="139" Length="771"/>
+                                </Anns>
+                                <AndPred And="Wedge">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="13" Col="48" Start="139" Length="717"/>
+                                    </Anns>
+                                    <AndPred And="Wedge">
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="12" Col="99" Start="139" Length="669"/>
+                                        </Anns>
+                                        <AndPred And="Wedge">
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="12" Col="51" Start="139" Length="615"/>
+                                            </Anns>
+                                            <AndPred And="Wedge">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="11" Col="74" Start="139" Length="567"/>
+                                                </Anns>
+                                                <AndPred And="Wedge">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="11" Col="57" Start="139" Length="512"/>
+                                                    </Anns>
+                                                    <AndPred And="Wedge">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="11" Col="37" Start="139" Length="495"/>
+                                                        </Anns>
+                                                        <AndPred And="Wedge">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="10" Col="80" Start="139" Length="475"/>
+                                                            </Anns>
+                                                            <AndPred And="Wedge">
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="10" Col="40" Start="139" Length="432"/>
+                                                                </Anns>
+                                                                <AndPred And="Wedge">
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="98" Start="139" Length="392"/>
+                                                                    </Anns>
+                                                                    <AndPred And="Wedge">
+                                                                        <Anns>
+                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="51" Start="139" Length="346"/>
+                                                                        </Anns>
+                                                                        <AndPred And="Wedge">
+                                                                            <Anns>
+                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="8" Col="91" Start="139" Length="299"/>
+                                                                            </Anns>
+                                                                            <AndPred And="Wedge">
+                                                                                <Anns>
+                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="8" Col="41" Start="139" Length="242"/>
+                                                                                </Anns>
+                                                                                <AndPred And="Wedge">
+                                                                                    <Anns>
+                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="7" Col="76" Start="139" Length="192"/>
+                                                                                    </Anns>
+                                                                                    <AndPred And="Wedge">
+                                                                                        <Anns>
+                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="7" Col="39" Start="139" Length="145"/>
+                                                                                        </Anns>
+                                                                                        <AndPred And="Wedge">
+                                                                                            <Anns>
+                                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="6" Col="70" Start="139" Length="108"/>
+                                                                                            </Anns>
+                                                                                            <AndPred And="Wedge">
+                                                                                                <Anns>
+                                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="6" Col="35" Start="139" Length="63"/>
+                                                                                                </Anns>
+                                                                                                <MemPred Mixfix="false">
+                                                                                                    <Anns>
+                                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="6" Col="13" Start="139" Length="28"/>
+                                                                                                    </Anns>
+                                                                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                                                                        <Anns>
+                                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="6" Col="6" Start="139" Length="6"/>
+                                                                                                        </Anns>
+                                                                                                        <ZName>
+                                                                                                            <Anns>
+                                                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="6" Col="6" Start="139" Length="6"/>
+                                                                                                            </Anns>
+                                                                                                            <Word>readBy</Word>
+                                                                                                            <ZStrokeList/>
+                                                                                                        </ZName>
+                                                                                                        <ZExprList/>
+                                                                                                    </RefExpr>
+                                                                                                    <RefExpr Mixfix="true" Explicit="true">
+                                                                                                        <Anns>
+                                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="6" Col="22" Start="150" Length="17"/>
+                                                                                                        </Anns>
+                                                                                                        <ZName>
+                                                                                                            <Anns>
+                                                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="6" Col="22" Start="155" Length="4"/>
+                                                                                                            </Anns>
+                                                                                                            <Word> _ ↔ _ </Word>
+                                                                                                            <ZStrokeList/>
+                                                                                                        </ZName>
+                                                                                                        <ZExprList>
+                                                                                                            <RefExpr Mixfix="false" Explicit="false">
+                                                                                                                <Anns>
+                                                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="6" Col="17" Start="150" Length="4"/>
+                                                                                                                </Anns>
+                                                                                                                <ZName>
+                                                                                                                    <Anns>
+                                                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="6" Col="17" Start="150" Length="4"/>
+                                                                                                                    </Anns>
+                                                                                                                    <Word>Data</Word>
+                                                                                                                    <ZStrokeList/>
+                                                                                                                </ZName>
+                                                                                                                <ZExprList/>
+                                                                                                            </RefExpr>
+                                                                                                            <RefExpr Mixfix="false" Explicit="false">
+                                                                                                                <Anns>
+                                                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="6" Col="27" Start="160" Length="7"/>
+                                                                                                                </Anns>
+                                                                                                                <ZName>
+                                                                                                                    <Anns>
+                                                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="6" Col="27" Start="160" Length="7"/>
+                                                                                                                    </Anns>
+                                                                                                                    <Word>Service</Word>
+                                                                                                                    <ZStrokeList/>
+                                                                                                                </ZName>
+                                                                                                                <ZExprList/>
+                                                                                                            </RefExpr>
+                                                                                                        </ZExprList>
+                                                                                                    </RefExpr>
+                                                                                                </MemPred>
+                                                                                                <MemPred Mixfix="false">
+                                                                                                    <Anns>
+                                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="6" Col="48" Start="174" Length="28"/>
+                                                                                                    </Anns>
+                                                                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                                                                        <Anns>
+                                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="6" Col="41" Start="174" Length="6"/>
+                                                                                                        </Anns>
+                                                                                                        <ZName>
+                                                                                                            <Anns>
+                                                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="6" Col="41" Start="174" Length="6"/>
+                                                                                                            </Anns>
+                                                                                                            <Word>writes</Word>
+                                                                                                            <ZStrokeList/>
+                                                                                                        </ZName>
+                                                                                                        <ZExprList/>
+                                                                                                    </RefExpr>
+                                                                                                    <RefExpr Mixfix="true" Explicit="true">
+                                                                                                        <Anns>
+                                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="6" Col="60" Start="185" Length="17"/>
+                                                                                                        </Anns>
+                                                                                                        <ZName>
+                                                                                                            <Anns>
+                                                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="6" Col="60" Start="193" Length="4"/>
+                                                                                                            </Anns>
+                                                                                                            <Word> _ ↔ _ </Word>
+                                                                                                            <ZStrokeList/>
+                                                                                                        </ZName>
+                                                                                                        <ZExprList>
+                                                                                                            <RefExpr Mixfix="false" Explicit="false">
+                                                                                                                <Anns>
+                                                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="6" Col="52" Start="185" Length="7"/>
+                                                                                                                </Anns>
+                                                                                                                <ZName>
+                                                                                                                    <Anns>
+                                                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="6" Col="52" Start="185" Length="7"/>
+                                                                                                                    </Anns>
+                                                                                                                    <Word>Service</Word>
+                                                                                                                    <ZStrokeList/>
+                                                                                                                </ZName>
+                                                                                                                <ZExprList/>
+                                                                                                            </RefExpr>
+                                                                                                            <RefExpr Mixfix="false" Explicit="false">
+                                                                                                                <Anns>
+                                                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="6" Col="65" Start="198" Length="4"/>
+                                                                                                                </Anns>
+                                                                                                                <ZName>
+                                                                                                                    <Anns>
+                                                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="6" Col="65" Start="198" Length="4"/>
+                                                                                                                    </Anns>
+                                                                                                                    <Word>Data</Word>
+                                                                                                                    <ZStrokeList/>
+                                                                                                                </ZName>
+                                                                                                                <ZExprList/>
+                                                                                                            </RefExpr>
+                                                                                                        </ZExprList>
+                                                                                                    </RefExpr>
+                                                                                                </MemPred>
+                                                                                            </AndPred>
+                                                                                            <MemPred Mixfix="false">
+                                                                                                <Anns>
+                                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="7" Col="17" Start="215" Length="32"/>
+                                                                                                </Anns>
+                                                                                                <RefExpr Mixfix="false" Explicit="false">
+                                                                                                    <Anns>
+                                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="7" Col="6" Start="215" Length="10"/>
+                                                                                                    </Anns>
+                                                                                                    <ZName>
+                                                                                                        <Anns>
+                                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="7" Col="6" Start="215" Length="10"/>
+                                                                                                        </Anns>
+                                                                                                        <Word>readableTo</Word>
+                                                                                                        <ZStrokeList/>
+                                                                                                    </ZName>
+                                                                                                    <ZExprList/>
+                                                                                                </RefExpr>
+                                                                                                <RefExpr Mixfix="true" Explicit="true">
+                                                                                                    <Anns>
+                                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="7" Col="26" Start="230" Length="17"/>
+                                                                                                    </Anns>
+                                                                                                    <ZName>
+                                                                                                        <Anns>
+                                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="7" Col="26" Start="235" Length="4"/>
+                                                                                                        </Anns>
+                                                                                                        <Word> _ ↔ _ </Word>
+                                                                                                        <ZStrokeList/>
+                                                                                                    </ZName>
+                                                                                                    <ZExprList>
+                                                                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                                                                            <Anns>
+                                                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="7" Col="21" Start="230" Length="4"/>
+                                                                                                            </Anns>
+                                                                                                            <ZName>
+                                                                                                                <Anns>
+                                                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="7" Col="21" Start="230" Length="4"/>
+                                                                                                                </Anns>
+                                                                                                                <Word>Data</Word>
+                                                                                                                <ZStrokeList/>
+                                                                                                            </ZName>
+                                                                                                            <ZExprList/>
+                                                                                                        </RefExpr>
+                                                                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                                                                            <Anns>
+                                                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="7" Col="31" Start="240" Length="7"/>
+                                                                                                            </Anns>
+                                                                                                            <ZName>
+                                                                                                                <Anns>
+                                                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="7" Col="31" Start="240" Length="7"/>
+                                                                                                                </Anns>
+                                                                                                                <Word>Service</Word>
+                                                                                                                <ZStrokeList/>
+                                                                                                            </ZName>
+                                                                                                            <ZExprList/>
+                                                                                                        </RefExpr>
+                                                                                                    </ZExprList>
+                                                                                                </RefExpr>
+                                                                                            </MemPred>
+                                                                                        </AndPred>
+                                                                                        <MemPred Mixfix="false">
+                                                                                            <Anns>
+                                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="7" Col="54" Start="254" Length="30"/>
+                                                                                            </Anns>
+                                                                                            <RefExpr Mixfix="false" Explicit="false">
+                                                                                                <Anns>
+                                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="7" Col="45" Start="254" Length="8"/>
+                                                                                                </Anns>
+                                                                                                <ZName>
+                                                                                                    <Anns>
+                                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="7" Col="45" Start="254" Length="8"/>
+                                                                                                    </Anns>
+                                                                                                    <Word>canWrite</Word>
+                                                                                                    <ZStrokeList/>
+                                                                                                </ZName>
+                                                                                                <ZExprList/>
+                                                                                            </RefExpr>
+                                                                                            <RefExpr Mixfix="true" Explicit="true">
+                                                                                                <Anns>
+                                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="7" Col="66" Start="267" Length="17"/>
+                                                                                                </Anns>
+                                                                                                <ZName>
+                                                                                                    <Anns>
+                                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="7" Col="66" Start="275" Length="4"/>
+                                                                                                    </Anns>
+                                                                                                    <Word> _ ↔ _ </Word>
+                                                                                                    <ZStrokeList/>
+                                                                                                </ZName>
+                                                                                                <ZExprList>
+                                                                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                                                                        <Anns>
+                                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="7" Col="58" Start="267" Length="7"/>
+                                                                                                        </Anns>
+                                                                                                        <ZName>
+                                                                                                            <Anns>
+                                                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="7" Col="58" Start="267" Length="7"/>
+                                                                                                            </Anns>
+                                                                                                            <Word>Service</Word>
+                                                                                                            <ZStrokeList/>
+                                                                                                        </ZName>
+                                                                                                        <ZExprList/>
+                                                                                                    </RefExpr>
+                                                                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                                                                        <Anns>
+                                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="7" Col="71" Start="280" Length="4"/>
+                                                                                                        </Anns>
+                                                                                                        <ZName>
+                                                                                                            <Anns>
+                                                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="7" Col="71" Start="280" Length="4"/>
+                                                                                                            </Anns>
+                                                                                                            <Word>Data</Word>
+                                                                                                            <ZStrokeList/>
+                                                                                                        </ZName>
+                                                                                                        <ZExprList/>
+                                                                                                    </RefExpr>
+                                                                                                </ZExprList>
+                                                                                            </RefExpr>
+                                                                                        </MemPred>
+                                                                                    </AndPred>
+                                                                                    <MemPred Mixfix="true">
+                                                                                        <Anns>
+                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="8" Col="9" Start="297" Length="34"/>
+                                                                                        </Anns>
+                                                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                                                            <Anns>
+                                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="8" Col="6" Start="297" Length="2"/>
+                                                                                            </Anns>
+                                                                                            <ZName>
+                                                                                                <Anns>
+                                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="8" Col="6" Start="297" Length="2"/>
+                                                                                                </Anns>
+                                                                                                <Word>wf</Word>
+                                                                                                <ZStrokeList/>
+                                                                                            </ZName>
+                                                                                            <ZExprList/>
+                                                                                        </RefExpr>
+                                                                                        <SetExpr>
+                                                                                            <ZExprList>
+                                                                                                <ApplExpr Mixfix="true">
+                                                                                                    <Anns>
+                                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="8" Col="20" Start="304" Length="27"/>
+                                                                                                    </Anns>
+                                                                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                                                                        <Anns>
+                                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="8" Col="35" Start="326" Length="5"/>
+                                                                                                        </Anns>
+                                                                                                        <ZName>
+                                                                                                            <Anns>
+                                                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="8" Col="35" Start="326" Length="5"/>
+                                                                                                            </Anns>
+                                                                                                            <Word> _ ↗+↙</Word>
+                                                                                                            <ZStrokeList/>
+                                                                                                        </ZName>
+                                                                                                        <ZExprList/>
+                                                                                                    </RefExpr>
+                                                                                                    <ApplExpr Mixfix="true">
+                                                                                                        <Anns>
+                                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="8" Col="20" Start="304" Length="19"/>
+                                                                                                            <ParenAnn>
+                                                                                                                <Anns>
+                                                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="8" Col="11" Start="302" Length="23"/>
+                                                                                                                </Anns>
+                                                                                                            </ParenAnn>
+                                                                                                        </Anns>
+                                                                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                                                                            <Anns>
+                                                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="8" Col="20" Start="311" Length="5"/>
+                                                                                                            </Anns>
+                                                                                                            <ZName>
+                                                                                                                <Anns>
+                                                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="8" Col="20" Start="311" Length="5"/>
+                                                                                                                </Anns>
+                                                                                                                <Word> _ ⨾ _ </Word>
+                                                                                                                <ZStrokeList/>
+                                                                                                            </ZName>
+                                                                                                            <ZExprList/>
+                                                                                                        </RefExpr>
+                                                                                                        <TupleExpr>
+                                                                                                            <ZExprList>
+                                                                                                                <RefExpr Mixfix="false" Explicit="false">
+                                                                                                                    <Anns>
+                                                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="8" Col="13" Start="304" Length="6"/>
+                                                                                                                    </Anns>
+                                                                                                                    <ZName>
+                                                                                                                        <Anns>
+                                                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="8" Col="13" Start="304" Length="6"/>
+                                                                                                                        </Anns>
+                                                                                                                        <Word>readBy</Word>
+                                                                                                                        <ZStrokeList/>
+                                                                                                                    </ZName>
+                                                                                                                    <ZExprList/>
+                                                                                                                </RefExpr>
+                                                                                                                <RefExpr Mixfix="false" Explicit="false">
+                                                                                                                    <Anns>
+                                                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="8" Col="26" Start="317" Length="6"/>
+                                                                                                                    </Anns>
+                                                                                                                    <ZName>
+                                                                                                                        <Anns>
+                                                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="8" Col="26" Start="317" Length="6"/>
+                                                                                                                        </Anns>
+                                                                                                                        <Word>writes</Word>
+                                                                                                                        <ZStrokeList/>
+                                                                                                                    </ZName>
+                                                                                                                    <ZExprList/>
+                                                                                                                </RefExpr>
+                                                                                                            </ZExprList>
+                                                                                                        </TupleExpr>
+                                                                                                    </ApplExpr>
+                                                                                                </ApplExpr>
+                                                                                            </ZExprList>
+                                                                                        </SetExpr>
+                                                                                    </MemPred>
+                                                                                </AndPred>
+                                                                                <MemPred Mixfix="true">
+                                                                                    <Anns>
+                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="8" Col="53" Start="338" Length="43"/>
+                                                                                    </Anns>
+                                                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                                                        <Anns>
+                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="8" Col="47" Start="338" Length="5"/>
+                                                                                        </Anns>
+                                                                                        <ZName>
+                                                                                            <Anns>
+                                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="8" Col="47" Start="338" Length="5"/>
+                                                                                            </Anns>
+                                                                                            <Word>graph</Word>
+                                                                                            <ZStrokeList/>
+                                                                                        </ZName>
+                                                                                        <ZExprList/>
+                                                                                    </RefExpr>
+                                                                                    <SetExpr>
+                                                                                        <ZExprList>
+                                                                                            <ApplExpr Mixfix="true">
+                                                                                                <Anns>
+                                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="8" Col="68" Start="348" Length="33"/>
+                                                                                                </Anns>
+                                                                                                <RefExpr Mixfix="false" Explicit="false">
+                                                                                                    <Anns>
+                                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="8" Col="85" Start="376" Length="5"/>
+                                                                                                    </Anns>
+                                                                                                    <ZName>
+                                                                                                        <Anns>
+                                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="8" Col="85" Start="376" Length="5"/>
+                                                                                                        </Anns>
+                                                                                                        <Word> _ ↗+↙</Word>
+                                                                                                        <ZStrokeList/>
+                                                                                                    </ZName>
+                                                                                                    <ZExprList/>
+                                                                                                </RefExpr>
+                                                                                                <ApplExpr Mixfix="true">
+                                                                                                    <Anns>
+                                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="8" Col="68" Start="348" Length="25"/>
+                                                                                                        <ParenAnn>
+                                                                                                            <Anns>
+                                                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="8" Col="55" Start="346" Length="29"/>
+                                                                                                            </Anns>
+                                                                                                        </ParenAnn>
+                                                                                                    </Anns>
+                                                                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                                                                        <Anns>
+                                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="8" Col="68" Start="359" Length="5"/>
+                                                                                                        </Anns>
+                                                                                                        <ZName>
+                                                                                                            <Anns>
+                                                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="8" Col="68" Start="359" Length="5"/>
+                                                                                                            </Anns>
+                                                                                                            <Word> _ ⨾ _ </Word>
+                                                                                                            <ZStrokeList/>
+                                                                                                        </ZName>
+                                                                                                        <ZExprList/>
+                                                                                                    </RefExpr>
+                                                                                                    <TupleExpr>
+                                                                                                        <ZExprList>
+                                                                                                            <RefExpr Mixfix="false" Explicit="false">
+                                                                                                                <Anns>
+                                                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="8" Col="57" Start="348" Length="10"/>
+                                                                                                                </Anns>
+                                                                                                                <ZName>
+                                                                                                                    <Anns>
+                                                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="8" Col="57" Start="348" Length="10"/>
+                                                                                                                    </Anns>
+                                                                                                                    <Word>readableTo</Word>
+                                                                                                                    <ZStrokeList/>
+                                                                                                                </ZName>
+                                                                                                                <ZExprList/>
+                                                                                                            </RefExpr>
+                                                                                                            <RefExpr Mixfix="false" Explicit="false">
+                                                                                                                <Anns>
+                                                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="8" Col="74" Start="365" Length="8"/>
+                                                                                                                </Anns>
+                                                                                                                <ZName>
+                                                                                                                    <Anns>
+                                                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="8" Col="74" Start="365" Length="8"/>
+                                                                                                                    </Anns>
+                                                                                                                    <Word>canWrite</Word>
+                                                                                                                    <ZStrokeList/>
+                                                                                                                </ZName>
+                                                                                                                <ZExprList/>
+                                                                                                            </RefExpr>
+                                                                                                        </ZExprList>
+                                                                                                    </TupleExpr>
+                                                                                                </ApplExpr>
+                                                                                            </ApplExpr>
+                                                                                        </ZExprList>
+                                                                                    </SetExpr>
+                                                                                </MemPred>
+                                                                            </AndPred>
+                                                                            <MemPred Mixfix="true">
+                                                                                <Anns>
+                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="20" Start="394" Length="44"/>
+                                                                                </Anns>
+                                                                                <RefExpr Mixfix="false" Explicit="false">
+                                                                                    <Anns>
+                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="6" Start="394" Length="13"/>
+                                                                                    </Anns>
+                                                                                    <ZName>
+                                                                                        <Anns>
+                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="6" Start="394" Length="13"/>
+                                                                                        </Anns>
+                                                                                        <Word>knownServices</Word>
+                                                                                        <ZStrokeList/>
+                                                                                    </ZName>
+                                                                                    <ZExprList/>
+                                                                                </RefExpr>
+                                                                                <SetExpr>
+                                                                                    <ZExprList>
+                                                                                        <ApplExpr Mixfix="true">
+                                                                                            <Anns>
+                                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="34" Start="410" Length="28"/>
+                                                                                            </Anns>
+                                                                                            <RefExpr Mixfix="false" Explicit="false">
+                                                                                                <Anns>
+                                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="34" Start="422" Length="4"/>
+                                                                                                </Anns>
+                                                                                                <ZName>
+                                                                                                    <Anns>
+                                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="34" Start="422" Length="4"/>
+                                                                                                    </Anns>
+                                                                                                    <Word> _ ∪ _ </Word>
+                                                                                                    <ZStrokeList/>
+                                                                                                </ZName>
+                                                                                                <ZExprList/>
+                                                                                            </RefExpr>
+                                                                                            <TupleExpr>
+                                                                                                <ZExprList>
+                                                                                                    <ApplExpr Mixfix="false">
+                                                                                                        <Anns>
+                                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="22" Start="410" Length="11"/>
+                                                                                                        </Anns>
+                                                                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                                                                            <Anns>
+                                                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="22" Start="410" Length="4"/>
+                                                                                                            </Anns>
+                                                                                                            <ZName>
+                                                                                                                <Anns>
+                                                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="22" Start="410" Length="4"/>
+                                                                                                                </Anns>
+                                                                                                                <Word>dom</Word>
+                                                                                                                <ZStrokeList/>
+                                                                                                            </ZName>
+                                                                                                            <ZExprList/>
+                                                                                                        </RefExpr>
+                                                                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                                                                            <Anns>
+                                                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="27" Start="415" Length="6"/>
+                                                                                                            </Anns>
+                                                                                                            <ZName>
+                                                                                                                <Anns>
+                                                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="27" Start="415" Length="6"/>
+                                                                                                                </Anns>
+                                                                                                                <Word>writes</Word>
+                                                                                                                <ZStrokeList/>
+                                                                                                            </ZName>
+                                                                                                            <ZExprList/>
+                                                                                                        </RefExpr>
+                                                                                                    </ApplExpr>
+                                                                                                    <ApplExpr Mixfix="false">
+                                                                                                        <Anns>
+                                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="39" Start="427" Length="11"/>
+                                                                                                        </Anns>
+                                                                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                                                                            <Anns>
+                                                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="39" Start="427" Length="4"/>
+                                                                                                            </Anns>
+                                                                                                            <ZName>
+                                                                                                                <Anns>
+                                                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="39" Start="427" Length="4"/>
+                                                                                                                </Anns>
+                                                                                                                <Word>ran</Word>
+                                                                                                                <ZStrokeList/>
+                                                                                                            </ZName>
+                                                                                                            <ZExprList/>
+                                                                                                        </RefExpr>
+                                                                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                                                                            <Anns>
+                                                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="44" Start="432" Length="6"/>
+                                                                                                            </Anns>
+                                                                                                            <ZName>
+                                                                                                                <Anns>
+                                                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="44" Start="432" Length="6"/>
+                                                                                                                </Anns>
+                                                                                                                <Word>readBy</Word>
+                                                                                                                <ZStrokeList/>
+                                                                                                            </ZName>
+                                                                                                            <ZExprList/>
+                                                                                                        </RefExpr>
+                                                                                                    </ApplExpr>
+                                                                                                </ZExprList>
+                                                                                            </TupleExpr>
+                                                                                        </ApplExpr>
+                                                                                    </ZExprList>
+                                                                                </SetExpr>
+                                                                            </MemPred>
+                                                                        </AndPred>
+                                                                        <MemPred Mixfix="true">
+                                                                            <Anns>
+                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="67" Start="445" Length="40"/>
+                                                                            </Anns>
+                                                                            <RefExpr Mixfix="false" Explicit="false">
+                                                                                <Anns>
+                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="57" Start="445" Length="9"/>
+                                                                                </Anns>
+                                                                                <ZName>
+                                                                                    <Anns>
+                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="57" Start="445" Length="9"/>
+                                                                                    </Anns>
+                                                                                    <Word>knownData</Word>
+                                                                                    <ZStrokeList/>
+                                                                                </ZName>
+                                                                                <ZExprList/>
+                                                                            </RefExpr>
+                                                                            <SetExpr>
+                                                                                <ZExprList>
+                                                                                    <ApplExpr Mixfix="true">
+                                                                                        <Anns>
+                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="81" Start="457" Length="28"/>
+                                                                                        </Anns>
+                                                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                                                            <Anns>
+                                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="81" Start="469" Length="4"/>
+                                                                                            </Anns>
+                                                                                            <ZName>
+                                                                                                <Anns>
+                                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="81" Start="469" Length="4"/>
+                                                                                                </Anns>
+                                                                                                <Word> _ ∪ _ </Word>
+                                                                                                <ZStrokeList/>
+                                                                                            </ZName>
+                                                                                            <ZExprList/>
+                                                                                        </RefExpr>
+                                                                                        <TupleExpr>
+                                                                                            <ZExprList>
+                                                                                                <ApplExpr Mixfix="false">
+                                                                                                    <Anns>
+                                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="69" Start="457" Length="11"/>
+                                                                                                    </Anns>
+                                                                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                                                                        <Anns>
+                                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="69" Start="457" Length="4"/>
+                                                                                                        </Anns>
+                                                                                                        <ZName>
+                                                                                                            <Anns>
+                                                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="69" Start="457" Length="4"/>
+                                                                                                            </Anns>
+                                                                                                            <Word>dom</Word>
+                                                                                                            <ZStrokeList/>
+                                                                                                        </ZName>
+                                                                                                        <ZExprList/>
+                                                                                                    </RefExpr>
+                                                                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                                                                        <Anns>
+                                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="74" Start="462" Length="6"/>
+                                                                                                        </Anns>
+                                                                                                        <ZName>
+                                                                                                            <Anns>
+                                                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="74" Start="462" Length="6"/>
+                                                                                                            </Anns>
+                                                                                                            <Word>readBy</Word>
+                                                                                                            <ZStrokeList/>
+                                                                                                        </ZName>
+                                                                                                        <ZExprList/>
+                                                                                                    </RefExpr>
+                                                                                                </ApplExpr>
+                                                                                                <ApplExpr Mixfix="false">
+                                                                                                    <Anns>
+                                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="86" Start="474" Length="11"/>
+                                                                                                    </Anns>
+                                                                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                                                                        <Anns>
+                                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="86" Start="474" Length="4"/>
+                                                                                                        </Anns>
+                                                                                                        <ZName>
+                                                                                                            <Anns>
+                                                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="86" Start="474" Length="4"/>
+                                                                                                            </Anns>
+                                                                                                            <Word>ran</Word>
+                                                                                                            <ZStrokeList/>
+                                                                                                        </ZName>
+                                                                                                        <ZExprList/>
+                                                                                                    </RefExpr>
+                                                                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                                                                        <Anns>
+                                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="91" Start="479" Length="6"/>
+                                                                                                        </Anns>
+                                                                                                        <ZName>
+                                                                                                            <Anns>
+                                                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="9" Col="91" Start="479" Length="6"/>
+                                                                                                            </Anns>
+                                                                                                            <Word>writes</Word>
+                                                                                                            <ZStrokeList/>
+                                                                                                        </ZName>
+                                                                                                        <ZExprList/>
+                                                                                                    </RefExpr>
+                                                                                                </ApplExpr>
+                                                                                            </ZExprList>
+                                                                                        </TupleExpr>
+                                                                                    </ApplExpr>
+                                                                                </ZExprList>
+                                                                            </SetExpr>
+                                                                        </MemPred>
+                                                                    </AndPred>
+                                                                    <MemPred Mixfix="false">
+                                                                        <Anns>
+                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="10" Col="16" Start="498" Length="33"/>
+                                                                        </Anns>
+                                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                                            <Anns>
+                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="10" Col="6" Start="498" Length="9"/>
+                                                                            </Anns>
+                                                                            <ZName>
+                                                                                <Anns>
+                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="10" Col="6" Start="498" Length="9"/>
+                                                                                </Anns>
+                                                                                <Word>clearance</Word>
+                                                                                <ZStrokeList/>
+                                                                            </ZName>
+                                                                            <ZExprList/>
+                                                                        </RefExpr>
+                                                                        <RefExpr Mixfix="true" Explicit="true">
+                                                                            <Anns>
+                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="10" Col="28" Start="512" Length="19"/>
+                                                                            </Anns>
+                                                                            <ZName>
+                                                                                <Anns>
+                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="10" Col="28" Start="520" Length="5"/>
+                                                                                </Anns>
+                                                                                <Word> _ ⇸ _ </Word>
+                                                                                <ZStrokeList/>
+                                                                            </ZName>
+                                                                            <ZExprList>
+                                                                                <RefExpr Mixfix="false" Explicit="false">
+                                                                                    <Anns>
+                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="10" Col="20" Start="512" Length="7"/>
+                                                                                    </Anns>
+                                                                                    <ZName>
+                                                                                        <Anns>
+                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="10" Col="20" Start="512" Length="7"/>
+                                                                                        </Anns>
+                                                                                        <Word>Service</Word>
+                                                                                        <ZStrokeList/>
+                                                                                    </ZName>
+                                                                                    <ZExprList/>
+                                                                                </RefExpr>
+                                                                                <RefExpr Mixfix="false" Explicit="false">
+                                                                                    <Anns>
+                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="10" Col="34" Start="526" Length="5"/>
+                                                                                    </Anns>
+                                                                                    <ZName>
+                                                                                        <Anns>
+                                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="10" Col="34" Start="526" Length="5"/>
+                                                                                        </Anns>
+                                                                                        <Word>Level</Word>
+                                                                                        <ZStrokeList/>
+                                                                                    </ZName>
+                                                                                    <ZExprList/>
+                                                                                </RefExpr>
+                                                                            </ZExprList>
+                                                                        </RefExpr>
+                                                                    </MemPred>
+                                                                </AndPred>
+                                                                <MemPred Mixfix="false">
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="10" Col="56" Start="538" Length="33"/>
+                                                                    </Anns>
+                                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                                        <Anns>
+                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="10" Col="46" Start="538" Length="9"/>
+                                                                        </Anns>
+                                                                        <ZName>
+                                                                            <Anns>
+                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="10" Col="46" Start="538" Length="9"/>
+                                                                            </Anns>
+                                                                            <Word>locationS</Word>
+                                                                            <ZStrokeList/>
+                                                                        </ZName>
+                                                                        <ZExprList/>
+                                                                    </RefExpr>
+                                                                    <RefExpr Mixfix="true" Explicit="true">
+                                                                        <Anns>
+                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="10" Col="68" Start="552" Length="19"/>
+                                                                        </Anns>
+                                                                        <ZName>
+                                                                            <Anns>
+                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="10" Col="68" Start="560" Length="5"/>
+                                                                            </Anns>
+                                                                            <Word> _ ⇸ _ </Word>
+                                                                            <ZStrokeList/>
+                                                                        </ZName>
+                                                                        <ZExprList>
+                                                                            <RefExpr Mixfix="false" Explicit="false">
+                                                                                <Anns>
+                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="10" Col="60" Start="552" Length="7"/>
+                                                                                </Anns>
+                                                                                <ZName>
+                                                                                    <Anns>
+                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="10" Col="60" Start="552" Length="7"/>
+                                                                                    </Anns>
+                                                                                    <Word>Service</Word>
+                                                                                    <ZStrokeList/>
+                                                                                </ZName>
+                                                                                <ZExprList/>
+                                                                            </RefExpr>
+                                                                            <RefExpr Mixfix="false" Explicit="false">
+                                                                                <Anns>
+                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="10" Col="74" Start="566" Length="5"/>
+                                                                                </Anns>
+                                                                                <ZName>
+                                                                                    <Anns>
+                                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="10" Col="74" Start="566" Length="5"/>
+                                                                                    </Anns>
+                                                                                    <Word>Level</Word>
+                                                                                    <ZStrokeList/>
+                                                                                </ZName>
+                                                                                <ZExprList/>
+                                                                            </RefExpr>
+                                                                        </ZExprList>
+                                                                    </RefExpr>
+                                                                </MemPred>
+                                                            </AndPred>
+                                                            <MemPred Mixfix="false">
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="11" Col="16" Start="584" Length="30"/>
+                                                                </Anns>
+                                                                <RefExpr Mixfix="false" Explicit="false">
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="11" Col="6" Start="584" Length="9"/>
+                                                                    </Anns>
+                                                                    <ZName>
+                                                                        <Anns>
+                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="11" Col="6" Start="584" Length="9"/>
+                                                                        </Anns>
+                                                                        <Word>locationD</Word>
+                                                                        <ZStrokeList/>
+                                                                    </ZName>
+                                                                    <ZExprList/>
+                                                                </RefExpr>
+                                                                <RefExpr Mixfix="true" Explicit="true">
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="11" Col="25" Start="598" Length="16"/>
+                                                                    </Anns>
+                                                                    <ZName>
+                                                                        <Anns>
+                                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="11" Col="25" Start="603" Length="5"/>
+                                                                        </Anns>
+                                                                        <Word> _ ⇸ _ </Word>
+                                                                        <ZStrokeList/>
+                                                                    </ZName>
+                                                                    <ZExprList>
+                                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                                            <Anns>
+                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="11" Col="20" Start="598" Length="4"/>
+                                                                            </Anns>
+                                                                            <ZName>
+                                                                                <Anns>
+                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="11" Col="20" Start="598" Length="4"/>
+                                                                                </Anns>
+                                                                                <Word>Data</Word>
+                                                                                <ZStrokeList/>
+                                                                            </ZName>
+                                                                            <ZExprList/>
+                                                                        </RefExpr>
+                                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                                            <Anns>
+                                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="11" Col="31" Start="609" Length="5"/>
+                                                                            </Anns>
+                                                                            <ZName>
+                                                                                <Anns>
+                                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="11" Col="31" Start="609" Length="5"/>
+                                                                                </Anns>
+                                                                                <Word>Level</Word>
+                                                                                <ZStrokeList/>
+                                                                            </ZName>
+                                                                            <ZExprList/>
+                                                                        </RefExpr>
+                                                                    </ZExprList>
+                                                                </RefExpr>
+                                                            </MemPred>
+                                                        </AndPred>
+                                                        <MemPred Mixfix="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="11" Col="45" Start="621" Length="13"/>
+                                                            </Anns>
+                                                            <RefExpr Mixfix="false" Explicit="false">
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="11" Col="43" Start="621" Length="1"/>
+                                                                </Anns>
+                                                                <ZName>
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="11" Col="43" Start="621" Length="1"/>
+                                                                    </Anns>
+                                                                    <Word>u</Word>
+                                                                    <ZStrokeList/>
+                                                                </ZName>
+                                                                <ZExprList/>
+                                                            </RefExpr>
+                                                            <RefExpr Mixfix="false" Explicit="false">
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="11" Col="49" Start="627" Length="7"/>
+                                                                </Anns>
+                                                                <ZName>
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="11" Col="49" Start="627" Length="7"/>
+                                                                    </Anns>
+                                                                    <Word>Service</Word>
+                                                                    <ZStrokeList/>
+                                                                </ZName>
+                                                                <ZExprList/>
+                                                            </RefExpr>
+                                                        </MemPred>
+                                                    </AndPred>
+                                                    <MemPred Mixfix="false">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="11" Col="65" Start="641" Length="10"/>
+                                                        </Anns>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="11" Col="63" Start="641" Length="1"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="11" Col="63" Start="641" Length="1"/>
+                                                                </Anns>
+                                                                <Word>i</Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="11" Col="69" Start="647" Length="4"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="11" Col="69" Start="647" Length="4"/>
+                                                                </Anns>
+                                                                <Word>Data</Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                    </MemPred>
+                                                </AndPred>
+                                                <MemPred Mixfix="false">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="12" Col="21" Start="664" Length="42"/>
+                                                    </Anns>
+                                                    <ApplExpr Mixfix="false">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="12" Col="6" Start="664" Length="14"/>
+                                                        </Anns>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="12" Col="6" Start="664" Length="4"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="12" Col="6" Start="664" Length="4"/>
+                                                                </Anns>
+                                                                <Word>dom</Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="12" Col="11" Start="669" Length="9"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="12" Col="11" Start="669" Length="9"/>
+                                                                </Anns>
+                                                                <Word>locationS</Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                    </ApplExpr>
+                                                    <PowerExpr>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="12" Col="25" Start="683" Length="23"/>
+                                                        </Anns>
+                                                        <ApplExpr Mixfix="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="12" Col="34" Start="692" Length="14"/>
+                                                                <ParenAnn>
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="12" Col="32" Start="690" Length="18"/>
+                                                                    </Anns>
+                                                                </ParenAnn>
+                                                            </Anns>
+                                                            <RefExpr Mixfix="false" Explicit="false">
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="12" Col="34" Start="692" Length="4"/>
+                                                                </Anns>
+                                                                <ZName>
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="12" Col="34" Start="692" Length="4"/>
+                                                                    </Anns>
+                                                                    <Word>dom</Word>
+                                                                    <ZStrokeList/>
+                                                                </ZName>
+                                                                <ZExprList/>
+                                                            </RefExpr>
+                                                            <RefExpr Mixfix="false" Explicit="false">
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="12" Col="39" Start="697" Length="9"/>
+                                                                </Anns>
+                                                                <ZName>
+                                                                    <Anns>
+                                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="12" Col="39" Start="697" Length="9"/>
+                                                                    </Anns>
+                                                                    <Word>clearance</Word>
+                                                                    <ZStrokeList/>
+                                                                </ZName>
+                                                                <ZExprList/>
+                                                            </RefExpr>
+                                                        </ApplExpr>
+                                                    </PowerExpr>
+                                                </MemPred>
+                                            </AndPred>
+                                            <MemPred Mixfix="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="12" Col="69" Start="715" Length="39"/>
+                                                </Anns>
+                                                <ApplExpr Mixfix="false">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="12" Col="57" Start="715" Length="11"/>
+                                                    </Anns>
+                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="12" Col="57" Start="715" Length="4"/>
+                                                        </Anns>
+                                                        <ZName>
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="12" Col="57" Start="715" Length="4"/>
+                                                            </Anns>
+                                                            <Word>dom</Word>
+                                                            <ZStrokeList/>
+                                                        </ZName>
+                                                        <ZExprList/>
+                                                    </RefExpr>
+                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="12" Col="62" Start="720" Length="6"/>
+                                                        </Anns>
+                                                        <ZName>
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="12" Col="62" Start="720" Length="6"/>
+                                                            </Anns>
+                                                            <Word>writes</Word>
+                                                            <ZStrokeList/>
+                                                        </ZName>
+                                                        <ZExprList/>
+                                                    </RefExpr>
+                                                </ApplExpr>
+                                                <PowerExpr>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="12" Col="73" Start="731" Length="23"/>
+                                                    </Anns>
+                                                    <ApplExpr Mixfix="false">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="12" Col="82" Start="740" Length="14"/>
+                                                            <ParenAnn>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="12" Col="80" Start="738" Length="18"/>
+                                                                </Anns>
+                                                            </ParenAnn>
+                                                        </Anns>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="12" Col="82" Start="740" Length="4"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="12" Col="82" Start="740" Length="4"/>
+                                                                </Anns>
+                                                                <Word>dom</Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="12" Col="87" Start="745" Length="9"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="12" Col="87" Start="745" Length="9"/>
+                                                                </Anns>
+                                                                <Word>locationS</Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                    </ApplExpr>
+                                                </PowerExpr>
+                                            </MemPred>
+                                        </AndPred>
+                                        <MemPred Mixfix="false">
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="13" Col="18" Start="769" Length="39"/>
+                                            </Anns>
+                                            <ApplExpr Mixfix="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="13" Col="6" Start="769" Length="11"/>
+                                                </Anns>
+                                                <RefExpr Mixfix="false" Explicit="false">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="13" Col="6" Start="769" Length="4"/>
+                                                    </Anns>
+                                                    <ZName>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="13" Col="6" Start="769" Length="4"/>
+                                                        </Anns>
+                                                        <Word>ran</Word>
+                                                        <ZStrokeList/>
+                                                    </ZName>
+                                                    <ZExprList/>
+                                                </RefExpr>
+                                                <RefExpr Mixfix="false" Explicit="false">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="13" Col="11" Start="774" Length="6"/>
+                                                    </Anns>
+                                                    <ZName>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="13" Col="11" Start="774" Length="6"/>
+                                                        </Anns>
+                                                        <Word>readBy</Word>
+                                                        <ZStrokeList/>
+                                                    </ZName>
+                                                    <ZExprList/>
+                                                </RefExpr>
+                                            </ApplExpr>
+                                            <PowerExpr>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="13" Col="22" Start="785" Length="23"/>
+                                                </Anns>
+                                                <ApplExpr Mixfix="false">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="13" Col="31" Start="794" Length="14"/>
+                                                        <ParenAnn>
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="13" Col="29" Start="792" Length="18"/>
+                                                            </Anns>
+                                                        </ParenAnn>
+                                                    </Anns>
+                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="13" Col="31" Start="794" Length="4"/>
+                                                        </Anns>
+                                                        <ZName>
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="13" Col="31" Start="794" Length="4"/>
+                                                            </Anns>
+                                                            <Word>dom</Word>
+                                                            <ZStrokeList/>
+                                                        </ZName>
+                                                        <ZExprList/>
+                                                    </RefExpr>
+                                                    <RefExpr Mixfix="false" Explicit="false">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="13" Col="36" Start="799" Length="9"/>
+                                                        </Anns>
+                                                        <ZName>
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="13" Col="36" Start="799" Length="9"/>
+                                                            </Anns>
+                                                            <Word>locationS</Word>
+                                                            <ZStrokeList/>
+                                                        </ZName>
+                                                        <ZExprList/>
+                                                    </RefExpr>
+                                                </ApplExpr>
+                                            </PowerExpr>
+                                        </MemPred>
+                                    </AndPred>
+                                    <MemPred Mixfix="false">
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="13" Col="66" Start="817" Length="39"/>
+                                        </Anns>
+                                        <ApplExpr Mixfix="false">
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="13" Col="54" Start="817" Length="11"/>
+                                            </Anns>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="13" Col="54" Start="817" Length="4"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="13" Col="54" Start="817" Length="4"/>
+                                                    </Anns>
+                                                    <Word>dom</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="13" Col="59" Start="822" Length="6"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="13" Col="59" Start="822" Length="6"/>
+                                                    </Anns>
+                                                    <Word>readBy</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                        </ApplExpr>
+                                        <PowerExpr>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="13" Col="70" Start="833" Length="23"/>
+                                            </Anns>
+                                            <ApplExpr Mixfix="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="13" Col="79" Start="842" Length="14"/>
+                                                    <ParenAnn>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="13" Col="77" Start="840" Length="18"/>
+                                                        </Anns>
+                                                    </ParenAnn>
+                                                </Anns>
+                                                <RefExpr Mixfix="false" Explicit="false">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="13" Col="79" Start="842" Length="4"/>
+                                                    </Anns>
+                                                    <ZName>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="13" Col="79" Start="842" Length="4"/>
+                                                        </Anns>
+                                                        <Word>dom</Word>
+                                                        <ZStrokeList/>
+                                                    </ZName>
+                                                    <ZExprList/>
+                                                </RefExpr>
+                                                <RefExpr Mixfix="false" Explicit="false">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="13" Col="84" Start="847" Length="9"/>
+                                                    </Anns>
+                                                    <ZName>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="13" Col="84" Start="847" Length="9"/>
+                                                        </Anns>
+                                                        <Word>locationD</Word>
+                                                        <ZStrokeList/>
+                                                    </ZName>
+                                                    <ZExprList/>
+                                                </RefExpr>
+                                            </ApplExpr>
+                                        </PowerExpr>
+                                    </MemPred>
+                                </AndPred>
+                                <MemPred Mixfix="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="18" Start="871" Length="39"/>
+                                    </Anns>
+                                    <ApplExpr Mixfix="false">
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="6" Start="871" Length="11"/>
+                                        </Anns>
+                                        <RefExpr Mixfix="false" Explicit="false">
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="6" Start="871" Length="4"/>
+                                            </Anns>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="6" Start="871" Length="4"/>
+                                                </Anns>
+                                                <Word>ran</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <ZExprList/>
+                                        </RefExpr>
+                                        <RefExpr Mixfix="false" Explicit="false">
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="11" Start="876" Length="6"/>
+                                            </Anns>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="11" Start="876" Length="6"/>
+                                                </Anns>
+                                                <Word>writes</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <ZExprList/>
+                                        </RefExpr>
+                                    </ApplExpr>
+                                    <PowerExpr>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="22" Start="887" Length="23"/>
+                                        </Anns>
+                                        <ApplExpr Mixfix="false">
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="31" Start="896" Length="14"/>
+                                                <ParenAnn>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="29" Start="894" Length="18"/>
+                                                    </Anns>
+                                                </ParenAnn>
+                                            </Anns>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="31" Start="896" Length="4"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="31" Start="896" Length="4"/>
+                                                    </Anns>
+                                                    <Word>dom</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                            <RefExpr Mixfix="false" Explicit="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="36" Start="901" Length="9"/>
+                                                </Anns>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="36" Start="901" Length="9"/>
+                                                    </Anns>
+                                                    <Word>locationD</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                                <ZExprList/>
+                                            </RefExpr>
+                                        </ApplExpr>
+                                    </PowerExpr>
+                                </MemPred>
+                            </AndPred>
+                            <ForallPred>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="56" Start="921" Length="57"/>
+                                    <ParenAnn>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="54" Start="919" Length="61"/>
+                                        </Anns>
+                                    </ParenAnn>
+                                </Anns>
+                                <ZSchText>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="66" Start="929" Length="18"/>
+                                    </Anns>
+                                    <ZDeclList>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="66" Start="929" Length="18"/>
+                                        </Anns>
+                                        <VarDecl>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="66" Start="929" Length="18"/>
+                                            </Anns>
+                                            <ZNameList>
+                                                <ZName>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="64" Start="929" Length="1"/>
+                                                    </Anns>
+                                                    <Word>s</Word>
+                                                    <ZStrokeList/>
+                                                </ZName>
+                                            </ZNameList>
+                                            <ApplExpr Mixfix="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="68" Start="933" Length="14"/>
+                                                </Anns>
+                                                <RefExpr Mixfix="false" Explicit="false">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="68" Start="933" Length="4"/>
+                                                    </Anns>
+                                                    <ZName>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="68" Start="933" Length="4"/>
+                                                        </Anns>
+                                                        <Word>dom</Word>
+                                                        <ZStrokeList/>
+                                                    </ZName>
+                                                    <ZExprList/>
+                                                </RefExpr>
+                                                <RefExpr Mixfix="false" Explicit="false">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="73" Start="938" Length="9"/>
+                                                    </Anns>
+                                                    <ZName>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="73" Start="938" Length="9"/>
+                                                        </Anns>
+                                                        <Word>locationS</Word>
+                                                        <ZStrokeList/>
+                                                    </ZName>
+                                                    <ZExprList/>
+                                                </RefExpr>
+                                            </ApplExpr>
+                                        </VarDecl>
+                                    </ZDeclList>
+                                </ZSchText>
+                                <MemPred Mixfix="true">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="85" Start="950" Length="28"/>
+                                    </Anns>
+                                    <TupleExpr>
+                                        <ZExprList>
+                                            <ApplExpr Mixfix="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="85" Start="950" Length="11"/>
+                                                </Anns>
+                                                <RefExpr Mixfix="false" Explicit="false">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="85" Start="950" Length="9"/>
+                                                    </Anns>
+                                                    <ZName>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="85" Start="950" Length="9"/>
+                                                        </Anns>
+                                                        <Word>locationS</Word>
+                                                        <ZStrokeList/>
+                                                    </ZName>
+                                                    <ZExprList/>
+                                                </RefExpr>
+                                                <RefExpr Mixfix="false" Explicit="false">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="95" Start="960" Length="1"/>
+                                                    </Anns>
+                                                    <ZName>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="95" Start="960" Length="1"/>
+                                                        </Anns>
+                                                        <Word>s</Word>
+                                                        <ZStrokeList/>
+                                                    </ZName>
+                                                    <ZExprList/>
+                                                </RefExpr>
+                                            </ApplExpr>
+                                            <ApplExpr Mixfix="false">
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="102" Start="967" Length="11"/>
+                                                </Anns>
+                                                <RefExpr Mixfix="false" Explicit="false">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="102" Start="967" Length="9"/>
+                                                    </Anns>
+                                                    <ZName>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="102" Start="967" Length="9"/>
+                                                        </Anns>
+                                                        <Word>clearance</Word>
+                                                        <ZStrokeList/>
+                                                    </ZName>
+                                                    <ZExprList/>
+                                                </RefExpr>
+                                                <RefExpr Mixfix="false" Explicit="false">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="112" Start="977" Length="1"/>
+                                                    </Anns>
+                                                    <ZName>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="112" Start="977" Length="1"/>
+                                                        </Anns>
+                                                        <Word>s</Word>
+                                                        <ZStrokeList/>
+                                                    </ZName>
+                                                    <ZExprList/>
+                                                </RefExpr>
+                                            </ApplExpr>
+                                        </ZExprList>
+                                    </TupleExpr>
+                                    <RefExpr Mixfix="false" Explicit="false">
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="97" Start="962" Length="4"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="14" Col="97" Start="962" Length="4"/>
+                                            </Anns>
+                                            <Word> _ ≤ _ </Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </RefExpr>
+                                </MemPred>
+                            </ForallPred>
+                        </AndPred>
+                        <MemPred Mixfix="false">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="15" Col="22" Start="993" Length="20"/>
+                            </Anns>
+                            <TupleExpr>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="15" Col="12" Start="993" Length="9"/>
+                                </Anns>
+                                <ZExprList>
+                                    <RefExpr Mixfix="false" Explicit="false">
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="15" Col="14" Start="995" Length="1"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="15" Col="14" Start="995" Length="1"/>
+                                            </Anns>
+                                            <Word>i</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </RefExpr>
+                                    <RefExpr Mixfix="false" Explicit="false">
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="15" Col="18" Start="999" Length="1"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="15" Col="18" Start="999" Length="1"/>
+                                            </Anns>
+                                            <Word>u</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <ZExprList/>
+                                    </RefExpr>
+                                </ZExprList>
+                            </TupleExpr>
+                            <RefExpr Mixfix="false" Explicit="false">
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="15" Col="26" Start="1007" Length="6"/>
+                                </Anns>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="15" Col="26" Start="1007" Length="6"/>
+                                    </Anns>
+                                    <Word>readBy</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ZExprList/>
+                            </RefExpr>
+                        </MemPred>
+                    </AndPred>
+                    <AndPred And="Wedge">
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="15" Col="63" Start="1023" Length="47"/>
+                        </Anns>
+                        <MemPred Mixfix="false">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="15" Col="44" Start="1023" Length="20"/>
+                            </Anns>
+                            <RefExpr Mixfix="false" Explicit="false">
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="15" Col="42" Start="1023" Length="1"/>
+                                </Anns>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="15" Col="42" Start="1023" Length="1"/>
+                                    </Anns>
+                                    <Word>i</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ZExprList/>
+                            </RefExpr>
+                            <ApplExpr Mixfix="false">
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="15" Col="48" Start="1029" Length="14"/>
+                                </Anns>
+                                <RefExpr Mixfix="false" Explicit="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="15" Col="48" Start="1029" Length="4"/>
+                                    </Anns>
+                                    <ZName>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="15" Col="48" Start="1029" Length="4"/>
+                                        </Anns>
+                                        <Word>dom</Word>
+                                        <ZStrokeList/>
+                                    </ZName>
+                                    <ZExprList/>
+                                </RefExpr>
+                                <RefExpr Mixfix="false" Explicit="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="15" Col="53" Start="1034" Length="9"/>
+                                    </Anns>
+                                    <ZName>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="15" Col="53" Start="1034" Length="9"/>
+                                        </Anns>
+                                        <Word>locationD</Word>
+                                        <ZStrokeList/>
+                                    </ZName>
+                                    <ZExprList/>
+                                </RefExpr>
+                            </ApplExpr>
+                        </MemPred>
+                        <MemPred Mixfix="false">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="15" Col="71" Start="1050" Length="20"/>
+                            </Anns>
+                            <RefExpr Mixfix="false" Explicit="false">
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="15" Col="69" Start="1050" Length="1"/>
+                                </Anns>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="15" Col="69" Start="1050" Length="1"/>
+                                    </Anns>
+                                    <Word>u</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ZExprList/>
+                            </RefExpr>
+                            <ApplExpr Mixfix="false">
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="15" Col="75" Start="1056" Length="14"/>
+                                </Anns>
+                                <RefExpr Mixfix="false" Explicit="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="15" Col="75" Start="1056" Length="4"/>
+                                    </Anns>
+                                    <ZName>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="15" Col="75" Start="1056" Length="4"/>
+                                        </Anns>
+                                        <Word>dom</Word>
+                                        <ZStrokeList/>
+                                    </ZName>
+                                    <ZExprList/>
+                                </RefExpr>
+                                <RefExpr Mixfix="false" Explicit="false">
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="15" Col="80" Start="1061" Length="9"/>
+                                    </Anns>
+                                    <ZName>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="15" Col="80" Start="1061" Length="9"/>
+                                        </Anns>
+                                        <Word>clearance</Word>
+                                        <ZStrokeList/>
+                                    </ZName>
+                                    <ZExprList/>
+                                </RefExpr>
+                            </ApplExpr>
+                        </MemPred>
+                    </AndPred>
+                </ImpliesPred>
+            </ForallPred>
+        </ConjPara>
+        <NarrPara>
+            <Anns>
+                <LocAnn Loc="/root/czt-code/parser/parser-zeves/target/test-classes/tests/zeves/proofGoal.tex" Line="16" Col="13" Start="1084" Length="1"/>
+            </Anns>
+            <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</Content>
+        </NarrPara>
+    </ZParaList>
+</ZSect>

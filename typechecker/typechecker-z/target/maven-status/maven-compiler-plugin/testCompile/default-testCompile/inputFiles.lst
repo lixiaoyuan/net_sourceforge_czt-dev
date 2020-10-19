@@ -1,0 +1,6 @@
+/root/czt-code/typechecker/typechecker-z/src/test/java/net/sourceforge/czt/typecheck/z/TypeCheckerTest.java
+/root/czt-code/typechecker/typechecker-z/src/test/java/net/sourceforge/czt/typecheck/z/TypeInferenceTest.java
+/root/czt-code/typechecker/typechecker-z/src/test/java/net/sourceforge/czt/typecheck/z/IdTest.java
+/root/czt-code/typechecker/typechecker-z/src/test/java/net/sourceforge/czt/typecheck/z/CyclicParentTypeCheckerTest.java
+/root/czt-code/typechecker/typechecker-z/src/test/java/net/sourceforge/czt/typecheck/testutil/TypeParser.java
+/root/czt-code/typechecker/typechecker-z/src/test/java/net/sourceforge/czt/typecheck/util/UnificationEnvTest.java

@@ -1,0 +1,116 @@
+\documentclass{article}
+\usepackage{czt}
+
+\begin{document}
+%----------------------------------
+
+\begin{zsection}	 \SECTION complexHidingRenaming\_ref \parents~ref\_toolkit , complexHidingRenaming
+\end{zsection}
+
+VC ZSection Created at Sun Oct 18 08:41:44 UTC 2020.
+
+
+Added schema for feasibility VC signature of paragraph named OpFSBSig at unknown.
+\begin{schema}{OpFSBSig}
+\\
+ S \\
+ SR \\
+ in? : \nat 
+\where
+ true
+\end{schema}
+
+
+Added schema for feasibility VC signature of paragraph named OpHRFSBSig at unknown.
+\begin{schema}{OpHRFSBSig}
+\\
+ SR \\
+ c : \nat \\
+ in? : \nat 
+\where
+ true
+\end{schema}
+
+
+Added schema for feasibility VC signature of paragraph named OpIORenameFSBSig at unknown.
+\begin{schema}{OpIORenameFSBSig}
+\\
+ S \\
+ SR \\
+ param? : \nat 
+\where
+ true
+\end{schema}
+
+
+Added schema for feasibility VC signature of paragraph named SFSBSig at unknown.
+\begin{schema}{SFSBSig}
+\\
+ S 
+\where
+ S
+\end{schema}
+
+
+Added schema for feasibility VC signature of paragraph named SRFSBSig at unknown.
+\begin{schema}{SRFSBSig}
+\\
+ SR 
+\where
+ SR
+\end{schema}
+
+
+Added schema for feasibility VC signature of paragraph named StateFSBSig at unknown.
+\begin{schema}{StateFSBSig}
+\\
+ S \\
+ SR 
+\where
+ State
+\end{schema}
+
+VC3 for line 10 column 4 start 165 length 16 in "complexHidingRenaming"
+\begin{theorem}{ S\_ vc\_ ref}\\
+ \exists SFSBSig | true @ true \\
+
+\end{theorem}
+
+VC4 for line 11 column 4 start 188 length 12 in "complexHidingRenaming"
+\begin{theorem}{ SR\_ vc\_ ref}\\
+ \exists SRFSBSig | true @ true \\
+
+\end{theorem}
+
+VC6 for line 16 column 1 start 264 length 92 in "complexHidingRenaming"
+\begin{theorem}{ State\_ vc\_ ref}\\
+ \exists StateFSBSig | true @ true \\
+
+\end{theorem}
+
+VC8 for line 24 column 1 start 358 length 92 in "complexHidingRenaming"
+\begin{theorem}{ Op\_ vc\_ ref}\\
+ \forall OpFSBSig | true @ \pre Op \\
+
+\end{theorem}
+
+VC10 for line 32 column 4 start 467 length 42 in "complexHidingRenaming"
+\begin{theorem}{ OpIORename\_ vc\_ ref}\\
+ \forall OpIORenameFSBSig | true @ \pre OpIORename \\
+
+\end{theorem}
+
+VC11 for line 33 column 4 start 516 length 42 in "complexHidingRenaming"
+\begin{theorem}{ OpHR\_ vc\_ ref}\\
+ \forall OpHRFSBSig | true @ \pre OpHR \\
+
+\end{theorem}
+
+
+
+ VC Z section "complexHidingRenamingARGref" has $6$ interesting VCs (Total = 12; Simplified to $true$ = 6).
+
+
+
+%----------------------------------
+\end{document}

@@ -1,0 +1,35 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1603010464494
+Build-Jdk: 1.8.0_262
+Built-By: root
+Bundle-Description: Provides classes for typechecking Z/EVES proofs.
+Bundle-DocURL: http://czt.sourceforge.net
+Bundle-License: http://www.gnu.org/copyleft/gpl.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: CZT Typechecker Z/EVES
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-SymbolicName: net.sourceforge.czt.typechecker-zeves;singleton:=fa
+ lse
+Bundle-Vendor: Community Z Tools Project
+Bundle-Version: 1.6.0.cdh
+Created-By: Apache Maven Bundle Plugin
+Embed-Transitive: true
+Export-Package: net.sourceforge.czt.typecheck.zeves;version="1.6.0.cdh",
+ net.sourceforge.czt.typecheck.zeves.impl;version="1.6.0.cdh",net.source
+ forge.czt.typecheck.zeves.util;version="1.6.0.cdh"
+Import-Package: net.sourceforge.czt.base.ast;version="[1.6,2)",net.sourc
+ eforge.czt.base.util;version="[1.6,2)",net.sourceforge.czt.parser.util;
+ version="[1.6,2)",net.sourceforge.czt.parser.zeves;version="[1.6,2)",ne
+ t.sourceforge.czt.print.util;version="[1.6,2)",net.sourceforge.czt.prin
+ t.zeves;version="[1.6,2)",net.sourceforge.czt.session;version="[1.6,2)"
+ ,net.sourceforge.czt.typecheck.z;version="[1.6,2)",net.sourceforge.czt.
+ typecheck.z.impl;version="[1.6,2)",net.sourceforge.czt.typecheck.z.util
+ ;version="[1.6,2)",net.sourceforge.czt.util;version="[1.6,2)",net.sourc
+ eforge.czt.z.ast;version="[1.6,2)",net.sourceforge.czt.z.impl;version="
+ [1.6,2)",net.sourceforge.czt.z.util;version="[1.6,2)",net.sourceforge.c
+ zt.z.visitor;version="[1.6,2)",net.sourceforge.czt.zeves.ast;version="[
+ 1.6,2)",net.sourceforge.czt.zeves.impl;version="[1.6,2)",net.sourceforg
+ e.czt.zeves.jaxb;version="[1.6,2)",net.sourceforge.czt.zeves.util;versi
+ on="[1.6,2)",net.sourceforge.czt.zeves.visitor;version="[1.6,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-2.3.0.201405100607

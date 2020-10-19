@@ -1,0 +1,15 @@
+net/sourceforge/czt/parser/circus/CyclicParentParserTest.class
+net/sourceforge/czt/parser/circus/ParserTest.class
+net/sourceforge/czt/parser/circus/ParserFailTest.class
+net/sourceforge/czt/parser/circus/ParserUtilsTest.class
+net/sourceforge/czt/parser/circus/AbstractParserTest.class
+net/sourceforge/czt/parser/circus/SimpleCircusFormatter.class
+net/sourceforge/czt/parser/circus/ParseErrorLogging.class
+net/sourceforge/czt/print/circus/PrintTest$TestNormal.class
+net/sourceforge/czt/parser/circus/AbstractParserTest$DeleteLocVisitor.class
+net/sourceforge/czt/parser/circus/DefaultCircusSectionParentsTest.class
+net/sourceforge/czt/parser/circus/ParseErrorLogging$NameFilter.class
+net/sourceforge/czt/print/circus/PrintTest.class
+net/sourceforge/czt/parser/circus/ParserFailTest$TestError.class
+net/sourceforge/czt/parser/circus/ParserTest$TestNormal.class
+net/sourceforge/czt/parser/circus/SectionManagerCircusParserTest.class

@@ -1,0 +1,13 @@
+/root/czt-code/z2b/src/main/java/net/sourceforge/czt/z2b/Preprocessor.java
+/root/czt-code/z2b/src/main/java/net/sourceforge/czt/z2b/Create.java
+/root/czt-code/z2b/src/main/java/net/sourceforge/czt/z2b/BTermWriter.java
+/root/czt-code/z2b/src/main/java/net/sourceforge/czt/z2b/BWriter.java
+/root/czt-code/z2b/src/main/java/net/sourceforge/czt/z2b/Main.java
+/root/czt-code/z2b/src/main/java/net/sourceforge/czt/z2b/BOperation.java
+/root/czt-code/z2b/src/main/java/net/sourceforge/czt/z2b/Z2B.java
+/root/czt-code/z2b/src/main/java/net/sourceforge/czt/z2b/BMachine.java
+/root/czt-code/z2b/src/main/java/net/sourceforge/czt/z2b/FreeVarChecker.java
+/root/czt-code/z2b/src/main/java/net/sourceforge/czt/z2b/BException.java
+/root/czt-code/z2b/src/main/java/net/sourceforge/czt/z2b/Classifier.java
+/root/czt-code/z2b/src/main/java/net/sourceforge/czt/z2b/RenameVisitor.java
+/root/czt-code/z2b/src/main/java/net/sourceforge/czt/z2b/UnfoldException.java

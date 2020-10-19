@@ -1,0 +1,5763 @@
+
+/*
+  Copyright (C) 2003, 2004, 2005 Tim Miller
+  Copyright (C) 2004, 2005, 2006, 2007 Petra Malik
+  Copyright (C) 2005, 2006, 2007 Leo Freitas
+  This file is part of the CZT project.
+
+  The CZT project contains free software;
+  you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2 of the License, or
+  (at your option) any later version.
+
+  The CZT project is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with CZT; if not, write to the Free Software
+  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+*/
+
+package net.sourceforge.czt.parser.zeves;
+
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.Properties;
+import java.util.Collection;
+import java.util.Collections;
+
+import java_cup.runtime.*;
+
+import net.sourceforge.czt.util.CztException;
+import net.sourceforge.czt.util.Section;
+import net.sourceforge.czt.util.CztLogger;
+
+import net.sourceforge.czt.base.ast.*;
+import net.sourceforge.czt.base.util.PerformanceSettings;
+
+import net.sourceforge.czt.z.ast.*;
+import net.sourceforge.czt.z.util.*;
+
+import net.sourceforge.czt.session.*;
+
+import net.sourceforge.czt.parser.util.*;
+
+
+import net.sourceforge.czt.zeves.ast.*;
+import net.sourceforge.czt.zeves.util.ZEvesString;
+import net.sourceforge.czt.zeves.util.Factory;
+import net.sourceforge.czt.zeves.util.ZEvesUtils;
+
+import net.sourceforge.czt.parser.z.*;
+
+import net.sourceforge.czt.parser.zeves.ProofTable;
+
+
+import net.sourceforge.czt.session.Dialect;
+
+action code
+{:
+
+
+    /** The symbols used to replace arguments for names in ApplExpr etc. */
+    protected final static String ARG_TOK = ZString.ARG_TOK;
+    protected final static String LISTARG_TOK = ZString.LISTARG_TOK;
+
+    /** The factory for creating AST objects. */
+    protected Factory factory_;
+
+    /** The table of operators. */
+    protected OpTable opTable_;
+    
+    /** The table of named conjectures */
+    protected ThmTable thmTable_;
+
+
+    /** The table of proof scripts. */
+    protected ProofTable proofTable_;
+
+
+    /** The source currently being parsed. */
+    protected Source source_ = null;
+
+    /**
+     * The symbol returned by the last call to local_next_token().
+     */
+    protected Symbol previous_;
+
+    protected ParserState parserState_;
+
+   /** Section information (action code). */
+    protected SectionInfo sectInfo_;
+
+	protected DefaultSectionParents defaultSP_;
+
+		/** Action code dialect */
+	  protected Dialect dialect_;
+	  
+    /** The operator scanner. */
+    protected OperatorScanner opScanner_;
+    protected NewlineScanner nlScanner_;
+
+
+		public Dialect getDialect()
+		{
+			return dialect_;
+		}
+
+    /**
+     * Create an function application with the SchExpr formed from
+     * 'st' and any additional renaming/strokes etc in 'al'.
+     * 
+     * @param e 
+     * @param st 
+     * @param al 
+     * @return
+     */
+    private ApplExpr createSchApplExpr(Expr e, SchText st,
+                                       List < Object > al)
+    {
+      Expr se = factory_.createSchExpr(st);
+      for (Object a : al) {
+        if (a instanceof Stroke) {
+          se = factory_.createDecorExpr(se, (Stroke) a);
+        }
+        else if (a instanceof RenameExpr) {
+          RenameExpr re = (RenameExpr) a;
+          se = factory_.createRenameExpr(se, re.getRenameList());
+        }
+        else if (a instanceof BindSelExpr) {
+          BindSelExpr bse = (BindSelExpr) a;
+          se  = factory_.createBindSelExpr(se, bse.getName());
+        }
+        else if (a instanceof TupleSelExpr) {
+          TupleSelExpr tse = (TupleSelExpr) a;
+          se  = factory_.createTupleSelExpr(se, tse.getNumeral());
+        }
+      }
+      ApplExpr result = factory_.createApplExpr(e, se, Boolean.FALSE);
+      return result;
+    }
+
+    private void checkName(Decorword decorword)
+    {
+      ZChar unmatched = decorword.check();
+      if (unmatched != null) {
+        final Object[] params = { unmatched };
+        parser.report_error(ZParseMessage.MSG_UNMATCHED_WORDGLUE,
+                            params, decorword.getLocation());
+      }
+    }
+
+    private Spec createSpec(List<? extends Sect> sectList)
+    {
+      Spec result = factory_.createSpec();
+      result.setVersion(Version.ZML_VERSION);
+      result.getSect().addAll(sectList);
+      return result;
+    }
+
+    private ZName createZName(Decorword decorword)
+    {
+      checkName(decorword);
+      ZName result = factory_.createZName(decorword.getWord(),
+                                          decorword.getStrokes());
+      addLocAnn(result, decorword.getLocation());
+      return result;
+    }
+
+
+    // bla\$domainCheck or bla\$declaration
+    private ZName createSpecialThmName(Decorword dw1, /*LocInfo dollar,*/ Decorword dw2)
+    {
+      checkName(dw1);
+      checkName(dw2);
+      // dw1 might have strokes; dw2 must not have strokes.
+      ZName result = factory_.createZName(dw1.getWord() + ZEvesString.ZPROOFDOLLARCHAR + dw2.getWord(), dw1.getStrokes());
+      checkSpecialThmSuffix(dw2);
+
+      // location is the start of dw1 and end dw2
+      addLocAnn(result, getLocation(dw1.getLocation(), dw2.getLocation()));
+      return result;
+    }
+
+    // unamed\$n5\$domainCheck
+    private ZName createSpecialThmName(Decorword dw1, Decorword dw2, Decorword dw3)
+    {
+      checkName(dw1);
+      checkName(dw2);
+      checkName(dw3);
+      // dw1 might have strokes; dw2/3 must not have strokes.
+      ZName result = factory_.createZName(dw1.getWord() + ZEvesString.ZPROOFDOLLARCHAR + dw2.getWord() + ZEvesString.ZPROOFDOLLARCHAR + dw3.getWord(), dw1.getStrokes());
+      checkSpecialThmSuffix(dw2);
+      checkSpecialThmSuffix(dw3);
+
+      // location is the start of dw1 and end dw2
+      addLocAnn(result, getLocation(dw1.getLocation(), dw3.getLocation()));
+      return result;
+    }
+
+    private void checkSpecialThmSuffix(Decorword dw)
+    {
+      if (dw.getStrokes() != null && !dw.getStrokes().isEmpty())
+      {
+        parser.report_error(ZEvesParseMessage.MSG_INVALID_SPECIAL_THM_SUFFIX,
+                               new Object[] { dw.toString() }, dw.getLocation());
+      }
+      // TODO: or should we actually check for all the "allowed" names? e.g., domainCheck; thetasInSet; member; etc...
+    }
+
+    // some very peculiar circunstances (e.g., name capture; mistaken names from thm appl) might appear like "x$"
+    //private ZName createSpecialName(Decorword dw)
+    //{
+    //  checkName(dw);
+    //  ZName result = factory_.createZName(dw.getWord() + ZEvesString.ZPROOFDOLLARCHAR, dw.getStrokes());
+    //  addLocAnn(result, dw.getLocation());
+    //  return result;
+    //}
+
+    // x$' for x' renamed due to capture
+    // second decorword MUST be DOLLAR STROKE
+    //private ZName createSpecialName(Decorword dw)//, Decorword pw)
+    //{
+    //  checkName(dw);
+    //  //checkName(pw);
+    //  if ((!dw.getWord().endsWith(ZEvesString.ZPROOFDOLLARCHAR))
+    //      //||
+    //      //(pw == null || !(pw instanceof Proofword) || !pw.getStrokes().isEmpty())
+    //      )
+    //  {
+    //    parser.report_error(ZEvesParseMessage.MSG_INVALID_SPECIAL_THM_SUFFIX,
+    //        new Object[] { dw.toString() //+ String.valueOf(pw)
+    //                     }, dw.getLocation());
+    //  }
+    //  ZName result = factory_.createZName(dw.getWord() + ZEvesString.TO,//pw.getWord(),
+    //    dw.getStrokes());
+    //  addLocAnn(result, dw.getLocation());
+    //  return result;
+    //}
+
+    private void addZNote(Term term, ZEvesNote znote)
+    {
+      if (znote != null && znote.getNote() != null && !znote.getNote().isEmpty())
+      {
+        term.getAnns().add(znote);
+      }
+    }
+
+    /**
+     * Labels for unboxed paragraph are slighltly more complicated. That's because something like \begin[disabled]{zed}...\end{zed}
+     * are (ability-only) labels for all paragraphs within, hence the list as a parameter. Each paragraph will have inner elements
+     * within that are entitled to a label, say a GivenPara like [X,Y,Z] will have 3 labels, one for each name X, Y, Z. That is,
+     * GivenPara will have 3 labels, and each name will have its own. For FreePara, each FreeType and Branch have a label, as well
+     * as the top-level para, where the names are free-type names. For AxPara, it depends: if it's an abbreviation or horizontal
+     * schema (e.g., OmitBox), the name is obvious; other AxPara kinds are not allowed within unboxed-para lists. For ConjPara,
+     * an error is raised, since Z/EVES does not allow theorems in zed environments. OptempPara is also funny, but necessary.
+     */
+    private void addZEvesLabel(List<Para> unboxedParaList, LabelAbility ability)
+    {
+      for (Para p : unboxedParaList)
+      {
+        if (p instanceof GivenPara)
+        {
+          GivenPara gp = (GivenPara) p;
+          if (gp.getNameList() instanceof ZNameList)
+          {
+            for (Name name : gp.getZNameList())
+            {
+              addZEvesLabel(gp, name, ability);
+            }
+          }
+        }
+        else if (p instanceof FreePara)
+        {
+          FreePara fp = (FreePara)p;
+          if (fp.getFreetypeList() instanceof ZFreetypeList)
+          {
+            for (Freetype ft : ZUtils.assertZFreetypeList(fp.getFreetypeList()))
+            {
+              addZEvesLabel(fp, ft.getName(), ability);
+              if (ft.getBranchList() instanceof ZBranchList)
+              {
+                for (Branch branch : ZUtils.assertZBranchList(ft.getBranchList()))
+                {
+                  addZEvesLabel(fp, branch.getName(), ability);
+                }
+              }
+            }
+          }
+        }
+        else if (p instanceof AxPara)
+        {
+          AxPara ap = (AxPara)p;
+          if (ap.getBox().equals(Box.OmitBox))
+          {
+            // try if it is an abbreviation
+            Name name = ZUtils.getAbbreviationName(ap);
+            if (name == null)
+            {
+              // if not, it must be a simple schema (e.g., one that is schema display, not schema calculus, YET! TODO)
+              if (!ZUtils.isSimpleSchema(ap))
+              {
+                parser.report_error(ZEvesParseMessage.MSG_INVALID_AXPARA_ABILITY,
+                               new Object[] { ap }, getLocation(p));
+              }
+              else
+              {
+                name = ZUtils.getSchemaName(ap);
+              }
+            }
+            assert name != null;
+            addZEvesLabel(ap, name, ability);
+          }
+          else
+          {
+            parser.report_error(ZEvesParseMessage.MSG_INVALID_AXPARA_ABILITY,
+                               new Object[] { ap }, getLocation(p));
+          }
+        }
+        else if (p instanceof OptempPara)
+        {
+          OptempPara op = (OptempPara)p;
+          for (Oper oper : op.getOper())
+          {
+            //if (oper instanceof Operand)
+            //{
+            //  ((Operand)oper).
+            //}
+            //else
+            if (oper instanceof Operator)
+            {
+              addZEvesLabel(op, factory_.createZName(((Operator)oper).getWord()), ability);
+            }
+          }
+        }
+        else if (p instanceof ConjPara)
+        {
+          // if \vdash? is present, this is unlikely to be within Z/EVES,
+          // but rather as part of a unboxedPara within ZED rather than THEOREM
+          // raise a warning? or error? ERROR?
+          
+          // the assymetry of THEOREM is annoying: in there, we add the label. But it is still
+          // parsed as if it was an unboxed para (!) So, will get here. So, only raise the error
+          // if getLabel(p) doesn't have a label yet (e.g., haven't been processed as THEOREM!)
+          if (ZEvesUtils.getLabel(p) == null)
+          {
+            parser.report_error(ZEvesParseMessage.MSG_UNBOXED_CONJPARA, new Object[] { ((ConjPara)p).getName(), p }, getLocation(p));
+          }
+        }
+        else
+        {
+           parser.report_error(ZEvesParseMessage.MSG_UNKNOWNPARA_ABILITY,
+                               new Object[] { p }, getLocation(p));
+        }
+      }
+    }
+
+    private void addZEvesLabel(Term term, Name name, LabelAbility ability)
+    {
+      addZEvesLabel(term, name, ability, ZEvesUtils.getDefaultUsage());
+    }
+
+    /**
+     * Create ZEvesLabel with given parameters and attach it to Term, as well as Name.
+     * If the term or name already contains a label, a warning is raised.
+     */
+    private void addZEvesLabel(Term term, Name name, LabelAbility ability, LabelUsage usage)
+    {
+      assert name != null;
+      if (ZEvesUtils.getLabel(term) != null)
+      {
+         // warning: multiple labels? It does happen for GivenPara and others, though...
+         // in that case, check the name. If it does have it already as well, then raise the warning
+         // (E.g., the name having it at a GvienPara, is a duplication)
+         if (ZEvesUtils.getLabel(name) != null)
+         {
+            CztLogger.getLogger(Parser.class).warning("Duplicated ZEvesLabel for name " + name + " as " + 
+            	ZEvesUtils.getLabel(name) + " for " + getDialect().toString() + " in Parser.");
+            if (!ZEvesUtils.getLabel(name).equals(ZEvesUtils.getLabel(term)))
+            {
+              CztLogger.getLogger(Parser.class).warning("Inconsistent ZEvesLabel for name " + name + 
+              	" and term as " + ZEvesUtils.getLabel(name)
+              	+ " for " + getDialect().toString() + " in Parser.");
+            }
+         }
+      }
+      ZEvesLabel label = factory_.createZEvesLabel(name, ability, usage);
+      //name.getAnns().add(label); To avoid circular annotation loops in ZML
+      term.getAnns().add(label);
+    }
+
+    /**
+     * Creates a ZEvesLabel with default values from ZEvesUtils, and a fresh name
+     * according to ParserState - this is usually the name for axioms, like axiom$1.
+     * The freshly created name has the label as an annotation.
+     */
+    private ZEvesLabel createDefaultZEvesLabel(LabelAbility ability, LabelUsage usage)
+    {
+      ZName name = factory_.createZName(parserState_.freshLabelName());
+      ZEvesLabel result = factory_.createZEvesLabel(name, ability, usage);
+      //name.getAnns().add(result); To avoid circular annotation loops in ZML
+      return result;
+    }
+
+
+    private Operator createOperator(Decorword decorword)
+    {
+      return createOperator(decorword.getName(), decorword.getLocation());
+    }
+
+    private Operator createOperator(String name, LocInfo locInfo)
+    {
+      final ZName dn = factory_.createZName(name);
+      final StrokeList sl = dn.getStrokeList();
+      if (sl instanceof List && ((List<?>) sl).size() != 0) {
+        final Object[] params = { name };
+        parser.report_error(ZParseMessage.MSG_STROKE_IN_OPNAME,
+                            params, locInfo);
+      }
+      Operator result = factory_.createOperator(dn.getWord());
+      addLocAnn(result, locInfo);
+      return result;
+    }
+
+    private void misusedOpName(LocString name)
+    {
+      final Object [] params = {name.getString()};
+      parser.report_error(ZParseMessage.MSG_OPNAME_AS_DECLWORD,
+                          params, name.getLocation());
+    }
+
+    private LocInfo getLocation(int line, int column)
+    {
+      return new LocInfoImpl(getDialect(), getLoc(), line, column);
+    }
+
+    private LocInfo getLocation(Term term)
+    {
+      return parser.getLocation(term);
+    }
+
+    private OperatorName createOperatorName(List<String> list)
+      throws OperatorName.OperatorNameException
+    {
+      final String errorMessage = list + " is not an operator name (for dialect " + getDialect().toString() + " in Parser).";
+      if (list.size() <= 1) {
+        throw new OperatorName.OperatorNameException(errorMessage);
+      }
+      StrokeList strokes = null;
+      Boolean expectArgument = null;
+      StringBuilder stringBuilder = new StringBuilder();
+      for (String opPart : list) {
+        if (opPart.equals(ZString.ARG) ||
+            opPart.equals(ARG_TOK)) {
+          if (Boolean.FALSE.equals(expectArgument)) {
+            throw new OperatorName.OperatorNameException(errorMessage);
+          }
+          stringBuilder.append(ARG_TOK);
+          expectArgument = Boolean.FALSE;
+        }
+        else if (opPart.equals(ZString.LISTARG) ||
+                 opPart.equals(LISTARG_TOK)) {
+          if (Boolean.FALSE.equals(expectArgument)) {
+            throw new OperatorName.OperatorNameException(errorMessage);
+          }
+          stringBuilder.append(LISTARG_TOK);
+          expectArgument = Boolean.FALSE;
+        }
+        else {
+          if (Boolean.TRUE.equals(expectArgument)) {
+            throw new OperatorName.OperatorNameException(errorMessage);
+          }
+          ZName declName = factory_.createZName(opPart);
+          stringBuilder.append(declName.getWord());
+          if (strokes == null) {
+            strokes = declName.getStrokeList();
+          }
+          else if (! strokes.equals(declName.getStrokeList())) {
+            final String message =
+              "The component names of an operator must have the " +
+              "same decorations (for dialect " + dialect_.toString() + " in Parser).";
+            throw new OperatorName.OperatorNameException(message);
+          }
+          expectArgument = Boolean.TRUE;
+        }
+      }
+      return new OperatorName(stringBuilder.toString(), strokes);
+    }
+
+    /**
+     * Converts a list of String objects to a Name object.
+     * 
+     * @param list 
+     * @param location 
+     * @return
+     */
+    protected ZName strListToZName(List<String> list,
+                                   LocInfo location)
+    {
+      try {
+        OperatorName opName = createOperatorName(list);
+        ZName result =
+          factory_.createZName(opName.getWord(), opName.getStrokes());
+        addLocAnn(result, location);
+        return result;
+      }
+      catch (OperatorName.OperatorNameException e) {
+        parser.report_error(ZParseMessage.MSG_OPNAME_ERROR,
+                            new Object[] { e.getMessage() },
+                            location);
+        return null;
+      }
+    }
+    
+    /**
+     * Converts a name list into a list of strings. This methods is called by complex operator template
+     * patterns that eventually call strListToZName(List<String>, LocInfo). Earlier versions of 
+     * parser mixed up list of names within the list of strings... This method flattens these names to strings.
+     */
+    protected List<String> extractNamesFromNameList(List<Name> list)
+    {
+    	List<String> result = factory_.list();
+    	for(Name n : list)
+    	{
+    		if (n instanceof ZName)
+    			result.add(ZUtils.assertZName(n).getWord());
+    		
+    		else
+    			result.add(n.toString());
+    	}
+    	return result;
+    }
+    
+
+    protected List<String> toStringList(List<LocString> list)
+    {
+      List<String> result = new ArrayList<String>(list.size());
+      for (LocString ls : list) {
+        result.add(ls.getString());
+      }
+      return result;
+    }
+
+    /**
+     * Converts a Term to a Pred.
+     * 
+     * @param t 
+     * @return
+     */
+    protected Pred pred(Term t)
+    {
+      Pred result = null;
+
+      if (t instanceof Pred) {
+        result = (Pred) t;
+      }
+
+      else if (t instanceof Expr) {
+        result = factory_.createExprPred((Expr) t);
+        LocAnn locAnn = (LocAnn) t.getAnn(LocAnn.class);
+        if (locAnn != null) result.getAnns().add(locAnn);
+      }
+      else {
+        //I don't think that this is possible...?
+        parser.report_error(ZParseMessage.MSG_PRED_EXPECTED,
+                            new Object[0], getLocation(t));
+      }
+      return result;
+    }
+
+    /**
+     * Converts an Term to an Expr.
+     * 
+     * @param t 
+     * @return
+     */
+    protected Expr expr(Term t)
+    {
+      Expr result = null;
+
+      if (t instanceof Expr) {
+        result = (Expr) t;
+      }
+      else if (t instanceof ExprPred) {
+        result = ((ExprPred) t).getExpr();
+      }
+
+      else if (t instanceof Pred) {
+
+        parser.report_error(ZParseMessage.MSG_EXPR_EXPECTED_FOUND_PRED,
+                            new Object [0], getLocation(t));
+
+      }
+      else {
+        parser.report_error(ZParseMessage.MSG_EXPR_EXPECTED,
+                            new Object [0], getLocation(t));
+      }
+      return result;
+    }
+
+
+
+    /**
+     * Converts a Term to a Name.
+     * 
+     * @param t 
+     * @return 
+     */
+    protected Name name(Term t)
+    {
+      if (t instanceof Name) return (Name) t;
+      if (t instanceof RefExpr) {
+        RefExpr re = (RefExpr) t;
+        if (re.getZExprList().size() > 0) {
+          parser.report_error(ZParseMessage.MSG_REFNAME_NO_PARAMS_EXPECTED,
+                              new Object [0], getLocation(re));
+        }
+        return re.getName();
+      }
+      parser.report_error(ZParseMessage.MSG_REFNAME_EXPECTED,
+                          new Object [0], getLocation(t));
+      return null;
+    }
+
+    /**
+     * Creates a member predicate from a string list and an expression list.
+     * 
+     * @param name 
+     * @param exprs 
+     * @param loc 
+     * @return
+     */
+    protected MemPred createMemPred(List<String> name,
+                                    ZExprList exprs,
+                                    LocInfo loc)
+    {
+      Expr e = createTupleExpr(exprs);
+      Name rn = strListToZName(name, loc);
+      MemPred result = factory_.createRelOpAppl(e, rn);
+      addLocAnn(result.getRightExpr(), loc);
+      return result;
+    }
+
+    /**
+     * Creates an application expression or reference expression
+     * (depending on the type of operator: function or generic)
+     * from a string list and an expression list.
+     * The line,column pair are the position of the start of
+     * the whole mixfix expression.
+     * 
+     * @param name 
+     * @param exprs 
+     * @param loc 
+     * @return
+     */
+    protected Expr createMixfixExpr(List<String> name,
+                                    ZExprList exprs,
+                                    LocInfo loc)
+    {
+      final Name rn = strListToZName(name, loc);
+      Expr result = null;
+
+      // TODO: then do what with it? firstOperator is never used.
+      //
+      //get the first operator in the name list, i.e. the first
+      //item that is not an ARG_TOK or LISTARG_TOK.
+      //String firstOperator = null;
+      //for (String next : name) {
+      //  if (! next.equals(ARG_TOK) && ! next.equals(LISTARG_TOK)) {
+      //    firstOperator = next;
+      //    break;
+      //  }
+      //}
+
+      if (opTable_.lookup(name) != null &&
+          Cat.Function.equals(opTable_.lookup(name).getCat())) {
+        Expr e = createTupleExpr(exprs);
+        result = factory_.createFunOpAppl(rn, e);
+        addLocAnn(((ApplExpr) result).getLeftExpr(), loc);
+      }
+      else {
+        result = factory_.createRefExpr(rn, exprs, Boolean.TRUE, Boolean.TRUE);
+      }
+
+      return result;
+    }
+
+    /**
+     * If the list contains just one expression, the expression is
+     * returned.  If there is more than one expression in the list, a
+     * tuple expression is created and returned.
+     * 
+     * @param exprs 
+     * @return
+     */
+    private Expr createTupleExpr(ZExprList exprs)
+    {
+      return exprs.size() == 1 ?
+        exprs.get(0) : factory_.createTupleExpr(exprs);
+    }
+
+    /**
+     * Returns the right hand side of the previous infix relation.
+     * 
+     * @param pred 
+     * @return
+     */
+    protected Expr getPreviousRhsExpr(Pred pred)
+    {
+      Expr result = null;
+
+      MemPred memPred = null;
+      if (pred instanceof MemPred) {
+        memPred = (MemPred) pred;
+      }
+      else {   //AndPred
+        memPred = (MemPred) ((AndPred) pred).getRightPred();
+      }
+
+      //if the previous infix is a mem pred
+      if (memPred.getMixfix().equals(Boolean.FALSE)) {
+        result = memPred.getRightExpr();
+      }
+      //if the previous infix is an equals
+      else if (memPred.getMixfix().equals(Boolean.TRUE) &&
+               memPred.getRightExpr() instanceof SetExpr) {
+        SetExpr se = (SetExpr) memPred.getRightExpr();
+        result = se.getZExprList().get(0);
+      }
+      //if the previous infix is an IP
+      else {
+        TupleExpr te = (TupleExpr) memPred.getLeftExpr();
+        result = te.getZExprList().get(1);
+      }
+
+      return result;
+    }
+
+    /**
+     * Convert a chain relation into a series of and predicates
+     * (transformation rule 12.2.10.3).
+     * 
+     * @param chain 
+     * @param sym 
+     * @param rhs 
+     * @param loc 
+     * @return
+     */
+    protected Pred transformChainRel(Pred chain, int sym, Expr rhs,
+                                     LocInfo loc)
+    {
+      Pred result = null;
+
+      Expr lExpr = getPreviousRhsExpr(chain);
+      Expr rExpr = rhs;
+
+      Boolean mixfix = Boolean.FALSE;
+      if (sym == Sym.EQUALS) {
+        ZExprList expList = factory_.createZExprList();
+        expList.add(rhs);
+        rExpr = factory_.createSetExpr(expList);
+        addLocAnn(rExpr, loc);
+        mixfix = Boolean.TRUE;
+      }
+
+      MemPred mp = factory_.createMemPred(lExpr, rExpr, mixfix);
+      addLocAnn(mp, loc);
+      result = factory_.createAndPred(chain, mp, And.Chain);
+      return result;
+    }
+
+    protected Pred transformChainRelInfix(Pred chain, Expr rhs, String ip,
+                                          LocInfo loc)
+    {
+      Pred result = null;
+
+      List<String> opName = factory_.list(ARG_TOK);
+      opName.add(ip);
+      opName.add(ARG_TOK);
+
+      Expr lExpr = getPreviousRhsExpr(chain);
+      Expr rExpr = rhs;
+      ZExprList exprs = factory_.createZExprList();
+      exprs.add(lExpr);
+      exprs.add(rExpr);
+      MemPred mp = createMemPred(opName, exprs, loc);
+      addLocAnn(mp, loc);
+      result = factory_.createAndPred(chain, mp, And.Chain);
+      return result;
+    }
+
+    /**
+     * Creates a list of strings for a list returned by expSep.
+     * This list will represent the name of the operator to which
+     * the expressions were applied.
+     * 
+     * @param opName 
+     * @param es
+     */
+    protected void addExpSepName(List<String> opName, List<?> es)
+    {
+      for (int i = 0; i < es.size(); i += 2) {
+
+        List<?> list = (List<?>) es.get(i);
+        if (list.size() == 1) {
+          opName.add(ARG_TOK);
+        }
+        else {
+          opName.add(LISTARG_TOK);
+        }
+        opName.add((String) es.get(i + 1));
+      }
+    }
+
+    /**
+     * Returns the list of expressions returned by expSep.
+     * 
+     * @param expList 
+     * @param es 
+     */
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+    protected void addExpSepExp(List<? extends Object> expList, List<Object> es)
+    {
+      for (int i = 0; i < es.size(); i += 2) {
+      	// exprList is always called as ZExprList; but es can have expr or strings. argh... TODO: fix types?
+        expList.addAll((List) es.get(i));
+      }
+    }
+    
+    private void resetInfoTables(String section, List<Parent> parents,
+                                 int line, int column)
+      throws Exception
+    {
+      
+      // use the cyclic manager to get valid parents avoiding cyclic recursion
+      CyclicParseManager cyclicMan = CyclicParseManager.getManager(sectInfo_);
+      List<Parent> validParents = cyclicMan.getValidParents(section, parents); 
+      try
+      {
+        // to enable proper transaction scopes within the section manager,
+        // we MUST adhere to the most natural dependency ordering between
+        // any info table involved. 
+        // the one we choose was: 
+        //  [ProofTable] dependsOn ThmTble dependsOn [JokerTble] dependsOn OpTable
+        //
+        //
+        // ahhh, but there is the possibility of unrecovered errors or syntax errors
+        // or indeed scanning errors. In that case, we would need a catch for closing/cancelling
+        // the transactions. Instead then, we decided to end the transaction with a empty
+        // info table that gets filled along the way during parsing. If such errors occur,
+        // then upon removing the ZSect involved, we know that the dependant tables get
+        // removed as well becuase they explicitly depend on the ZSect.
+        // So order here of resetXXXTable doesn't matter.
+
+        resetOpTable(section, validParents, line, column);
+        resetThmTable(section, validParents, line, column);
+
+        resetProofTable(section, validParents, line, column);
+
+        
+      } finally {
+        // mark section inactive and report cycles
+        List<List<String>> cycles = cyclicMan.visitedParents(section);
+        for (List<String> cycle : cycles) {
+          // report found cycles, if any, as warnings
+          reportParentCycle(cycle, parents);
+        }
+      }
+      
+    }
+    
+    private void reportParentCycle(List<String> cycle, List<Parent> parents)
+    {
+      Pair<String, String> render = CyclicParseManager.renderParseParentCycle(cycle);
+      String cycleParent = render.getFirst();
+      String cycleStr = render.getSecond();
+      
+      boolean found = false;
+      for (Parent parent : parents) {
+        if (cycleParent.equals(parent.getWord())) {
+          // found the parent - report cycle with its location as a warning
+          CyclicParentError.reportCyclicParent(sectInfo_, source_, cycleStr, getLocation(parent));
+          found = true;
+          // do not break, because several parents with the same name could be
+          // listed - we need to report the same cycle for all of them
+        }
+      }
+      
+      if (!found) {
+        // no applicable parent found? 
+        // still report - using dummy location
+        CyclicParentError.reportCyclicParent(sectInfo_, source_, cycleStr, 
+            new LocInfoImpl(getDialect(), source_.getName(), 0, 0));
+      }
+    }
+    
+    /**
+     * Starts a transaction for the info table. Also calculates parent info tables and returns
+     * them. This means that parent info tables become implicit dependencies for this info table.
+     * 
+     * @param section
+     * @param parents
+     * @param line
+     * @param column
+     * @param tableKey
+     * @param tableLabel
+     * @return
+     */
+    private <T> List<T> startInfoTableTransaction(String section, List<Parent> parents, 
+        int line, int column, Key<T> tableKey, String tableLabel)
+    {
+      /*
+       * Start the transaction for the info table. Parent calculations later will start their own
+       * transactions (via {@code SectionInfo.get()}), thus nesting transactions and dependencies.
+       * We assume here, that the parent cycles have been resolved.
+       */
+      sectInfo_.startTransaction(tableKey);
+  
+      List<T> parentInfoTables = factory_.list();
+      if (Section.PRELUDE.getName().equals(section)) {
+        assert parents.isEmpty();
+      }
+      else {
+        for (Parent parent : parents) {
+          
+          // For each parent, resolve their info table and use it to create the current one.
+          // Note that if problems occur in parents, the error is reported, but parsing continues.
+          try 
+          {
+            // will have a transaction on the inner/parent table
+            T parentInfoTable = sectInfo_.get(new Key<T>(parent.getWord(), tableKey.getType()));
+            parentInfoTables.add(parentInfoTable);
+          }
+          catch (CommandException e) {
+            Object [] args = { tableLabel, section, e.getMessage() };
+            parser.report_error(ZParseMessage.MSG_OF_PARENT_NOT_FOUND,
+                                args, new LocInfoImpl(getDialect(), getLoc(), line, column));
+          }
+        }
+      }
+      
+      return parentInfoTables;
+    }
+    
+    /**
+     * End the transaction for the info table calculation in the Section Manager. The transaction is
+     * ended immediately after calculation of the info table. It is then populated with contents
+     * during the actual parsing. This means that the info table can be empty when first put in the
+     * section manager, and filled with content later. Such approach is necessary to ensure correct
+     * transactions in the section manager. Otherwise, parsing of different info tables can overlap,
+     * and transactions would fail.
+     * <p>
+     * To accommodate for the short-circuiting of the info table transactions, we add an explicit
+     * dependency on the ZSect for the info table. This is to signal that the ZSect may contain
+     * contents for the info table, e.g. operator definitions.
+     * </p>
+     * <p>
+     * The same approach (end transaction after initial resolution of an object) is used for
+     * LatexMarkupFunction computation. This is necessary because of a complicated parsing protocol,
+     * and is a compromise to achieve transactional structure to some level. Otherwise the
+     * transactions would overlap. To achieve better confidence in the dependencies, some
+     * dependencies are added explicitly (e.g. that info table depends on its ZSect).
+     * </p>
+     * 
+     * @param section
+     * @param tableKey
+     * @param infoTable
+     */
+    private <T> void endInfoTableTransaction(String section, Key<T> tableKey, T infoTable)
+    {
+      sectInfo_.endTransaction(tableKey, infoTable,
+          Collections.singleton(new Key<ZSect>(section, ZSect.class)));
+    }
+    
+    /**
+     * Marks the given key of the info table computation as a dependency for the parsed section. 
+     * This is used to implicitly include the dependency on an info table, e.g. if it is used to
+     * interpret/generate the subsequent contents of the Z section. For example, OpTable is used
+     * in the operator scanner, so we mark this dependency. This should be done for all info
+     * tables that have bi-directional dependency with the ZSect, e.g. OpTable, JokerTable. The
+     * ThmTable, though, is not used by the parser, so it should not be a dependency for the ZSect.
+     * 
+     * @param section 
+     * @param tableKey
+     * @return 
+     */
+    private <T> T markInfoTableDependency(String section, Key<T> tableKey) {
+      try
+      {
+        // mark the implicit dependency via SectionInfo.get(), 
+        // because we are inside a ZSect transaction
+        return sectInfo_.get(tableKey);
+      }
+      catch (CommandException e)
+      {
+        // should never happen - we have just put the table into the manager
+        final String message = "Could not retrieve " + tableKey.getType().getSimpleName() 
+            + " for " + section + " that has just been calculated?! (for dialect " 
+            + getDialect().toString() + " in Parser).";
+        throw new CztException(message, e);
+      }
+    }
+    
+    private void resetOpTable(String section, List<Parent> parents,
+                              int line, int column)
+    {
+      Key<OpTable> optKey = new Key<OpTable>(section, OpTable.class);
+      
+      // start the transaction and collect parent tables
+      List<OpTable> parentOpTables = startInfoTableTransaction(
+          section, parents, line, column, optKey, "Operator table");
+      
+      OpTable opTable = new OpTable(getDialect(), section);
+      try {
+        opTable.addParents(parentOpTables);
+      }
+      catch (InfoTable.InfoTableException e) {
+        parser.report_error(ZParseMessage.MSG_CANNOT_MERGE_OPTABLES, 
+            new Object[]{e.getMessage()},
+            getLocation(line, column));
+      }
+  
+      // end the transaction with the non-null value
+      endInfoTableTransaction(section, optKey, opTable);
+      
+      opTable_ = opTable;
+      
+      // mark the OpTable dependency for the ZSect, because it is used in the operator scanner 
+      markInfoTableDependency(section, optKey);
+      opScanner_.setOperatorTable(opTable_);
+    }
+    
+    private void resetThmTable(String section, List<Parent> parents,
+                              int line, int column)
+    {
+      Key<ThmTable> thmKey = new Key<ThmTable>(section, ThmTable.class);
+      
+      // start the transaction and collect parent tables
+      List<ThmTable> parentThmTables = startInfoTableTransaction(
+          section, parents, line, column, thmKey, "Named conjectures table");
+      
+      ThmTable thmTable = new ThmTable(getDialect(), section);
+      try {
+        thmTable.addParents(parentThmTables);
+      }
+      catch (InfoTable.InfoTableException e) {
+        parser.report_error(ZParseMessage.MSG_CANNOT_MERGE_THMTABLES, 
+            new Object[]{e.getMessage()},
+            getLocation(line, column));
+      }
+  
+      // end the transaction with the non-null value
+      endInfoTableTransaction(section, thmKey, thmTable);
+      
+      thmTable_ = thmTable;
+    }
+
+
+    private void addToProofTable(ProofScript script, int nleft, int nright)
+    {
+       try
+       {
+         proofTable_.add(script);
+       }
+       catch (ProofTable.ProofTableException e)
+       {
+         //final Symbol token = new Symbol(Sym.ZED, nleft, nright);
+           parser.report_error(ZEvesParseMessage.MSG_CANNOT_ADD_PROOFSCRIPT,
+                               new Object[] { e.getMessage() },
+                               getLocation(nleft, nright));
+       }
+    }
+    
+    private void resetProofTable(String section, List<Parent> parents,
+                              int line, int column)
+    {
+      Key<ProofTable> proofKey = new Key<ProofTable>(section, ProofTable.class);
+      
+      // start the transaction and collect parent tables
+      List<ProofTable> parentProofTables = startInfoTableTransaction(
+          section, parents, line, column, proofKey, "Named proof scripts table");
+      
+      ProofTable proofTable = new ProofTable(getDialect(), section);
+      try {
+        proofTable.addParents(parentProofTables);
+      }
+      catch (InfoTable.InfoTableException e) {
+        parser.report_error(ZEvesParseMessage.MSG_CANNOT_MERGE_PROOFTABLES, 
+            new Object[]{e.getMessage()},
+            getLocation(line, column));
+      }
+  
+      // end the transaction with the non-null value
+      endInfoTableTransaction(section, proofKey, proofTable);
+      
+      proofTable_ = proofTable;
+    }
+
+
+    /**
+     * Starts the Z section computation transaction in the Section Manager. The transaction allows to
+     * capture the dependencies of the ZSect - e.g. that it depends on its OpTable, and transitively
+     * on parent OpTables and ZSects.
+     * <p>
+     * The ZSect transaction must be started manually, because the parsing is done for the whole
+     * specification. So the section manager can start a transaction on the Spec, however inside the
+     * specification, there can be multiple Z sections. Thus transactions for each ZSect are started
+     * and ended manually, during the parse process.
+     * </p>
+     * <p>
+     * The start of transaction handles issues with redeclared sections as well. See
+     * {@link #endZSectTransaction(ZSect, OpTable)} for more details about the ZSect transaction and
+     * explicit dependencies.
+     * </p>
+     * <p>
+     * When the manual transaction starts, we need to ensure that any exceptions until the end of
+     * transaction are caught and handled. If an exception is encountered, the ZSect transaction must
+     * be cancelled. This is done in {@link Parser#parse()} method, which is the single entry point to
+     * parsing.
+     * </p>
+     * 
+     * @param sectName
+     * @see #endZSectTransaction(ZSect, OpTable)
+     */
+    private void startZSectTransaction(String sectName)
+    {
+      Key<ZSect> zsKey = new Key<ZSect>(sectName, ZSect.class);
+       
+      /*
+       * There may be cases when the Z section is calculated already at the start of transaction.
+       * Sometimes it can be because of the pollution of section manager (SM) from previous runs -
+       * this should have been removed before running the parsing again. Polluted section managers
+       * should generally be caught by other transactions, so it is not that important to be strict
+       * about existing objects in SM cache here.
+       *
+       * However, there are cases when we can encounter this case in a single specification
+       * (RedeclaredSection). The parser is required to parse such specification without errors, and
+       * leave the check for the typechecker. Thus there is parsing of two identical section names
+       * (and therefore keys). For this case - when we encounter the second (redeclared) section, we
+       * remove the ZSect from SM if it is already cached, and start a new transaction for its
+       * calculation. We will have a case when the second ZSect "overwrites" the first ZSect via
+       * remove-endTransaction.
+       * 
+       * If we do not do such "overwriting", we would have needed to make the RedeclaredSection a
+       * parsing error and stop parsing altogether (e.g. via Exception). Current solution allows us to
+       * finish parsing and postpone the check to typechecker.
+       */
+      if (sectInfo_.isCached(zsKey))
+      {
+        sectInfo_.removeKey(zsKey);
+      }
+       
+      /*
+       * Force start the transaction - we cannot have it started already. The parsing could not have
+       * started with a ZSect transaction, because parsing encompasses the whole Spec (even if it has
+       * a single ZSect). So the outer transaction must be that of a Spec, and we should not have an
+       * existing transaction on ZSect. Therefore do a strict startTransaction(), instead of
+       * ensureTransaction().
+       * 
+       * Note if parsing is started using SectionInfo#get(ZSect), the original ZSect transaction is
+       * postponed in favor of the Spec transaction (see ParseUtils for details).
+       */
+       
+      sectInfo_.startTransaction(zsKey);
+    }
+
+    private ZSect createZSect(String name, List<Parent> parents)
+    {
+      parserState_.setCurrentSectName(name);
+      ZParaList paraList = factory_.createZParaList();
+      ZSect result = factory_.createZSect(name, parents, paraList);
+      return result;
+    }
+    
+    /**
+     * Ends the transaction for Z section calculation in the Section Manager. The computed ZSect
+     * receives final adjustments - its operators are reordered according to their precedence, and the
+     * LatexMarkupFunction is added as a LatexMarkupPara to the section. The Z section transaction is
+     * ended, and the section is added to the section manager.
+     * 
+     * @param zSect
+     *          The Z section to end transaction
+     * @param opTable 
+     *          The operator table to determine operator precedences
+     * @return The updated Z section (may be the same object)
+     * @see #startZSectTransaction(String)
+     */
+    private ZSect endZSectTransaction(ZSect zSect, OpTable opTable)
+    {
+      final boolean parseError = parser.hasErrors();
+      final String sectName = zSect.getName();
+  
+      // reorder the Z section in correct operator precedence
+      final PrecedenceHandlingVisitor visitor = new PrecedenceHandlingVisitor(opTable);
+      final ZSect sect = (ZSect) zSect.accept(visitor);
+
+      if (sectName.equals("zeves_toolkit"))
+      {
+        // adds applies$to definitions to top of sections Z para list
+        parserState_.updateZSectWithAddedPara(sect);
+      }
+
+      // Add the LatexMarkupFunction as a LatexMarkupPara to the ZSect.
+      // Note, that this will add implicit dependency on LMF, if it is available
+      addLatexMarkupPara(sect, sectName);
+
+      
+      Key<ZSect> zsKey = new Key<ZSect>(sectName, ZSect.class);
+  
+      if (!parseError) {
+
+        
+        // check proof-thm table consistency
+        checkProofTables();
+        
+
+        /*
+         * End the ZSect transaction. The parser may carry explicit dependencies to add for the ZSect.
+         * This allows indicating some dependencies that could have been missed since ZSect
+         * transaction is started later in the parsing, e.g. that ZSect depends on its Source, or has
+         * a bi-directional dependency with its Spec.
+         * 
+         * ZSect also depends on its LatexMarkupFunction, OpTable and JokerTable. Actually, dependencies 
+         * with these objects are bi-directional (they also depend on the ZSect). These dependencies are
+         * implicitly captured (see #resetOpTable(), addLatexMarkupPara(), etc.), so there is no need to
+         * add them explicitly.
+         */
+        sectInfo_.endTransaction(zsKey, sect, parser.getExplicitDeps());
+      }
+      else {
+        // in case of parsing errors, cancel the transaction
+        sectInfo_.cancelTransaction(zsKey);
+      }
+      return sect;
+    }
+
+    /**
+     * Adds the computed LatexMarkupFunction for the Z section, if available, as a LatexMarkupPara to
+     * the section.
+     * 
+     * @param sect
+     * @param sectName
+     */
+    private void addLatexMarkupPara(ZSect sect, String sectName)
+    {
+      Key<LatexMarkupFunction> key = new Key<LatexMarkupFunction>(sectName, LatexMarkupFunction.class);
+      if (sectInfo_.isCached(key)) {
+        try {
+  
+          /*
+           * Note that this SectionInfo#get(LMF) call will add dependency on the LMF to the ZSect.
+           * This is good, because it indicates the dependency implicitly, which may have been missed
+           * since LatexMarkupParser executes before Parsing (and ZSect transaction) even starts.
+           */
+          LatexMarkupFunction latexMarkupFunction = sectInfo_.get(key);
+  
+          /*
+           * During lexing, the LatexMarkupFunction for this ZSect may have been calculated, which
+           * contains LaTeX markup directives within the section. These directives are added to the
+           * front of the Z section as a LatexMarkupPara. If no directives exist, a LatexMarkupPara
+           * with empty directives list is added.
+           */
+          LatexMarkupPara markupPara = latexMarkupFunction.toAst(factory_);
+          ZUtils.assertZParaList(sect.getParaList()).add(0, markupPara);
+  
+        }
+        catch (CommandException exception) {
+          String message = "Error retrieving LatexMarkupFunction for section " + sectName + " and dialect " + exception.getDialect().toString() + 
+          	" in Parser for " + getDialect().toString();
+          CztLogger.getLogger(Parser.class).warning(message);
+        }
+      }
+    }
+
+
+    private void checkProofTables()
+    {
+        proofTable_.checkAgainst(thmTable_); // just warning in case of inconsistency (e.g., more proofs than conj para).
+        //proofTable_.verifyConsistency(thmTable_); -- for error
+    } 
+
+
+    protected String getLoc()
+    {
+      return parserState_.getLoc();
+    }
+
+    private void addLocAnn(Term term, LocInfo locInfo)
+    {
+      parserState_.addLocAnn(term, locInfo);
+    }
+
+    //private void addZStateRefInfo(Term term, Ann ozsi, Name n)
+    //{
+    //   if (ozsi != null)
+    //   {
+    //      if (ozsi instanceof ZRefinesAnn)
+    //        ((ZRefinesAnn)ozsi).setConcreteName(n);
+    //      term.getAnns().add(ozsi);
+    //   }
+    //}
+
+    private int computeLength(LocInfo start, LocInfo end)
+    {
+      final int startStart = start.getStart();
+      final int endStart = end.getStart();
+      final int endLength = end.getLength();
+      if (startStart >= 0 &&
+          endStart >= 0 &&
+          endLength >= 0) {
+        return endStart - startStart + endLength;
+      }
+      return -1;
+    }
+
+    private LocInfo getLocation(LocInfo start, LocInfo end)
+    {
+      if (start != null && end != null) {
+        return new LocInfoImpl(getDialect(),
+        											 start.getSource(),
+                               start.getLine(),
+                               start.getColumn(),
+                               start.getStart(),
+                               computeLength(start, end));
+      }
+      return null;
+    }
+
+    private LocInfo getLocation(Term start, LocInfo end)
+    {
+      return getLocation(getLocation(start), end);
+    }
+
+    private LocInfo getLocation(LocInfo start, Term end)
+    {
+      return getLocation(start, getLocation(end));
+    }
+
+    private LocInfo getLocation(Term start, Term end)
+    {
+      return getLocation(getLocation(start), getLocation(end));
+    }
+
+    private LocInfo getLocation(int line, int column,
+                                LocInfo start, LocInfo end)
+    {
+      if (start != null && end != null) {
+        return new LocInfoImpl(getDialect(),
+        											 start.getSource(),
+                               line,
+                               column,
+                               start.getStart(),
+                               computeLength(start, end));
+      }
+      return null;
+    }
+
+    private LocInfo getLocation(int line, int column,
+                                Term start, LocInfo end)
+    {
+      return getLocation(line, column, getLocation(start), end);
+    }
+
+    
+
+    private LocInfo getLocation(int line, int column,
+                                Term start, Term end)
+    {
+      return getLocation(line, column, getLocation(start), getLocation(end));
+    }
+
+    private LocInfo getLocation(List<LocString> list)
+    {
+      if (list != null && list.size() > 0) {
+        if (list.size() == 1) return list.get(0).getLocation();
+        return getLocation(list.get(0).getLocation(),
+                           list.get(list.size() - 1).getLocation());
+      }
+      return null;
+    }
+
+
+
+    // could be useful for other parsers as well
+    protected void logProductionResult(Object term, String from, LocInfo loc) {
+        CztLogger.getLogger(Parser.class).fine("PRODUCTION RESULT: " +
+            " from " + from + " @ " + loc + "=>\n" + term
+            + " for " + getDialect().toString() + " in Parser.");
+    }
+:}
+
+parser code
+{:
+    private static final Map<Object, String> symbolMap_ = DebugUtils.getFieldMap(Sym.class);
+
+    
+
+    @Override
+    public Symbol parse() throws java.lang.Exception
+    {
+      // perform the parsing, but wrap into a try-catch, to react when problems
+      // occur - we need to update the transactions in the section manager
+      Symbol symbol;
+      try {
+      
+        symbol = super.parse();
+        
+      } catch (Exception e) {
+        /*
+         * If fatal exception occurred during the parsing (usually problems are reported
+         * but the parsing continues), we need to cancel the current transaction. This is 
+         * required, because ZSect transactions are started manually, instead of via 
+         * SectionInfo.get(). So upon exception, find out the current ZSect, and cancel
+         * its transaction, then re-throw the exception.
+         */
+        cleanupZSectTransaction();
+        
+        throw e;
+      }
+      
+      if (hasErrors())
+      {
+        // need to cleanup, e.g. if scanning error happens. It would be reported, but
+        // parsing stops and section transaction is not closed.
+        cleanupZSectTransaction();
+        raiseErrors();
+      }
+      return symbol;
+    }
+    
+    /**
+     * Finds the current section, and cancels its transaction, if one is still active.
+     * This is necessary because section transactions are started manually, and we need
+     * to cleanup if unexpected error (e.g. underlying scanning error) happens. 
+     */
+    private void cleanupZSectTransaction() {
+      String currentSect = action_obj.parserState_.getCurrentSectName();
+      if (currentSect != null) {
+        Key<ZSect> sectKey = new Key<ZSect>(currentSect, ZSect.class);
+        // Check whether the current section transaction is still active.
+        // This is needed, because sometimes the transaction has finished
+        // and we are just reporting errors (and cleaning up)
+        if (sectKey.equals(sectInfo_.getCurrentTransaction())) {
+          sectInfo_.cancelTransaction(sectKey);
+        }
+      }
+    }
+
+    /** The file being parsed. */
+    protected Source source_;
+
+    /** Section information (parser code). */
+    protected SectionInfo sectInfo_;
+
+  // dialect is a final attribute determined at construction time
+  // depending on the extension being used (i.e. decided at XML transformation time).
+  // this is useful for fine-tuned error information. If no extension is chosen we 
+  // get a compilation error (i.e. final field not assigned).
+  protected final Dialect dialect_ = 
+  						Dialect.ZEVES
+    				  // otherwise it will be unassigned, hence a compilation error
+    				  ;
+
+	protected DefaultSectionParents defaultSP_;
+
+    /**
+     * The list of parse errors.
+     */
+    protected List<CztError> errorList_;
+
+    protected ParseException parseException_;
+
+    /**
+     * Contains the last token where a syntax error has occured.
+     */
+    private Symbol errorToken_;
+
+    /**
+     * True if and only if an error has occured during parsing.
+     */
+    //protected boolean error_ = false;
+
+    private OperatorScanner opScanner_;
+    private NewlineScanner nlScanner_;
+
+
+		public Dialect getDialect()
+		{
+			return dialect_;
+		}
+
+    protected boolean hasErrors()
+    {
+      for(CztError e : errorList_)
+      {
+        if (e.getErrorType() == ErrorType.ERROR)
+          return true;
+
+      }
+      return false;
+    }
+
+    protected void raiseErrors() throws ParseException
+    {
+      assert hasErrors() : "no errors to be raised";
+      if (parseException_ == null)
+      {
+        assert source_ == null;
+        parseException_ = new ParseException(getDialect(), errorList_);
+      }
+      assert parseException_.getErrors().equals(errorList_) : "inconsistent error list";
+      Iterator<CztError> it = errorList_.iterator();
+      while (it.hasNext())
+      {
+        CztError e = it.next();
+        if (e.getErrorType().equals(ErrorType.WARNING))
+        {
+          it.remove();
+          // TODO: Parser should have a warning manager (!) 
+          //       For now, keep warnings as just "show" at the parser level?
+          CztLogger.getLogger(Parser.class).warning(e.toString());
+        }
+      }
+      it = null;
+      // in case there are no more warnings...
+      if (hasErrors())
+      {
+        throw parseException_;
+      }
+    }
+
+    // there are more constructors created by java cup, don't put it final!
+    private Set<Key<?>> explicitDeps_ = Collections.emptySet();
+
+    Set<Key<?>> getExplicitDeps()
+    {
+      return Collections.unmodifiableSet(explicitDeps_);
+    }
+
+    /**
+     * Creates a new parser with the given scanner, source information,
+     * and section information.
+     * The source information is only used for printing error messages.
+     * The section information should be able to provide information of
+     * type <code>net.sourceforge.czt.parser.util.OpTable.class</code>.
+     */
+    public Parser(CztScanner scanner,
+                    Source source,
+                    SectionInfo sectInfo,
+                    Properties properties,
+                    Collection<? extends Key<?>> explicitDeps)
+    {
+      super(scanner);
+      source_ = source;
+      sectInfo_ = sectInfo;
+      assert scanner != null && sectInfo_ != null;
+      errorList_ = new ArrayList<CztError>(PerformanceSettings.INITIAL_ARRAY_CAPACITY);
+      explicitDeps_ = new HashSet<Key<?>>(explicitDeps);
+      parseException_ = null;
+      defaultSP_ = null;
+      if (source != null) {
+        try {
+          parseException_ =
+            sectInfo_.get(new Key<ParseException>(source.getName(),
+                                  ParseException.class));
+          errorList_ = parseException_.getErrors();
+          
+          defaultSP_ =
+          	sectInfo_.get(new Key<DefaultSectionParents>(source.getName(),
+          							DefaultSectionParents.class));
+        }
+        catch (CommandException e) {
+          e.printStackTrace();
+          //TODO: check this. why not report the error?
+          //report_error(e.toString(), e);
+        }
+      }
+      else {
+      	try {
+          defaultSP_ =
+          	sectInfo_.get(new Key<DefaultSectionParents>(Section.ANONYMOUS.getName(),
+          							DefaultSectionParents.class));
+        }
+        catch (CommandException e) {
+          e.printStackTrace();
+          //TODO: check this. why not report the error?
+          //report_error(e.toString(), e);
+        } 
+      }
+      assert defaultSP_ != null;
+      opScanner_ = new OperatorScanner(getCztScanner(), properties);
+
+      nlScanner_ = new NewlineScanner(opScanner_, properties);
+      CztLogger.getLogger(Parser.class).finer("New " + Parser.class.getName() + 
+      		" parser created for " + source_ 
+      		+ " for " + getDialect().toString() + ".");
+    }
+    
+    public CztScanner getCztScanner()
+    {
+    	return (CztScanner)getScanner();
+    }
+
+    /**
+     * Returns the next token.
+     */
+    protected Symbol local_next_token() throws Exception
+    {
+      Symbol result = nlScanner_.next_token();
+      assert result != action_obj.previous_;
+
+      action_obj.previous_ = result;
+      String logMessage =
+        "Next token is (" + symbolMap_.get(result.sym) + ", " +
+            (result.sym != Sym.TEXT ? String.valueOf(result.value) + ", " +
+                (result.value != null ? result.value.getClass().getName() : "null") : "...shhh...")  
+                + " for " + getDialect().toString() + " in Parser).";
+      CztLogger.getLogger(Parser.class).finest(logMessage);
+      return result;
+    }
+
+    /**
+     * @throws ClassCastException if the object is not a CztError
+     */
+    public void report_error(String message, Object object)
+    {
+      CztError error = (CztError) object;
+      errorList_.add(error);
+      //error_ = true;
+    }
+
+    public void report_error(ZParseMessage msg,
+                             Object[] params,
+                             LocInfo locInfo)
+    {
+      report_error(null, new ZParseError(sectInfo_, msg, params, locInfo));
+    }
+
+ 
+    public void report_error(ZEvesParseMessage msg,
+                             Object[] params,
+                             LocInfo locInfo)
+    {
+      report_error(null, new ZEvesParseError(sectInfo_, msg, params, locInfo));
+    }
+
+
+    public void syntax_error(Symbol token)
+    {
+      errorToken_ = token;
+    }
+
+    public void unrecovered_syntax_error(Symbol token) //throws Exception
+    {
+      report_error("Syntax error", createSyntaxError(token));
+      done_parsing();
+      CztLogger.getLogger(Parser.class).severe("Parser error for " + getDialect().toString() + " dialect ==> token " +
+      	symbolMap_.get(token.sym));
+      // TODO: throw new ParseException?
+      //	    throw new PrintException(dialect_, "Parser printer error: " +
+	    //  String.valueOf(message) + " => " + (info instanceof Symbol ? symbolMap_.get(((Symbol)info).sym) : String.valueOf(info)));
+    }
+
+    public void report_syntax_error()
+    {
+      report_error("Syntax error", createSyntaxError(errorToken_));
+    }
+
+    protected CztError createSyntaxError(Symbol token)
+    {
+      return new ZParseError(sectInfo_, ZParseMessage.MSG_SYNTAX_ERROR,
+                             new Object[] { toObject(token) },
+                             getLocation(token));
+    }
+
+    public void report_syntax_error(ZParseMessage msg)
+    {
+      report_error(msg,
+                   new Object[] { toObject(errorToken_) },
+                   getLocation(errorToken_));
+    }
+    
+
+    protected Object toObject(Symbol symbol)
+    {
+      if (symbol.value != null &&
+          !(symbol.value instanceof LocInfo)) {
+        return symbol.value;
+      }
+      return symbolMap_.get(symbol.sym);
+    }
+
+    protected String getLoc()
+    {
+      return source_.toString();
+    }
+
+    protected LocInfo getLocation(Symbol symbol)
+    {
+      if (symbol.value instanceof LocInfo) {
+        return (LocInfo) symbol.value;
+      }
+      if (symbol.value instanceof LocString) {
+        LocString s = (LocString) symbol.value;
+        return s.getLocation();
+      }
+      if (symbol.value instanceof LocInt) {
+        LocInt i = (LocInt) symbol.value;
+        return i.getLocation();
+      }
+      return new LocInfoImpl(getDialect(), getLoc(), symbol.left, symbol.right);
+    }
+
+    protected LocInfo getLocation(Term term)
+    {
+      if (term != null) {
+        return getLocation((LocAnn) term.getAnn(LocAnn.class));
+      }
+      return null;
+    }
+
+    protected LocInfo getLocation(LocAnn locAnn)
+    {
+      return new LocInfoImpl(getDialect(), locAnn);
+    }
+
+    protected ParserState createParserState(Source src)
+    {
+      return new ParserState(src);
+    }
+
+    protected Factory createParserFactory()
+    {
+      Factory result = new Factory();
+      
+      return result;
+    }
+:}
+
+init with
+{:
+    //share the operator table between the action code and the parser code
+    action_obj.source_ = source_;
+    action_obj.sectInfo_ = sectInfo_;
+    action_obj.dialect_ = dialect_;
+    action_obj.defaultSP_ = defaultSP_;
+    action_obj.opScanner_ = opScanner_;
+    action_obj.nlScanner_ = nlScanner_;
+    action_obj.parserState_ = createParserState(source_);
+    action_obj.factory_ = createParserFactory();
+
+:}
+
+scan with {: return local_next_token(); :};
+
+terminal LocInfo
+        PARA, EXPR, PRED,
+        THETA, MU, LAMBDA,
+        NEXTSTROKE, OUTSTROKE, INSTROKE,
+        LPAREN, RPAREN, LSQUARE, RSQUARE, LBIND, RBIND,
+        LDATA, RDATA, LBRACE, RBRACE,
+        BAR, ANDALSO, CONJECTURE, AND, OR, IMP, IFF, NOT,
+        ALL, EXI, CROSS, POWER,
+        SLASH, EQUALS, MEM, COLON, SEMICOLON, COMMA, DOT, SPOT, ZHIDE,
+        ZPROJ, ZCOMP, ZPIPE, NL,
+        SECTION, PARENTS, TRUE, FALSE, LET, IF, THEN, ELSE, ZPRE,
+        RELATION, FUNCTION, GENERIC, LEFTASSOC, RIGHTASSOC, LISTARG, ARG,
+        DEFFREE, DEFEQUAL, EXIONE,
+        END, AX, SCH, GENSCH, GENAX, ZED, THEOREM,
+
+        //ZSTATE, ZSTINIT, ZSTFIN, ZASTATE, ZASTINIT, 
+        //ZCSTATE, ZCSTINIT, ZRETRIEVE, ZASTFIN, ZCSTFIN,
+        //ZAINITIN, ZAFINOUT, ZCINITIN, ZCFINOUT, ZRETRIEVEIN,
+        //ZRETRIEVEOUT, ZFSREFINES, ZBSREFINES,
+
+        // Proof environment chars and specific proof words
+        ZPROOF, //ZPROOFSECTION, 
+        ZPROOFCOMMANDSEP, THMREPLACEMENT, QNTINSTANTIATION,
+        LLABEL, RLABEL, DISABLEDTHMTAG, DISABLEDDEFTAG,
+        THMRULE, THMGRULE, THMFRULE, THMAXIOM, 
+        
+        // LZNOTE, RZNOTE, 
+        
+        // PROOFWORD, // Needed for ContextFreeScanner, but given as ProofWord (Decorword)
+        
+        APPLY, BACK, CASES, CONJUNCTIVE, DISJUNCTIVE, EQUALITY,
+        INSTANTIATE, INVOKE, NEXT, PRENEX, PROVE, REARRANGE, TRIVIAL, TRY,
+        SPLIT, USE, WITH, BY, ENABLED, EXPRESSION, DISABLED, LEMMA,
+        NORMALIZATION, PREDICATE, SUBSTITUTE, TO, SORRY, OOPS,
+
+        CHECK, DECLARE, HELP, PARENT, PRINT, QUIT, READ, RESET, RETRY,
+        SYNTAX, THEOREMS, UNDO, ZSECTION, ZTAGS,
+
+        ABOUT, DECLARATION, FORMULA, HISTORY, PROOF, SCRIPT, STATUS,
+        SUMMARY, THROUGH,
+
+
+        //identifiers starting with a '_' are used only to force precedence
+        _APPLICATION, _RENAME;
+
+terminal LocString
+
+        TEXT, PREP, PRE, POSTP, POST, IP, I, LP, L, ELP, EL, ERP, ER,
+        SRP, SR, EREP, ERE, SREP, SRE, ES, SS;
+
+terminal LocInt NUMERAL, NUMSTROKE;
+
+terminal Decorword
+
+        THMNAME, 
+
+        DECORWORD, DECLWORD;
+
+
+terminal Proofword
+        PROOFWORD; // Needed for the ContextFreeScanner. Should be dealt with by SmartScanner, though. see below.
+
+terminal LocInfo
+      REDUCE, REWRITE, SIMPLIFY;
+
+
+non terminal Term
+    input;
+
+non terminal Spec
+    specification;
+
+non terminal NarrSect
+    narrSect;
+
+non terminal ZSect
+    section,
+    emptySectionHeader,
+    empty,
+    sectionHeader;
+
+non terminal List<Sect>
+    sectionList;
+
+non terminal List<Parent>
+    parentList,
+    parents;
+
+non terminal ZParaList
+    paragraphList;
+
+non terminal List<Para>
+    unboxedParagraphList,
+    unboxedParagraphItemList;
+
+non terminal Para
+    boxedParagraph,
+    unboxedParagraphItem,
+    narrParagraph;
+
+non terminal AxPara
+    axiomaticDefinition,
+    genericAxDefinition,
+    abbreviationDefinition,
+    schema;
+
+//non terminal ZStateInfo
+//non terminal Ann
+//    optZStRefInfo;  // either ZStateAnn or ZRefinesAnn
+//
+////non terminal ZRefines
+////    optZRefines;
+
+non terminal ConstDecl
+    letDefinition;
+
+non terminal ZFreetypeList freeTypeList;
+non terminal Freetype freeTypeDefinition;
+
+non terminal List<LocString>
+    narrWordList;
+
+non terminal OptempPara 
+	operatorTemplate;
+	
+// this list includes both operator and operands
+non terminal List<Oper>
+    template,
+    prefixTemplate,
+    postfixTemplate,
+    infixTemplate,
+    nofixTemplate,
+    optWordOperandList;
+
+non terminal Operand
+    varg,
+    templateTag;
+non terminal Assoc assoc;
+non terminal OptempPara catTemplate;
+
+non terminal SchText
+    schemaTextNoExpression,
+    axiomaticSchemaText,
+    schemaText;
+
+non terminal ZDeclList letDefinitionList;
+
+non terminal ZBranchList branchList;
+non terminal Branch branch;
+
+non terminal ZNameList
+    nameList,
+    declWordList;
+
+non terminal Name
+    name,
+    declName;
+
+non terminal ZName
+    refName;
+
+non terminal List<ZName> refNameList;
+
+non terminal RenameList renameList;
+non terminal ZRenameList zRenameList;
+non terminal NewOldPair rename;
+
+non terminal ZDeclList
+    zDeclList;
+
+non terminal DeclList
+    optDeclPart,
+    declPart;
+
+non terminal VarDecl
+    varDecl;
+non terminal ConstDecl
+    bindDecl,
+    constDecl;
+non terminal Decl
+    basicDeclaration,
+    declaration;
+
+non terminal GivenPara basicTypeDefinition;
+non terminal ZNameList
+    formalParameters,
+    optFormalParameters;
+
+non terminal Stroke stroke;
+
+non terminal And
+    sep;
+
+non terminal Term
+    term,
+    septerm,
+    func_appl,
+    inner_term;
+
+non terminal List < Object >
+    optAppendageList,
+    appendageList;
+
+non terminal Object
+    appendage;
+
+non terminal Pred
+    predicate,
+    relation,
+    infixRel,
+    infixChainRel;
+
+non terminal MemPred
+    prefixRel,
+    postfixRel,
+    nofixRel;
+
+non terminal Expr
+    expression;
+
+non terminal ZDeclList
+    constDeclList,
+    
+    bindDeclList,
+    
+    optConstDeclList;
+
+non terminal ZExprList
+    prodExpressionList,
+    optExpressionList,
+    expressionList;
+
+non terminal List<String>
+    opName,
+    prefixName,
+    postfixName,
+    infixName,
+    nofixName;
+
+non terminal Pair<Name,ZNameList>
+    genName,
+    prefixGenName,
+    postfixGenName,
+    infixGenName,
+    nofixGenName;
+
+non terminal List<String>
+    optVargEsSsList;
+
+non terminal Pair<ZNameList,ZNameList>
+    optNameEsSsList;
+
+non terminal Expr
+    application,
+    prefixApp,
+    postfixApp,
+    infixApp,
+    nofixApp;
+
+non terminal List<Object>
+    expSep;
+
+non terminal List<String>
+    argErepOrSrep,
+    argEreOrSre,
+    argErOrSr,
+    argEsOrSs,
+    argErpOrSrp;
+
+non terminal LocString
+    misusedOpName,
+    ereOrSre,
+    erOrSr,
+    esOrSs;
+
+non terminal And
+    optNL;
+
+non terminal Boolean
+    conjecture;
+
+
+non terminal ProofScript
+    zProof;
+    
+non terminal ProofCommandList
+    proofScript;
+
+non terminal ProofCommand
+    proofCommand, innerProofCommand,
+    applyCommand, caseAnalysisCommand, normalizationCommand,
+    quantifiersCommand, simplificationCommand, substitutionCommand,
+    useCommand, withCommand,
+    printProofCommands, undoingCommands, interfaceCommands, zsectionProofCommands;
+
+
+non terminal LocInfo
+    optPrint, optSummary, optScript;
+
+non terminal LocInt
+    optNumber;
+
+non terminal Instantiation
+    instantiation//, replacement
+    ;
+
+non terminal InstantiationList
+    instantiations, replacements,
+    //optReplacements,
+    instantiationList;
+
+//non terminal Expr
+//    zevesRenaming;
+
+non terminal ZExprList
+    //optGenActuals,
+    genericActuals;
+
+non terminal Object[]
+      innerSimplCmd;
+
+// can include ZPROOFDOLLAR sign in these names
+non terminal Name 
+      applyThmName, thmName;
+
+non terminal ZNameList
+      thmNameList;
+
+non terminal LocInfo
+    proofSep;
+
+//non terminal Boolean
+//    instOrRepl;
+
+non terminal LabelAbility
+    optLabelAbility,
+    optDefAbility,
+    optThmAbility;
+
+non terminal LabelUsage
+    optUsage;
+
+non terminal ZEvesLabel
+    optAxLabel;
+
+//non terminal ZEvesNote
+//    optZNote;
+
+
+// These are ordered from loosest first to tightest last.
+precedence right        BAR;
+precedence left         TEXT;
+precedence left          RPAREN;
+precedence left         NL, SEMICOLON;
+precedence nonassoc     DEFEQUAL ;
+precedence left         ALL, EXI, EXIONE, SPOT ;
+
+
+
+precedence left         IFF;
+precedence right        IMP;
+precedence left         OR;
+precedence left         AND;
+precedence right        NOT;
+precedence left         MEM, EQUALS, PREP, LP, IP, EREP, SREP,
+                        POSTP, ELP, ERP, SRP;
+precedence right        LAMBDA;
+precedence right        MU;
+precedence right        LET;
+
+precedence right        ELSE;
+precedence left         ZCOMP;
+precedence left         ZPIPE;
+precedence left         ZHIDE;
+precedence left         ZPROJ;
+precedence right        ZPRE;
+precedence left         I, CROSS;
+precedence left         EL, ERE, SRE;
+precedence right        POWER, PRE, L;
+
+precedence left         POST, ER, SR;
+
+precedence left         _APPLICATION;
+precedence left         INSTROKE, OUTSTROKE, NEXTSTROKE, NUMSTROKE;
+
+precedence left         _RENAME;
+
+precedence left         DOT;
+precedence right        THETA;
+precedence left         LSQUARE, RSQUARE;
+
+precedence nonassoc     LLABEL, RLABEL; //, LZNOTE, RZNOTE;
+
+precedence left         DECORWORD
+                        ;
+
+//TODO: check the need for precedence here of proof words 
+
+
+/// specifications /////////////////////////////////////////////////////////
+
+input ::=
+        narrSect:narr specification:s
+        {:
+           if (narr != null) {
+             s.getSect().add(0, narr);
+           }
+           
+           RESULT = s;
+        :}
+        |
+        PARA boxedParagraph:p
+        {: RESULT = p; :}
+        |
+        EXPR expression:e
+        {: RESULT = e; :}
+        |
+        PRED predicate:p
+        {: RESULT = p; :}
+        ;
+
+narrSect ::=
+        //empty
+        {:
+           RESULT = null;
+        :}
+	|
+	narrWordList:nwl
+	{:
+           RESULT = factory_.createNarrSect(toStringList(nwl));
+           addLocAnn(RESULT, getLocation(nwl));
+        :}
+        ;
+
+specification ::=
+        // anonymous specification
+        emptySectionHeader:header paragraphList:pl
+        {:
+           header.setParaList(pl);
+           ZSect zSect = endZSectTransaction(header, opTable_);
+           RESULT = createSpec(factory_.list(zSect));
+           
+        :}
+        |
+        // sectioned specification
+        sectionList:sl
+        {:
+           RESULT = createSpec(sl);
+        :}
+        ;
+
+emptySectionHeader ::=
+        empty:e
+        {:
+           // Apply Syntactic Transformation Rule 12.2.1.1
+           final String name = Section.ANONYMOUS.getName();
+           startZSectTransaction(name);
+           final Set<String> parentSet = defaultSP_.defaultParents(name);
+           final List<Parent> parents = ZUtils.parentsAsListOfParent(parentSet);
+           resetInfoTables(name, parents, eleft, eright);
+           RESULT = createZSect(name, parents);
+
+           addLocAnn(RESULT, getLocation(eleft, eright));
+        :}
+        ;
+
+empty ::=
+        //empty
+        {:
+        :}
+        ;
+
+sectionList ::=
+        sectionList:sl section:s
+        {:
+           sl.add(s);
+           RESULT = sl;
+        :}
+        |
+        section:s
+        {: RESULT = factory_.list((Sect) s); :}
+        ;
+
+section ::=
+        sectionHeader:header paragraphList:pl
+        {:
+           
+           header.setParaList(pl);
+           RESULT = endZSectTransaction(header, opTable_);
+           if (pl.size() > 0) {
+             Para plPara = pl.get(pl.size()-1);
+             //logProductionResult(plPara, "PARAGRAPH LOCATION AT SECTION", getLocation(plPara));
+             LocInfo loc = getLocation(plPara);
+             LocAnn locAnn = (LocAnn) RESULT.getAnn(LocAnn.class);
+             if (loc.getStart() >= 0 &&
+                 loc.getLength() >= 0  &&
+                 locAnn.getStart() != null) {
+               final int length = loc.getStart() + loc.getLength()
+                                  - locAnn.getStart().intValue();
+               locAnn.setLength(BigInteger.valueOf(length));
+             }
+           }
+
+           
+        :}
+        ;
+
+sectionHeader ::=
+        //ZED token at the start of sections is ignored by
+        //the OperatorScanner to avoid a few problems
+        SECTION:s DECORWORD:dw parents:p END
+        {:
+           String name = dw.getName();
+           checkName(dw);
+
+			// add default parents only if given parents are empty
+			// this includes explicitly given NON-PARENTS (i.e. SECTION name PARENTS _empty_ ; SECTION name).
+			// in both cases we override to add default parents. 
+			//
+			// This is as prescribed by the Z Standard (see the Section production in Appendix C.3)
+           if (p.isEmpty())
+           {
+			   // add to the set to avoid repetition of parents
+	           //final Set<String> parentStrSet = defaultSP_.defaultParents(name);
+	           final Set<Parent> parentSet = ZUtils.parentsAsSetOfParent(defaultSP_.defaultParents(name));
+	           parentSet.addAll(p);
+	           
+	           // make it back into list of Parent cleared of duplicates
+	           p.clear();
+	           p.addAll(parentSet);
+           }
+		   
+           // update the parsed section information
+           startZSectTransaction(name);
+           resetInfoTables(name, p, pleft, pright);
+           RESULT = createZSect(name, p);
+
+           addLocAnn(RESULT, s);
+        :}
+        ;
+
+parents ::=
+        //empty
+        {: RESULT = factory_.list(); :}
+        |
+        PARENTS
+        {: RESULT = factory_.list(); :}
+        |
+        PARENTS parentList:pl
+        {: RESULT = pl; :}
+        ;
+
+parentList ::=
+        parentList:pl COMMA DECORWORD:dw
+        {:
+           checkName(dw);
+           Parent p = factory_.createParent(dw.getName());
+           addLocAnn(p, dw.getLocation());
+           pl.add(p);
+           RESULT = pl;
+        :}
+        |
+        DECORWORD:dw
+        {:
+           checkName(dw);
+           Parent p = factory_.createParent(dw.getName());
+           addLocAnn(p, dw.getLocation());
+           RESULT = factory_.list(p);
+        :}
+        ;
+
+
+//paragraphs are divided into boxed and unboxed paragraphs.
+//Unboxed paragraphs must have a newline after their definition,
+//unless they are the final paragraph within ZED ... END tokens
+paragraphList ::=
+        paragraphList:pl boxedParagraph:p
+        {:
+           if (p != null) {
+             
+                pl.add(p);
+           }
+           RESULT = pl;
+        :}
+        |
+        paragraphList:pl unboxedParagraphList:upl
+        {:
+           
+              pl.addAll(upl);
+           RESULT = pl;
+        :}
+
+        |
+        paragraphList:pl narrParagraph:np
+        {:
+           
+              pl.add(np);
+           RESULT = pl;
+        :}
+        |
+        //empty
+        {: RESULT = factory_.createZParaList(); :} %prec NL
+        ;
+
+
+// 6.2 Global Paragraphs //////////////////////////////////////////////////////
+
+boxedParagraph ::=
+        axiomaticDefinition:ad
+        {: RESULT = ad; :}
+        |
+        schema:s
+        {: RESULT = s; :}
+        |
+        genericAxDefinition:gd
+        {: RESULT = gd; :}
+
+        |
+        zProof:zp
+        {: RESULT = zp; :}
+
+        |
+        error:e END:ed
+        {:
+          parser.report_syntax_error();
+          
+        :}
+        ;
+
+narrParagraph ::=
+        narrWordList:nwl
+        {:
+           RESULT = factory_.createNarrPara(toStringList(nwl));
+           addLocAnn(RESULT, getLocation(nwl));
+           
+        :}
+        ;
+
+unboxedParagraphList ::=
+        ZED:zed
+        optDefAbility:ability
+        unboxedParagraphItemList:uil END:end
+        {: if (uil.size() == 1) {
+             addLocAnn(uil.get(0), getLocation(zed, end));
+           }
+             
+           RESULT = uil;
+           addZEvesLabel(RESULT, ability);
+        :}
+
+        |
+        ZED:z error:e END
+        {:
+           parser.report_syntax_error();
+           RESULT = factory_.list();
+
+        :}
+        ;
+
+unboxedParagraphItemList ::=
+        unboxedParagraphItemList:uil NL unboxedParagraphItem:ui
+        {:
+           if (ui != null) uil.add(ui);
+           RESULT = uil;
+        :}
+        |
+        unboxedParagraphItem:ui
+        {:
+           RESULT = factory_.list();
+
+           
+
+           // This nullness result check is important for
+           // consistency with the check above for lists.
+           //
+           // It is also important to avoid duplication
+           // of Circus BasicPorcess declared across multiple
+           // Circus environments.
+           if (ui != null) RESULT.add(ui);
+        :}
+        ;
+
+unboxedParagraphItem ::=
+        
+        //optZNote:znote
+        
+        basicTypeDefinition:btd
+        {: RESULT = btd; :}
+        |
+        
+        //optZNote:znote
+        
+        abbreviationDefinition:ad
+        {: RESULT = ad; :}
+        |
+        
+        //optZNote:znote
+        
+        freeTypeList:ftl
+        {:
+           RESULT = factory_.createFreePara(ftl);
+           addLocAnn(RESULT, getLocation(ftl.get(0), ftl.get(ftl.size() - 1)));
+        :}
+        |
+        optThmAbility:ability
+        THEOREM
+        optUsage:usage
+        name:n optNL optFormalParameters:ofp
+        
+        //optZNote:znote
+        
+        conjecture:c predicate:p
+
+        // WARNING: ConjPara within ZED environment cannot accept ability (!) Only within THEOREM environment!
+        {:
+           // named conjectures in Unicode are a CZT extension of the Z standard.
+           RESULT = factory_.createConjPara(ofp, p);
+           RESULT.getAnns().add(n); // add it as an annotation for now.
+           LocInfo loc = getLocation(getLocation(ofpleft, ofpright), getLocation(p));
+           
+           if (c)
+           {
+            // if \vdash? is present, this is unlikely to be within Z/EVES,
+            // but rather as part of a unboxedPara within ZED rather than THEOREM
+            // raise a warning? or error? ERROR?
+            CztLogger.getLogger(Parser.class).warning(java.text.MessageFormat.format(
+              ZEvesParseMessage.MSG_WARNING_VDASH_IN_CONJECTURE.getMessage(), n, loc)
+              + " for " + getDialect().toString() + " in Parser.");
+           }
+           addZEvesLabel(RESULT, n, ability, usage);
+           
+           addLocAnn(RESULT, loc);
+           
+           try
+           {
+             thmTable_.add((ConjPara)RESULT);
+           }
+           catch (ThmTable.ThmTableException e)
+           {
+             //final Symbol token = new Symbol(Sym.ZED, nleft, nright);
+               parser.report_error(ZParseMessage.MSG_CANNOT_ADD_THM,
+                                   new Object[] { e.getMessage() },
+                                   getLocation(nleft, nright));
+           }           
+        :}
+        |
+        optFormalParameters:ofp CONJECTURE:c predicate:p
+        {:
+           // unnamed conjectures in Unicode, as in the Z standard.
+           RESULT = factory_.createConjPara(ofp, p);
+           addLocAnn(RESULT, getLocation(getLocation(ofpleft, ofpright), getLocation(p)));
+        :}
+        |
+        operatorTemplate:ot
+        {:
+           try {
+             opTable_.add(ot);
+           }
+           catch (OpTable.OperatorException e) {
+             //final Symbol token = new Symbol(Sym.ZED, otleft, otright);
+             parser.report_error(ZParseMessage.MSG_CANNOT_ADD_OP,
+                                 new Object[] { e.getMessage() },
+                                 getLocation(otleft, otright));
+           }
+           RESULT = ot;
+        :}
+
+        ;
+
+conjecture ::=
+        CONJECTURE:c
+        {:
+          RESULT = true;
+        :}
+        
+        |
+        // empty is fine in Z/EVES
+        {:
+          RESULT = false;
+        :}
+        
+        ;
+
+
+optThmAbility ::=
+        DISABLEDTHMTAG
+        {:
+          RESULT = LabelAbility.disabled;
+        :}
+        |
+        // empty
+        {:
+          RESULT = LabelAbility.none;
+        :}
+        ;
+
+optDefAbility ::=
+        DISABLEDDEFTAG
+        {:
+          RESULT = LabelAbility.disabled;
+        :}
+        |
+        // empty
+        {:
+          RESULT = LabelAbility.none;
+        :}
+        ;
+
+optLabelAbility ::=
+        // "disabled" within \Label{ is overloaded by the "disabled" proof-keyword as well...
+        DISABLED
+        {:
+          RESULT = LabelAbility.disabled;
+        :}
+        |
+        // empty
+        {:
+          RESULT = LabelAbility.none;
+        :}
+        ;
+
+optUsage ::=
+        THMRULE
+        {:
+          RESULT = LabelUsage.rule;
+        :}
+        |
+        THMFRULE
+        {:
+          RESULT = LabelUsage.frule;
+        :}
+        |
+        THMGRULE
+        {:
+          RESULT = LabelUsage.grule;
+        :}
+        |
+        THMAXIOM
+        {:
+          RESULT = LabelUsage.axiom;
+        :}
+        |
+        // empty
+        {:
+          RESULT = LabelUsage.none;
+        :}
+        ;
+
+// ZNote is generating out-of-memory errors... TODO:check later... Remove for now.
+/*
+optZNote ::=
+        LZNOTE:lzn DECORWORD:note RZNOTE:rzn
+        {:
+          RESULT = factory_.createZEvesNote(note.toString());
+          addLocAnn(RESULT, getLocation(lzn, rzn));
+        :}
+        |
+        // empty
+        {:
+          RESULT = factory_.createZEvesNote();
+        :}
+        ;
+*/
+
+
+
+basicTypeDefinition ::=
+        LSQUARE:lsq nameList:nl RSQUARE
+        {:
+           RESULT = factory_.createGivenPara(nl);
+           addLocAnn(RESULT, getLocation(lsqleft, lsqright));
+        :}
+        ;
+
+schema ::=
+        SCH:sch
+        optDefAbility:ability
+        name:n optNL
+        //optZStRefInfo:ozsi optNL
+        schemaText:st END:end
+        {:
+           RESULT = factory_.createSchema(n, null, st);
+           addZEvesLabel(RESULT, n, ability);
+           addLocAnn(RESULT, getLocation(sch, end));
+           //addZStateRefInfo(RESULT, ozsi, n);
+        :}
+        |
+        GENSCH:gensch
+        optDefAbility:ability
+        name:n optNL 
+        formalParameters:fp
+        //optZStRefInfo:ozsi optNL
+        schemaText:st END:end
+        {:
+           RESULT = factory_.createSchema(n, fp, st);
+           addZEvesLabel(RESULT, n, ability);
+           addLocAnn(RESULT, getLocation(gensch, end));
+           //addZStateRefInfo(RESULT, ozsi, n);
+        :}
+        ;
+
+/*
+optZStRefInfo ::=
+        ZSTATE
+        {:
+           RESULT = factory_.createZStateAnn(ZStateInfo.STATE);
+        :}
+        |
+        ZSTINIT
+        {:
+           RESULT = factory_.createZStateAnn(ZStateInfo.STINIT);
+        :}
+        |
+        ZSTFIN
+        {:
+           RESULT = factory_.createZStateAnn(ZStateInfo.STFIN);
+        :}
+        |
+        ZASTATE
+        {:
+           RESULT = factory_.createZStateAnn(ZStateInfo.ASTATE);
+        :}
+        |
+        ZASTINIT
+        {:
+           RESULT = factory_.createZStateAnn(ZStateInfo.ASTINIT);
+        :}
+        |
+        ZCSTATE
+        {:
+           RESULT = factory_.createZStateAnn(ZStateInfo.CSTATE);
+        :}
+        |
+        ZCSTINIT
+        {:
+           RESULT = factory_.createZStateAnn(ZStateInfo.CSTINIT);
+        :}
+        |
+        ZASTFIN
+        {:
+           RESULT = factory_.createZStateAnn(ZStateInfo.ASTFIN);
+        :}
+        |
+        ZCSTFIN
+        {:
+           RESULT = factory_.createZStateAnn(ZStateInfo.CSTFIN);
+        :}
+        |
+        ZRETRIEVE
+        {:
+           RESULT = factory_.createZStateAnn(ZStateInfo.RETRIEVE);
+        :}
+        |
+        ZRETRIEVEIN
+        {:
+           RESULT = factory_.createZStateAnn(ZStateInfo.RETRIEVEIN);
+        :}
+        |
+        ZRETRIEVEOUT
+        {:
+           RESULT = factory_.createZStateAnn(ZStateInfo.RETRIEVEOUT);
+        :}
+        |
+        ZAINITIN
+        {:
+           RESULT = factory_.createZStateAnn(ZStateInfo.AINITIN);
+        :}
+        |
+        ZAFINOUT
+        {:
+           RESULT = factory_.createZStateAnn(ZStateInfo.AFINOUT);
+        :}
+        |
+        ZCINITIN
+        {:
+           RESULT = factory_.createZStateAnn(ZStateInfo.CINITIN);
+        :}
+        |
+        ZCFINOUT
+        {:
+           RESULT = factory_.createZStateAnn(ZStateInfo.CFINOUT);
+        :}
+        |
+        ZFSREFINES name:abs
+        {:
+           RESULT = factory_.createZRefinesAnn(abs);
+           ((ZRefinesAnn)RESULT).setRefKind(ZRefKind.FORWARD);
+        :}
+        |
+        ZBSREFINES name:abs 
+        {:
+           RESULT = factory_.createZRefinesAnn(abs);
+           ((ZRefinesAnn)RESULT).setRefKind(ZRefKind.BACKWARD);
+        :}
+        |
+        // empty
+        {:
+           RESULT = null;
+        :}
+        ;
+*/
+
+
+zProof ::=
+        ZPROOF:zp thmName:n //optNL
+              proofScript:ps proofSep:zpc //optNL
+              END:end
+        {:
+           //parserState_.addProofScript(n, RESULT);
+
+           // resets the proof step counter at the beginning of a proof script
+           factory_.getZEvesFactory().resetProofSteps();
+           
+           RESULT = factory_.createProofScript(n, ps);
+           addLocAnn(RESULT, getLocation(zp, end));
+           addToProofTable(RESULT, nleft, nright);
+
+        :}
+        |
+        ZPROOF:zp thmName:n //optNL
+              END:end
+        {:
+           RESULT = factory_.createProofScript(n, factory_.createProofCommandList());
+           addLocAnn(RESULT, getLocation(zp, end));
+           addToProofTable(RESULT, nleft, nright);
+        :}
+        ;
+
+proofScript ::= 
+        proofScript:ps proofSep:zpc proofCommand:pc
+        {:
+          ps.add(pc);
+          RESULT = ps;
+        :}
+        |
+        // last proof command separator just before end at top-level zProof production
+        proofCommand:pc //proofSep:zpc
+        {:
+           RESULT = factory_.createProofCommandList(factory_.list(pc));
+        :}
+        ;
+
+proofCommand ::=
+        //optZNote:znote
+        innerProofCommand:ipc
+        {:
+          RESULT = ipc;
+          //addZNote(RESULT, znote);
+          // LocAnn must be at the lower production (e.g., with more loc info, rather than here) - Andrius
+          //addLocAnn(RESULT, getLocation(ipc));
+        :}
+        |
+        printProofCommands:ppc
+        {:
+          RESULT = ppc;
+        :}
+        |
+        undoingCommands:uc
+        {:
+          RESULT = uc;
+        :}
+        |
+        interfaceCommands:ic
+        {:
+          RESULT = ic;
+        :}
+        |
+        zsectionProofCommands:zpc
+        {:
+          RESULT = zpc;
+        :}
+        ;
+
+
+printProofCommands ::=
+        HELP name:n
+        {:
+        :}
+        |
+        PRINT DECLARATION name:n
+        {:
+        :}
+        |
+        PRINT FORMULA
+        {:
+        :}
+        |
+        PRINT HISTORY optSummary:s optNumber:n
+        {:
+        :}
+        |
+        PRINT PROOF optSummary:s
+        {:
+        :}
+        |
+        PRINT STATUS
+        {:
+        :}
+        |
+        PRINT SYNTAX name:n
+        {:
+        :}
+        |
+        optPrint:t THEOREMS ABOUT EXPRESSION expression:e
+        {:
+        :}
+        |
+        optPrint:t THEOREMS ABOUT PREDICATE predicate:p
+        {:
+        :}
+        ;
+
+undoingCommands ::=
+        RESET
+        {:
+        :}
+        |
+        UNDO optNumber:n
+        {:
+        :}
+        |
+        UNDO BACK TO name:n
+        {:
+        :}
+        |
+        UNDO BACK THROUGH name:n
+        {:
+        :}
+        |
+        RETRY
+        {:
+        :}
+        |
+        TRY LEMMA thmName:n
+        {:
+        :}
+        TRY predicate:p
+        {:
+        :}
+        |
+        SORRY:s
+        {:
+          RESULT = factory_.getZEvesFactory().createSorryCommand(false);
+          addLocAnn(RESULT, getLocation(sleft, sright));
+        :}
+        |
+        OOPS:s
+        {:
+          RESULT = factory_.getZEvesFactory().createSorryCommand(true);
+          addLocAnn(RESULT, getLocation(sleft, sright));
+        :}
+        ;
+
+interfaceCommands ::=
+        CHECK DECORWORD:dw2
+        {:
+        :}
+        |
+        QUIT
+        {:
+        :}
+        |
+        READ optScript:s DECORWORD:dw2
+        {:
+        :}
+        |
+        ZTAGS thmNameList:tnl
+        {:
+        :}
+        ;
+
+        // or should this be thmNameList:nl?
+zsectionProofCommands ::=
+        DECLARE nameList:nl
+        {:
+        :}
+        |
+        DECLARE TO name:n
+        {:
+        :}
+        |
+        DECLARE THROUGH name:n
+        {:
+        :}
+        |
+        PARENT DECORWORD:dw
+        {:
+        :}
+        |
+        ZSECTION DECORWORD:path nameList:nl
+        {:
+        :}
+        |
+        // NOTE: Added this (spurious) production here to avoid the warning about
+        // 	     PROOFWORD terminal, which needs to be declared, but was never used
+        //		 by the Parser; it's used by the ContextFreeScanner and SmartScanner.
+        PROOFWORD:dw
+        {:
+	        parser.report_error(ZEvesParseMessage.MSG_UNHANDLED_PROOFWORD,
+                               new Object[] { dw.toString() }, dw.getLocation());
+                               // error should be fatal, but that's okay. Just return NULL.
+        :}
+        ;
+        
+optScript ::=
+        SCRIPT:s
+        {:
+          RESULT = s;
+        :}
+        |
+        // empty
+        {:
+          RESULT = null;
+        :}
+        ;
+
+optPrint ::=
+        PRINT:p
+        {:
+          RESULT = p;
+        :}
+        |
+        // empty
+        {:
+          RESULT = null;
+        :}
+        ;
+
+optSummary ::=
+        SUMMARY:s
+        {:
+          RESULT = s;
+        :}
+        |
+        // empty
+        {:
+          RESULT = null;
+        :}
+        ;
+
+optNumber ::=
+        NUMERAL:n
+        {:
+          RESULT = n;
+        :}
+        |
+        // empty
+        {:
+          RESULT = null;
+        :}
+        ;
+
+innerProofCommand ::=
+        applyCommand:acm 
+        {:
+          RESULT = acm;
+        :}
+        |
+        caseAnalysisCommand:cam
+        {:
+          RESULT = cam;
+        :}
+        |
+        normalizationCommand:nm
+        {:
+          RESULT = nm;
+        :}
+        |
+        quantifiersCommand:qm
+        {:
+          RESULT = qm;
+        :}
+        |
+        simplificationCommand:sm
+        {:
+          RESULT = sm;
+        :}
+        |
+        substitutionCommand:tm
+        {:
+          RESULT = tm;
+        :}
+        |
+        useCommand:um
+        {:
+          RESULT = um;
+        :}
+        |
+        withCommand:wm
+        {:
+          RESULT = wm;
+        :}
+        ;
+
+applyCommand ::=
+        // TODO: generalise this to  "getProofStepKind(RESULT)" and have a "switch" in there for
+        //       some user defined complexity rather than my own fixed?
+        //
+        // TODO: perhaps we can leave this THMNAME as just DECORWORD. In ContextFreeScanner I substitute
+        //       the incoming DECORWORD accordingly to THMNAME, but I impose no restriction on the name
+        APPLY:ap applyThmName:n TO EXPRESSION expression:e
+        {:
+          //checkValidTheoremName(n);
+          RESULT = factory_.getZEvesFactory().createApplyToExprCommand(n, e);
+          addLocAnn(RESULT, getLocation(ap, e));
+          //proofScripts_.countStep(RESULT, ProofStep.COMPLEX, ProofScope.LOCAL);
+        :}
+        |
+        APPLY:ap applyThmName:n TO PREDICATE predicate:p
+        {:
+          //checkValidTheoremName(n);
+          RESULT = factory_.getZEvesFactory().createApplyToPredCommand(n, p);
+          addLocAnn(RESULT, getLocation(ap, p));
+          //proofScripts_.countStep(RESULT, ProofStep.COMPLEX, ProofScope.LOCAL);
+        :}
+        |
+        // in ContextFreeScanner, this case isn't easy to "catch"!
+        APPLY:ap applyThmName:n
+        {:
+          //checkValidTheoremName(n);
+          RESULT = factory_.getZEvesFactory().createGlobalApplyCommand(n);
+          addLocAnn(RESULT, getLocation(ap, getLocation(n)));
+          //proofScripts_.countStep(RESULT, ProofStep.MEDIUM, ProofScope.GLOBAL);
+        :}
+        ;
+
+caseAnalysisCommand ::=
+        CASES:cam
+        {:
+          RESULT = factory_.getZEvesFactory().createCasesCommand();
+          addLocAnn(RESULT, cam);
+          //proofScripts_.countStep(RESULT, ProofStep.TRIVIAL, ProofScope.GLOBAL);
+        :}
+        |
+        NEXT:cam
+        {:
+          RESULT = factory_.getZEvesFactory().createNextCommand();
+          addLocAnn(RESULT, cam);
+          //proofScripts_.countStep(RESULT, ProofStep.TRIVIAL, ProofScope.GLOBAL);
+        :}
+        |
+        // split pred;
+        SPLIT:cam predicate:p
+        {:
+          RESULT = factory_.getZEvesFactory().createSplitCommand(p);
+          addLocAnn(RESULT, getLocation(cam, p));
+          //proofScripts_.countStep(RESULT, ProofStep.MEDIUM, ProofScope.GLOBAL);
+        :}
+        ;
+//              cases  : Kind=Cases and P == null
+//              next   : Kind=Next  and P == null
+//              split P: Kind=Split and P != null
+
+normalizationCommand ::=
+        CONJUNCTIVE:nc
+        {:
+          RESULT = factory_.getZEvesFactory().createConjunctiveCommand();
+          addLocAnn(RESULT, nc);
+          //proofScripts_.countStep(RESULT, ProofStep.UNUSUAL, ProofScope.GLOBAL);
+        :}
+        |
+        DISJUNCTIVE:nc
+        {:
+          RESULT = factory_.getZEvesFactory().createDisjunctiveCommand();
+          addLocAnn(RESULT, nc);
+          //proofScripts_.countStep(RESULT, ProofStep.UNUSUAL, ProofScope.GLOBAL);
+        :}
+        |
+        REARRANGE:nc
+        {:
+          RESULT = factory_.getZEvesFactory().createRearrangeCommand();
+          addLocAnn(RESULT, nc);
+          //proofScripts_.countStep(RESULT, ProofStep.SIMPLE, ProofScope.GLOBAL);
+        :}
+        |
+        WITH:w NORMALIZATION:n innerProofCommand:ipc
+        {:
+          RESULT = factory_.getZEvesFactory().createWithNormalizationCommand(ipc);
+          addLocAnn(RESULT, getLocation(w, ipc));
+          //proofScripts_.countStep(RESULT, ProofStep.MEDIUM, getProofScope(ipc));
+        :}
+        ;
+//            conjunctive: Kind==Conjuncture and CMD == null
+//            disjunctive: Kind==Disjunctive and CMD == null
+//            rearrange  : Kind==Rearranghe  and CMD == null
+//            with normalization CMD: Kind==Command and CMD != null
+
+
+quantifiersCommand ::=
+        PRENEX:p
+        {:
+          RESULT = factory_.getZEvesFactory().createPrenexCommand();
+          addLocAnn(RESULT, p);
+          //proofScripts_.countStep(RESULT, ProofStep.TRIVIAL, ProofScope.GLOBAL);
+        :}
+        |
+        INSTANTIATE:i instantiations:inst
+        {:
+          assert !inst.isEmpty();
+          RESULT = factory_.getZEvesFactory().createInstantiateCommand(inst);
+          addLocAnn(RESULT, getLocation(i, inst));
+          //proofScripts_.countStep(RESULT, ProofStep.COMPLEX, ProofScope.GLOBAL); // or is it local? to a quantifier?
+        :}
+        ;
+//          prenex     : InstList = null or empty
+//          instantiate: InstList != null and != empty
+
+instantiations ::=
+        instantiationList:il
+        {:
+          RESULT = il;
+          //checkInstantiationListConsistency(il);
+          addLocAnn(il, getLocation(il.get(0), il.get(il.size() - 1)));
+        :}
+        ;
+
+instantiationList ::=
+        instantiationList:il COMMA instantiation:i
+        {:
+           il.add(i);
+           RESULT = il;
+        :}
+        |
+        instantiation:i
+        {:
+           RESULT = factory_.createInstantiationList();
+           RESULT.add(i);
+        :}
+        ;
+
+instantiation ::=
+        // use invoke name because we could have instantiation of operator names
+        // as quantified names.
+        refName:n THMREPLACEMENT expression:e // instOrRepl:isQtn zevesRenaming:e
+        {:
+           RESULT = factory_.createInstantiation(n, e, InstantiationKind.ThmReplacement);
+           addLocAnn(RESULT, getLocation(n, e));
+        :} // DIDN'T SOLVE CONFLICT BELOW FOR zevesRenaming production.
+           // %prec _RENAME
+        |
+        refName:n QNTINSTANTIATION expression:e
+        {:
+           RESULT = factory_.createInstantiation(n, e, InstantiationKind.Quantifier);
+           addLocAnn(RESULT, getLocation(n, e));
+        :}
+        ;
+
+//zevesRenaming ::=
+       // expression:e
+        //{:
+        //  RESULT = e;
+        //:}
+        // CONFLICTS!  TODO: won't accepted mixed renamings for now.. (e.g., THETA S[x := 10, a/y]; use THETA S[x:= 10, y := a]).
+        //|
+        //DECORWORD:n
+        //refName:n
+        //name:n
+        //????
+        //{:
+        //  RESULT = createRefExpr(n);
+        //:}
+        //;
+
+//instOrRepl ::=
+        //DEFEQUAL
+        //{:
+        //  RESULT = true;
+        //:}
+        //|
+        //THMREPLACEMENT
+        //{:
+        //  RESULT = false;
+        //:}
+        //|
+        // for when we have mixed renaming like: THETA S[x := 10, a/y] (both are THMREPLACEMENT kind)
+        //SLASH
+        //{:
+        //  RESULT = false;
+        //:}
+        //;
+
+simplificationCommand ::=
+        PROVE:cmd BY innerSimplCmd:isc
+        {:
+          ProofCommand pc = null;
+          switch ((RewriteKind) isc[0])
+          {
+            case Simplify:
+            // TODO: add an error case here, actually
+              pc = factory_.getZEvesFactory().createProveBySimplifyCommand();
+              break;
+            case Rewrite:
+              pc = factory_.getZEvesFactory().createProveByRewriteCommand();
+              break;
+            case Reduce:
+              pc = factory_.getZEvesFactory().createProveByReduceCommand();
+              break;
+            default:
+              throw new Error("invalid proof command rewrite kind " + isc[0] +
+              	 "(for dialect " + getDialect().toString() + " in Parser)."
+              );
+          }
+          RESULT = pc;
+          addLocAnn(RESULT, getLocation(cmd, (LocInfo) isc[1]));
+          //proofScripts_.countStep(RESULT, ProofStep.TRIVIAL, ProofScope.GLOBAL);
+        :}
+        |
+        TRIVIAL:cmd innerSimplCmd:isc
+        {:
+          ProofCommand pc = null;
+          switch ((RewriteKind) isc[0])
+          {
+            case Simplify:
+              pc = factory_.getZEvesFactory().createTrivialSimplifyCommand();
+              break;
+            case Rewrite:
+              pc = factory_.getZEvesFactory().createTrivialRewriteCommand();
+              break;
+            case Reduce:
+            // TODO: add an error case here, actually
+              pc = factory_.getZEvesFactory().createTrivialReduceCommand();
+              break;
+            default:
+              throw new Error("invalid proof command rewrite kind " + isc[0]+
+              	 "(for dialect " + getDialect().toString() + " in Parser)."
+              );
+          }
+          RESULT = pc;
+          addLocAnn(RESULT, getLocation(cmd, (LocInfo) isc[1]));
+          //proofScripts_.countStep(RESULT, ProofStep.MEDIUM, ProofScope.GLOBAL);
+        :}
+        |
+        innerSimplCmd:isc
+        {:
+          ProofCommand pc = null;
+          switch ((RewriteKind) isc[0])
+          {
+            case Simplify:
+              pc = factory_.getZEvesFactory().createSimplifyCommand();
+              break;
+            case Rewrite:
+              pc = factory_.getZEvesFactory().createRewriteCommand();
+              break;
+            case Reduce:
+              pc = factory_.getZEvesFactory().createReduceCommand();
+              break;
+            default:
+              throw new Error("invalid proof command rewrite kind " + isc[0]+
+              	 "(for dialect " + getDialect().toString() + " in Parser)."
+              );
+          }
+          RESULT = pc;
+          addLocAnn(RESULT, (LocInfo) isc[1]);
+          //proofScripts_.countStep(RESULT, ProofStep.SIMPLE, ProofScope.GLOBAL);
+        :}
+        |  
+        // unqualified "prove" command is "by rewrite" in Z/EVES
+        PROVE:cmd
+        {:
+          RESULT = factory_.getZEvesFactory().createProveByRewriteCommand();
+          addLocAnn(RESULT, cmd);
+          //proofScripts_.countStep(RESULT, ProofStep.TRIVIAL, ProofScope.GLOBAL);
+        :}
+        ;
+
+innerSimplCmd ::=
+        SIMPLIFY:cmd
+        {:
+          RESULT = new Object[] { RewriteKind.Simplify, cmd };
+        :}
+        |
+        REWRITE:cmd
+        {:
+          RESULT = new Object[] { RewriteKind.Rewrite, cmd };
+        :}
+        |
+        REDUCE:cmd
+        {:
+          RESULT = new Object[] { RewriteKind.Reduce, cmd };
+        :}
+        ;
+
+substitutionCommand ::=
+        EQUALITY:st SUBSTITUTE expression:e
+        {:
+          RESULT = factory_.getZEvesFactory().createEqualitySubstituteCommand(e);
+          addLocAnn(RESULT, getLocation(st, e));
+          //proofScripts_.countStep(RESULT, ProofStep.SIMPLE, ProofScope.LOCAL);
+        :}
+        |
+        EQUALITY:st SUBSTITUTE:end
+        {:
+          RESULT = factory_.getZEvesFactory().createGlobalEqualitySubstituteCommand();
+          addLocAnn(RESULT, getLocation(st, end));
+          //proofScripts_.countStep(RESULT, ProofStep.SIMPLE, ProofScope.GLOBAL);
+        :}
+        |
+        INVOKE:st PREDICATE predicate:p
+        {:
+          RESULT = factory_.getZEvesFactory().createInvokePredicateCommand(p);
+          addLocAnn(RESULT, getLocation(st, p));
+          //proofScripts_.countStep(RESULT, ProofStep.MEDIUM, ProofScope.LOCAL);
+        :}
+        |
+        // includes both names and opNames parenthesised 
+        INVOKE:st refName:n
+        {:
+          RESULT = factory_.getZEvesFactory().createInvokeCommand(n);
+          addLocAnn(RESULT, getLocation(st, n));
+          //proofScripts_.countStep(RESULT, ProofStep.SIMPLE, ProofScope.LOCAL);
+        :}
+        |
+        INVOKE:st
+        {:
+          RESULT = factory_.getZEvesFactory().createGlobalInvokeCommand();
+          addLocAnn(RESULT, st);
+          //proofScripts_.countStep(RESULT, ProofStep.SIMPLE, ProofScope.GLOBAL);
+        :}
+        ;
+//          equality substitute [Expr]: Pred = null and Name = null and (Expr != null or EQ)  [global eq subst]
+//          invoke predicate Pred     : Expr = null and Name = null and Pred != null
+//          invoke [Name]             : Expr = null and Pred = null and (Name != null or INVOKE) [global invoke]
+
+
+// Keep the productions separate, otherwise, if I use optXXX there is a lookahead problem for "use name[x:=10]"
+// to know whether the replacement is generic actual or not.
+useCommand ::=
+        // TODO: for use, should we allow the $ names? Perhaps not, given they are always rules?! No: use S\$declaration is common!
+        USE:u thmName:thmN genericActuals:ga replacements:repl //optGenActuals:ga optReplacements:repl
+        {:
+          //checkValidTheoremName(thmN);
+                                                          // if ga is not empty, then create an "explicit" RefExpr; an normal one (e.g., createRefExpr(thmN)) otherwise.
+          RESULT = factory_.getZEvesFactory().createUseCommand(
+                      factory_.createRefExpr(thmN, ga, Boolean.FALSE, !ga.isEmpty()), repl);
+          addLocAnn(RESULT, getLocation(u, repl));
+          //proofScripts_.countStep(RESULT, ProofStep.COMPLEX, ProofScope.GLOBAL);
+        :}
+        |
+        USE:u thmName:thmN replacements:repl
+        {:
+          //checkValidTheoremName(thmN);
+          RESULT = factory_.getZEvesFactory().createUseCommand(factory_.createRefExpr(thmN), repl);
+          addLocAnn(RESULT, getLocation(u, repl));
+          //proofScripts_.countStep(RESULT, ProofStep.COMPLEX, ProofScope.GLOBAL);
+        :} // No need ? %  p r e c _RENAME
+        |
+        USE:u thmName:thmN genericActuals:ga
+        {:
+          //checkValidTheoremName(thmN);
+          RESULT = factory_.getZEvesFactory().createUseCommand(
+                      factory_.createRefExpr(thmN, ga, Boolean.FALSE, Boolean.TRUE));
+          addLocAnn(RESULT, getLocation(u, ga));
+          //proofScripts_.countStep(RESULT, ProofStep.COMPLEX, ProofScope.GLOBAL);
+        :}
+        |
+        USE:u thmName:thmN
+        {:
+          //checkValidTheoremName(thmN);
+          RESULT = factory_.getZEvesFactory().createUseCommand(factory_.createRefExpr(thmN));
+          addLocAnn(RESULT, getLocation(u, thmN));
+          //proofScripts_.countStep(RESULT, ProofStep.MEDIUM, ProofScope.GLOBAL);
+        :}
+        ;
+       
+genericActuals ::=
+        LSQUARE:ls expressionList:el RSQUARE:rs
+        {:
+           RESULT = el;
+           addLocAnn(RESULT, getLocation(ls, rs));
+        :}
+        ;
+
+
+replacements ::=
+        LSQUARE:ls instantiationList:rl RSQUARE:rs
+        {:
+          RESULT = rl;
+          addLocAnn(rl, getLocation(ls, rs));
+        :}
+        ;
+
+/*optGenActuals ::=
+        genericActuals:ga
+        {:
+          RESULT = ga;
+        :}
+        |
+        //empty
+        {:
+          RESULT = factory_.createZExprList();
+        :}
+        ;
+
+optReplacements ::=
+        replacements:r
+        {:
+          RESULT = r;
+        :}
+        |
+        // empty
+        {:
+          RESULT = factory_.createInstantiationList();
+        :}
+        ;
+        */
+
+// TODO: call these something else because "with normalization" is not here?
+withCommand ::=
+        WITH:w EXPRESSION LPAREN expression:e RPAREN innerProofCommand:ipc
+        {:
+          RESULT = factory_.getZEvesFactory().createWithExpressionCommand(e, ipc);
+          addLocAnn(RESULT, getLocation(w, ipc));
+          //proofScripts_.countStep(RESULT, ProofStep.MEDIUM, ProofScope.LOCAL);
+        :}
+        |
+        WITH:w PREDICATE LPAREN predicate:p RPAREN innerProofCommand:ipc
+        {:
+          RESULT = factory_.getZEvesFactory().createWithPredicateCommand(p, ipc);
+          addLocAnn(RESULT, getLocation(w, ipc));
+          //proofScripts_.countStep(RESULT, ProofStep.MEDIUM, ProofScope.LOCAL);
+        :}
+        |
+        WITH:w ENABLED LPAREN thmNameList:nl RPAREN innerProofCommand:ipc
+        {:
+          RESULT = factory_.getZEvesFactory().createWithEnabledCommand(nl, ipc);
+          addLocAnn(RESULT, getLocation(w, ipc));
+          //proofScripts_.countStep(RESULT, ProofStep.MEDIUM, getProofScope(ipc));
+        :}
+        |
+        WITH:w DISABLED LPAREN thmNameList:nl RPAREN innerProofCommand:ipc
+        {:
+          RESULT = factory_.getZEvesFactory().createWithDisabledCommand(nl, ipc);
+          addLocAnn(RESULT, getLocation(w, ipc));
+          //proofScripts_.countStep(RESULT, ProofStep.MEDIUM, getProofScope(ipc));
+        :}
+        ;
+//      with expression E cmd : Expr != null and Pred = null and NameList = empty and Cmd != null
+//      with predicate P cmd  : Expr  = null and Pred = null and NameList = empty and Cmd = null
+//      with enabled NL cmd   : Expr  = null and Pred = null and NameLisst != empty and Cmd != null (same for disabled)
+
+proofSep ::=
+        // do nothing
+        ZPROOFCOMMANDSEP:zpc //optNL
+        {:
+          RESULT = zpc;
+        :}
+        ;
+
+
+applyThmName ::=
+        //THMNAME:dw1 ZPROOFDOLLAR:d DECORWORD:dw2
+        //{:
+        //   RESULT = createSpecialThmName(dw1, dw2);
+        //:}
+        //|
+        THMNAME:dw
+        {:
+           RESULT = createZName(dw);
+        :}
+        ;
+
+thmName ::=
+        // special name from axiomatic/schema declarations
+        // the issue here is that "DECLARATION" is a reserved 
+        // word ("print declaration X"), hence doesn't gets
+        // tokenised as DECORWORD(!)
+        // ex. f\$declaration, S\$declaration
+        //DECORWORD:dw1 ZPROOFDOLLAR:d DECLARATION:dcl
+        //{:
+        //   RESULT = createSpecialThmName(dw1, new Decorword(ZEvesString.DECLARATION, dcl));
+        //:}
+        //|
+        //// NAME$domainCheck
+        //DECORWORD:dw1 ZPROOFDOLLAR:d DECORWORD:dw2
+        //{:
+        //   RESULT = createSpecialThmName(dw1, dw2);
+        //:}
+        //|
+        //// unammed$ni$domainCheck
+        //DECORWORD:dw1 ZPROOFDOLLAR DECORWORD:dw2 ZPROOFDOLLAR DECORWORD:dw3
+        //{:
+        //   RESULT = createSpecialThmName(dw1, dw2, dw3);
+        //:}
+        //|
+        DECORWORD:dw
+        {:
+           RESULT = createZName(dw);
+        :}
+        |
+        opName:on
+        {:
+           final LocInfo loc = getLocation(onleft, onright);
+           RESULT = strListToZName(on, loc);
+           RESULT.getAnns().add(factory_.createParenAnn());
+        :}
+        ;
+
+thmNameList ::=
+        thmNameList:nl COMMA thmName:n
+        {:
+           nl.add(n);
+           RESULT = nl;
+        :}
+        |
+        thmName:n
+        {:
+           RESULT = factory_.createZNameList();
+           RESULT.add(n);
+        :}
+        ;
+
+
+genericAxDefinition ::=
+        GENAX:genax formalParameters:fp axiomaticSchemaText:st END:end
+        {:
+           RESULT = factory_.createAxPara(fp, st, Box.AxBox);
+           
+           parserState_.clearLabelPredList();
+           
+           addLocAnn(RESULT, getLocation(genax, end));
+        :}
+        ;
+
+optFormalParameters ::=
+        formalParameters:fp
+        {: RESULT = fp; :}
+        |
+        //empty
+        {: RESULT = factory_.createZNameList(); :}
+        ;
+
+formalParameters ::=
+        LSQUARE nameList:nl RSQUARE optNL
+        {: RESULT = nl; :}
+        ;
+
+axiomaticDefinition ::=
+        AX:ax axiomaticSchemaText:st END:end
+        {:
+           ZNameList zdnl = factory_.createZNameList();
+           RESULT = factory_.createAxPara(zdnl, st, Box.AxBox);
+           
+           parserState_.clearLabelPredList();
+           
+           addLocAnn(RESULT, getLocation(ax, end));
+        :}
+        ;
+
+//according to the Z ISO standard, an abbreviation definition is to be
+//treated as an axiomatic definition, with ConstDecl(dn,e)
+abbreviationDefinition ::=
+        declName:dn DEFEQUAL:equal expression:e
+        {:
+           ConstDecl cd = factory_.createConstDecl(dn, e);
+           addLocAnn(cd, getLocation(equalleft, equalright, dn, e));
+           ZDeclList decls = factory_.createZDeclList();
+           decls.add(cd);
+           ZSchText st = factory_.createZSchText(decls, null);
+           addLocAnn(st, getLocation(dn, e));
+           ZNameList zdnl = factory_.createZNameList();
+           RESULT = factory_.createAxPara(zdnl, st, Box.OmitBox);
+           addLocAnn(RESULT, getLocation(dn, e));
+        :}
+        |
+        //TODO: check this. Should be name:n, but the toolkit won't parse
+        //"\langle \listarg \rangle [X] == .... without this
+        declName:dn formalParameters:fp DEFEQUAL:equal expression:e
+        {:
+           ConstDecl cd = factory_.createConstDecl(dn, e);
+           addLocAnn(cd, getLocation(equalleft, equalright, dn, e));
+           ZDeclList decls = factory_.createZDeclList();
+           decls.add(cd);
+           ZSchText st = factory_.createZSchText(decls, null);
+           addLocAnn(st, getLocation(cd, e));
+           RESULT = factory_.createAxPara(fp, st, Box.OmitBox);
+           addLocAnn(RESULT, getLocation(dn, e));
+        :}
+        |
+        genName:gn DEFEQUAL:equal expression:e
+        {:
+           Name dn = gn.getFirst();
+           LocInfo dnLoc = dn != null ?
+             getLocation(dn) : getLocation(gnleft, gnright);
+           ZNameList fp = gn.getSecond();
+           ConstDecl cd = factory_.createConstDecl(dn, e);
+           LocInfo eLoc = getLocation(e);
+           addLocAnn(cd, getLocation(equalleft, equalright, dnLoc, eLoc));
+           ZDeclList decls = factory_.createZDeclList();
+           decls.add(cd);
+           ZSchText st = factory_.createZSchText(decls, null);
+           addLocAnn(st, getLocation(dnLoc, eLoc));
+           RESULT = factory_.createAxPara(fp, st, Box.OmitBox);
+           addLocAnn(RESULT, getLocation(dnLoc, eLoc));
+        :}
+        ;
+
+
+freeTypeList ::=
+        freeTypeList:ftl ANDALSO freeTypeDefinition:ftd
+        {:
+           ftl.add(ftd);
+           RESULT = ftl;
+        :}
+        |
+        freeTypeDefinition:ftd
+        {:
+           RESULT = factory_.createZFreetypeList();
+           RESULT.add(ftd); :}
+        ;
+
+freeTypeDefinition ::=
+        name:n DEFFREE:deffree branchList:bl
+        {:
+           RESULT = factory_.createFreetype(n, bl);
+           addLocAnn(RESULT, getLocation(deffreeleft, deffreeright,
+                                         n, bl.get(bl.size() - 1)));
+        :}
+        ;
+
+branchList ::=
+        branchList:bl BAR branch:b
+        {:
+           bl.add(b);
+           RESULT = bl;
+        :}
+        |
+        branch:b
+        {:
+           RESULT = factory_.createZBranchList();
+           RESULT.add(b); :}
+        ;
+
+branch ::=
+        declName:dn
+        {:
+           RESULT = factory_.createBranch(dn, null);
+           addLocAnn(RESULT, getLocation(dn));
+        :}
+        |
+        declName:dn LDATA expression:e RDATA:rdata
+        {:
+           RESULT = factory_.createBranch(dn, e);
+           addLocAnn(RESULT, getLocation(dn, rdata));
+        :}
+        ;
+
+narrWordList ::=
+        narrWordList:nwl TEXT:t
+        {:
+           nwl.add(t);
+           RESULT = nwl;
+        :}
+        |
+        TEXT:t
+        {: RESULT = factory_.list(t); :}
+        ;
+
+// operator templates  /////////////////////////////////////////////////////
+
+operatorTemplate ::=
+        RELATION:rel template:t
+        {:
+           RESULT = factory_.createOptempPara();
+           RESULT.getOper().addAll(t);
+           RESULT.setCat(Cat.Relation);
+           addLocAnn(RESULT, getLocation(relleft, relright));
+        :}
+        |
+        FUNCTION:fun catTemplate:ct
+        {:
+           ct.setCat(Cat.Function);
+           addLocAnn(ct, getLocation(funleft, funright));
+           RESULT = ct;
+        :}
+        |
+        GENERIC:g catTemplate:ct
+        {:
+           ct.setCat(Cat.Generic);
+           addLocAnn(ct, getLocation(gleft, gright));
+           RESULT = ct;
+        :}
+        ;
+
+template ::=
+        prefixTemplate:pt
+        {: RESULT = pt; :}
+        |
+        postfixTemplate:pt
+        {: RESULT = pt; :}
+        |
+        infixTemplate:it
+        {: RESULT = it; :}
+        |
+        nofixTemplate:nt
+        {: RESULT = nt; :}
+        ;
+
+
+catTemplate ::=
+        prefixTemplate:pt
+        {:
+           RESULT = factory_.createOptempPara();
+           RESULT.getOper().addAll(pt);
+        :}
+        |
+        postfixTemplate:pt
+        {:
+           RESULT = factory_.createOptempPara();
+           RESULT.getOper().addAll(pt);
+        :}
+        |
+        NUMERAL:pr assoc:a infixTemplate:it
+        {:
+           RESULT = factory_.createOptempPara();
+           RESULT.setPrec(pr.getValue());
+           RESULT.getOper().addAll(it);
+           RESULT.setAssoc(a);
+        :}
+        |
+        nofixTemplate:nt
+        {:
+           RESULT = factory_.createOptempPara();
+           RESULT.getOper().addAll(nt);
+        :}
+        ;
+
+
+assoc ::=
+        LEFTASSOC
+        {: RESULT = Assoc.Left; :}
+        |
+        RIGHTASSOC
+        {: RESULT = Assoc.Right; :}
+        ;
+
+
+prefixTemplate ::=
+        LPAREN DECORWORD:n optWordOperandList:ol varg:v RPAREN
+        {:
+           ol.add(0, createOperator(n));
+           ol.add(v);
+           RESULT = ol;
+        :}
+	|
+	LPAREN POWER:p varg:v RPAREN
+	{:
+           RESULT = factory_.list(createOperator(ZString.POWER, p), v);
+	:}
+        ;
+
+
+postfixTemplate ::=
+        LPAREN varg:v DECORWORD:n optWordOperandList:ol RPAREN
+        {: 
+           ol.add(0, createOperator(n));
+           ol.add(0, v);
+           RESULT = ol;
+        :}
+        ;
+
+
+infixTemplate ::=
+        LPAREN varg:v1 DECORWORD:n optWordOperandList:ol varg:v2 RPAREN
+        {:
+           ol.add(0, createOperator(n));
+           ol.add(0, v1);
+           ol.add(v2);
+           RESULT = ol;
+        :}
+        ;
+
+
+nofixTemplate ::=
+        LPAREN DECORWORD:n optWordOperandList:ol RPAREN:rp
+        {:
+           if (ol.size() < 1) {
+             parser.report_error(ZParseMessage.MSG_UNEXPECTED_TOKEN,
+                                 new Object[] {"RPAREN"},
+                                 getLocation(rpleft, rpright));
+           }
+           ol.add(0, createOperator(n));
+           RESULT = ol;
+        :}
+        ;
+
+
+optWordOperandList ::=
+        //empty
+        {: RESULT = factory_.list(); :}
+        |
+        optWordOperandList:wl templateTag:t DECORWORD:n
+        {:
+           wl.add(t);
+           wl.add(createOperator(n));
+           RESULT = wl;
+        :}
+        ;
+
+templateTag ::=
+        varg:v
+        {: RESULT = v; :}
+        |
+        LISTARG:listarg
+        {: RESULT = factory_.createOperand(Boolean.TRUE); :}
+        ;
+
+varg ::=
+        ARG:arg
+        {: RESULT = factory_.createOperand(Boolean.FALSE); :}
+        ;
+
+
+
+/// schema text ///////////////////////////////////////////
+
+schemaText ::=
+        optDeclPart:odp BAR predicate:p
+        {:
+           RESULT = factory_.createZSchText(odp, p);
+           
+           parserState_.clearLabelAssociations(p);
+           
+           addLocAnn(RESULT, getLocation(getLocation(odp),
+                                         getLocation(p)));
+        :}
+        |
+        optDeclPart:odp
+        {:
+           RESULT = factory_.createZSchText(odp, null);
+           addLocAnn(RESULT, getLocation(odp));
+        :}
+        ;
+
+axiomaticSchemaText ::=
+        optDeclPart:odp BAR predicate:p
+        {:
+           RESULT = factory_.createZSchText(odp, p);
+           
+           parserState_.associateLabelsToPreds(p);
+           
+           addLocAnn(RESULT, getLocation(getLocation(odp),
+                                         getLocation(p)));
+        :}
+        |
+        optDeclPart:odp
+        {:
+           RESULT = factory_.createZSchText(odp, null);
+           addLocAnn(RESULT, getLocation(odp));
+        :}
+        ;
+
+
+optAxLabel ::=
+        LLABEL:l optLabelAbility:ability optUsage:usage thmName:n RLABEL:r
+        {:
+          RESULT = factory_.createZEvesLabel(n, ability, usage);
+          //n.getAnns().add(RESULT); To avoid circular annotation loops in ZML
+          addLocAnn(RESULT, getLocation(l, r));
+        :}
+        |
+        // empty
+        {:
+          // create a label as an axiom
+          RESULT = createDefaultZEvesLabel(LabelAbility.none, LabelUsage.none);
+        :}
+        ;
+
+
+optDeclPart ::=
+        //empty
+        {: RESULT = factory_.createZDeclList(); :}
+        |
+        declPart:dp
+        {: RESULT = dp; :}
+        ;
+
+declPart ::=
+        zDeclList:zdl
+        {:
+           RESULT = zdl;
+           addLocAnn(zdl, getLocation(getLocation(zdl.get(0)),
+                                      getLocation(zdl.get(zdl.size() - 1))));
+        :}
+
+        ;
+
+zDeclList ::=
+        declaration:d
+        {: RESULT = factory_.createZDeclList(factory_.list(d)); :}
+        |
+        zDeclList:zdl sep declaration:d
+        {:
+           zdl.add(d);
+           RESULT = zdl;
+        :}
+        ;
+
+declaration ::=
+        basicDeclaration:bd
+        {: RESULT = bd; :}
+        |
+        expression:e
+        {: RESULT = factory_.createInclDecl(e); :}
+        ;
+
+schemaTextNoExpression ::=
+        optDeclPart:dp BAR predicate:p
+        {:
+           RESULT = factory_.createZSchText(dp, p);
+        :}
+        |
+        zDeclList:zdl sep declaration:d
+	{:
+           zdl.add(d);
+           RESULT = factory_.createZSchText(zdl, null);
+	:}
+	|
+	basicDeclaration:bd
+	{:
+           ZDeclList zdl = factory_.createZDeclList(factory_.list(bd));
+           RESULT = factory_.createZSchText(zdl, null);
+        :}
+        ;
+
+basicDeclaration ::=
+        varDecl:vd
+        {: RESULT = vd; :}
+        |
+        constDecl:cd
+        {: RESULT = cd; :}
+        ;
+
+varDecl ::=
+        declWordList:dwl COLON:colon expression:e
+        {:
+           RESULT = factory_.createVarDecl(dwl, e);
+           if (dwl.size() > 0) {
+             LocInfo loc = getLocation(colonleft, colonright, dwl.get(0), e);
+             addLocAnn(RESULT, loc);
+           }
+           else {
+             addLocAnn(RESULT, getLocation(colon, e));
+           }
+        :}
+        |
+        declWordList:dwl COLON:colon error:e
+        {:
+           ZParseMessage msg = ZParseMessage.MSG_SYNTAX_ERROR_IN_VARDECL;
+           parser.report_syntax_error(msg);
+        :}
+
+        ;
+
+constDecl ::=
+        declName:dn DEFEQUAL:defequal expression:e
+        {:
+           RESULT = factory_.createConstDecl(dn, e);
+           addLocAnn(RESULT, getLocation(defequalleft, defequalright, dn, e));
+        :}
+
+        ;
+
+sep ::=
+        SEMICOLON
+        {: RESULT = And.Semi; :}
+        |
+        NL
+        {: RESULT = And.NL; :}
+        ;
+
+/// word, declName, and refName lists ////////////////////////////////////
+
+nameList ::=
+        nameList:nl COMMA DECORWORD:dw
+        {:
+           Name dn = createZName(dw);
+           nl.add(dn);
+           RESULT = nl;
+        :}
+        |
+        DECORWORD:dw
+        {:
+           Name dn = createZName(dw);
+           RESULT = factory_.createZNameList();
+           RESULT.add(dn);
+        :}
+        ;
+
+name ::=
+        DECORWORD:dw
+        {:
+           RESULT = createZName(dw);
+        :}
+
+        //|
+        //DECORWORD:dw TO
+        //{:
+        //   RESULT = createSpecialName(dw);
+        //   //System.out.println("name ::= " + RESULT);
+        //:}
+        //|
+        //// for cases like x$ and x$'  (e.g., renamed captured names)
+        //DECORWORD:dw ZPROOFDOLLAR:d
+        //{:
+        //  RESULT = createSpecialName(dw);
+        //:}
+        //|
+        //DECORWORD:dw ZPROOFDOLLARSTROKE:d
+        //{:
+        //  RESULT = createSpecialName(dw, d);
+        //:}
+
+        ;
+
+declWordList ::=
+        declWordList:dwl COMMA DECLWORD:dw
+        {:
+           Name dn = createZName(dw);
+           dwl.add(dn);
+           RESULT = dwl;
+        :}
+        |
+        declWordList:dwl COMMA opName:on
+        {:
+           LocInfo loc = getLocation(onleft, onright);
+           Name dn = strListToZName(on, loc);
+           if (dn != null) {
+             addLocAnn(dn, loc);
+             dwl.add(dn);
+           }
+           RESULT = dwl;
+        :}
+        |
+        declWordList:dwl COMMA misusedOpName:mon
+        {:
+           misusedOpName(mon);
+           RESULT = factory_.createZNameList();
+        :}
+        |
+        opName:on
+        {:
+           LocInfo loc = getLocation(onleft, onright);
+           Name dn = strListToZName(on, loc);
+           if (dn != null) {
+             addLocAnn(dn, loc);
+           }
+           RESULT = factory_.createZNameList();
+           RESULT.add(dn);
+        :}
+        |
+        DECLWORD:dw
+        {:
+           Name dn = createZName(dw);
+           RESULT = factory_.createZNameList();
+           RESULT.add(dn);
+        :}
+        |
+        misusedOpName:mon
+        {:
+           misusedOpName(mon);
+           RESULT = factory_.createZNameList();
+        :}
+        ;
+
+misusedOpName ::=
+        PREP:p
+        {: RESULT = p; :}
+        |
+        PRE:p
+        {: RESULT = p; :}
+        |
+        POSTP:p
+        {: RESULT = p; :}
+        |
+        POST:p
+        {: RESULT = p; :}
+        |
+        IP:ip
+        {: RESULT = ip; :}
+        |
+        I:i
+        {: RESULT = i; :}
+        |
+        LP:lp
+        {: RESULT = lp; :}
+        |
+        L:l
+        {: RESULT = l; :}
+        |
+        ELP:elp
+        {: RESULT = elp; :}
+        |
+        EL:el
+        {: RESULT = el; :}
+        |
+        ERP:erp
+        {: RESULT = erp; :}
+        |
+        ER:er
+        {: RESULT = er; :}
+        |
+        SRP:srp
+        {: RESULT = srp; :}
+        |
+        SR:sr
+        {: RESULT = sr; :}
+        |
+        EREP:erep
+        {: RESULT = erep; :}
+        |
+        ERE:ere
+        {: RESULT = ere; :}
+        |
+        SREP:srep
+        {: RESULT = srep; :}
+        |
+        SRE:sre
+        {: RESULT = sre; :}
+        |
+        ES:es
+        {: RESULT = es; :}
+        |
+        SS:ss
+        {: RESULT = ss; :}
+        ;
+
+declName ::=
+        name:n
+        {: RESULT = n; :}
+        |
+        opName:on
+        {:
+           LocInfo loc = getLocation(onleft, onright);
+           RESULT = strListToZName(on, loc);
+           addLocAnn(RESULT, loc);
+        :}
+        ;
+
+refNameList ::=
+        refNameList:rnl COMMA DECORWORD:dw
+        {:
+           ZName rn = createZName(dw);
+           rnl.add(rn);
+           RESULT = rnl;
+        :}
+        
+        |
+        DECORWORD:dw
+        {:
+           ZName rn = createZName(dw);
+           RESULT = factory_.list(rn);
+        :}
+        
+        ;
+
+refName ::=
+        DECORWORD:dw
+        {:
+           RESULT = createZName(dw);
+        :}
+        
+        |
+        LPAREN:lparen opName:on RPAREN:rparen
+        {:
+           final LocInfo loc = getLocation(lparen, rparen);
+           RESULT = strListToZName(on, loc);
+           RESULT.getAnns().add(factory_.createParenAnn());
+        :}
+        ;
+
+opName ::=
+        prefixName:pn
+        {: RESULT = pn; :}
+        |
+        postfixName:pn
+        {: RESULT = pn; :}
+        |
+        infixName:in
+        {: RESULT = in; :}
+        |
+        nofixName:nn
+        {: RESULT = nn; :}
+        ;
+
+prefixName ::=
+        PRE:p varg
+        {: RESULT = factory_.list(p.getString(), ARG_TOK); :}
+        |
+        PREP:p varg
+        {: RESULT = factory_.list(p.getString(), ARG_TOK); :}
+        |
+        L:l optVargEsSsList:ouesl argEreOrSre:aeos varg
+        {:
+           RESULT = factory_.list(l.getString());
+           RESULT.addAll(ouesl);
+           RESULT.addAll(aeos);
+           RESULT.add(ARG_TOK);
+        :}
+        |
+        LP:lp optVargEsSsList:ouesl argErepOrSrep:aeos varg
+        {:
+           RESULT = factory_.list(lp.getString());
+           RESULT.addAll(ouesl);
+           RESULT.addAll(aeos);
+           RESULT.add(ARG_TOK);
+        :}
+        ;
+
+postfixName ::=
+        varg POST:p
+        {: RESULT = factory_.list(ARG_TOK, p.getString()); :}
+        |
+        varg POSTP:p
+        {: RESULT = factory_.list(ARG_TOK, p.getString()); :}
+        |
+        varg EL:el optVargEsSsList:ouesl argErOrSr:aeos
+        {:
+           RESULT = factory_.list(ARG_TOK);
+           RESULT.add(el.getString());
+           RESULT.addAll(ouesl);
+           RESULT.addAll(aeos);
+        :}
+        |
+        varg ELP:elp optVargEsSsList:ouesl argErpOrSrp:aeos
+        {:
+           RESULT = factory_.list(ARG_TOK);
+           RESULT.add(elp.getString());
+           RESULT.addAll(ouesl);
+           RESULT.addAll(aeos);
+        :}
+        ;
+
+
+infixName ::=
+        varg I:i varg
+        {:
+           RESULT = factory_.list(ARG_TOK);
+           RESULT.add(i.getString());
+           RESULT.add(ARG_TOK);
+        :}
+        |
+        varg IP:ip varg
+        {:
+           RESULT = factory_.list(ARG_TOK);
+           RESULT.add(ip.getString());
+           RESULT.add(ARG_TOK);
+        :}
+        |
+        varg EL:el optVargEsSsList:ouesl argEreOrSre:aeos varg
+        {:
+           RESULT = factory_.list(ARG_TOK);
+           RESULT.add(el.getString());
+           RESULT.addAll(ouesl);
+           RESULT.addAll(aeos);
+           RESULT.add(ARG_TOK);
+        :}
+        |
+        varg ELP:elp optVargEsSsList:ouesl argErepOrSrep:aeos varg
+        {:
+           RESULT = factory_.list(ARG_TOK);
+           RESULT.add(elp.getString());
+           RESULT.addAll(ouesl);
+           RESULT.addAll(aeos);
+           RESULT.add(ARG_TOK);
+        :}
+        ;
+
+nofixName ::=
+        L:l optVargEsSsList:ouesl argErOrSr:aeos
+        {:
+           RESULT = factory_.list(l.getString());
+           RESULT.addAll(ouesl);
+           RESULT.addAll(aeos);
+        :}
+        |
+        LP:lp optVargEsSsList:ouesl argErpOrSrp:aeos
+        {:
+           RESULT = factory_.list(lp.getString());
+           RESULT.addAll(ouesl);
+           RESULT.addAll(aeos);
+        :}
+        ;
+
+optVargEsSsList ::=
+        //empty
+        {: RESULT = factory_.list(); :}
+        |
+        optVargEsSsList:ouesl argEsOrSs:aeos
+        {:
+           ouesl.addAll(aeos);
+           RESULT = ouesl;
+        :}
+        ;
+
+argEsOrSs ::=
+        ARG ES:es
+        {: RESULT = factory_.list(ARG_TOK, es.getString()); :}
+        |
+        LISTARG SS:ss
+        {: RESULT = factory_.list(LISTARG_TOK, ss.getString()); :}
+        ;
+
+argEreOrSre ::=
+        ARG ERE:ere
+        {: RESULT = factory_.list(ARG_TOK, ere.getString()); :}
+        |
+        LISTARG SRE:sre
+        {: RESULT = factory_.list(LISTARG_TOK, sre.getString()); :}
+        ;
+
+argErepOrSrep ::=
+        ARG EREP:erep
+        {: RESULT = factory_.list(ARG_TOK, erep.getString()); :}
+        |
+        LISTARG SREP:srep
+        {: RESULT = factory_.list(LISTARG_TOK, srep.getString()); :}
+        ;
+
+argErOrSr ::=
+        ARG ER:er
+        {: RESULT = factory_.list(ARG_TOK, er.getString()); :}
+        |
+        LISTARG SR:sr
+        {: RESULT = factory_.list(LISTARG_TOK, sr.getString()); :}
+        ;
+
+argErpOrSrp ::=
+        ARG ERP:erp
+        {: RESULT = factory_.list(ARG_TOK, erp.getString()); :}
+        |
+        LISTARG SRP:srp
+        {: RESULT = factory_.list(LISTARG_TOK, srp.getString()); :}
+        ;
+
+//a genName is returned as a pair, with the first item being the name,
+//and the second being a list of generic parameters
+genName ::=
+        prefixGenName:pgn
+        {: RESULT = pgn; :}
+        |
+        postfixGenName:pgn
+        {: RESULT = pgn; :}
+        |
+        infixGenName:ign
+        {: RESULT = ign; :}
+        |
+        nofixGenName:ngn
+        {: RESULT = ngn; :}
+        ;
+
+prefixGenName ::=
+        PRE:pre name:formalParameter
+        {:
+           List<String> name = factory_.list(pre.getString(), ARG_TOK);
+           ZNameList decls = factory_.createZNameList();
+           decls.add(formalParameter);
+           LocInfo loc = getLocation(formalParameterleft,
+                                     formalParameterright);
+           Name declName = strListToZName(name, loc);
+           RESULT = new Pair<Name, ZNameList>(declName, decls);
+        :}
+        |
+        L:l optNameEsSsList:onesl name:fpn1
+             ereOrSre:eos name:fpn2
+        {:
+           //construct the name
+           List<String> name = factory_.list(l.getString());
+           
+           // BUGFIX:
+           // NOTE: This template is for rather complex (i.e. ternary etc) generic operator template.
+           //		Surprisingly, there are non in the standard toolkit, and the standard itself is
+           //		rather vague about examples of such complex operators. We tried but couldn't create
+           //		an example to "test" this production, but at least now the types are right.
+           //name.addAll((List) onesl.getSecond());
+           name.addAll(extractNamesFromNameList(onesl.getSecond()));
+           name.add(ARG_TOK);
+           name.add(eos.getString());
+           name.add(ARG_TOK);
+
+           //construct the parameter list
+           ZNameList fps = onesl.getFirst();
+           fps.add(fpn1);
+           fps.add(fpn2);
+           LocInfo loc = getLocation(fpn2left, fpn2right);
+           Name declName = strListToZName(name, loc);
+           RESULT = new Pair<Name, ZNameList>(declName, fps);
+        :}
+        ;
+
+postfixGenName ::=
+        name:fpn POST:p
+        {:
+           List<String> name = factory_.list(ARG_TOK, p.getString());
+           ZNameList decls = factory_.createZNameList();
+           decls.add(fpn);
+           LocInfo loc = getLocation(pleft, pright);
+           Name declName = strListToZName(name, loc);
+           RESULT = new Pair<Name, ZNameList>(declName, decls);
+        :}
+        |
+        name:fpn1 EL:el optNameEsSsList:onesl name:fpn2 erOrSr:eos
+        {:
+           //construct the name
+           List<String> name = factory_.list(ARG_TOK);
+           name.add(el.getString());
+
+           // BUGFIX:
+           // NOTE: This template is for rather complex (i.e. ternary etc) generic operator template.
+           //		Surprisingly, there are non in the standard toolkit, and the standard itself is
+           //		rather vague about examples of such complex operators. We tried but couldn't create
+           //		an example to "test" this production, but at least now the types are right.
+           //name.addAll((List) onesl.getSecond());
+           name.addAll(extractNamesFromNameList(onesl.getSecond()));
+
+           name.add(ARG_TOK);
+           name.add(eos.getString());
+
+           //construct the parameter list
+           ZNameList fps = factory_.createZNameList();
+           fps.add(fpn1);
+           fps.addAll(onesl.getFirst());
+           fps.add(fpn2);
+           LocInfo loc = getLocation(eosleft, eosright);
+           Name declName = strListToZName(name, loc);
+           RESULT = new Pair<Name, ZNameList>(declName, fps);
+         :}
+        ;
+
+infixGenName ::=
+        name:fpn1 I:i name:fpn2
+        {:
+           //construct the name
+           List<String> name = factory_.list(ARG_TOK);
+           name.add(i.getString());
+           name.add(ARG_TOK);
+
+           //construct the parameter list
+           ZNameList fps = factory_.createZNameList();
+           fps.add(fpn1);
+           fps.add(fpn2);
+           LocInfo loc = getLocation(fpn2left, fpn2right);
+           Name declName = strListToZName(name, loc);
+           RESULT = new Pair<Name, ZNameList>(declName, fps);
+        :}
+        |
+        name:fpn1 EL:el optNameEsSsList:onesl name:fpn2 ereOrSre:eos name:fpn3
+        {:
+           //construct the name
+           List<String> name = factory_.list(ARG_TOK);
+           name.add(el.getString());
+
+           // BUGFIX:
+           // NOTE: This template is for rather complex (i.e. ternary etc) generic operator template.
+           //		Surprisingly, there are non in the standard toolkit, and the standard itself is
+           //		rather vague about examples of such complex operators. We tried but couldn't create
+           //		an example to "test" this production, but at least now the types are right.
+           //name.addAll((List) onesl.getSecond());
+           name.addAll(extractNamesFromNameList(onesl.getSecond()));
+
+           name.add(ARG_TOK);
+           name.add(eos.getString());
+           name.add(ARG_TOK);
+           //construct the parameter list
+           ZNameList fps = factory_.createZNameList();
+           fps.add(fpn1);
+           fps.addAll(onesl.getFirst());
+           fps.add(fpn2);
+           fps.add(fpn3);
+           LocInfo loc = getLocation(fpn3left, fpn3right);
+           Name declName = strListToZName(name, loc);
+           RESULT = new Pair<Name, ZNameList>(declName, fps);
+        :}
+        ;
+
+nofixGenName ::=
+        L:l optNameEsSsList:onesl name:fpn erOrSr:eos
+        {:
+           //construct the name
+           List<String> name = factory_.list(l.getString());
+           
+           // BUGFIX:
+           // NOTE: This template is for rather complex (i.e. ternary etc) generic operator template.
+           //		Surprisingly, there are non in the standard toolkit, and the standard itself is
+           //		rather vague about examples of such complex operators. We tried but couldn't create
+           //		an example to "test" this production, but at least now the types are right.
+           //name.addAll((List) onesl.getSecond());
+           name.addAll(extractNamesFromNameList(onesl.getSecond()));
+           
+           name.add(ARG_TOK);
+           name.add(eos.getString());
+
+           //construct the parameter list
+           ZNameList fps = onesl.getFirst();
+           fps.add(fpn);
+           LocInfo loc = getLocation(eosleft, eosright);
+           Name declName = strListToZName(name, loc);
+           RESULT = new Pair<Name, ZNameList>(declName, fps);
+        :}
+        ;
+
+//an optNameEsSsList is returned as a pair, with the first item
+//being a list comprising generic parameters, and the second being a
+//list comprising the name
+optNameEsSsList ::=
+        //empty
+        {: RESULT = new Pair<ZNameList, ZNameList>(factory_.createZNameList(),
+                             factory_.createZNameList()); :}
+        |
+        optNameEsSsList:ouesl name:fpn esOrSs:eos
+        {:
+           ZNameList gens = ouesl.getFirst();
+           gens.add(fpn);
+           List<ZNameList> name = factory_.list(ouesl.getSecond());
+           // BUG?/TODO: This can't be right. The result is a list of ZNameLists and
+           //			 the code just adds two strings to the list?
+           //
+           // NOTE: This template is for rather complex (i.e. ternary etc) generic operator template.
+           //		Surprisingly, there are non in the standard toolkit, and the standard itself is
+           //		rather vague about examples of such complex operators. We tried but couldn't create
+           //		an example to "test" this production, but at least now the types are right.
+           //name.add(ARG_TOK);
+           //name.add(eos.getString());
+           name.add(factory_.createZNameList(
+ 		  		factory_.list(factory_.createZName(ARG_TOK), 
+   					  factory_.createZName(eos.getString()))));
+           RESULT = ouesl;
+        :}
+        ;
+
+// these results are LocString
+esOrSs ::=
+        ES:es
+        {: RESULT = es; :}
+        |
+        SS:ss
+        {: RESULT = ss; :}
+        ;
+
+ereOrSre ::=
+        ERE:ere
+        {: RESULT = ere; :}
+        |
+        SRE:sre
+        {: RESULT = sre; :}
+        ;
+
+erOrSr ::=
+        ER:er
+        {: RESULT = er; :}
+        |
+        SR:sr
+        {: RESULT = sr; :}
+        ;
+
+/// predicates and expressions ///////////////////////////////////////////////
+
+// This is for terms which MUST be predicates, so MIGHT contain NL/SEMI.
+predicate ::=
+        predicate:lhs sep:s optAxLabel:label term:rhs
+        {:
+           Pred rhsp = pred(rhs);
+           
+           parserState_.storeZEvesLabelFor(rhsp, label);
+           
+           RESULT = factory_.createAndPred(lhs, rhsp, s);
+           addLocAnn(RESULT, getLocation(sleft, sright, lhs, rhs));
+        :}
+        |
+        optAxLabel:label term:p
+        {:
+            RESULT = pred(p);
+            
+            parserState_.storeZEvesLabelFor(RESULT, label);  
+            
+        :}
+        ;
+
+expression ::=
+        term:t
+        {: RESULT = expr(t); :}
+        ;
+
+// This is for terms (which may be expr or pred) which MIGHT contain
+// NL/SEMI.  If they do contain NL/SEMI, they must be predicates!
+septerm ::=
+        septerm:lhs sep:s term:rhs
+        {:
+           RESULT = factory_.createAndPred(pred(lhs), pred(rhs), s);
+           addLocAnn(RESULT, getLocation(sleft, sright, lhs, rhs));
+        :}
+	|
+	term:t
+	{: RESULT = t; :}
+	;
+
+term ::=
+        /* conditional */
+        IF:i predicate:p THEN term:te ELSE term:fe
+        {:
+           RESULT = factory_.createCondExpr(p, expr(te), expr(fe));
+           addLocAnn(RESULT, getLocation(i, fe));
+        :}
+        |
+        /* (schema) universal quantification */
+        ALL:all schemaText:st SPOT term:t
+        {:
+           if (t instanceof Expr) {
+             RESULT = factory_.createForallExpr(st, expr(t));
+           }
+           else {
+             RESULT = factory_.createForallPred(st, pred(t));
+           }
+           addLocAnn(RESULT, getLocation(all, t));
+        :}
+        |
+        /* (schema) existential quantification */
+        EXI:exi schemaText:st SPOT term:t
+        {:
+           if (t instanceof Expr) {
+             RESULT = factory_.createExistsExpr(st, expr(t));
+           }
+           else {
+             RESULT = factory_.createExistsPred(st, pred(t));
+           }
+           addLocAnn(RESULT, getLocation(exi, t));
+        :}
+        |
+        /* (schema) unique existential quantification */
+        EXIONE:exione schemaText:st SPOT term:t
+        {:
+           if (t instanceof Expr) {
+             RESULT = factory_.createExists1Expr(st, expr(t));
+           }
+           else {
+             RESULT = factory_.createExists1Pred(st, pred(t));
+           }
+           addLocAnn(RESULT, getLocation(exione, t));
+        :}
+        |
+        /* function construction */
+        LAMBDA:lambda schemaText:st SPOT term:t
+        {:
+           RESULT = factory_.createLambdaExpr(st, expr(t));
+           addLocAnn(RESULT, getLocation(lambda, t));
+        :} %prec LAMBDA
+        |
+        /* definite description */
+        MU:mu schemaText:st SPOT term:t
+        {:
+           RESULT = factory_.createMuExpr(st, expr(t));
+           addLocAnn(RESULT, getLocation(mu, t));
+        :} %prec MU
+        |
+        /* substitution expression */
+        LET:let letDefinitionList:ldl SPOT term:t
+        {:
+           ZSchText st = factory_.createZSchText(ldl, null);
+           RESULT = factory_.createLetExpr(st, expr(t));
+           addLocAnn(RESULT, getLocation(let, t));
+        :} %prec LET
+        |
+        /* (schema) equivalence */
+        term:lhs IFF:iff term:rhs
+        {:
+          if (lhs instanceof Expr && rhs instanceof Expr) {
+            RESULT = factory_.createIffExpr(expr(lhs), expr(rhs));
+          }
+          else {
+            RESULT = factory_.createIffPred(pred(lhs), pred(rhs));
+          }
+          addLocAnn(RESULT, getLocation(iffleft, iffright, lhs, rhs));
+        :}
+        |
+        /* (schema) implication */
+        term:lhs IMP:imp term:rhs
+        {:
+          if (lhs instanceof Expr && rhs instanceof Expr) {
+            RESULT = factory_.createImpliesExpr(expr(lhs), expr(rhs));
+          }
+          else {
+            RESULT = factory_.createImpliesPred(pred(lhs), pred(rhs));
+          }
+          addLocAnn(RESULT, getLocation(impleft, impright, lhs, rhs));
+        :}
+        |
+        /* (schema) disjunction */
+        term:lhs OR:or term:rhs
+        {:
+          if (lhs instanceof Expr && rhs instanceof Expr) {
+            RESULT = factory_.createOrExpr(expr(lhs), expr(rhs));
+          }
+          else {
+            RESULT = factory_.createOrPred(pred(lhs), pred(rhs));
+          }
+          addLocAnn(RESULT, getLocation(orleft, orright, lhs, rhs));
+        :}
+        |
+        /* (schema) conjunction */
+        term:lhs AND:and term:rhs
+        {:
+
+          if (lhs instanceof Expr && rhs instanceof Expr) {
+            RESULT = factory_.createAndExpr(expr(lhs), expr(rhs));
+          }
+          else {
+            RESULT = factory_.createAndPred(pred(lhs), pred(rhs), And.Wedge);
+          }
+          addLocAnn(RESULT, getLocation(andleft, andright, lhs, rhs));
+        :}
+        |
+        /* (schema) negation */
+        NOT:not term:t
+        {:
+          if (t instanceof Expr) {
+            RESULT = factory_.createNegExpr(expr(t));
+          }
+          else {
+            RESULT = factory_.createNegPred(pred(t));
+          }
+          addLocAnn(RESULT, getLocation(not, t));
+        :}
+        |
+        /* schema composition */
+        term:lhs ZCOMP:comp term:rhs
+        {:
+
+             RESULT = factory_.createCompExpr(expr(lhs), expr(rhs));
+
+           addLocAnn(RESULT, getLocation(compleft, compright, lhs, rhs));
+        :}
+        |
+        /* schema piping */
+        term:lhs ZPIPE:pipe term:rhs
+        {:
+           RESULT = factory_.createPipeExpr(expr(lhs), expr(rhs));
+           addLocAnn(RESULT, getLocation(pipeleft, piperight, lhs, rhs));
+        :}
+        |
+        /* schema hiding */
+        term:t ZHIDE:hide LPAREN refNameList:rnl RPAREN:rparen
+        {:
+           ZNameList zNameList = factory_.createZNameList(rnl);
+
+             RESULT = factory_.createHideExpr(expr(t), zNameList);
+
+           addLocAnn(RESULT, getLocation(hideleft, hideright, t, rparen));
+        :}
+        |
+
+        /* schema projection */
+        term:lhs ZPROJ:proj term:rhs
+        {:
+           RESULT = factory_.createProjExpr(expr(lhs), expr(rhs));
+           addLocAnn(RESULT, getLocation(projleft, projright, lhs, rhs));
+        :}
+        |
+        /* schema precondition */
+        ZPRE:pre term:t
+        {:
+           RESULT = factory_.createPreExpr(expr(t));
+           addLocAnn(RESULT, getLocation(pre, t));
+        :}
+        |
+        /* powerset */
+        POWER:power term:t
+        {:
+           RESULT = factory_.createPowerExpr(expr(t));
+           addLocAnn(RESULT, getLocation(power, t));
+        :}
+        |
+        /* Cartesian product */
+        prodExpressionList:pel
+        {:
+           RESULT = factory_.createProdExpr(pel);
+           LocInfo loc =
+             getLocation(pelleft, pelright, pel.get(0), pel.get(pel.size()-1));
+           addLocAnn(RESULT, loc);
+        :}
+        |
+        /* relation operator application */
+        relation:rel
+        {: RESULT = rel; :}
+        |
+        /* application of operator function */
+        application:a
+        {: RESULT = a; :}
+        |
+        /* application of non-operator function */
+        func_appl:fa
+        {: RESULT = fa; :}
+
+        ;
+
+
+
+func_appl ::=
+        func_appl:fa inner_term:it
+        {:
+           RESULT = factory_.createApplExpr(expr(fa), expr(it), Boolean.FALSE);
+           addLocAnn(RESULT, getLocation(fa, it));
+        :} %prec _APPLICATION
+        |
+        inner_term:it
+        {: RESULT = it; :} %prec _APPLICATION
+        ;
+
+inner_term ::=
+        /* set extension */
+        LBRACE:lbrace optExpressionList:oel RBRACE:rbrace
+        {:
+           RESULT = factory_.createSetExpr(oel);
+           addLocAnn(RESULT, getLocation(lbrace, rbrace));
+        :}
+        |
+        /* set comprehension */
+        LBRACE:lbrace schemaText:st SPOT expression:e RBRACE:rbrace
+        {:
+           RESULT = factory_.createSetCompExpr(st, e);
+           addLocAnn(RESULT, getLocation(lbrace, rbrace));
+        :}
+        |
+        /*  characteristic set comprehension */
+        LBRACE:lbrace schemaTextNoExpression:stne RBRACE:rbrace
+        {:
+           RESULT = factory_.createSetCompExpr(stne, null);
+           addLocAnn(RESULT, getLocation(lbrace, rbrace));
+        :}
+        |
+        /* tuple extension */
+        LPAREN:lparen expressionList:el COMMA expression:e RPAREN:rparen
+        {:
+           el.add(e);
+           RESULT = factory_.createTupleExpr(el);
+           addLocAnn(RESULT, getLocation(lparen, rparen));
+        :}
+        |
+        /* characteristic definite description */
+        LPAREN:lparen MU:mu schemaText:st RPAREN:rparen
+        {:
+           RESULT = factory_.createMuExpr(st, null);
+           addLocAnn(RESULT, getLocation(muleft, muright, lparen, rparen));
+           RESULT.getAnns().add(factory_.createParenAnn());
+        :}
+        |
+        nofixRel:nfr
+        {: RESULT = nfr; :} %prec ERP
+        |
+        nofixApp:nfa
+        {: RESULT = nfa; :} %prec _APPLICATION
+        |
+        /* binding extension */
+        LBIND:lbind optConstDeclList:cdl RBIND:rbind
+        {:
+           RESULT = factory_.createBindExpr(cdl);
+           addLocAnn(RESULT, getLocation(lbind, rbind));
+        :}
+        |
+
+        LBIND:lbind bindDeclList:bdl RBIND:rbind
+        {:
+           RESULT = factory_.createBindExpr(bdl);
+           addLocAnn(RESULT, getLocation(lbind, rbind));
+        :}
+        |
+
+        /* empty schema construction */
+        LSQUARE:lsq RSQUARE:rsq
+        {:
+           DeclList dl = factory_.createZDeclList();
+           SchText st = factory_.createZSchText(dl, null);
+
+             RESULT = factory_.createSchExpr(st);
+
+           addLocAnn(RESULT, getLocation(lsq, rsq));
+        :}
+        |
+        /* schema construction */
+        /* push 'false' onto the isOpExpr stack, because both schema
+         * exprs and operations contain only expressions
+         */
+        LSQUARE:lsq
+          //
+          schemaTextNoExpression:stne
+          /* pop the stack now the expr has been parsed */
+          // 
+        RSQUARE:rsq
+        {:
+
+           RESULT = factory_.createSchExpr(stne);
+
+           addLocAnn(RESULT, getLocation(lsq, rsq));
+        :}
+        |
+        /* binding selection */
+        inner_term:it DOT:dot refName:rn
+        {:
+
+             RESULT = factory_.createBindSelExpr(expr(it), rn);
+
+           addLocAnn(RESULT, getLocation(dotleft, dotright, it, rn));
+        :}
+        |
+        /* tuple selection */
+        inner_term:it DOT:dot NUMERAL:n
+        {:
+           ZNumeral numeral = factory_.createZNumeral(n.getValue());
+           addLocAnn(numeral, n.getLocation());
+           RESULT = factory_.createTupleSelExpr(expr(it), numeral);
+           LocInfo loc = getLocation(dotleft, dotright, it, n.getLocation());
+           addLocAnn(RESULT, loc);
+        :}
+        |
+        /* schema decoration */
+        inner_term:it stroke:s
+        {:
+           //if the inner term is a theta expr, add the stroke to the
+           //theta expr instead, which has a tighter binding.
+           Object pAnn = it.getAnn(ParenAnn.class);
+           if (it instanceof ThetaExpr && pAnn == null) {
+             ThetaExpr te = (ThetaExpr) it;
+	     te.getZStrokeList().add(s);
+	     addLocAnn(te, getLocation(te, s));
+	     RESULT = te;
+           }
+           else {
+             RESULT = factory_.createDecorExpr(expr(it), s);
+           }
+           addLocAnn(RESULT, getLocation(it, s));
+        :}
+
+        |
+        /* binding construction */
+        THETA:theta inner_term:it
+        {:
+           //System.out.println("REACHED THETA FOR " + it.toString());
+           ZStrokeList sl = factory_.createZStrokeList();
+           RESULT = factory_.createThetaExpr(expr(it), sl);
+           addLocAnn(RESULT, getLocation(theta, it));
+        :}
+        |
+        /* function application with schema expr as argument */
+        inner_term:it LSQUARE schemaTextNoExpression:st RSQUARE:rsquare
+           optAppendageList:oal
+        {:
+           RESULT = createSchApplExpr(expr(it), st, oal);
+           addLocAnn(RESULT, getLocation(it, rsquare));
+        :}
+        |
+        /* generic instantiation */
+        /* If inner_term is changed to refName
+           (as in the grammar given in the Z Standard),
+           rename expressions fail to parse. */
+        inner_term:it LSQUARE expressionList:el RSQUARE:rsquare
+        {:
+           RESULT = factory_.createRefExpr(name(it), el, Boolean.FALSE, Boolean.TRUE);
+           addLocAnn(RESULT, getLocation(it, rsquare));
+        :}
+
+        |
+        /* schema renaming */
+        inner_term:it LSQUARE renameList:rnl RSQUARE:rsquare
+        {:
+
+             RESULT = factory_.createRenameExpr(expr(it), rnl);
+
+           //System.out.println("REACHED RENAMING = " + rnl.toString());
+           addLocAnn(RESULT, getLocation(it, rsquare));
+        :} %prec _RENAME
+        |
+        /* number literal */
+        NUMERAL:n
+        {:
+           ZNumeral numeral = factory_.createZNumeral(n.getValue());
+           addLocAnn(numeral, n.getLocation());
+           RESULT = factory_.createNumExpr(numeral);
+           addLocAnn(RESULT, n.getLocation());
+        :}
+        |
+        /* parenthesized expression/predicate */
+        LPAREN:lparen septerm:t RPAREN:rparen
+        {:
+           ParenAnn parenAnn = factory_.createParenAnn();
+           addLocAnn(parenAnn, getLocation(lparen, rparen));
+           t.getAnns().add(parenAnn);
+           RESULT = t;
+        :}
+        |
+        /* reference */
+        refName:rn
+        {:
+           RESULT = factory_.createRefExpr(rn);
+           addLocAnn(RESULT, getLocation(rn));
+        :}
+        |
+        /* truth */
+        TRUE:t
+        {:
+           RESULT = factory_.createTruePred();
+           addLocAnn(RESULT, t);
+        :}
+        |
+        /* falsity */
+        FALSE:f
+        {:
+           RESULT = factory_.createFalsePred();
+           addLocAnn(RESULT, f);
+        :}
+
+        ;
+
+optAppendageList ::=
+       appendageList:al
+       {: RESULT = al; :}
+       |
+       //empty
+       {: RESULT = factory_.list(); :}
+       ;
+
+//a list of possible constructs that come after inner_term LSQUARE
+//schemaTextNoExpression RSQUARE
+appendageList ::=
+       appendageList:al appendage:a
+       {:
+          al.add(a);
+          RESULT = al;
+       :}
+       |
+       appendage:a
+       {: RESULT = factory_.list(a); :}
+       ;
+
+appendage ::=
+        stroke:s
+        {: RESULT = s; :}
+        |
+        LSQUARE:lsq renameList:rnl RSQUARE
+        {: RESULT = factory_.createRenameExpr(null, rnl); :}
+        |
+        DOT refName:rn
+        {: RESULT = factory_.createBindSelExpr(null, rn); :}
+        |
+        DOT NUMERAL:n
+        {:
+           ZNumeral numeral = factory_.createZNumeral(n.getValue());
+           addLocAnn(numeral, n.getLocation());
+           RESULT = factory_.createTupleSelExpr(null, numeral);
+        :}
+        ;
+
+prodExpressionList ::=
+        term:t1 CROSS term:t2
+        {:
+           RESULT = factory_.createZExprList();
+           RESULT.add(expr(t1));
+           RESULT.add(expr(t2));
+        :}
+        |
+        prodExpressionList:pel CROSS term:t
+        {:
+           pel.add(expr(t));
+           RESULT = pel;
+        :}
+        ;
+
+optExpressionList ::=
+        //empty
+        {: RESULT = factory_.createZExprList(); :}
+        |
+        expressionList:el
+        {: RESULT = el; :}
+        ;
+
+expressionList ::=
+        expressionList:el COMMA expression:e
+        {:
+           el.add(e);
+           RESULT = el;
+        :}
+        |
+        expression:e
+        {:
+           RESULT = factory_.createZExprList();
+           RESULT.add(e);
+        :}
+        ;
+
+
+optConstDeclList ::=
+        //empty
+        {: RESULT = factory_.createZDeclList(); :}
+        |
+        constDeclList:cdl
+        {: RESULT = cdl; :}
+        ;
+
+constDeclList ::=
+        constDeclList:cdl COMMA constDecl:cd
+        {:
+           cdl.getDecl().add(cd);
+           RESULT = cdl;
+        :}
+        |
+        constDecl:cd
+        {: RESULT = factory_.createZDeclList(factory_.list(cd)); :}
+        ;
+
+
+bindDeclList ::=
+        bindDeclList:bdl SEMICOLON bindDecl:bd
+        {:
+           bdl.getDecl().add(bd);
+           RESULT = bdl;
+        :}
+        |
+        bindDecl:bd
+        {: RESULT = factory_.createZDeclList(factory_.list(bd)); :}
+        ;
+
+bindDecl ::=
+        // because of COLON, this will be a DECLWORD
+        DECLWORD:dn COLON:c expression:e
+        {:
+           ZName zn = createZName(dn);
+           RESULT = factory_.createConstDecl(zn, e);
+           addLocAnn(RESULT, getLocation(cleft, cright, zn, e));
+        :}
+        |
+        // this is an odd one: an operator name as part of the schema declarations...?
+        opName:on COLON:c expression:e
+        {:
+           final LocInfo loc = getLocation(onleft, onright);
+           ZName dn = strListToZName(on, loc);
+           dn.getAnns().add(factory_.createParenAnn()); //add?
+           RESULT = factory_.createConstDecl(dn, e);
+           addLocAnn(RESULT, getLocation(cleft, cright, dn, e));
+        :}
+        ;
+
+
+
+letDefinitionList ::=
+        letDefinitionList:ldl SEMICOLON letDefinition:ld
+        {:
+           ldl.getDecl().add(ld);
+           RESULT = ldl;
+        :}
+        |
+        letDefinition:ld
+        {: RESULT = factory_.createZDeclList(factory_.list(ld)); :}
+        ;
+
+letDefinition ::=
+        declName:n DEFEQUAL:defequal expression:e
+        {:
+           RESULT = factory_.createConstDecl(n,e);
+           addLocAnn(RESULT, getLocation(defequalleft, defequalright, n, e));
+        :}
+        ;
+
+stroke ::=
+        INSTROKE:is
+        {:
+           RESULT = factory_.createInStroke();
+           addLocAnn(RESULT, is);
+        :}
+        |
+        OUTSTROKE:os
+        {:
+           RESULT = factory_.createOutStroke();
+           addLocAnn(RESULT, os);
+        :}
+        |
+        NEXTSTROKE:ns
+        {:
+           RESULT = factory_.createNextStroke();
+           addLocAnn(RESULT, ns);
+        :}
+        |
+        NUMSTROKE:ns
+        {:
+           RESULT = factory_.createNumStroke(ns.getIntValue());
+           addLocAnn(RESULT, ns.getLocation());
+        :}
+        ;
+
+renameList ::=
+
+        // appear first so that THMREPLACEMENT takes precedence over SLASH in ZEves' case
+        instantiations:inst
+        {:
+          RESULT = inst;
+        :}
+        |
+
+        zRenameList:zrnl
+        {: RESULT = zrnl; :}
+
+        ;
+
+zRenameList ::=
+        zRenameList:rnl COMMA rename:rn
+        {:
+           rnl.getNewOldPair().add(rn);
+           RESULT = rnl;
+        :}
+        |
+        rename:rn
+        {: RESULT = factory_.createZRenameList(factory_.list(rn)); :}
+        ;
+
+rename ::=
+        declName:lhs SLASH refName:rhs
+        {:
+           RESULT = factory_.createNewOldPair(lhs, rhs);
+           addLocAnn(RESULT, getLocation(lhs, rhs));
+        :}
+        ;
+
+
+//nofix relation is not included here because it has a different precedence
+//than the other types of relation
+relation ::=
+        prefixRel:pr
+        {: RESULT = pr; :}
+        |
+        postfixRel:pr
+        {: RESULT = pr; :}
+        |
+        infixRel:ir
+        {: RESULT = ir; :}
+        ;
+
+//according to the ISO standard, op e1 is equivalent to
+//e mem op
+prefixRel ::=
+        PREP:p term:t
+        {:
+           List<String> opName = factory_.list(p.getString());
+           opName.add(ARG_TOK);
+           ZExprList exprs = factory_.createZExprList();
+           exprs.add(expr(t));
+           RESULT = createMemPred(opName, exprs, p.getLocation());
+           addLocAnn(RESULT, getLocation(p.getLocation(), t));
+        :}
+        |
+        LP:lp expSep:es term:t1 EREP:erep term:t2
+        {:
+           List<String> opName = factory_.list(lp.getString());
+           addExpSepName(opName, es);
+           opName.add(ARG_TOK);
+           opName.add(erep.getString());
+
+           ZExprList expList = factory_.createZExprList();
+           addExpSepExp(expList, es);
+           expList.add(expr(t1));
+           expList.add(expr(t2));
+           LocInfo lpLoc = lp.getLocation();
+           LocInfo loc = getLocation(lpLoc, erep.getLocation());
+           RESULT = createMemPred(opName, expList, loc);
+           addLocAnn(RESULT, getLocation(lpLoc, t2));
+        :}
+        |
+        LP:lp expSep:es optExpressionList:oel SREP:srep term:t
+        {:
+           List<String> opName = factory_.list(lp.getString());
+           addExpSepName(opName, es);
+           opName.add(LISTARG_TOK);
+           opName.add(srep.getString());
+
+           ZExprList expList = factory_.createZExprList();
+           addExpSepExp(expList, es);
+           Expr seq = factory_.createSequence(oel);
+           LocInfo lpLoc = lp.getLocation();
+           LocInfo loc = getLocation(lpLoc, srep.getLocation());
+           addLocAnn(seq, loc);
+           expList.add(seq);
+           expList.add(expr(t));
+           RESULT = createMemPred(opName, expList, loc);
+           addLocAnn(RESULT, getLocation(lpLoc, t));
+        :}
+        ;
+
+postfixRel ::=
+        term:t POSTP:p
+        {:
+           ZExprList expList = factory_.createZExprList();
+           expList.add(expr(t));
+           LocInfo pLoc = p.getLocation();
+           RESULT = createMemPred(factory_.list(p.getString()), expList, pLoc);
+           addLocAnn(RESULT, getLocation(t, pLoc));
+        :}
+        |
+        term:t1 ELP:elp expSep:es term:t2 ERP:erp
+        {:
+           List<String> opName = factory_.list(ARG_TOK);
+           opName.add(elp.getString());
+           addExpSepName(opName, es);
+           opName.add(ARG_TOK);
+           opName.add(erp.getString());
+
+           ZExprList expList = factory_.createZExprList();
+           expList.add(expr(t1));
+           addExpSepExp(expList, es);
+           expList.add(expr(t2));
+           LocInfo erpLoc = erp.getLocation();
+           LocInfo loc = getLocation(elp.getLocation(), erpLoc);
+           RESULT = createMemPred(opName, expList, loc);
+           addLocAnn(RESULT, getLocation(t1, erpLoc));
+        :}
+        |
+        term:t ELP:elp expSep:es optExpressionList:oel SRP:srp
+        {:
+           List<String> opName = factory_.list(ARG_TOK);
+           opName.add(elp.getString());
+           addExpSepName(opName, es);
+           opName.add(LISTARG_TOK);
+           opName.add(srp.getString());
+
+           ZExprList expList = factory_.createZExprList();
+           expList.add(expr(t));
+           addExpSepExp(expList, es);
+           Expr seq = factory_.createSequence(oel);
+           LocInfo srpLoc = srp.getLocation();
+           addLocAnn(seq, getLocation(elp.getLocation(), srpLoc));
+           expList.add(seq);
+           //expList.add(factory_.createSequence(oel));
+           LocInfo loc = getLocation(elp.getLocation(), srpLoc);
+           RESULT = createMemPred(opName, expList, loc);
+           addLocAnn(RESULT, getLocation(t, srpLoc));
+        :}
+        ;
+
+infixRel ::=
+        infixChainRel:icr
+        {: RESULT = icr; :}
+        |
+        term:t1 ELP:elp expSep:es term:t2 EREP:erep term:t3
+        {:
+           List<String> opName = factory_.list(ARG_TOK);
+           opName.add(elp.getString());
+           addExpSepName(opName, es);
+           opName.add(ARG_TOK);
+           opName.add(erep.getString());
+           opName.add(ARG_TOK);
+
+           ZExprList expList = factory_.createZExprList();
+           expList.add(expr(t1));
+           addExpSepExp(expList, es);
+           expList.add(expr(t2));
+           expList.add(expr(t3));
+           LocInfo loc = getLocation(elp.getLocation(), erep.getLocation());
+           RESULT = createMemPred(opName, expList, loc);
+           addLocAnn(RESULT, getLocation(t1, t3));
+        :}
+        |
+        term:t1 ELP:elp expSep:es optExpressionList:oel SREP:erep term:t2
+        {:
+           List<String> opName = factory_.list(ARG_TOK);
+           opName.add(elp.getString());
+           addExpSepName(opName, es);
+           opName.add(LISTARG_TOK);
+           opName.add(erep.getString());
+           opName.add(ARG_TOK);
+
+           ZExprList expList = factory_.createZExprList();
+           expList.add(expr(t1));
+           addExpSepExp(expList, es);
+           Expr seq = factory_.createSequence(oel);
+           addLocAnn(seq, getLocation(oelleft, oelright));
+           expList.add(seq);
+           //expList.add(factory_.createSequence(oel));
+           expList.add(expr(t2));
+           LocInfo loc = getLocation(elp.getLocation(), erep.getLocation());
+           RESULT = createMemPred(opName, expList, loc);
+           addLocAnn(RESULT, getLocation(t1, t2));
+        :}
+        ;
+
+infixChainRel ::=
+        term:lhs MEM:m term:rhs
+        {:
+           RESULT =
+             factory_.createMemPred(expr(lhs), expr(rhs), Boolean.FALSE);
+           addLocAnn(RESULT, getLocation(mleft, mright, lhs, rhs));
+        :}
+        |
+        term:lhs EQUALS:equals term:rhs
+        {:
+           RESULT = factory_.createEquality(expr(lhs), expr(rhs));
+           addLocAnn(RESULT, getLocation(equalsleft, equalsright, lhs, rhs));
+        :}
+        |
+        term:lhs IP:ip term:rhs
+        {:
+           List<String> opName = factory_.list(ARG_TOK);
+           opName.add(ip.getString());
+           opName.add(ARG_TOK);
+           ZExprList expList = factory_.createZExprList();
+           expList.add(expr(lhs));
+           expList.add(expr(rhs));
+           RESULT = createMemPred(opName, expList, ip.getLocation());
+           addLocAnn(RESULT, getLocation(lhs, rhs));
+        :}
+        |
+        //apply syntactic transformation rule 12.2.10.3
+        infixChainRel:icr MEM term:rhs
+        {:
+           RESULT =
+             transformChainRel(icr, Sym.MEM, expr(rhs), getLocation(icr));
+           addLocAnn(RESULT, getLocation(icr, rhs));
+        :}
+        |
+        //apply syntactic transformation rule 12.2.10.3
+        infixChainRel:icr EQUALS term:rhs
+        {:
+           RESULT = transformChainRel(icr, Sym.EQUALS, expr(rhs),
+                                      getLocation(icrleft, icrright));
+           addLocAnn(RESULT, getLocation(icrleft, icrright));
+        :}
+        |
+        //apply syntactic transformation rule 12.2.10.3
+        infixChainRel:icr IP:ip term:rhs
+        {:
+           RESULT = transformChainRelInfix(icr, expr(rhs), ip.getString(),
+                                           getLocation(icrleft, icrright));
+           addLocAnn(RESULT, getLocation(icrleft, icrright));
+        :}
+        ;
+
+nofixRel ::=
+        LP:lp expSep:es term:t ERP:erp
+        {:
+           List<String> opName = factory_.list(ARG_TOK);
+           addExpSepName(opName, es);
+           opName.add(ARG_TOK);
+           opName.add(erp.getString());
+
+           ZExprList expList = factory_.createZExprList();
+           addExpSepExp(expList, es);
+           expList.add(expr(t));
+           LocInfo erpLoc = erp.getLocation();
+           LocInfo loc = getLocation(lp.getLocation(), erpLoc);
+           RESULT = createMemPred(opName, expList, loc);
+           addLocAnn(RESULT, getLocation(lp.getLocation(), erpLoc));
+        :}
+        |
+        LP:lp expSep:es optExpressionList:oel SRP:srp
+        {:
+           List<String> opName = factory_.list(ARG_TOK);
+           addExpSepName(opName, es);
+           opName.add(LISTARG_TOK);
+           opName.add(srp.getString());
+
+           ZExprList expList = factory_.createZExprList();
+           addExpSepExp(expList, es);
+           Expr seq = factory_.createSequence(oel);
+           LocInfo srpLoc =  srp.getLocation();
+           LocInfo lpLoc = lp.getLocation();
+           addLocAnn(seq, getLocation(lpLoc, srpLoc));
+           expList.add(seq);
+           //expList.add(factory_.createSequence(oel));
+           LocInfo loc = getLocation(lpLoc, srpLoc);
+           RESULT = createMemPred(opName, expList, loc);
+           addLocAnn(RESULT, loc);
+        :}
+        ;
+
+
+//nofix application is not included here because it has a different
+//precedence to the other types of application
+application ::=
+        prefixApp:pa
+        {: RESULT = pa; :}
+        |
+        postfixApp:pa
+        {: RESULT = pa; :}
+        |
+        infixApp:ia
+        {: RESULT = ia; :}
+        ;
+
+prefixApp ::=
+        PRE:pre term:t
+        {:
+           ZExprList exprs = factory_.createZExprList();
+           exprs.add(expr(t));
+           LocInfo loc = pre.getLocation();
+           RESULT =
+             createMixfixExpr(factory_.list(pre.getString(), ARG_TOK), exprs, loc);
+           addLocAnn(RESULT, getLocation(pre.getLocation(), t));
+        :}
+        |
+        L:l expSep:es term:t1 ERE:ere term:t2
+        {:
+           List<String> opName = factory_.list(l.getString());
+           addExpSepName(opName, es);
+           opName.add(ARG_TOK);
+           opName.add(ere.getString());
+           opName.add(ARG_TOK);
+
+           ZExprList expList = factory_.createZExprList();
+           addExpSepExp(expList, es);
+           expList.add(expr(t1));
+           expList.add(expr(t2));
+           LocInfo lloc = l.getLocation();
+           LocInfo loc = getLocation(lloc, ere.getLocation());
+           RESULT = createMixfixExpr(opName, expList, loc);
+           addLocAnn(RESULT, getLocation(lloc, t2));
+        :}
+        |
+        L:l expSep:es optExpressionList:oel SRE:sre term:t
+        {:
+           List<String> opName = factory_.list(l.getString());
+           addExpSepName(opName, es);
+           opName.add(LISTARG_TOK);
+           opName.add(sre.getString());
+           opName.add(ARG_TOK);
+
+           ZExprList expList = factory_.createZExprList();
+           addExpSepExp(expList, es);
+           Expr seq = factory_.createSequence(oel);
+           LocInfo sreLoc = sre.getLocation();
+           LocInfo lLoc = l.getLocation();
+           addLocAnn(seq, getLocation(lLoc, sreLoc));
+           expList.add(seq);
+           //expList.add(factory_.createSequence(oel));
+           expList.add(expr(t));
+           LocInfo loc = getLocation(lLoc, sreLoc);
+           RESULT = createMixfixExpr(opName, expList, loc);
+           addLocAnn(RESULT, getLocation(lLoc, t));
+        :}
+        ;
+
+postfixApp ::=
+        term:t POST:post
+        {:
+           ZExprList exprs = factory_.createZExprList();
+           exprs.add(expr(t));
+           LocInfo loc = post.getLocation();
+           RESULT =
+             createMixfixExpr(factory_.list(ARG_TOK, post.getString()), exprs, loc);
+           addLocAnn(RESULT, getLocation(t, post.getLocation()));
+        :}
+        |
+        term:t1 EL:el expSep:es term:t2 ER:er
+        {:
+           List<String> opName = factory_.list(ARG_TOK);
+           opName.add(el.getString());
+           addExpSepName(opName, es);
+           opName.add(ARG_TOK);
+           opName.add(er.getString());
+
+           ZExprList expList = factory_.createZExprList();
+           expList.add(expr(t1));
+           addExpSepExp(expList, es);
+           expList.add(expr(t2));
+           LocInfo erLoc = er.getLocation();
+           LocInfo elLoc = el.getLocation();
+           LocInfo loc = getLocation(elLoc, erLoc);
+           RESULT = createMixfixExpr(opName, expList, loc);
+           addLocAnn(RESULT, getLocation(t1, erLoc));
+        :}
+        |
+        term:t EL:el expSep:es optExpressionList:oel SR:sr
+        {:
+           List<String> opName = factory_.list(ARG_TOK);
+           opName.add(el.getString());
+           addExpSepName(opName, es);
+           opName.add(LISTARG_TOK);
+           opName.add(sr.getString());
+
+           LocInfo srLoc = sr.getLocation();
+           LocInfo elLoc = el.getLocation();
+           ZExprList expList = factory_.createZExprList();
+           expList.add(expr(t));
+           addExpSepExp(expList, es);
+           Expr seq = factory_.createSequence(oel);
+           addLocAnn(seq, getLocation(el.getLocation(), srLoc));
+           expList.add(seq);
+           //expList.add(factory_.createSequence(oel));
+           LocInfo loc = getLocation(elLoc, srLoc);
+           RESULT = createMixfixExpr(opName, expList, loc);
+           addLocAnn(RESULT, getLocation(t, srLoc));
+        :}
+        ;
+
+infixApp ::=
+        term:lhs I:i term:rhs
+        {:
+           List<String> opName = factory_.list(ARG_TOK);
+           opName.add(i.getString());
+           opName.add(ARG_TOK);
+           ZExprList exprs = factory_.createZExprList();
+           exprs.add(expr(lhs));
+           exprs.add(expr(rhs));
+           RESULT = createMixfixExpr(opName, exprs, i.getLocation());
+           addLocAnn(RESULT, getLocation(ileft, iright, lhs, rhs));
+        :}
+        |
+        term:t1 EL:el expSep:es term:t2 ERE:ere term:t3
+        {:
+           List<String> opName = factory_.list(ARG_TOK);
+           opName.add(el.getString());
+           addExpSepName(opName, es);
+           opName.add(ARG_TOK);
+           opName.add(ere.getString());
+           opName.add(ARG_TOK);
+
+           ZExprList expList = factory_.createZExprList();
+           expList.add(expr(t1));
+           addExpSepExp(expList, es);
+           expList.add(expr(t2));
+           expList.add(expr(t3));
+           LocInfo loc = getLocation(el.getLocation(), ere.getLocation());
+           RESULT = createMixfixExpr(opName, expList, loc);
+           addLocAnn(RESULT, getLocation(t1, t3));
+        :}
+        |
+        term:t1 EL:el expSep:es optExpressionList:oel SRE:sre term:t2
+        {:
+           List<String> opName = factory_.list(ARG_TOK);
+           opName.add(el.getString());
+           addExpSepName(opName, es);
+           opName.add(LISTARG_TOK);
+           opName.add(sre.getString());
+           opName.add(ARG_TOK);
+
+           ZExprList expList = factory_.createZExprList();
+           expList.add(expr(t1));
+           addExpSepExp(expList, es);
+           Expr seq = factory_.createSequence(oel);
+           LocInfo sreLoc = sre.getLocation();
+           addLocAnn(seq, getLocation(el.getLocation(), sreLoc));
+           expList.add(seq);
+           //expList.add(factory_.createSequence(oel));
+           expList.add(expr(t2));
+           LocInfo loc = getLocation(el.getLocation(), sreLoc);
+           RESULT = createMixfixExpr(opName, expList, loc);
+           addLocAnn(RESULT, getLocation(elleft, elright, t1, t2));
+        :}
+        ;
+
+nofixApp ::=
+        L:l expSep:es term:t ER:er
+        {:
+           List<String> opName = factory_.list(l.getString());
+           addExpSepName(opName, es);
+           opName.add(ARG_TOK);
+           opName.add(er.getString());
+
+           ZExprList expList = factory_.createZExprList();
+           addExpSepExp(expList, es);
+           expList.add(expr(t));
+           LocInfo loc = getLocation(l.getLocation(), er.getLocation());
+           RESULT = createMixfixExpr(opName, expList, loc);
+           addLocAnn(RESULT, loc);
+        :}
+        |
+        L:l expSep:es optExpressionList:oel SR:sr
+        {:
+           List<String> opName = factory_.list(l.getString());
+           addExpSepName(opName, es);
+           opName.add(LISTARG_TOK);
+           opName.add(sr.getString());
+
+           ZExprList expList = factory_.createZExprList();
+           addExpSepExp(expList, es);
+           Expr seq = factory_.createSequence(oel);
+           LocInfo loc = getLocation(l.getLocation(), sr.getLocation());
+           addLocAnn(seq, loc);
+           expList.add(seq);
+           RESULT = createMixfixExpr(opName, expList, loc);
+           addLocAnn(RESULT, loc);
+        :}
+        ;
+
+expSep ::=
+        //empty
+        {: RESULT = factory_.list(); :} %prec I
+        |
+        expSep:exs term:t ES:es
+        {:
+           exs.add(factory_.list(expr(t)));
+           exs.add(es.getString());
+           RESULT = exs;
+        :}
+        |
+        expSep:exs expressionList:exprList SS:ss
+        {:
+           exs.add(exprList);
+           exs.add(ss.getString());
+           RESULT = exs;
+        :}
+        ;
+
+optNL ::=
+        //empty
+        |
+        NL
+        ;
+

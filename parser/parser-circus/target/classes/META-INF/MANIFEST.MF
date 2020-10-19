@@ -1,0 +1,34 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1603010441407
+Build-Jdk: 1.8.0_262
+Built-By: root
+Bundle-Description: Provides classes for parsing and printing Circus spe
+ cifications.
+Bundle-DocURL: http://czt.sourceforge.net
+Bundle-License: http://www.gnu.org/copyleft/gpl.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: CZT Parser Circus
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-SymbolicName: net.sourceforge.czt.parser-circus;singleton:=false
+Bundle-Vendor: Community Z Tools Project
+Bundle-Version: 1.6.0.cdh
+Created-By: Apache Maven Bundle Plugin
+Embed-Transitive: true
+Export-Package: lib;version="1.6.0.cdh",net.sourceforge.czt.parser.circu
+ s;version="1.6.0.cdh",net.sourceforge.czt.print.circus;version="1.6.0.c
+ dh"
+Import-Package: java_cup.runtime;version="[0.11,1)",net.sourceforge.czt.
+ base.ast;version="[1.6,2)",net.sourceforge.czt.base.util;version="[1.6,
+ 2)",net.sourceforge.czt.circus.ast;version="[1.6,2)",net.sourceforge.cz
+ t.circus.impl;version="[1.6,2)",net.sourceforge.czt.circus.jaxb;version
+ ="[1.6,2)",net.sourceforge.czt.circus.util;version="[1.6,2)",net.source
+ forge.czt.circus.visitor;version="[1.6,2)",net.sourceforge.czt.parser.u
+ til;version="[1.6,2)",net.sourceforge.czt.parser.z;version="[1.6,2)",ne
+ t.sourceforge.czt.print.ast;version="[1.6,2)",net.sourceforge.czt.print
+ .util;version="[1.6,2)",net.sourceforge.czt.print.z;version="[1.6,2)",n
+ et.sourceforge.czt.session;version="[1.6,2)",net.sourceforge.czt.util;v
+ ersion="[1.6,2)",net.sourceforge.czt.z.ast;version="[1.6,2)",net.source
+ forge.czt.z.impl;version="[1.6,2)",net.sourceforge.czt.z.util;version="
+ [1.6,2)",org.xml.sax
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-2.3.0.201405100607

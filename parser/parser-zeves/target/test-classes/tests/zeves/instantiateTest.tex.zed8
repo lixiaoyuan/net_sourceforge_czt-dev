@@ -1,0 +1,29 @@
+─ section instantiateTest parents standard_toolkit └ 
+
+├ prf1 
+instantiate x == y ;  
+prove by rewrite ;  
+└ 
+
+├ prf2 
+prove by rewrite ;  
+instantiate x == y ;  
+prove by rewrite ;  
+└ 
+
+├ prf3 
+prove by rewrite ;  
+instantiate x == let v == d ⦁ v + 1 , y == 20 ;  
+prove by rewrite ;  
+└ 
+
+─ generic ( Test _ ) └ 
+
+─ Test XX == ℙ ( ℙ XX ) └ 
+
+├ prf4 
+prove by rewrite ;  
+instantiate ( Test _ ) == { } ;  
+prove by rewrite ;  
+└ 
+

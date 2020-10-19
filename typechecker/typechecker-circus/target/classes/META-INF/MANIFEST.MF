@@ -1,0 +1,36 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1603010480330
+Build-Jdk: 1.8.0_262
+Built-By: root
+Bundle-Description: Provides classes for typechecking Circus specificati
+ ons.
+Bundle-DocURL: http://czt.sourceforge.net
+Bundle-License: http://www.gnu.org/copyleft/gpl.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: CZT Typechecker Circus
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-SymbolicName: net.sourceforge.czt.typechecker-circus;singleton:=f
+ alse
+Bundle-Vendor: Community Z Tools Project
+Bundle-Version: 1.6.0.cdh
+Created-By: Apache Maven Bundle Plugin
+Embed-Transitive: true
+Export-Package: net.sourceforge.czt.typecheck.circus;version="1.6.0.cdh"
+ ,net.sourceforge.czt.typecheck.circus.impl;version="1.6.0.cdh",net.sour
+ ceforge.czt.typecheck.circus.util;version="1.6.0.cdh"
+Import-Package: net.sourceforge.czt.base.ast;version="[1.6,2)",net.sourc
+ eforge.czt.base.util;version="[1.6,2)",net.sourceforge.czt.circus.ast;v
+ ersion="[1.6,2)",net.sourceforge.czt.circus.impl;version="[1.6,2)",net.
+ sourceforge.czt.circus.jaxb;version="[1.6,2)",net.sourceforge.czt.circu
+ s.util;version="[1.6,2)",net.sourceforge.czt.circus.visitor;version="[1
+ .6,2)",net.sourceforge.czt.parser.circus;version="[1.6,2)",net.sourcefo
+ rge.czt.parser.util;version="[1.6,2)",net.sourceforge.czt.print.circus;
+ version="[1.6,2)",net.sourceforge.czt.print.util;version="[1.6,2)",net.
+ sourceforge.czt.session;version="[1.6,2)",net.sourceforge.czt.typecheck
+ .z;version="[1.6,2)",net.sourceforge.czt.typecheck.z.impl;version="[1.6
+ ,2)",net.sourceforge.czt.typecheck.z.util;version="[1.6,2)",net.sourcef
+ orge.czt.util;version="[1.6,2)",net.sourceforge.czt.z.ast;version="[1.6
+ ,2)",net.sourceforge.czt.z.impl;version="[1.6,2)",net.sourceforge.czt.z
+ .util;version="[1.6,2)",net.sourceforge.czt.z.visitor;version="[1.6,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-2.3.0.201405100607

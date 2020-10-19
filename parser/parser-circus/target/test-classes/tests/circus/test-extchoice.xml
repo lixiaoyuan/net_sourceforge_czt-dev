@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Spec Version="2.1" xsi:schemaLocation="http://czt.sourceforge.net/zml http://czt.sourceforge.net/zml/Z_2_1.xsd" xmlns="http://czt.sourceforge.net/zml" xmlns:ns2="http://czt.sourceforge.net/zpatt" xmlns:ns3="http://czt.sourceforge.net/circus" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ZSect>
+        <Anns>
+            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="0" Col="0"/>
+        </Anns>
+        <Name>Specification</Name>
+        <Parent>
+            <Word>standard_toolkit</Word>
+        </Parent>
+        <Parent>
+            <Word>circus_toolkit</Word>
+        </Parent>
+        <ZParaList>
+            <LatexMarkupPara/>
+            <ns3:ChannelPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="1" Col="5" Start="19"/>
+                </Anns>
+                <ZDeclList>
+                    <ns3:ChannelDecl>
+                        <Anns>
+                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex"/>
+                        </Anns>
+                        <ZNameList/>
+                        <ZNameList>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="1" Col="19" Start="33" Length="3"/>
+                                </Anns>
+                                <Word>out</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                        </ZNameList>
+                        <RefExpr Mixfix="false" Explicit="false">
+                            <ZName>
+                                <Word>$$SYNCH</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ZExprList/>
+                        </RefExpr>
+                    </ns3:ChannelDecl>
+                </ZDeclList>
+            </ns3:ChannelPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="2" Col="12" Start="49" Length="2"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+            </NarrPara>
+            <ns3:ProcessPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="5" Col="4" Start="70" Length="311"/>
+                </Anns>
+                <ZName>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="5" Col="18" Start="84" Length="1"/>
+                    </Anns>
+                    <Word>P</Word>
+                    <ZStrokeList/>
+                </ZName>
+                <ZNameList/>
+                <ns3:BasicProcess>
+                    <Anns>
+                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="5" Col="29" Start="95" Length="286"/>
+                    </Anns>
+                    <ZParaList>
+                        <AxPara Box="OmitBox">
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="6" Col="25" Start="134" Length="29"/>
+                                <ns3:CircusStateAnn/>
+                            </Anns>
+                            <ZNameList/>
+                            <ZSchText>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="6" Col="25" Start="134" Length="29"/>
+                                </Anns>
+                                <ZDeclList>
+                                    <ConstDecl>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="6" Col="25" Start="134" Length="29"/>
+                                        </Anns>
+                                        <ZName>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="6" Col="25" Start="134" Length="5"/>
+                                            </Anns>
+                                            <Word>State</Word>
+                                            <ZStrokeList/>
+                                        </ZName>
+                                        <SchExpr>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="6" Col="34" Start="143" Length="20"/>
+                                            </Anns>
+                                            <ZSchText>
+                                                <ZDeclList>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="6" Col="38" Start="146" Length="7"/>
+                                                    </Anns>
+                                                    <VarDecl>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="6" Col="38" Start="146" Length="7"/>
+                                                        </Anns>
+                                                        <ZNameList>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="6" Col="37" Start="146" Length="1"/>
+                                                                </Anns>
+                                                                <Word>x</Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                        </ZNameList>
+                                                        <RefExpr Mixfix="false" Explicit="false">
+                                                            <Anns>
+                                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="6" Col="40" Start="149" Length="4"/>
+                                                            </Anns>
+                                                            <ZName>
+                                                                <Anns>
+                                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="6" Col="40" Start="149" Length="4"/>
+                                                                </Anns>
+                                                                <Word>ℕ</Word>
+                                                                <ZStrokeList/>
+                                                            </ZName>
+                                                            <ZExprList/>
+                                                        </RefExpr>
+                                                    </VarDecl>
+                                                </ZDeclList>
+                                                <TruePred>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="6" Col="47" Start="156" Length="4"/>
+                                                    </Anns>
+                                                </TruePred>
+                                            </ZSchText>
+                                        </SchExpr>
+                                    </ConstDecl>
+                                </ZDeclList>
+                            </ZSchText>
+                        </AxPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="12" Start="179" Length="138"/>
+                            </Anns>
+                            <ZName>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="12" Start="179" Length="1"/>
+                                </Anns>
+                                <Word>A</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:GuardedAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="47" Start="204" Length="113"/>
+                                </Anns>
+                                <ns3:InterleaveAction>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="89" Start="256" Length="61"/>
+                                        <ParenAnn>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="87" Start="254" Length="65"/>
+                                            </Anns>
+                                        </ParenAnn>
+                                    </Anns>
+                                    <ns3:ExtChoiceAction>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="89" Start="256" Length="16"/>
+                                            <ParenAnn>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="88" Start="255" Length="18"/>
+                                                </Anns>
+                                            </ParenAnn>
+                                        </Anns>
+                                        <ns3:CallAction>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="89" Start="256" Length="2"/>
+                                            </Anns>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="89" Start="256" Length="2"/>
+                                                </Anns>
+                                                <Word>a1</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <ZExprList/>
+                                        </ns3:CallAction>
+                                        <ns3:CallAction>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="103" Start="270" Length="2"/>
+                                            </Anns>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="103" Start="270" Length="2"/>
+                                                </Anns>
+                                                <Word>a2</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <ZExprList/>
+                                        </ns3:CallAction>
+                                    </ns3:ExtChoiceAction>
+                                    <ns3:ExtChoiceAction>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="134" Start="301" Length="16"/>
+                                            <ParenAnn>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="133" Start="300" Length="18"/>
+                                                </Anns>
+                                            </ParenAnn>
+                                        </Anns>
+                                        <ns3:CallAction>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="134" Start="301" Length="2"/>
+                                            </Anns>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="134" Start="301" Length="2"/>
+                                                </Anns>
+                                                <Word>a3</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <ZExprList/>
+                                        </ns3:CallAction>
+                                        <ns3:CallAction>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="148" Start="315" Length="2"/>
+                                            </Anns>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="148" Start="315" Length="2"/>
+                                                </Anns>
+                                                <Word>a4</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <ZExprList/>
+                                        </ns3:CallAction>
+                                    </ns3:ExtChoiceAction>
+                                    <ns3:CircusNameSet>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="115" Start="282" Length="3"/>
+                                        </Anns>
+                                        <RefExpr Mixfix="false" Explicit="false">
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="115" Start="282" Length="3"/>
+                                            </Anns>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="115" Start="282" Length="3"/>
+                                                </Anns>
+                                                <Word>ns1</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <ZExprList/>
+                                        </RefExpr>
+                                    </ns3:CircusNameSet>
+                                    <ns3:CircusNameSet>
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="121" Start="288" Length="3"/>
+                                        </Anns>
+                                        <RefExpr Mixfix="false" Explicit="false">
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="121" Start="288" Length="3"/>
+                                            </Anns>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="121" Start="288" Length="3"/>
+                                                </Anns>
+                                                <Word>ns2</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <ZExprList/>
+                                        </RefExpr>
+                                    </ns3:CircusNameSet>
+                                </ns3:InterleaveAction>
+                                <OrPred>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="47" Start="204" Length="24"/>
+                                        <ParenAnn>
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="35" Start="202" Length="28"/>
+                                            </Anns>
+                                        </ParenAnn>
+                                    </Anns>
+                                    <MemPred Mixfix="true">
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="42" Start="204" Length="8"/>
+                                            <ParenAnn>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="36" Start="203" Length="10"/>
+                                                </Anns>
+                                            </ParenAnn>
+                                        </Anns>
+                                        <RefExpr Mixfix="false" Explicit="false">
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="37" Start="204" Length="4"/>
+                                            </Anns>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="37" Start="204" Length="4"/>
+                                                </Anns>
+                                                <Word>size</Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <ZExprList/>
+                                        </RefExpr>
+                                        <SetExpr>
+                                            <ZExprList>
+                                                <NumExpr>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="44" Start="211" Length="1"/>
+                                                    </Anns>
+                                                    <ZNumeral Value="0">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="44" Start="211" Length="1"/>
+                                                        </Anns>
+                                                    </ZNumeral>
+                                                </NumExpr>
+                                            </ZExprList>
+                                        </SetExpr>
+                                    </MemPred>
+                                    <MemPred Mixfix="true">
+                                        <Anns>
+                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="53" Start="220" Length="8"/>
+                                            <ParenAnn>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="52" Start="219" Length="10"/>
+                                                </Anns>
+                                            </ParenAnn>
+                                        </Anns>
+                                        <TupleExpr>
+                                            <ZExprList>
+                                                <RefExpr Mixfix="false" Explicit="false">
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="53" Start="220" Length="4"/>
+                                                    </Anns>
+                                                    <ZName>
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="53" Start="220" Length="4"/>
+                                                        </Anns>
+                                                        <Word>size</Word>
+                                                        <ZStrokeList/>
+                                                    </ZName>
+                                                    <ZExprList/>
+                                                </RefExpr>
+                                                <NumExpr>
+                                                    <Anns>
+                                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="60" Start="227" Length="1"/>
+                                                    </Anns>
+                                                    <ZNumeral Value="0">
+                                                        <Anns>
+                                                            <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="60" Start="227" Length="1"/>
+                                                        </Anns>
+                                                    </ZNumeral>
+                                                </NumExpr>
+                                            </ZExprList>
+                                        </TupleExpr>
+                                        <RefExpr Mixfix="false" Explicit="false">
+                                            <Anns>
+                                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="58" Start="225" Length="2"/>
+                                            </Anns>
+                                            <ZName>
+                                                <Anns>
+                                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="7" Col="58" Start="225" Length="2"/>
+                                                </Anns>
+                                                <Word> _ &gt; _ </Word>
+                                                <ZStrokeList/>
+                                            </ZName>
+                                            <ZExprList/>
+                                        </RefExpr>
+                                    </MemPred>
+                                </OrPred>
+                            </ns3:GuardedAction>
+                        </ns3:ActionPara>
+                        <ns3:ActionPara>
+                            <Anns>
+                                <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="9" Col="12" Start="357" Length="11"/>
+                            </Anns>
+                            <ZName>
+                                <Word>$$mainAction_L9C12</Word>
+                                <ZStrokeList/>
+                            </ZName>
+                            <ns3:CallAction>
+                                <Anns>
+                                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="9" Col="12" Start="357" Length="11"/>
+                                    <ns3:OnTheFlyDefAnn/>
+                                </Anns>
+                                <ZName>
+                                    <Anns>
+                                        <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="9" Col="22" Start="367" Length="1"/>
+                                    </Anns>
+                                    <Word>A</Word>
+                                    <ZStrokeList/>
+                                </ZName>
+                                <ZExprList/>
+                            </ns3:CallAction>
+                        </ns3:ActionPara>
+                    </ZParaList>
+                </ns3:BasicProcess>
+            </ns3:ProcessPara>
+            <NarrPara>
+                <Anns>
+                    <LocAnn Loc="/root/czt-code/parser/parser-circus/target/test-classes/tests/circus/test-extchoice.tex" Line="11" Col="12" Start="394" Length="2"/>
+                </Anns>
+                <Content xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</Content>
+            </NarrPara>
+        </ZParaList>
+    </ZSect>
+</Spec>

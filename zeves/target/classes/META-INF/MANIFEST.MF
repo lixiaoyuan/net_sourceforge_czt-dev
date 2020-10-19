@@ -1,0 +1,36 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1603010514959
+Build-Jdk: 1.8.0_262
+Built-By: root
+Bundle-Description: CZT interface to Z/EVES theorem prover.
+Bundle-DocURL: http://czt.sourceforge.net
+Bundle-License: http://www.gnu.org/copyleft/gpl.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: CZT to Z/EVES
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-SymbolicName: net.sourceforge.czt.zeves;singleton:=false
+Bundle-Vendor: Community Z Tools Project
+Bundle-Version: 1.6.0.cdh
+Created-By: Apache Maven Bundle Plugin
+Embed-Transitive: true
+Export-Package: net.sourceforge.czt.zeves;version="1.6.0.cdh",net.source
+ forge.czt.zeves.proof;version="1.6.0.cdh",net.sourceforge.czt.zeves.res
+ ponse;version="1.6.0.cdh",net.sourceforge.czt.zeves.response.form;versi
+ on="1.6.0.cdh",net.sourceforge.czt.zeves.response.para;version="1.6.0.c
+ dh",net.sourceforge.czt.zeves.snapshot;version="1.6.0.cdh",net.sourcefo
+ rge.czt.zeves.z;version="1.6.0.cdh"
+Import-Package: javax.xml.bind,javax.xml.bind.annotation,javax.xml.parse
+ rs,javax.xml.transform,javax.xml.transform.sax,net.sourceforge.czt.base
+ .ast;version="[1.6,2)",net.sourceforge.czt.base.util;version="[1.6,2)",
+ net.sourceforge.czt.base.visitor;version="[1.6,2)",net.sourceforge.czt.
+ parser.util;version="[1.6,2)",net.sourceforge.czt.session;version="[1.6
+ ,2)",net.sourceforge.czt.text;version="[1.6,2)",net.sourceforge.czt.typ
+ echeck.z;version="[1.6,2)",net.sourceforge.czt.typecheck.z.util;version
+ ="[1.6,2)",net.sourceforge.czt.typecheck.zeves;version="[1.6,2)",net.so
+ urceforge.czt.util;version="[1.6,2)",net.sourceforge.czt.z.ast;version=
+ "[1.6,2)",net.sourceforge.czt.z.util;version="[1.6,2)",net.sourceforge.
+ czt.z.visitor;version="[1.6,2)",net.sourceforge.czt.zeves.ast;version="
+ [1.6,2)",net.sourceforge.czt.zeves.util;version="[1.6,2)",net.sourcefor
+ ge.czt.zeves.visitor;version="[1.6,2)",org.xml.sax,org.xml.sax.ext
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-2.3.0.201405100607

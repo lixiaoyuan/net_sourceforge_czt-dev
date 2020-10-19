@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="net.sourceforge.czt.eclipse.zeves.feature"
+      label="%featureName"
+      version="1.0.0.202010180842"
+      provider-name="%providerName"
+      plugin="net.sourceforge.czt.eclipse.zeves.feature.branding">
+
+   <description url="http://czt.sourceforge.net/eclipse">
+      %description
+   </description>
+
+   <copyright url="%copyrightURL">
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <url>
+      <update label="%updateSiteName" url="http://czt.sourceforge.net/eclipse/updates/releases/"/>
+   </url>
+
+   <requires>
+      <import feature="net.sourceforge.czt.eclipse.feature" version="1.6.0.qualifier"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime" version="3.7.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.editors"/>
+      <import plugin="org.eclipse.debug.ui"/>
+      <import plugin="org.eclipse.jface.databinding"/>
+      <import plugin="org.eclipse.core.databinding"/>
+      <import plugin="org.eclipse.jface.text"/>
+      <import plugin="org.eclipse.core.expressions"/>
+      <import plugin="org.eclipse.core.filesystem"/>
+      <import plugin="org.eclipse.ui.forms"/>
+      <import plugin="org.apache.commons.lang" version="2.4.0" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="net.sourceforge.czt.eclipse.zeves.ui"
+         download-size="181"
+         install-size="396"
+         version="1.0.0.202010180842"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.commons.lang"
+         download-size="291"
+         install-size="618"
+         version="2.6.0.v201404270220"
+         unpack="false"/>
+
+   <plugin
+         id="net.sourceforge.czt.eclipse.zeves.feature.branding"
+         download-size="8"
+         install-size="8"
+         version="1.0.0.202010180842"
+         unpack="false"/>
+
+   <plugin
+         id="net.sourceforge.czt.eclipse.zeves.core"
+         download-size="28"
+         install-size="59"
+         version="1.0.0.202010180842"
+         unpack="false"/>
+
+   <plugin
+         id="net.sourceforge.czt.eclipse.zeves.doc"
+         download-size="140"
+         install-size="149"
+         version="1.6.0.202010180842"
+         unpack="false"/>
+
+</feature>

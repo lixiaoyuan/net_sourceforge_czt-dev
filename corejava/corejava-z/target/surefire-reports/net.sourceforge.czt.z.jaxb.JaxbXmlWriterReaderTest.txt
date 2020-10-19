@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: net.sourceforge.czt.z.jaxb.JaxbXmlWriterReaderTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.294 sec - in net.sourceforge.czt.z.jaxb.JaxbXmlWriterReaderTest

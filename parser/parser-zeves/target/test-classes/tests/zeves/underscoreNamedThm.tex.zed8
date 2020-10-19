@@ -1,0 +1,14 @@
+─ section underscoreNamedThm parents zeves_prelude └ 
+
+─ ☒ theorem rule lName_Okay 
+∃ x : ℕ ⦁ x > 10 
+└ 
+
+├ lName_Okay 
+instantiate x == 11 ;  
+prove by reduce ;  
+└ 
+
+─ theorem Test_Okay 
+( ∃ y : ℕ ⦁ true ) 
+└ 

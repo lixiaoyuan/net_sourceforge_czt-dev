@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: net.sourceforge.czt.print.z.ZmlPrinterTest
+-------------------------------------------------------------------------------
+Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.583 sec - in net.sourceforge.czt.print.z.ZmlPrinterTest

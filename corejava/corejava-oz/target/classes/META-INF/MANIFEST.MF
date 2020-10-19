@@ -1,0 +1,35 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1603010308301
+Build-Jdk: 1.8.0_262
+Built-By: root
+Bundle-Description: Provides AST classes for Object-Z extension.
+Bundle-DocURL: http://czt.sourceforge.net
+Bundle-License: http://www.gnu.org/copyleft/gpl.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: CZT Corejava Object-Z
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-SymbolicName: net.sourceforge.czt.corejava-oz;singleton:=false
+Bundle-Vendor: Community Z Tools Project
+Bundle-Version: 1.6.0.cdh
+Created-By: Apache Maven Bundle Plugin
+Embed-Transitive: true
+Export-Package: net.sourceforge.czt.oz.ast;version="1.6.0.cdh",net.sourc
+ eforge.czt.oz.impl;version="1.6.0.cdh",net.sourceforge.czt.oz.jaxb;vers
+ ion="1.6.0.cdh",net.sourceforge.czt.oz.jaxb.gen;version="1.6.0.cdh",net
+ .sourceforge.czt.oz.util;version="1.6.0.cdh",net.sourceforge.czt.oz.vis
+ itor;version="1.6.0.cdh",vm.gnast;version="1.6.0.cdh",xml;version="1.6.
+ 0.cdh",xsl;version="1.6.0.cdh"
+Import-Package: javax.xml.bind,javax.xml.bind.annotation,javax.xml.names
+ pace,net.sourceforge.czt.base.ast;version="[1.6,2)",net.sourceforge.czt
+ .base.impl;version="[1.6,2)",net.sourceforge.czt.base.jaxb;version="[1.
+ 6,2)",net.sourceforge.czt.base.util;version="[1.6,2)",net.sourceforge.c
+ zt.base.visitor;version="[1.6,2)",net.sourceforge.czt.util;version="[1.
+ 6,2)",net.sourceforge.czt.z.ast;version="[1.6,2)",net.sourceforge.czt.z
+ .impl;version="[1.6,2)",net.sourceforge.czt.z.jaxb.gen;version="[1.6,2)
+ ",net.sourceforge.czt.z.util;version="[1.6,2)",net.sourceforge.czt.zpat
+ t.ast;version="[1.6,2)",net.sourceforge.czt.zpatt.impl;version="[1.6,2)
+ ",net.sourceforge.czt.zpatt.jaxb;version="[1.6,2)",net.sourceforge.czt.
+ zpatt.jaxb.gen;version="[1.6,2)",net.sourceforge.czt.zpatt.util;version
+ ="[1.6,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-2.3.0.201405100607

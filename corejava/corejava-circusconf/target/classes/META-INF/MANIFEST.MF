@@ -1,0 +1,40 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1603010359039
+Build-Jdk: 1.8.0_262
+Built-By: root
+Bundle-Description: Provides AST classes for Circus Confidentiality exte
+ nsion.
+Bundle-DocURL: http://czt.sourceforge.net
+Bundle-License: http://www.gnu.org/copyleft/gpl.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: CZT Corejava Circus Confidentiality
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-SymbolicName: net.sourceforge.czt.corejava-circusconf;singleton:=
+ false
+Bundle-Vendor: Community Z Tools Project
+Bundle-Version: 1.6.0.cdh
+Created-By: Apache Maven Bundle Plugin
+Embed-Transitive: true
+Export-Package: net.sourceforge.czt.circusconf.ast;version="1.6.0.cdh",n
+ et.sourceforge.czt.circusconf.impl;version="1.6.0.cdh",net.sourceforge.
+ czt.circusconf.jaxb;version="1.6.0.cdh",net.sourceforge.czt.circusconf.
+ jaxb.gen;version="1.6.0.cdh",net.sourceforge.czt.circusconf.util;versio
+ n="1.6.0.cdh",net.sourceforge.czt.circusconf.visitor;version="1.6.0.cdh
+ ",vm.gnast;version="1.6.0.cdh",xml;version="1.6.0.cdh",xsl;version="1.6
+ .0.cdh"
+Import-Package: javax.xml.bind,javax.xml.bind.annotation,javax.xml.names
+ pace,net.sourceforge.czt.base.ast;version="[1.6,2)",net.sourceforge.czt
+ .base.impl;version="[1.6,2)",net.sourceforge.czt.base.jaxb;version="[1.
+ 6,2)",net.sourceforge.czt.base.util;version="[1.6,2)",net.sourceforge.c
+ zt.circus.ast;version="[1.6,2)",net.sourceforge.czt.circus.impl;version
+ ="[1.6,2)",net.sourceforge.czt.circus.jaxb.gen;version="[1.6,2)",net.so
+ urceforge.czt.circus.util;version="[1.6,2)",net.sourceforge.czt.circusp
+ att.ast;version="[1.6,2)",net.sourceforge.czt.circuspatt.impl;version="
+ [1.6,2)",net.sourceforge.czt.circuspatt.jaxb;version="[1.6,2)",net.sour
+ ceforge.czt.circuspatt.util;version="[1.6,2)",net.sourceforge.czt.util;
+ version="[1.6,2)",net.sourceforge.czt.z.ast;version="[1.6,2)",net.sourc
+ eforge.czt.z.jaxb.gen;version="[1.6,2)",net.sourceforge.czt.z.util;vers
+ ion="[1.6,2)",net.sourceforge.czt.zpatt.ast;version="[1.6,2)",net.sourc
+ eforge.czt.zpatt.jaxb.gen;version="[1.6,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-2.3.0.201405100607

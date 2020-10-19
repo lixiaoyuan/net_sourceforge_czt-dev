@@ -1,0 +1,97 @@
+\documentclass{article}
+\usepackage{czt}
+
+\begin{document}
+%----------------------------------
+
+\begin{zsection}	 \SECTION birthdaybook\_fsb \parents~fsb\_toolkit , birthdaybook
+\end{zsection}
+
+VC ZSection Created at Sun Oct 18 08:41:43 UTC 2020.
+
+VC3 for line 13 column 1 start 348 length 39 in "birthdaybook"
+\begin{theorem}{ NAME\_ vc\_ fsb}\\
+ \lnot NAME = \{ \} \land \lnot DATE = \{ \} \\
+
+\end{theorem}
+
+VC5 for line 20 column 1 start 476 length 128 in "birthdaybook"
+\begin{theorem}{ BirthdayBook\_ vc\_ fsb}\\
+ \exists birthday : NAME \pfun DATE ; known : \power NAME | BirthdayBook @ true \\
+
+\end{theorem}
+
+VC7 for line 32 column 1 start 794 length 90 in "birthdaybook"
+\begin{theorem}{ InitBirthdayBook\_ vc\_ fsb}\\
+ \exists birthday' : NAME \pfun DATE ; known' : \power NAME | InitBirthdayBook @ true \\
+
+\end{theorem}
+
+VC9 for line 41 column 1 start 984 length 189 in "birthdaybook"
+\begin{theorem}{ AddBirthday\_ vc\_ fsb}\\
+ \forall birthday : NAME \pfun DATE ; date? : DATE ; known : \power NAME ; name? : NAME | true @ \exists birthday' : NAME \pfun DATE ; known' : \power NAME | true @ AddBirthday \\
+
+\end{theorem}
+
+VC11 for line 51 column 1 start 1175 length 158 in "birthdaybook"
+\begin{theorem}{ FindBirthday\_ vc\_ fsb}\\
+ \forall birthday : NAME \pfun DATE ; known : \power NAME ; name? : NAME | true @ \exists birthday' : NAME \pfun DATE ; date! : DATE ; known' : \power NAME | true @ FindBirthday \\
+
+\end{theorem}
+
+VC13 for line 61 column 1 start 1335 length 161 in "birthdaybook"
+\begin{theorem}{ Remind\_ vc\_ fsb}\\
+ \forall birthday : NAME \pfun DATE ; known : \power NAME ; today? : DATE | true @ \exists birthday' : NAME \pfun DATE ; cards! : \power NAME ; known' : \power NAME | true @ Remind \\
+
+\end{theorem}
+
+VC15 for line 73 column 1 start 1690 length 158 in "birthdaybook"
+\begin{theorem}{ RemindOne\_ vc\_ fsb}\\
+ \forall birthday : NAME \pfun DATE ; known : \power NAME ; today? : DATE | true @ \exists birthday' : NAME \pfun DATE ; card! : NAME ; known' : \power NAME | true @ RemindOne \\
+
+\end{theorem}
+
+VC19 for line 92 column 1 start 2066 length 80 in "birthdaybook"
+\begin{theorem}{ Success\_ vc\_ fsb}\\
+ \exists result! : REPORT | Success @ true \\
+
+\end{theorem}
+
+VC21 for line 98 column 1 start 2148 length 163 in "birthdaybook"
+\begin{theorem}{ AlreadyKnown\_ vc\_ fsb}\\
+ \forall birthday : NAME \pfun DATE ; known : \power NAME ; name? : NAME | true @ \exists birthday' : NAME \pfun DATE ; known' : \power NAME ; result! : REPORT | true @ AlreadyKnown \\
+
+\end{theorem}
+
+VC23 for line 108 column 1 start 2314 length 158 in "birthdaybook"
+\begin{theorem}{ NotKnown\_ vc\_ fsb}\\
+ \forall birthday : NAME \pfun DATE ; known : \power NAME ; name? : NAME | true @ \exists birthday' : NAME \pfun DATE ; known' : \power NAME ; result! : REPORT | true @ NotKnown \\
+
+\end{theorem}
+
+VC25 for line 122 column 5 start 2660 length 61 in "birthdaybook"
+\begin{theorem}{ RAddBirthday\_ vc\_ fsb}\\
+ \forall birthday : NAME \pfun DATE ; date? : DATE ; known : \power NAME ; name? : NAME ; name? : NAME | true @ \exists birthday' : NAME \pfun DATE ; known' : \power NAME ; result! : REPORT ; result! : REPORT | true @ RAddBirthday \\
+
+\end{theorem}
+
+VC26 for line 123 column 5 start 2729 length 59 in "birthdaybook"
+\begin{theorem}{ RFindBirthday\_ vc\_ fsb}\\
+ \forall birthday : NAME \pfun DATE ; known : \power NAME ; name? : NAME ; name? : NAME | true @ \exists birthday' : NAME \pfun DATE ; date! : DATE ; known' : \power NAME ; result! : REPORT ; result! : REPORT | true @ RFindBirthday \\
+
+\end{theorem}
+
+VC27 for line 124 column 5 start 2796 length 31 in "birthdaybook"
+\begin{theorem}{ RRemind\_ vc\_ fsb}\\
+ \forall birthday : NAME \pfun DATE ; known : \power NAME ; today? : DATE | true @ \exists birthday' : NAME \pfun DATE ; cards! : \power NAME ; known' : \power NAME ; result! : REPORT | true @ RRemind \\
+
+\end{theorem}
+
+
+
+ VC Z section "birthdaybookARGfsb" has $13$ interesting VCs (Total = 28; Simplified to $true$ = 15).
+
+
+
+%----------------------------------
+\end{document}

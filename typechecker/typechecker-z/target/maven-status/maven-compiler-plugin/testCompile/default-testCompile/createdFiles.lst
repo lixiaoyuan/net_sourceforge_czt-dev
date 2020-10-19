@@ -1,0 +1,9 @@
+net/sourceforge/czt/typecheck/testutil/TypeParser.class
+net/sourceforge/czt/typecheck/z/TypeCheckerTest.class
+net/sourceforge/czt/typecheck/z/CyclicParentTypeCheckerTest.class
+net/sourceforge/czt/typecheck/z/TypeCheckerTest$TestNormal.class
+net/sourceforge/czt/typecheck/z/IdTest$NameCollector.class
+net/sourceforge/czt/typecheck/z/TypeCheckerTest$TestError.class
+net/sourceforge/czt/typecheck/z/IdTest.class
+net/sourceforge/czt/typecheck/z/TypeInferenceTest.class
+net/sourceforge/czt/typecheck/util/UnificationEnvTest.class

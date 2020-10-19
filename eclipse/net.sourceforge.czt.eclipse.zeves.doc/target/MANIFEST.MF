@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: net.sourceforge.czt.eclipse.zeves.doc;singleton:=
+ true
+Bundle-Name: %Plugin.name
+Bundle-Version: 1.6.0.202010180842
+Bundle-Localization: plugin
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Vendor: %Plugin.providerName
+

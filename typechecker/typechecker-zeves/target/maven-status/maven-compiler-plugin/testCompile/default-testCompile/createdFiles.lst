@@ -1,0 +1,4 @@
+net/sourceforge/czt/typecheck/zeves/TypeCheckerTest$TestNormal.class
+net/sourceforge/czt/typecheck/zeves/TypeCheckerTest$TestError.class
+net/sourceforge/czt/typecheck/zeves/CyclicParentTypeCheckerTest.class
+net/sourceforge/czt/typecheck/zeves/TypeCheckerTest.class

@@ -1,0 +1,121 @@
+\documentclass{article}
+\usepackage{czt}
+
+\begin{document}
+%----------------------------------
+
+\begin{zsection}	 \SECTION zstateref\_fsb \parents~fsb\_toolkit , zstateref
+\end{zsection}
+
+VC ZSection Created at Sun Oct 18 08:41:44 UTC 2020.
+
+VC3 for line 6 column 1 start 83 length 91 in "zstateref"
+\begin{theorem}{ AState\_ vc\_ fsb}\\
+ \exists x : \power \nat | AState @ true \\
+
+\end{theorem}
+
+VC5 for line 13 column 1 start 176 length 83 in "zstateref"
+\begin{theorem}{ ASInit\_ vc\_ fsb}\\
+ \exists x' : \power \nat | ASInit @ true \\
+
+\end{theorem}
+
+VC7 for line 20 column 1 start 261 length 71 in "zstateref"
+\begin{theorem}{ ASFin\_ vc\_ fsb}\\
+ \exists x : \power \nat | ASFin @ true \\
+
+\end{theorem}
+
+VC9 for line 27 column 1 start 334 length 95 in "zstateref"
+\begin{theorem}{ CState\_ vc\_ fsb}\\
+ \exists y : \seq \nat | CState @ true \\
+
+\end{theorem}
+
+VC11 for line 34 column 1 start 431 length 92 in "zstateref"
+\begin{theorem}{ CSInit\_ vc\_ fsb}\\
+ \exists y' : \seq \nat | CSInit @ true \\
+
+\end{theorem}
+
+VC13 for line 41 column 1 start 525 length 71 in "zstateref"
+\begin{theorem}{ CSFin\_ vc\_ fsb}\\
+ \exists y : \seq \nat | CSFin @ true \\
+
+\end{theorem}
+
+VC15 for line 48 column 1 start 598 length 91 in "zstateref"
+\begin{theorem}{ Retr\_ vc\_ fsb}\\
+ \exists x : \power \nat ; y : \seq \nat | Retr @ true \\
+
+\end{theorem}
+
+VC17 for line 57 column 1 start 723 length 68 in "zstateref"
+\begin{theorem}{ Nothing\_ vc\_ fsb}\\
+ \forall x : \power \nat | true @ \exists x' : \power \nat | true @ Nothing \\
+
+\end{theorem}
+
+VC19 for line 63 column 1 start 793 length 73 in "zstateref"
+\begin{theorem}{ NothingAgain\_ vc\_ fsb}\\
+ \forall y : \seq \nat | true @ \exists y' : \seq \nat | true @ NothingAgain \\
+
+\end{theorem}
+
+VC21 for line 69 column 1 start 868 length 94 in "zstateref"
+\begin{theorem}{ AOp1\_ vc\_ fsb}\\
+ \forall i? : \nat ; x : \power \nat | true @ \exists x' : \power \nat | true @ AOp1 \\
+
+\end{theorem}
+
+VC23 for line 76 column 1 start 964 length 126 in "zstateref"
+\begin{theorem}{ COp1\_ vc\_ fsb}\\
+ \forall i? : \nat ; y : \seq \nat | true @ \exists y' : \seq \nat | true @ COp1 \\
+
+\end{theorem}
+
+VC25 for line 84 column 1 start 1092 length 84 in "zstateref"
+\begin{theorem}{ AOp2\_ vc\_ fsb}\\
+ \forall x : \power \nat | true @ \exists o! : \nat ; x' : \power \nat | true @ AOp2 \\
+
+\end{theorem}
+
+VC27 for line 91 column 1 start 1178 length 107 in "zstateref"
+\begin{theorem}{ COp2\_ vc\_ fsb}\\
+ \forall y : \seq \nat | true @ \exists o! : \nat ; y' : \seq \nat | true @ COp2 \\
+
+\end{theorem}
+
+VC29 for line 101 column 1 start 1333 length 92 in "zstateref"
+\begin{theorem}{ AMachineDef\_ vc\_ fsb}\\
+ \exists init : ASInit ; op1 : AOp1 ; state : AState | AMachineDef @ true \\
+
+\end{theorem}
+
+VC31 for line 107 column 1 start 1427 length 92 in "zstateref"
+\begin{theorem}{ CMachineDef\_ vc\_ fsb}\\
+ \exists init : CSInit ; op1 : COp1 ; state : CState | CMachineDef @ true \\
+
+\end{theorem}
+
+VC33 for line 113 column 1 start 1521 length 152 in "zstateref"
+\begin{theorem}{ Refines1\_ vc\_ fsb}\\
+ \exists abs : AMachineDef ; con : CMachineDef ; op1 : AOp1 \cross COp1 ; op2 : AOp2 \cross COp2 ; ret : Retr | Refines1 @ true \\
+
+\end{theorem}
+
+VC35 for line 121 column 1 start 1675 length 152 in "zstateref"
+\begin{theorem}{ Refines2\_ vc\_ fsb}\\
+ \exists abs : CMachineDef ; con : AMachineDef ; op1 : COp1 \cross AOp1 ; op2 : COp2 \cross AOp2 ; ret : Retr | Refines2 @ true \\
+
+\end{theorem}
+
+
+
+ VC Z section "zstaterefARGfsb" has $17$ interesting VCs (Total = 36; Simplified to $true$ = 19).
+
+
+
+%----------------------------------
+\end{document}

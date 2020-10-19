@@ -1,0 +1,33 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1603010385790
+Build-Jdk: 1.8.0_262
+Built-By: root
+Bundle-Description: Provides classes for parsing and printing Z Pattern 
+ specifications.
+Bundle-DocURL: http://czt.sourceforge.net
+Bundle-License: http://www.gnu.org/copyleft/gpl.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: CZT Parser Z Pattern
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-SymbolicName: net.sourceforge.czt.parser-zpatt;singleton:=false
+Bundle-Vendor: Community Z Tools Project
+Bundle-Version: 1.6.0.cdh
+Created-By: Apache Maven Bundle Plugin
+Embed-Transitive: true
+Export-Package: lib;version="1.6.0.cdh",net.sourceforge.czt.parser.zpatt
+ ;version="1.6.0.cdh",net.sourceforge.czt.print.zpatt;version="1.6.0.cdh
+ "
+Import-Package: java_cup.runtime;version="[0.11,1)",net.sourceforge.czt.
+ base.ast;version="[1.6,2)",net.sourceforge.czt.base.util;version="[1.6,
+ 2)",net.sourceforge.czt.base.visitor;version="[1.6,2)",net.sourceforge.
+ czt.parser.util;version="[1.6,2)",net.sourceforge.czt.parser.z;version=
+ "[1.6,2)",net.sourceforge.czt.print.util;version="[1.6,2)",net.sourcefo
+ rge.czt.print.z;version="[1.6,2)",net.sourceforge.czt.session;version="
+ [1.6,2)",net.sourceforge.czt.util;version="[1.6,2)",net.sourceforge.czt
+ .z.ast;version="[1.6,2)",net.sourceforge.czt.z.util;version="[1.6,2)",n
+ et.sourceforge.czt.z.visitor;version="[1.6,2)",net.sourceforge.czt.zpat
+ t.ast;version="[1.6,2)",net.sourceforge.czt.zpatt.jaxb;version="[1.6,2)
+ ",net.sourceforge.czt.zpatt.util;version="[1.6,2)",net.sourceforge.czt.
+ zpatt.visitor;version="[1.6,2)",org.xml.sax
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-2.3.0.201405100607

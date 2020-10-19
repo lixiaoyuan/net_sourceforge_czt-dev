@@ -1,0 +1,39 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1603010501495
+Build-Jdk: 1.8.0_262
+Built-By: root
+Bundle-Description: Verification condition generator for Z specification
+ s.
+Bundle-DocURL: http://czt.sourceforge.net
+Bundle-License: http://www.gnu.org/copyleft/gpl.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: CZT Z VCG
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-SymbolicName: net.sourceforge.czt.vcg-z;singleton:=false
+Bundle-Vendor: Community Z Tools Project
+Bundle-Version: 1.6.0.cdh
+Created-By: Apache Maven Bundle Plugin
+Embed-Transitive: true
+Export-Package: lib;version="1.6.0.cdh",net.sourceforge.czt.vcg.util;ver
+ sion="1.6.0.cdh",net.sourceforge.czt.vcg.z;version="1.6.0.cdh",net.sour
+ ceforge.czt.vcg.z.dc;version="1.6.0.cdh",net.sourceforge.czt.vcg.z.feas
+ ibility;version="1.6.0.cdh",net.sourceforge.czt.vcg.z.feasibility.util;
+ version="1.6.0.cdh",net.sourceforge.czt.vcg.z.refinement;version="1.6.0
+ .cdh",net.sourceforge.czt.vcg.z.refinement.util;version="1.6.0.cdh",net
+ .sourceforge.czt.vcg.z.transformer;version="1.6.0.cdh",net.sourceforge.
+ czt.vcg.z.transformer.dc;version="1.6.0.cdh",net.sourceforge.czt.vcg.z.
+ transformer.feasibility;version="1.6.0.cdh",net.sourceforge.czt.vcg.z.t
+ ransformer.refinement;version="1.6.0.cdh"
+Import-Package: net.sourceforge.czt.base.ast;version="[1.6,2)",net.sourc
+ eforge.czt.base.impl;version="[1.6,2)",net.sourceforge.czt.base.util;ve
+ rsion="[1.6,2)",net.sourceforge.czt.base.visitor;version="[1.6,2)",net.
+ sourceforge.czt.parser.util;version="[1.6,2)",net.sourceforge.czt.print
+ .util;version="[1.6,2)",net.sourceforge.czt.print.z;version="[1.6,2)",n
+ et.sourceforge.czt.session;version="[1.6,2)",net.sourceforge.czt.typech
+ eck.z;version="[1.6,2)",net.sourceforge.czt.typecheck.z.util;version="[
+ 1.6,2)",net.sourceforge.czt.util;version="[1.6,2)",net.sourceforge.czt.
+ z.ast;version="[1.6,2)",net.sourceforge.czt.z.impl;version="[1.6,2)",ne
+ t.sourceforge.czt.z.util;version="[1.6,2)",net.sourceforge.czt.z.visito
+ r;version="[1.6,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-2.3.0.201405100607
